@@ -12,11 +12,20 @@ import mapGenerator from "dom-generator";
 function createMap() {
   mapGenerator({
     tag: "div",
-    attributes: { id: "map" },
+    //* map: parent section of map
+    attributes: { class: "map" },
     children: [
       {
         tag: "div",
-        attributes: { id: "cardBlue" },
+        //* imageMap: background section of map
+        attributes: { class: "mapSection" },
+        children: [
+          {
+            tag: "div",
+            //* card: cardBlue of map background section
+            attributes: { class: "cardBlue" },
+          },
+        ],
       },
     ],
   });
