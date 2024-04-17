@@ -1,3 +1,5 @@
+import { section } from "../../JS/constants/constants";
+
 const whayTonrowData = [
   {
     title: "به صرفه",
@@ -5,3 +7,5 @@ const whayTonrowData = [
     icon: "",
   },
 ];
+
+whayTonrowData.map((data) => {});
