@@ -1,4 +1,5 @@
 import { section } from "../../JS/constants/constants";
+import { whyTonrowGenerator } from ".";
 
 const whayTonrowData = [
   {
@@ -8,4 +9,8 @@ const whayTonrowData = [
   },
 ];
 
-whayTonrowData.map((data) => {});
+whayTonrowData.forEach((data) => {
+  section.appendChild(
+    whyTonrowGenerator(data.title, data.description, data.icon)
+  );
+});

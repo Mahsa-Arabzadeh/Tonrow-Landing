@@ -1,5 +1,7 @@
-import domGenerator from "dom-generator";
+import domGenerator from "/dom-generator";
 import { section } from "../../JS/constants/constants";
+import "./index.scss";
+const app = document.querySelector("#app");
 
 /**
  * Generates a DOM element representing a "Why Tonrow" card.
@@ -7,9 +9,7 @@ import { section } from "../../JS/constants/constants";
  * @returns {HTMLElement} The generated DOM element representing the "Why Tonrow" card.
  */
 
-function whyTonrowGenerator(props) {
-  let [title, description, icon] = props;
-
+export function whyTonrowGenerator(title, description, icon) {
   const whyTonrow = domGenerator({
     tag: "div",
     attributes: { class: "why-tonrow-card" },
@@ -39,5 +39,3 @@ function whyTonrowGenerator(props) {
 
   return whyTonrow;
 }
-
-export default whyTonrowGenerator;

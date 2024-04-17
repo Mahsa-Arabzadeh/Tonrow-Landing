@@ -1,4 +1,4 @@
-import domGenerator from "dom-generator";
+import domGenerator from "./dom-generator";
 
 export const section = domGenerator({
   tag: "section",
