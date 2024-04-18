@@ -5,6 +5,18 @@ const headerData = [
     LinkAddress: "#home",
     btnText: "Register",
   },
+  {
+    linkText: "Home",
+    LinkAddress: "#home",
+  },
+  {
+    linkText: "Home",
+    LinkAddress: "#home",
+  },
+  {
+    linkText: "Home",
+    LinkAddress: "#home",
+  },
 ];
 
 export default headerData;
