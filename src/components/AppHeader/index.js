@@ -18,32 +18,6 @@ export default function header(headerData) {
           attributes: { class: "header-content" },
           children: [
             {
-              tag: "img",
-              attributes: {
-                src: headerData[0].imgAddress,
-                alt: "Logo",
-                class: "logo",
-              },
-            },
-            {
-              tag: "nav",
-              children: [
-                {
-                  tag: "ul",
-                  children: headerData.map((item) => ({
-                    tag: "li",
-                    children: [
-                      {
-                        tag: "a",
-                        properties: { textContent: item.linkText },
-                        attributes: { href: item.LinkAddress },
-                      },
-                    ],
-                  })),
-                },
-              ],
-            },
-            {
               tag: "button",
               dataAttributes: { id: "register" },
               properties: { textContent: headerData[0].btnText },
@@ -51,6 +25,38 @@ export default function header(headerData) {
                 click: () => {
                 },
               },
+            },
+            {
+              tag: "div",
+              attributes: { class: "flex-container" },
+              children: [
+                {
+                  tag: "nav",
+                  children: [
+                    {
+                      tag: "ul",
+                      children: headerData.map((item) => ({
+                        tag: "li",
+                        children: [
+                          {
+                            tag: "a",
+                            properties: { textContent: item.linkText },
+                            attributes: { href: item.LinkAddress },
+                          },
+                        ],
+                      })),
+                    },
+                  ],
+                },
+                {
+                  tag: "img",
+                  attributes: {
+                    src: headerData[0].imgAddress,
+                    alt: "Logo",
+                    class: "logo",
+                  },
+                },
+              ],
             },
           ],
         },
