@@ -1,7 +1,13 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
+import headerData from "./data.js";
 
-export default function header(imgAddress, linkText, LinkAddress, btnText) {
+export default function header(headerData) {
+  if (!headerData.length) {
+    console.error("headerData array is empty");
+    return;
+  }
+
   const headerGenerator = document.body.appendChild(
     domGenerator({
       tag: "header",
@@ -14,7 +20,7 @@ export default function header(imgAddress, linkText, LinkAddress, btnText) {
             {
               tag: "img",
               attributes: {
-                src: imgAddress,
+                src: headerData[0].imgAddress,
                 alt: "Logo",
                 class: "logo",
               },
@@ -24,28 +30,25 @@ export default function header(imgAddress, linkText, LinkAddress, btnText) {
               children: [
                 {
                   tag: "ul",
-                  children: [
-                    {
-                      tag: "li",
-                      children: [
-                        {
-                          tag: "a",
-                          properties: { textContent: linkText },
-                          attributes: { href: LinkAddress },
-                        },
-                      ],
-                    },
-                  ],
+                  children: headerData.map((item) => ({
+                    tag: "li",
+                    children: [
+                      {
+                        tag: "a",
+                        properties: { textContent: item.linkText },
+                        attributes: { href: item.LinkAddress },
+                      },
+                    ],
+                  })),
                 },
               ],
             },
             {
               tag: "button",
               dataAttributes: { id: "register" },
-              properties: { textContent: btnText },
+              properties: { textContent: headerData[0].btnText },
               eventListeners: {
                 click: () => {
-                  // Handle logout functionality here
                 },
               },
             },
