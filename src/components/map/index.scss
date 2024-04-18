@@ -37,6 +37,23 @@ body {
     img {
       position: relative;
       bottom: 79px;
+      animation-name: move;
+      animation-duration: 5s;
+
+      //*Engine movement animation on the map screen.
+      @keyframes move {
+        0% {
+          transform: translateX(1);
+        }
+
+        50% {
+          transform: translateX(750px) translateY(33px);
+        }
+
+        100% {
+          transform: translateY(33px) translateX(750px);
+        }
+      }
     }
   }
   /**========================================================================
