@@ -1,5 +1,5 @@
 header {
-  background-color: #333;
+  background-color: #fefefe;
   color: #fff;
   padding: 20px;
 
@@ -15,15 +15,20 @@ header {
         padding: 0;
 
         li {
-          margin-right: 10px;
+          display: inline-block;
+          margin-right: 68px; 
+
+          &:last-child {
+            margin-right: 0;
+          }
 
           a {
-            color: #fff;
+            color: #9a9a9a;
             text-decoration: none;
             transition: color 0.3s ease;
 
             &:hover {
-              color: #ccc;
+              color: #034cb6;
             }
           }
         }
@@ -31,8 +36,8 @@ header {
     }
 
     button {
-      background-color: #fff;
-      color: #333;
+      background-color: #4000ff;
+      color: #fff; /* Changed text color to white */
       border: none;
       padding: 10px 20px;
       border-radius: 5px;
@@ -45,8 +50,8 @@ header {
     }
 
     .logo {
-      height: 50px;
-      margin-left: auto;
+      height: 15px;
+      margin-left: 29px; 
     }
 
     .flex-container {

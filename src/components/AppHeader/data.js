@@ -1,20 +1,21 @@
-const headerData = [
+const headerData = [ //public
   {
-    imgAddress: "https://example.com/logo.png",
-    linkText: "خانه",
+    imgAddress: "./public/images/Tonrow.svg",
+    linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
-  },
-  {
-    linkText: "ئرخواست سفیر",
-    LinkAddress: "#home",
+    imgLinkAddress: "#", // add this line
   },
   {
     linkText: "درخواست خرید",
     LinkAddress: "#home",
   },
   {
-    linkText: "تماس با ما",
+    linkText: "درخواست سفیر",
+    LinkAddress: "#home",
+  },
+  {
+    linkText: "خانه",
     LinkAddress: "#home",
   },
 ];
