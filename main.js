@@ -1,7 +1,8 @@
+import header from "./src/components/AppHeader/index.js";
 import createMap from "./src/components/map/index.js";
 import "./src/components/map/index.scss";
-createMap();
+import { whyTonrowGenerator } from "./src/components/WhyTonrow/index.js";
 
-
-import header from "./src/components/AppHeader/index.js";
-header();
+whyTonrowGenerator();
+// header();
+// createMap();

@@ -1,0 +1,19 @@
+.why-tonrow-card{
+    width: 470px;
+    height: 123px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 10px;
+    gap: 32px;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0px 8px 34px 0px #E5586014;
+    .why-tonrow-container-card{
+        width: 326px;
+        height: 66px;
+        background-color: blue;
+        gap: 12px;
+    }
+}
