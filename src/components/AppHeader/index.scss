@@ -15,7 +15,12 @@ header {
         padding: 0;
 
         li {
+          display: inline-block; /* or display: inline-flex; */
           margin-right: 10px;
+
+          &:last-child {
+            margin-right: 0; /* Remove margin from the last li */
+          }
 
           a {
             color: #fff;

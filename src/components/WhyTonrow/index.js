@@ -1,18 +1,18 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
 
-const whayTonrowData = [
-  {
-    title: "به صرفه",
-    description: "ارزان ترین فروشگاه های ممکن نزدیک به شما ",
-    icon: "",
-  },
-  {
-    title: "همیشه در دسترس",
-    description: "پشتیبانی 24 ساعته همکاران ما در تنرو",
-    icon: "",
-  },
-];
+// const whayTonrowData = [
+//   {
+//     title: "به صرفه",
+//     description: "ارزان ترین فروشگاه های ممکن نزدیک به شما ",
+//     icon: "",
+//   },
+//   {
+//     title: "همیشه در دسترس",
+//     description: "پشتیبانی 24 ساعته همکاران ما در تنرو",
+//     icon: "",
+//   },
+// ];
 
 whayTonrowData.forEach((data) => {
   document.body.appendChild(
