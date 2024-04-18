@@ -9,74 +9,74 @@
   align-items: center;
   justify-content: center;
 }
-//* parent div style
-#map {
-  @include display();
-  width: 100vw;
-  height: 580px;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  background-color: antiquewhite;
+body {
+  margin: 0;
 
-  //* first childe on parent
-  #mapSection {
-    width: 90vw;
-    height: 580px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
+  //* parent div style
+  #map {
     @include display();
-  }
-}
+    width: 99vw;
+    height: 580px;
+    background-color: antiquewhite;
 
-/**========================================================================
+    //* first childe on parent
+    #mapSection {
+      padding: 0 2%;
+      width: 91vw;
+      height: 580px;
+      @include display();
+      justify-content: end;
+      background-image: url("../public/images/map section/map.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  /**========================================================================
  *                           blue card component
  *========================================================================**/
 
-//* blue card on child element
-#blueCard {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  @include display();
-  flex-direction: row;
-  text-align: center;
-  width: 42%;
-  height: 504px;
-  background: #2b6fbd1a;
-  border: 1px solid #f1f1f1;
-  border-radius: 4px;
-
-  //* description section on card child
-  #descriptionSellCard {
+  //* blue card on child element
+  #blueCard {
     @include display();
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
-    gap: 10px;
-    width: 87%;
+    width: 32%;
     height: 504px;
+    background: #2b6fbd1a;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
 
-    //* title
-    h1 {
+    //* description section on card child
+    #descriptionSellCard {
+      @include display();
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+      width: 87%;
+      height: 504px;
+
+      //* title
+      h1 {
         margin: 0;
-      font-size: 40px;
-      font-weight: 600;
-    }
-    //* description text
-    p {
-      font-size: 24px;
-      font-weight: 400;
-    }
+        font-size: 40px;
+        font-weight: 600;
+      }
+      //* description text
+      p {
+        font-size: 24px;
+        font-weight: 400;
+      }
 
-    //* CTA button on description section
-    button {
-      width: 264px;
-      height: 56px;
-      border-radius: 4px;
-      padding: 18px, 8px, 18px, 8px;
-      background-color: #1f4baf;
-      color: white;
+      //* CTA button on description section
+      button {
+        width: 264px;
+        height: 56px;
+        border-radius: 4px;
+        padding: 18px, 8px, 18px, 8px;
+        background-color: #1f4baf;
+        color: white;
+      }
     }
   }
 }
