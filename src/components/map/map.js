@@ -16,6 +16,10 @@ function createMap() {
           "درخواست خرید"
         ),
       },
+      {
+        tag: "img",
+        attributes: { src: "./public/images/group.png" },
+      },
     ],
   });
 

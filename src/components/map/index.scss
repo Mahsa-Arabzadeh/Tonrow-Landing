@@ -17,7 +17,7 @@ body {
     @include display();
     width: 99vw;
     height: 580px;
-    background-color: antiquewhite;
+    background-color: #f1f5f8;
   }
   /**========================================================================
    **                          map background
@@ -28,10 +28,16 @@ body {
     width: 91vw;
     height: 580px;
     @include display();
-    justify-content: end;
-    background-image: url("../public/icons/map section/map.svg");
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    background-image: url("../public/images/map.svg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    img {
+      position: relative;
+      bottom: 79px;
+    }
   }
   /**========================================================================
  *                           blue card component
