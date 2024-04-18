@@ -18,20 +18,21 @@ body {
     width: 99vw;
     height: 580px;
     background-color: antiquewhite;
-
-    //* first childe on parent
-    #mapSection {
-      padding: 0 2%;
-      width: 91vw;
-      height: 580px;
-      @include display();
-      justify-content: end;
-      background-image: url("../public/images/map section/map.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
   }
-
+  /**========================================================================
+   **                          map background
+   *========================================================================**/
+  //* first childe on parent
+  #mapSection {
+    padding: 0 2%;
+    width: 91vw;
+    height: 580px;
+    @include display();
+    justify-content: end;
+    background-image: url("../public/images/map section/map.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   /**========================================================================
  *                           blue card component
  *========================================================================**/

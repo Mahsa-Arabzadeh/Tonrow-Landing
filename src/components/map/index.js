@@ -1,6 +1,6 @@
 import mapGenerator from "dom-generator";
 
-import createBlueCard from "./blueCard";
+import createMap from "./map";
 
 //
 /**=======================================================================================================================
@@ -9,27 +9,20 @@ import createBlueCard from "./blueCard";
  *@return map
  *=======================================================================================================================
  **/
-function createMap() {
+function renderMap() {
   let map = mapGenerator({
     tag: "div",
     //* map: parent section of map
     attributes: { id: "map" },
     children: [
       {
-        tag: "div",
-        //* imageMap: background section of map
-        attributes: { id: "mapSection" },
-        children: [
-          //* card: cardBlue of map background section
-        {
-          tag: createBlueCard(),
-        }
-        ],
+        tag: createMap(),
+       
       },
     ],
   });
-
+  // return map;
   document.body.append(map);
 }
 
-export default createMap;
+export default renderMap;
