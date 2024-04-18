@@ -1,20 +1,20 @@
 const headerData = [
   {
     imgAddress: "https://example.com/logo.png",
-    linkText: "Home",
+    linkText: "خانه",
     LinkAddress: "#home",
     btnText: "Register",
   },
   {
-    linkText: "Home",
+    linkText: "ئرخواست سفیر",
     LinkAddress: "#home",
   },
   {
-    linkText: "Home",
+    linkText: "درخواست خرید",
     LinkAddress: "#home",
   },
   {
-    linkText: "Home",
+    linkText: "تماس با ما",
     LinkAddress: "#home",
   },
 ];
