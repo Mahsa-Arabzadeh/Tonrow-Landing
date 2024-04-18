@@ -1,0 +1,14 @@
+// import SEC continer code
+@import "./scss/continer.scss";
+// import header sass
+@import "./scss/header.scss";
+// import body sass
+@import './scss/body.scss';
+
+
+
+.body-what-services-tonrow{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}

@@ -1,15 +1,3 @@
-.what-services-tonrow {
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
-  width: 100%;
-}
-.what-services-tonrow h1 {
-  margin: 0 auto;
-  font-weight: 600;
-  font-size: 20px;
-}
-
 .header-what-services-tonrow {
   display: flex;
   gap: 7px;
@@ -32,10 +20,4 @@
 .active-btn-header-what-services-tonrow {
   color: rgb(0, 61, 149) !important;
   border-bottom: 2.5px solid rgb(0, 61, 149) !important;
-}
-
-.body-what-services-tonrow {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=header.css.map */

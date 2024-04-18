@@ -1,0 +1,22 @@
+.header-what-services-tonrow {
+  display: flex;
+  gap: 7px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  button {
+    font-size: 16px;
+    background-color: none;
+    border: none;
+    color: rgba(140, 140, 140, 1);
+    width: 37%;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+}
+.active-btn-header-what-services-tonrow {
+  color: rgba(0, 61, 149, 1) !important;
+  border-bottom: 2.5px solid rgba(0, 61, 149, 1) !important;
+}
