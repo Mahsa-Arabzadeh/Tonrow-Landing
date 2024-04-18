@@ -1,5 +1,13 @@
 import cardGenerator from "dom-generator";
 
+/**================================================================================================
+ **                                      FUNCTION NAME
+ *?  What does it do?
+ *@param title string  
+ *@param description string  
+ *@param buttonText string  
+ *@return section
+ *================================================================================================**/
 function createBlueCard(title , description , textButton) {
   let blueCard = cardGenerator({
     tag: "div",
