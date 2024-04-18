@@ -19,7 +19,8 @@ function createBlueCard() {
             tag: "p",
             //* imageMap: background section of map
             properties: {
-              textContent: "وظایف سفیران شامل جمع‌آوری سفارشات، تحویل به موقع، ارتباط مؤثر با مشتریان و حفظ کیفیت خدمات است.",
+              textContent:
+                "وظایف سفیران شامل جمع‌آوری سفارشات، تحویل به موقع، ارتباط مؤثر با مشتریان و حفظ کیفیت خدمات است.",
             },
           },
           {
