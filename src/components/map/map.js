@@ -2,6 +2,13 @@ import mapBGGenerator from "dom-generator";
 
 import createBlueCard from "./blueCard";
 
+//* blueCard component
+
+/**================================================================================================
+ **                                      createMap
+ *?  This component is for making the map part. This section has a background-image on which there is a card and an engine.
+ *@return mapBackground[div]
+ *================================================================================================**/
 function createMap() {
   let mapBackground = mapBGGenerator({
     tag: "div",

@@ -2,6 +2,8 @@ import mapGenerator from "dom-generator";
 
 import createMap from "./map";
 
+//* map component
+
 //
 /**=======================================================================================================================
  **                                                  mapGenerator
@@ -17,7 +19,6 @@ function renderMap() {
     children: [
       {
         tag: createMap(),
-       
       },
     ],
   });
