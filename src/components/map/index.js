@@ -21,7 +21,9 @@ function createMap() {
         attributes: { id: "mapSection" },
         children: [
           //* card: cardBlue of map background section
-          createBlueCard(),
+        {
+          tag: createBlueCard(),
+        }
         ],
       },
     ],
