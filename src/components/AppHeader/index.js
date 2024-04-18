@@ -45,7 +45,6 @@ export default function header(imgAddress, linkText, LinkAddress, btnText) {
               properties: { textContent: btnText },
               eventListeners: {
                 click: () => {
-                  // Handle logout functionality here
                 },
               },
             },
