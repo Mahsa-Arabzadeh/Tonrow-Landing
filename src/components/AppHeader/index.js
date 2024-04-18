@@ -1,37 +1,35 @@
-import domGenerator from '/dom-generator';
-import "./index.scss";
-
+import domGenerator from "dom-generator";
 
 export default function header(imgAddress, linkText, LinkAddress, btnText) {
   const headerGenerator = document.body.appendChild(
     domGenerator({
-      tag: 'header',
-      attributes: { id: 'header' },
+      tag: "header",
+      attributes: { id: "header" },
       children: [
         {
-          tag: 'div',
-          attributes: { class: 'header-content' },
+          tag: "div",
+          attributes: { class: "header-content" },
           children: [
             {
-              tag: 'img',
+              tag: "img",
               attributes: {
                 src: imgAddress,
-                alt: 'Logo',
-                class: 'logo',
+                alt: "Logo",
+                class: "logo",
               },
             },
             {
-              tag: 'nav',
+              tag: "nav",
               children: [
                 {
-                  tag: 'ul',
+                  tag: "ul",
                   children: [
                     {
-                      tag: 'li',
+                      tag: "li",
                       children: [
                         {
-                          tag: 'a',
-                          properties: { textContent: linkText},
+                          tag: "a",
+                          properties: { textContent: linkText },
                           attributes: { href: LinkAddress },
                         },
                       ],
@@ -41,8 +39,8 @@ export default function header(imgAddress, linkText, LinkAddress, btnText) {
               ],
             },
             {
-              tag: 'button',
-              dataAttributes: { id: 'register' },
+              tag: "button",
+              dataAttributes: { id: "register" },
               properties: { textContent: btnText },
               eventListeners: {
                 click: () => {
@@ -58,4 +56,3 @@ export default function header(imgAddress, linkText, LinkAddress, btnText) {
 
   return headerGenerator;
 }
-
