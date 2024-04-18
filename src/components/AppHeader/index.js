@@ -49,12 +49,20 @@ export default function header(headerData) {
                   ],
                 },
                 {
-                  tag: "img",
+                  tag: "a",
                   attributes: {
-                    src: headerData[0].imgAddress,
-                    alt: "Logo",
+                    href: headerData[0].imgLinkAddress, // use imgLinkAddress here
                     class: "logo",
                   },
+                  children: [
+                    {
+                      tag: "img",
+                      attributes: {
+                        src: headerData[0].imgAddress,
+                        alt: "Logo",
+                      },
+                    },
+                  ],
                 },
               ],
             },

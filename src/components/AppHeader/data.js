@@ -4,6 +4,7 @@ const headerData = [ //public
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
+    imgLinkAddress: "#", // add this line
   },
   {
     linkText: "درخواست خرید",
@@ -20,7 +21,3 @@ const headerData = [ //public
 ];
 
 export default headerData;
-
-
-
-
