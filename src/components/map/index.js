@@ -10,7 +10,7 @@ import mapGenerator from "dom-generator";
  **/
 
 function createMap() {
-  mapGenerator({
+  let map = mapGenerator({
     tag: "div",
     //* map: parent section of map
     attributes: { class: "map" },
@@ -29,4 +29,9 @@ function createMap() {
       },
     ],
   });
+
+// return map
+document.body.append(map)
 }
+
+export default createMap
