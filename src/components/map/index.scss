@@ -20,6 +20,10 @@
   align-items: center;
   text-align: center;
   justify-content: center;
+  width: 50%;
+  height: 504px;
+  background: #2b6fbd1a;
+  border: 1px solid #f1f1f1;
 
   #descriptionSellCard {
     display: flex;
@@ -27,5 +31,25 @@
     align-items: center;
     text-align: center;
     gap: 10px;
+    width: 45%;
+    height: 504px;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    button {
+      width: 264px;
+      height: 56px;
+      border-radius: 4px;
+      padding: 18px, 8px, 18px, 8px;
+      background-color: #1f4baf;
+      color: white;
+    }
   }
 }

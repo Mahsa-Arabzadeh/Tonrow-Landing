@@ -1,13 +1,14 @@
 import mapGenerator from "dom-generator";
+
 import createBlueCard from "./blueCard";
+
 //
 /**=======================================================================================================================
  **                                                  mapGenerator
  *?  This MAP Map makes the sequel.This function of taking a series of inputs and outputs makes it more usable.That has a card and photo.
- *@return section
+ *@return map
  *=======================================================================================================================
  **/
-
 function createMap() {
   let map = mapGenerator({
     tag: "div",
@@ -26,7 +27,6 @@ function createMap() {
     ],
   });
 
-  // return map
   document.body.append(map);
 }
 
