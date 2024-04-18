@@ -1,4 +1,5 @@
 import domGenerator from "dom-generator";
+import "./index.scss";
 
 export default function header(imgAddress, linkText, LinkAddress, btnText) {
   const headerGenerator = document.body.appendChild(
