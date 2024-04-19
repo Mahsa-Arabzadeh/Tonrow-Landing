@@ -1,9 +1,9 @@
 import "./src/components/headerComponent/index.scss";
 import "./src/components/mapComponent/index.scss";
 
+import buttonsConfig from "./src/components/buttonComponent/configButtonComponent.js";
 import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
 import baseButtonGenerator from "./src/components/Button/buttonComponent.js";
-import buttonsConfig from "./src/components/Button/configButtonComponent.js";
 import header from "./src/components/headerComponent/headerComponent";
 import renderMap from "./src/components/mapComponent/mapComponent";
 import headerData from "./src/components/AppHeader/data.js";
@@ -19,4 +19,3 @@ handleHeaderError(headerData);
 
 // Render the map
 renderMap();
-
