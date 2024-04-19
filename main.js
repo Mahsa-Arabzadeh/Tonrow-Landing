@@ -8,6 +8,8 @@ import "./src/components/headerComponent/index.scss";
 import "./src/components/mapComponent/index.scss";
 import renderMap from "./src/components/mapComponent/mapComponent";
 
+
+import "./src/components/whatDoesTonrowDo/index.js";
 // Define the default role
 const defaultRole = "public";
 
