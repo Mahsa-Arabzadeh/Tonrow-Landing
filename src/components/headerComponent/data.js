@@ -5,7 +5,7 @@ const publicHeaderData = [
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
-    imgLinkAddress: "#", 
+    imgLinkAddress: "#",
   },
   {
     linkText: "درخواست خرید",
@@ -27,7 +27,7 @@ const safirHeaderData = [
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
-    imgLinkAddress: "#", 
+    imgLinkAddress: "#",
   },
   {
     linkText: "درخواست خرید",
@@ -50,7 +50,7 @@ const adminHeaderData = [
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
-    imgLinkAddress: "#", 
+    imgLinkAddress: "#",
   },
   {
     linkText: "درخواست خرید",
@@ -73,8 +73,13 @@ const userHeaderData = [
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
-    imgLinkAddress: "#", 
+    imgLinkAddress: "#",
   },
+  {
+    linkText: "خانه",
+    LinkAddress: "#home",
+  },
+
   {
     linkText: "درخواست خرید",
     LinkAddress: "#home",
@@ -84,11 +89,13 @@ const userHeaderData = [
     LinkAddress: "#home",
   },
   {
-    linkText: "خانه",
+    linkText: "تماس با ما",
     LinkAddress: "#home",
   },
+  {
+    btnText: "hi",
+  },
 ];
-
 
 // Export all header data arrays
 export { safirHeaderData, adminHeaderData, userHeaderData, publicHeaderData };
