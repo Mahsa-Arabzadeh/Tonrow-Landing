@@ -1,4 +1,5 @@
-const headerData = [ //public
+const headerData = [
+  //public
   {
     imgAddress: "./public/images/Tonrow.svg",
     linkText: "تماس با ما",

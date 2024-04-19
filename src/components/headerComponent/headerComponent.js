@@ -22,8 +22,7 @@ export default function header(headerData) {
               dataAttributes: { id: "register" },
               properties: { textContent: headerData[0].btnText },
               eventListeners: {
-                click: () => {
-                },
+                click: () => {},
               },
             },
             {
