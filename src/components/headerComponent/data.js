@@ -30,17 +30,27 @@ const safirHeaderData = [
     imgLinkAddress: "#",
   },
   {
-    linkText: "درخواست خرید",
-    LinkAddress: "#home",
-  },
-  {
-    linkText: "درخواست سفیر",
-    LinkAddress: "#home",
-  },
-  {
     linkText: "خانه",
     LinkAddress: "#home",
   },
+
+  {
+    linkText: "درخواست ها",
+    LinkAddress: "#home",
+  },
+  {
+    linkText: "کلاب من",
+    LinkAddress: "#home",
+  },
+  {
+    linkText: "اطلاعیه",
+    LinkAddress: "#home",
+  },
+  
+  {
+    btnText: "hi",
+  },
+
 ];
 
 // Header data for admin role
@@ -53,16 +63,29 @@ const adminHeaderData = [
     imgLinkAddress: "#",
   },
   {
-    linkText: "درخواست خرید",
-    LinkAddress: "#home",
-  },
-  {
-    linkText: "درخواست سفیر",
-    LinkAddress: "#home",
-  },
-  {
     linkText: "خانه",
     LinkAddress: "#home",
+  },
+
+  {
+    linkText: "داشبورد",
+    LinkAddress: "#home",
+  },
+  {
+    linkText: "مدیریت سفارشات",
+    LinkAddress: "#home",
+  },
+  {
+    linkText: "مدیران سفیران",
+    LinkAddress: "#home",
+  },
+  {
+    linkText: "لیست جابجایی ها",
+    LinkAddress: "#home",
+  },
+
+  {
+    btnText: "hi",
   },
 ];
 
