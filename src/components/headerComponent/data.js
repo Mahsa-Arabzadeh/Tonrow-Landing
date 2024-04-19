@@ -1,11 +1,10 @@
 const headerData = [
-  //public
   {
     imgAddress: "./public/images/Tonrow.svg",
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
-    imgLinkAddress: "#", // add this line
+    imgLinkAddress: "#", 
   },
   {
     linkText: "درخواست خرید",
