@@ -1,13 +1,8 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
-import headerData from "./data.js";
+import { safirHeaderData, adminHeaderData, userHeaderData, publicHeaderData } from "./data.js";
 
 export default function header(headerData) {
-  if (!headerData.length) {
-    console.error("headerData array is empty");
-    return;
-  }
-
   const headerGenerator = document.body.appendChild(
     domGenerator({
       tag: "header",
@@ -22,8 +17,7 @@ export default function header(headerData) {
               dataAttributes: { id: "register" },
               properties: { textContent: headerData[0].btnText },
               eventListeners: {
-                click: () => {
-                },
+                click: () => {},
               },
             },
             {
@@ -51,7 +45,7 @@ export default function header(headerData) {
                 {
                   tag: "a",
                   attributes: {
-                    href: headerData[0].imgLinkAddress, // use imgLinkAddress here
+                    href: headerData[0].imgLinkAddress,
                     class: "logo",
                   },
                   children: [
