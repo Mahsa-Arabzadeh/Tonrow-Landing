@@ -12,6 +12,18 @@ const whayTonrowData = [
     title: "همیشه در دسترس",
     description: "پشتیبانی 24 ساعته همکاران ما در تنرو",
     icon: "../../public/images/call-calling.svg",
+    bgColor: "purple",
+  },
+  {
+    title: "حداکثر سرعت",
+    description: "تحویل کالا در کم ترین زمان ممکن برای شما ",
+    icon: "../../public/images/empty-wallet-change.svg",
+    bgColor: "hotpink",
+  },
+  {
+    title: "کیفیت بالا",
+    description: "بهترین کیفیت ممکن که فکرش هم می کنید. ",
+    icon: "../../public/images/shield-tick.svg",
     bgColor: "blue",
   },
 ];
