@@ -1,6 +1,7 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
 
+// Data array containing information for "Why Tonrow" cards.
 export const whayTonrowData = [
   {
     title: "به صرفه",
@@ -30,7 +31,10 @@ export const whayTonrowData = [
 
 /**
  * Generates a DOM element representing a "Why Tonrow" card.
- * @param {Array} props - An array containing title, description, and icon.
+ * @param {string} title - The title of the card.
+ * @param {string} description - The description of the card.
+ * @param {string} icon - The URL of the icon for the card.
+ * @param {string} bgColor - The background color of the card.
  * @returns {HTMLElement} The generated DOM element representing the "Why Tonrow" card.
  */
 export function whyTonrowCardGenerator(title, description, icon, bgColor) {

@@ -2,6 +2,10 @@ import { whayTonrowData } from "./data";
 import { whyTonrowCardGenerator } from "./data";
 import "./index.scss";
 
+/**
+ * Function to generate the 'Why Tonrow' section.
+ * @returns {HTMLElement} The generated section element.
+ */
 function whyTonrowGenerator() {
   const section = document.createElement("section");
   const secTitle = document.createElement("div");
@@ -13,6 +17,7 @@ function whyTonrowGenerator() {
   secTitle.setAttribute("class", "sec-title");
   cardContainer.setAttribute("class", "card-container");
 
+  //Append cards to the cardContainer to see the cards.
   const generateCard = whayTonrowData.forEach((data) => {
     cardContainer.appendChild(
       whyTonrowCardGenerator(
