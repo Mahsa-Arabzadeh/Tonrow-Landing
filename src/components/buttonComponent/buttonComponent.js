@@ -1,5 +1,7 @@
 import domGenerator from "dom-generator";
 
+import buttonsConfig from "./configButtonComponent";
+
 /**=======================================================================================================================
  **                                                 baseButtonGenerator
  *?  This is the button creation function. This function creates the button component and supports different buttons according to the figma layout and outside the layout. This algorithm can also be developed.
