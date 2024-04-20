@@ -6,12 +6,14 @@
   h1 {
     margin: 0 auto;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     color: var(--black-color);
   }
 }
 @media only screen and (min-width: 700px){
-  h1 {
-    font-size: 30px;
+  .what-services-tonrow{
+    h1 {
+      font-size: 40px;
+    }
   }
 }

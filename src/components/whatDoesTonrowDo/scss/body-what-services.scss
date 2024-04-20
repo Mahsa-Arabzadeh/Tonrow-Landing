@@ -46,14 +46,15 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0 50px;
+    margin: 0 auto;
     border: 1px #f3f3f3 solid;
     box-shadow: 0px 8px 34px 1px rgba(114, 125, 135, 0.1);
     gap: 8%;
     padding: 15px;
     border-radius: 20px;
+    width: 80%;
     img {
-      width: 40%;
+      width: 34%;
     }
     .description-body-SEC-whatDoesTonrowDo {
       width: 40%;
