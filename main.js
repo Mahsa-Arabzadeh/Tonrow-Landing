@@ -1,6 +1,7 @@
 import "./src/components/mapComponent/index.scss";
 import "./src/components/mapComponent/index.scss";
 import header from "./src/components/headerComponent/headerComponent";
+import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
 import handleHeaderError from "./src/components/headerComponent/errorHandler"; // Importing the default export from errorHandler.js
 import "./src/components/headerComponent/index.scss";
 import "./src/components/mapComponent/index.scss";
