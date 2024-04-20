@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
 
-  div {
+  .description-body-SEC-whatDoesTonrowDo {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -45,7 +45,7 @@
     gap: 15px;
     justify-content: center;
     align-items: center;
-    div {
+    .description-body-SEC-whatDoesTonrowDo {
       width: 50%;
       justify-content: end;
       align-items: end;
@@ -57,6 +57,5 @@
   }
   .body-what-services-tonrow:nth-child(even) {
     flex-direction: row-reverse;
-
   }
 }
