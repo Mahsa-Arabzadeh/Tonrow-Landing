@@ -1,58 +1,32 @@
-import domGenerator from "dom-generator";
+import { whayTonrowData } from "./data";
+import { whyTonrowCardGenerator } from "./data";
 import "./index.scss";
 
-// const whayTonrowData = [
-//   {
-//     title: "به صرفه",
-//     description: "ارزان ترین فروشگاه های ممکن نزدیک به شما ",
-//     icon: "",
-//   },
-//   {
-//     title: "همیشه در دسترس",
-//     description: "پشتیبانی 24 ساعته همکاران ما در تنرو",
-//     icon: "",
-//   },
-// ];
+function whyTonrowGenerator() {
+  const section = document.createElement("section");
+  const secTitle = document.createElement("div");
+  const cardContainer = document.createElement("div");
+  section.appendChild(secTitle);
+  section.appendChild(cardContainer);
+  secTitle.textContent = "چرا  تنرو  را  انتخاب  کنیم؟";
+  section.setAttribute("class", "section");
+  secTitle.setAttribute("class", "sec-title");
+  cardContainer.setAttribute("class", "card-container");
 
-whayTonrowData.forEach((data) => {
-  document.body.appendChild(
-    whyTonrowGenerator(data.title, data.description, data.icon)
-  );
-});
-
-/**
- * Generates a DOM element representing a "Why Tonrow" card.
- * @param {Array} props - An array containing title, description, and icon.
- * @returns {HTMLElement} The generated DOM element representing the "Why Tonrow" card.
- */
-
-export function whyTonrowGenerator(title, description, icon) {
-  const whyTonrow = domGenerator({
-    tag: "div",
-    attributes: { class: "why-tonrow-card" },
-    children: [
-      {
-        tag: "div",
-        attributes: { class: "why-tonrow-container-card" },
-        children: [
-          {
-            tag: "h3",
-            attributes: { class: "why-tonrow-title" },
-            properties: { textContent: title },
-          },
-          {
-            tag: "p",
-            attributes: { class: "why-tonrow-desc" },
-            properties: { textContent: description },
-          },
-        ],
-      },
-      {
-        tag: "img",
-        attributes: { class: "why-tonrow-icon", src: icon },
-      },
-    ],
+  const generateCard = whayTonrowData.forEach((data) => {
+    cardContainer.appendChild(
+      whyTonrowCardGenerator(
+        data.title,
+        data.description,
+        data.icon,
+        data.bgColor
+      )
+    );
   });
 
-  return whyTonrow;
+  document.body.appendChild(section);
+
+  return generateCard;
 }
+
+export { whyTonrowGenerator };

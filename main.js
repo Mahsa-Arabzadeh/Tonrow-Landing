@@ -6,7 +6,9 @@ import handleHeaderError from "./src/components/headerComponent/errorHandler"; /
 import "./src/components/headerComponent/index.scss";
 import "./src/components/mapComponent/index.scss";
 import renderMap from "./src/components/mapComponent/mapComponent";
-import "./src/components/whatDoesTonrowDo/index.js";
+import "./src/components/whatDoesTonrowDo/index";
+import { whyTonrowGenerator } from "./src/components/whyTonrowComponent/whyTonrowComponent";
+
 // Define the default role
 const defaultRole = "public";
 
@@ -18,3 +20,5 @@ handleHeaderError(headerData);
 
 // Render the map
 renderMap();
+
+whyTonrowGenerator();
