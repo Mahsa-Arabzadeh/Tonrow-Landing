@@ -11,5 +11,16 @@ import renderMap from "./src/components/mapComponent/mapComponent.js";
 // Define the default role
 
 const defaultRole = "public";
-renderMap()
+// renderMap()
 
+const buttonOptions = {
+  content: "My Button",
+  backgroundColor: "blue",
+  color: "white",
+  borderRadius: "10px",
+  border: "2px solid red",
+  width:'200px',
+  height:'100px'
+};
+const customButton = baseButtonGenerator(buttonOptions);
+document.body.appendChild(customButton);
