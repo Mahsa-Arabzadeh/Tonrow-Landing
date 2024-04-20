@@ -4,52 +4,62 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
-
-  div {
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  img,
+  p {
+    width: 87%;
+  }
+  .description-body-SEC-whatDoesTonrowDo {
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    h2,
-    p {
-      margin: 0;
-      padding: 0;
-    }
-    img,
-    p {
-      width: 95%;
-    }
+
     h2 {
       font-size: 23px;
+      color: var(--black-color);
     }
     p {
       font-size: 16px;
       text-align: center;
+      color: var(--gray-color);
     }
     button {
       outline: none;
       font-size: 16px;
-      color: #003d95;
+      color: var(--primary-color);
       border: 1.5px solid #dcdcdc;
       padding: 15px;
+      width: 40%;
     }
   }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
   .body-what-services-tonrow {
-    border: 1px #f3f3f3 solid;
-    box-shadow: 0px 8px 34px 1px rgba(114, 125, 135, 0.1);
+    display: flex;
     flex-direction: row;
-    gap: 15px;
     justify-content: center;
     align-items: center;
-    div {
-      width: 50%;
+    margin: 0 50px;
+    border: 1px #f3f3f3 solid;
+    box-shadow: 0px 8px 34px 1px rgba(114, 125, 135, 0.1);
+    gap: 8%;
+    padding: 15px;
+    border-radius: 20px;
+    img {
+      width: 40%;
+    }
+    .description-body-SEC-whatDoesTonrowDo {
+      width: 40%;
       justify-content: end;
       align-items: end;
-
+      gap: 10px;
       p {
         text-align: end;
       }
@@ -57,6 +67,5 @@
   }
   .body-what-services-tonrow:nth-child(even) {
     flex-direction: row-reverse;
-
   }
 }

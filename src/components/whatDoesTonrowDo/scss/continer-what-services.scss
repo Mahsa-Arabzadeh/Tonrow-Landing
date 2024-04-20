@@ -1,12 +1,13 @@
 .what-services-tonrow {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   width: 100%;
   h1 {
     margin: 0 auto;
     font-weight: 600;
     font-size: 20px;
+    color: var(--black-color);
   }
 }
 @media only screen and (min-width: 700px){
