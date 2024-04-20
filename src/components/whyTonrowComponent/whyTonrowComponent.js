@@ -1,41 +1,30 @@
 import { whayTonrowData } from "./data";
 import { whyTonrowCardGenerator } from "./data";
-import domGenerator from "dom-generator";
+import "./index.scss";
 
 function whyTonrowGenerator() {
-  const generateCard = () => {
-    whayTonrowData.forEach((data) => {
+  const section = document.createElement("section");
+  const secTitle = document.createElement("div");
+  const cardContainer = document.createElement("div");
+  section.appendChild(secTitle);
+  section.appendChild(cardContainer);
+  section.setAttribute("class", "section");
+  secTitle.setAttribute("class", "sec-title");
+  cardContainer.setAttribute("class", "card-container");
+  console.log(section);
+
+  const generateCard = whayTonrowData.map((data) => {
+    cardContainer.appendChild(
       whyTonrowCardGenerator(
         data.title,
         data.description,
         data.icon,
         data.bgColor
-      );
-    });
-  };
-
-  const generateComponent = domGenerator({
-    tag: "section",
-    attributes: { class: "section" },
-    children: [
-      {
-        tag: "div",
-        attributes: { class: "sec-title" },
-        properties: { textContent: "چرا  تنرو  را  انتخاب  کنیم؟" },
-      },
-      {
-        tag: "div",
-        attributes: { class: "card-container" },
-        children: [
-          {
-            tag: generateCard,
-          },
-        ],
-      },
-    ],
+      )
+    );
   });
 
-  return generateComponent;
+  return generateCard;
 }
 
 export { whyTonrowGenerator };
