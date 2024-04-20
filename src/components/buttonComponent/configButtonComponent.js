@@ -18,4 +18,4 @@ let buttonsConfig = [
   },
 ];
 
-export default buttonsConfig
+export default buttonsConfig;

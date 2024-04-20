@@ -1,22 +1,24 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
 
-// const whayTonrowData = [
-//   {
-//     title: "به صرفه",
-//     description: "ارزان ترین فروشگاه های ممکن نزدیک به شما ",
-//     icon: "",
-//   },
-//   {
-//     title: "همیشه در دسترس",
-//     description: "پشتیبانی 24 ساعته همکاران ما در تنرو",
-//     icon: "",
-//   },
-// ];
+const whayTonrowData = [
+  {
+    title: "به صرفه",
+    description: "ارزان ترین فروشگاه های ممکن نزدیک به شما ",
+    icon: "../../../public/images/shopping-cart.svg",
+    bgColor: "pink",
+  },
+  {
+    title: "به صرفه",
+    description: "ارزان ترین فروشگاه های ممکن نزدیک به شما ",
+    icon: "../../../public/images/shopping-cart.svg",
+    bgColor: "pink",
+  },
+];
 
 whayTonrowData.forEach((data) => {
   document.body.appendChild(
-    whyTonrowGenerator(data.title, data.description, data.icon)
+    whyTonrowGenerator(data.title, data.description, data.icon, data.bgColor)
   );
 });
 
@@ -26,7 +28,7 @@ whayTonrowData.forEach((data) => {
  * @returns {HTMLElement} The generated DOM element representing the "Why Tonrow" card.
  */
 
-export function whyTonrowGenerator(title, description, icon) {
+export function whyTonrowGenerator(title, description, icon, bgColor) {
   const whyTonrow = domGenerator({
     tag: "div",
     attributes: { class: "why-tonrow-card" },
@@ -48,8 +50,20 @@ export function whyTonrowGenerator(title, description, icon) {
         ],
       },
       {
-        tag: "img",
-        attributes: { class: "why-tonrow-icon", src: icon },
+        tag: "div",
+        attributes: {
+          class: "why-tonrow-div-icon",
+          style: `background-color: ${bgColor}`,
+        },
+        children: [
+          {
+            tag: "img",
+            attributes: {
+              class: "why-tonrow-icon",
+              src: icon,
+            },
+          },
+        ],
       },
     ],
   });
