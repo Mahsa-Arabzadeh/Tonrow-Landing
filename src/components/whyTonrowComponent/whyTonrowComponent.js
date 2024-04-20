@@ -8,12 +8,12 @@ function whyTonrowGenerator() {
   const cardContainer = document.createElement("div");
   section.appendChild(secTitle);
   section.appendChild(cardContainer);
+  secTitle.textContent = "چرا  تنرو  را  انتخاب  کنیم؟";
   section.setAttribute("class", "section");
   secTitle.setAttribute("class", "sec-title");
   cardContainer.setAttribute("class", "card-container");
-  console.log(section);
 
-  const generateCard = whayTonrowData.map((data) => {
+  const generateCard = whayTonrowData.forEach((data) => {
     cardContainer.appendChild(
       whyTonrowCardGenerator(
         data.title,
@@ -23,6 +23,8 @@ function whyTonrowGenerator() {
       )
     );
   });
+
+  document.body.appendChild(section);
 
   return generateCard;
 }
