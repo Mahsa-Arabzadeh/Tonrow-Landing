@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .why-tonrow-card{
     width: 470px;
     height: 123px;
@@ -10,8 +15,37 @@
     border: 1px solid #F5F5F5;
     box-shadow: 0px 8px 34px 0px #E5586014;
     .why-tonrow-container-card{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
         width: 326px;
         height: 66px;
         gap: 12px;
+        .why-tonrow-title{
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .why-tonrow-desc{
+            font-weight: 400;
+            font-size: 14px;
+            color: #353535;
+        }
+    }
+    .why-tonrow-div-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 91px;
+        height: 91px;
+        border-radius: 12px;
+        padding: 12px;
+        gap: 10px;
+        border: 0.5px solid #F2F2F2;
+        box-shadow: 0px 4px 17.5px 0px #00000029;
+        .why-tonrow-icon{
+            width: 48px;
+            height: 48px;
+        }
     }
 }
