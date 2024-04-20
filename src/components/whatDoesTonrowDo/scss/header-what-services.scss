@@ -1,0 +1,28 @@
+.header-what-services-tonrow {
+  display: flex;
+  gap: 7px;
+  margin: 0 auto;
+  width: 87%;
+  justify-content: center;
+  flex-wrap: wrap;
+  .btn-head-SEC-whatDoesTonrowDo {
+    font-size: 17px;
+    background-color: none;
+    border: none;
+    color: var(--gray-color);
+    width: 45%;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+}
+.active-btn-header-what-services-tonrow {
+  color: var(--primary-color) !important;
+  border-bottom: 2.5px solid var(--primary-color) !important;
+}
+
+@media only screen and (min-width: 900px) {
+  .header-what-services-tonrow {
+    display: none;
+  }
+}

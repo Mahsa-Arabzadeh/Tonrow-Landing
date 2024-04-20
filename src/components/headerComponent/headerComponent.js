@@ -1,6 +1,6 @@
+// headerComponent.js
 import domGenerator from "dom-generator";
 import "./index.scss";
-import { safirHeaderData, adminHeaderData, userHeaderData, publicHeaderData } from "./data.js";
 
 export default function header(headerData) {
   const headerGenerator = document.body.appendChild(
@@ -13,35 +13,9 @@ export default function header(headerData) {
           attributes: { class: "header-content" },
           children: [
             {
-              tag: "button",
-              dataAttributes: { id: "register" },
-              properties: { textContent: headerData[0].btnText },
-              eventListeners: {
-                click: () => {},
-              },
-            },
-            {
-              tag: "div",
-              attributes: { class: "flex-container" },
+              tag: "div", // Wrap logo and links in a div
+              attributes: { class: "logo-links-container" },
               children: [
-                {
-                  tag: "nav",
-                  children: [
-                    {
-                      tag: "ul",
-                      children: headerData.map((item) => ({
-                        tag: "li",
-                        children: [
-                          {
-                            tag: "a",
-                            properties: { textContent: item.linkText },
-                            attributes: { href: item.LinkAddress },
-                          },
-                        ],
-                      })),
-                    },
-                  ],
-                },
                 {
                   tag: "a",
                   attributes: {
@@ -58,7 +32,37 @@ export default function header(headerData) {
                     },
                   ],
                 },
+                {
+                  tag: "div",
+                  attributes: { class: "logo-links" },
+                  children: headerData.slice(1).filter(item => !item.btnText).map(item => {
+                    return {
+                      tag: "a",
+                      properties: {
+                        textContent: item.linkText,
+                      },
+                      attributes: {
+                        href: item.LinkAddress || "#",
+                      },
+                    };
+                  }),
+                },
               ],
+            },
+            {
+              tag: "div",
+              attributes: { class: "buttons-container" },
+              children: headerData.filter(item => item.btnText !== undefined).map(item => {
+                return {
+                  tag: "button",
+                  properties: { textContent: item.btnText },
+                  eventListeners: {
+                    click: () => {
+                      // Add button click functionality if needed
+                    },
+                  },
+                };
+              }),
             },
           ],
         },

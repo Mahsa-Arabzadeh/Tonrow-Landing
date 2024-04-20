@@ -4,11 +4,5 @@
 @import "./scss/header-what-services.scss";
 // import body sass
 @import './scss/body-what-services.scss';
-
-
-
-.body-what-services-tonrow{
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
+// import css root
+@import './scss/root.css'

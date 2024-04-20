@@ -1,0 +1,72 @@
+.body-what-services-tonrow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  img,
+  p {
+    width: 87%;
+  }
+  .description-body-SEC-whatDoesTonrowDo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 23px;
+      color: var(--black-color);
+    }
+    p {
+      font-size: 16px;
+      text-align: center;
+      color: var(--gray-color);
+    }
+    button {
+      outline: none;
+      font-size: 16px;
+      color: var(--primary-color);
+      border: 1.5px solid #dcdcdc;
+      padding: 15px;
+      width: 40%;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .body-what-services-tonrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px #f3f3f3 solid;
+    box-shadow: 0px 8px 34px 1px rgba(114, 125, 135, 0.1);
+    gap: 8%;
+    padding: 15px;
+    border-radius: 20px;
+    width: 80%;
+    img {
+      width: 34%;
+    }
+    .description-body-SEC-whatDoesTonrowDo {
+      width: 40%;
+      justify-content: end;
+      align-items: end;
+      gap: 10px;
+      p {
+        text-align: end;
+      }
+    }
+  }
+  .body-what-services-tonrow:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
