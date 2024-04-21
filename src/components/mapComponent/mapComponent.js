@@ -1,4 +1,3 @@
-import "./src/components/mapComponent/index.scss";
 import mapGenerator from "dom-generator";
 
 import createMap from "./map";
@@ -9,7 +8,7 @@ import createMap from "./map";
 /**=======================================================================================================================
  **                                                  mapGenerator
  *?  This MAP Map makes the sequel.This function of taking a series of inputs and outputs makes it more usable.That has a card and photo.
- *@return map
+ *@return map {object}
  *=======================================================================================================================
  **/
 function renderMap() {
@@ -26,5 +25,6 @@ function renderMap() {
   // return map;
   document.body.append(map);
 }
+
 
 export default renderMap;
