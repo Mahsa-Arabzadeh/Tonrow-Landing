@@ -1,18 +1,12 @@
 import domGenerator from "dom-generator";
+import { brandData } from "./data";
 import "./index.scss";
-
-const brandData = [
-  {
-    defaultSrc: "../../public/images/refahDefualt.svg",
-    hoveredSrc: "../../public/images/refahlogo-hoverd.svg",
-  },
-];
 
 function generateBrandTrust() {
   const sectionBrandTrust = document.body.appendChild(
     domGenerator({
       tag: "section",
-      attributes: { class: "section" },
+      attributes: { class: "section-brand" },
       children: [
         {
           tag: "h1",

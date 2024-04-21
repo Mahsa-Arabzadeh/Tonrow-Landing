@@ -14,7 +14,7 @@ function whyTonrowGenerator() {
   section.appendChild(secTitle);
   section.appendChild(cardContainer);
   secTitle.textContent = "چرا  تنرو  را  انتخاب  کنیم؟";
-  section.setAttribute("class", "section");
+  section.setAttribute("class", "section-why");
   secTitle.setAttribute("class", "sec-title");
   cardContainer.setAttribute("class", "card-container");
   // i'll refactor this.---------------------------

@@ -18,4 +18,4 @@ document.body.appendChild(customButton);
 
 generatorDOMWhatDoesTonrowDo();
 
-// brandIconGenerator();
+brandIconGenerator();
