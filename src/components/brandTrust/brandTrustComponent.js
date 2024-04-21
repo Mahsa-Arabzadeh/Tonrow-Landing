@@ -9,8 +9,16 @@ import "./index.scss";
 function brandIconGenerator(defaultSrc, hoveredSrc) {
   const brandGenerator = document.body.appendChild(
     domGenerator({
-      tag: "div",
+      tag: "img",
       attributes: { class: "brand-icon", src: defaultSrc },
+      eventListeners: {
+        mouseover: (e) => {
+          const mouseOver = e.target.setAttribute("src", hoveredSrc);
+        },
+        mouseout: (e) => {
+          const mouseOut = e.target.setAttribute("src", defaultSrc);
+        },
+      },
     })
   );
 
