@@ -1,2 +1,2 @@
-// import domGenerator from "dom-generator";
-// import "./index.scss";
+import domGenerator from "dom-generator";
+import "./index.scss";

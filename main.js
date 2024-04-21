@@ -1,5 +1,4 @@
 import "./src/components/headerComponent/index.scss";
-import "./src/components/whatDoesTonrowDo/index";
 
 import { whyTonrowGenerator } from "./src/components/whyTonrowComponent/whyTonrowComponent";
 import baseButtonGenerator from "./src/components/buttonComponent/buttonComponent";
@@ -10,8 +9,6 @@ import renderMap from "./src/components/mapComponent/mapComponent";
 
 // Define the default role
 const defaultRole = "safir";
-
-
 
 const customButton = baseButtonGenerator(buttonOptions);
 document.body.appendChild(customButton);

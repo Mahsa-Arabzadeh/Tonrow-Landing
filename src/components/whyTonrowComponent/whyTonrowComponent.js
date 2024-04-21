@@ -7,6 +7,7 @@ import "./index.scss";
  * @returns {HTMLElement} The generated section element.
  */
 function whyTonrowGenerator() {
+  // i'll refactor this.---------------------------
   const section = document.createElement("section");
   const secTitle = document.createElement("div");
   const cardContainer = document.createElement("div");
@@ -16,6 +17,7 @@ function whyTonrowGenerator() {
   section.setAttribute("class", "section");
   secTitle.setAttribute("class", "sec-title");
   cardContainer.setAttribute("class", "card-container");
+  // i'll refactor this.---------------------------
 
   //Append cards to the cardContainer to see the cards.
   const generateCard = whayTonrowData.forEach((data) => {
