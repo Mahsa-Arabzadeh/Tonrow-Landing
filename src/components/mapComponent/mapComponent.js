@@ -1,3 +1,4 @@
+import "./src/components/mapComponent/index.scss";
 import mapGenerator from "dom-generator";
 
 import createMap from "./map";
