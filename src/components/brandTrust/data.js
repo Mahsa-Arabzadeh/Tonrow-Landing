@@ -1,12 +1,14 @@
 export const brandData = [
   {
-    defaultSrc: "../../public/images/shield-tick.svg",
+    defaultSrc: "../../public/images/refahDefualt.svg",
+    hoveredSrc: "../../public/images/refahlogo-hoverd.svg",
+  },
+  {
+    defaultSrc: "../../public/images/refahDefualt.svg",
+    hoveredSrc: "../../public/images/refahlogo-hoverd.svg",
+  },
+  {
+    defaultSrc: "../../public/images/refahDefualt.svg",
     hoveredSrc: "../../public/images/refahlogo-hoverd.svg",
   },
 ];
-
-// brandData.forEach((data) => {
-//   document.body.appendChild(
-//     brandIconGenerator(data.defaultSrc, data.hoveredSrc)
-//   );
-// });

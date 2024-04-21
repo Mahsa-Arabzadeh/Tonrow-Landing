@@ -2,22 +2,21 @@ import domGenerator from "dom-generator";
 import "./index.scss";
 
 function generatorDOMWhatDoesTonrowDo() {
-  let conteanerGeneratorWhatDoesTonrowDo = 
-  document.body.append(
-    domGenerator({
-        tag: "section",
-        attributes: { class: "card" },
-        children: [
-          {
-            tag: "button",
-            dataAttributes: { id: "123456789" },
-            properties: { textContent: "DOM-Generator" },
-            eventListeners: { click: () => console.log("Hi!") },
-          },
-        ],
-      })
-  )
+    let conteanerGeneratorWhatDoesTonrowDo =
+        document.body.append(
+            domGenerator({
+                tag: "section",
+                attributes: { class: "what-services-tonrow" },
+                children: [
+                    {
+                        tag: "h1",
+                        properties: { textContent: "تــنــرو، چه خدماتی ارائه میدهد؟" },
+                    },
+                ],
+            })
+          
+        )
 
-  return conteanerGeneratorWhatDoesTonrowDo
+    return conteanerGeneratorWhatDoesTonrowDo
 }
 export default generatorDOMWhatDoesTonrowDo
