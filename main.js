@@ -6,9 +6,12 @@ import buttonOptions from "./src/components/buttonComponent/configButtonComponen
 import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
 import header from "./src/components/headerComponent/headerComponent";
 import renderMap from "./src/components/mapComponent/mapComponent";
+import brandIconGenerator from "./src/components/brandTrust/brandTrustComponent";
 
 // Define the default role
 const defaultRole = "safir";
 
 const customButton = baseButtonGenerator(buttonOptions);
 document.body.appendChild(customButton);
+
+brandIconGenerator();

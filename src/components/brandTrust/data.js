@@ -1,6 +1,12 @@
-const brandData = [
+export const brandData = [
   {
-    defaultSrc: "",
-    hoveredSrc: "",
+    defaultSrc: "../../public/images/shield-tick.svg",
+    hoveredSrc: "../../public/images/refahlogo-hoverd.svg",
   },
 ];
+
+// brandData.forEach((data) => {
+//   document.body.appendChild(
+//     brandIconGenerator(data.defaultSrc, data.hoveredSrc)
+//   );
+// });
