@@ -10,9 +10,11 @@ import brandIconGenerator from "./src/components/brandTrust/brandTrustComponent"
 
 import './src/components/heroBannerComponent/index'
 // import test from "./src/components/whatDoesTonrowDo/index";
+import generatorDOMWhatDoesTonrowDo from "./src/components/whatDoesTonrowDo/index";
 // Define the default role
 const defaultRole = "safir";
 const customButton = baseButtonGenerator(buttonOptions);
 document.body.appendChild(customButton);
-
 brandIconGenerator();
+
+generatorDOMWhatDoesTonrowDo()
