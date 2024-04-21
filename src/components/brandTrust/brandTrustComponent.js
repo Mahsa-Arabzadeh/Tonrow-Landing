@@ -1,12 +1,49 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
 
+const brandData = [
+  {
+    defaultSrc: "../../public/images/refahDefualt.svg",
+    hoveredSrc: "../../public/images/refahlogo-hoverd.svg",
+  },
+];
+
+function generateBrandTrust() {
+  const sectionBrandTrust = document.body.appendChild(
+    domGenerator({
+      tag: "section",
+      attributes: { class: "section" },
+      children: [
+        {
+          tag: "h1",
+          attributes: { class: "sec-title" },
+          properties: { textContent: "چه برند هایی به ما اعتماد کردند؟" },
+        },
+        {
+          tag: "div",
+          attributes: { class: "brand-container" },
+        },
+      ],
+    })
+  );
+
+  const brandContainer = document.querySelector(".brand-container");
+  // append to the container of image items
+  brandData.forEach((data) => {
+    brandContainer.appendChild(
+      brandIconGenerator(data.defaultSrc, data.hoveredSrc)
+    );
+  });
+
+  return sectionBrandTrust;
+}
+
 /**
  * @param {string} - defaultSrc : The default source of images.
  * @param {string} - hoveredSrc : The hovered source of images.
  * @returns {HTMLElement} - this function generate a dom element of brand icons.
  */
-function brandIconGenerator(defaultSrc, hoveredSrc) {
+export function brandIconGenerator(defaultSrc, hoveredSrc) {
   const brandGenerator = document.body.appendChild(
     domGenerator({
       tag: "img",
@@ -25,4 +62,4 @@ function brandIconGenerator(defaultSrc, hoveredSrc) {
   return brandGenerator;
 }
 
-export default brandIconGenerator;
+export default generateBrandTrust;
