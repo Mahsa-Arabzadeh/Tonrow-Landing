@@ -1,8 +1,11 @@
+:root{
+    --gray-color : #353535;
+    --black-color: #1F1F1F;
+    --primary-color: #003D95;
+}
 // import SEC continer code
 @import "./scss/continer-what-services.scss";
 // import header sass
 @import "./scss/header-what-services.scss";
 // import body sass
 @import './scss/body-what-services.scss';
-// import css root
-@import './scss/root.css'

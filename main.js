@@ -7,8 +7,8 @@ import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
 import header from "./src/components/headerComponent/headerComponent";
 import renderMap from "./src/components/mapComponent/mapComponent";
 
+// import test from "./src/components/whatDoesTonrowDo/index";
 // Define the default role
 const defaultRole = "safir";
-
 const customButton = baseButtonGenerator(buttonOptions);
 document.body.appendChild(customButton);
