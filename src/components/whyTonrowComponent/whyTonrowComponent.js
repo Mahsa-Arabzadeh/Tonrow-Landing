@@ -7,15 +7,17 @@ import "./index.scss";
  * @returns {HTMLElement} The generated section element.
  */
 function whyTonrowGenerator() {
+  // i'll refactor this.---------------------------
   const section = document.createElement("section");
   const secTitle = document.createElement("div");
   const cardContainer = document.createElement("div");
   section.appendChild(secTitle);
   section.appendChild(cardContainer);
   secTitle.textContent = "چرا  تنرو  را  انتخاب  کنیم؟";
-  section.setAttribute("class", "section");
+  section.setAttribute("class", "section-why");
   secTitle.setAttribute("class", "sec-title");
   cardContainer.setAttribute("class", "card-container");
+  // i'll refactor this.---------------------------
 
   //Append cards to the cardContainer to see the cards.
   const generateCard = whayTonrowData.forEach((data) => {

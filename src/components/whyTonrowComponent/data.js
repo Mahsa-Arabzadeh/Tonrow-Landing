@@ -4,16 +4,16 @@ import "./index.scss";
 // Data array containing information for "Why Tonrow" cards.
 export const whayTonrowData = [
   {
-    title: "به صرفه",
-    description: "ارزان ترین فروشگاه های ممکن نزدیک به شما ",
-    icon: "../../../public/images/shopping-cart.svg",
-    bgColor: "pink",
-  },
-  {
     title: "همیشه در دسترس",
     description: "پشتیبانی 24 ساعته همکاران ما در تنرو",
     icon: "../../public/images/call-calling.svg",
     bgColor: "purple",
+  },
+  {
+    title: "به صرفه",
+    description: "ارزان ترین فروشگاه های ممکن نزدیک به شما ",
+    icon: "../../../public/images/shopping-cart.svg",
+    bgColor: "pink",
   },
   {
     title: "حداکثر سرعت",

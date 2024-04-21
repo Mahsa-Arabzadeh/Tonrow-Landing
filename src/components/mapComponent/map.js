@@ -1,5 +1,4 @@
 import mapBGGenerator from "dom-generator";
-
 import createBlueCard from "./blueCard";
 
 //* blueCard component

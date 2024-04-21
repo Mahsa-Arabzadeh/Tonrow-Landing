@@ -46,11 +46,10 @@ const safirHeaderData = [
     linkText: "اطلاعیه",
     LinkAddress: "#home",
   },
-  
+
   {
     btnText: "hi",
   },
-
 ];
 
 // Header data for admin role
