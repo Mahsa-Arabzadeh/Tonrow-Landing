@@ -1,0 +1,6 @@
+const brandData = [
+  {
+    defaultSrc: "",
+    hoveredSrc: "",
+  },
+];

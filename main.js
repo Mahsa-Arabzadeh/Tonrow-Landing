@@ -10,7 +10,7 @@ import "./src/components/whatDoesTonrowDo/index";
 import { whyTonrowGenerator } from "./src/components/whyTonrowComponent/whyTonrowComponent";
 
 // Define the default role
-const defaultRole = "public";
+const defaultRole = "safir";
 
 // Get the header data array based on the default role
 const headerData = getHeaderDataByRole(defaultRole);
