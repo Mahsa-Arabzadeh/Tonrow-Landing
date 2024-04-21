@@ -17,5 +17,3 @@ const customButton = baseButtonGenerator(buttonOptions);
 document.body.appendChild(customButton);
 
 generatorDOMWhatDoesTonrowDo();
-
-brandIconGenerator();
