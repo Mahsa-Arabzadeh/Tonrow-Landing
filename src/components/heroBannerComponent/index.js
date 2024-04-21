@@ -11,7 +11,10 @@ const heroGenerator = document.body.appendChild(
             tag: "section",
             attributes: { id: "hero-section" },
             children: [
+                
+                {
 
+                }
 
             ]
 
