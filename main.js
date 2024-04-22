@@ -40,8 +40,8 @@ const buttonOptions = {
 };
 // button
 //! Testing 
-const customButton = baseButtonGenerator(buttonOptions);
-document.body.appendChild(customButton);
+// const customButton = baseButtonGenerator(buttonOptions);
+// document.body.appendChild(customButton);
 
 
 
