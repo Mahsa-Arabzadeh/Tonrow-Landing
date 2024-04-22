@@ -22,25 +22,25 @@ const heroGenerator = document.body.appendChild(
             // logo image
             {
               tag: "img",
-              attributes : {  src : "./public/images/heroBannerImages/Logotype.png"}
+              attributes : { class :"logo-image" ,src : "./public/images/heroBannerImages/Logotype.png"}
             },
 
             // hero image
             {
               tag: "img",
-              attributes : {src : "./public/images/heroBannerImages/hero.png"}
+              attributes : { class: "hero-image" ,src : "./public/images/heroBannerImages/hero.png"}
             },
 
             // shadow image
             {
               tag: "img",
-              attributes : {src : "./public/images/heroBannerImages/shadow.png"}
+              attributes : {class :"shadow-image",src : "./public/images/heroBannerImages/shadow.png"}
             },
 
             // down arrow image
             {
               tag: "img",
-              attributes : {src : "./public/images/heroBannerImages/arrow.svg"}
+              attributes : {class : "downArrow-image"  ,src : "./public/images/heroBannerImages/arrow.svg"}
             },
 
             //  subcard image (mobile)
