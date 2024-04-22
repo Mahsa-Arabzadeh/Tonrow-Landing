@@ -1,9 +1,11 @@
+import "./src/components/motorCycleComponent/index.scss";
 // import "./src/components/headerComponent/index.scss";
 // import "./src/components/heroBannerComponent/index";
 // import "./src/components/mapComponent/index.scss";
 import "./src/components/buttonComponent/index.scss";
 
 // import { whyTonrowGenerator } from "./src/components/whyTonrowComponent/whyTonrowComponent";
+import renderBreakMotor from "./src/components/motorCycleComponent/motorCycleComponent";
 // import baseButtonGenerator from "./src/components/buttonComponent/buttonComponent";
 // import buttonOptions from "./src/components/buttonComponent/configButtonComponent";
 // import generatorDOMWhatDoesTonrowDo from "./src/components/whatDoesTonrowDo/index";
@@ -15,7 +17,7 @@ import "./src/components/buttonComponent/index.scss";
 
 // Define the default role
 
-
+renderBreakMotor()
 
 
 // const defaultRole = "public";
@@ -46,7 +48,7 @@ const buttonOptions = {
 
 
 
-brandIconGenerator();
+// brandIconGenerator();
 
 // generatorDOMWhatDoesTonrowDo();
 
