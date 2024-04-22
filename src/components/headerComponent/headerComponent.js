@@ -1,5 +1,5 @@
-// headerComponent.js
 import domGenerator from "dom-generator";
+import sidebar from "../sideBar/sidebar";
 import "./index.scss";
 
 export default function header(headerData) {
@@ -35,40 +35,47 @@ export default function header(headerData) {
                 {
                   tag: "div",
                   attributes: { class: "logo-links" },
-                  children: headerData.slice(1).filter(item => !item.btnText).map(item => {
-                    return {
-                      tag: "a",
-                      properties: {
-                        textContent: item.linkText,
-                      },
-                      attributes: {
-                        href: item.LinkAddress || "#",
-                      },
-                    };
-                  }),
+                  children: headerData
+                    .slice(1)
+                    .filter((item) => !item.btnText)
+                    .map((item) => {
+                      return {
+                        tag: "a",
+                        properties: {
+                          textContent: item.linkText,
+                        },
+                        attributes: {
+                          href: item.LinkAddress || "#",
+                        },
+                      };
+                    }),
                 },
               ],
             },
             {
               tag: "div",
               attributes: { class: "buttons-container" },
-              children: headerData.filter(item => item.btnText !== undefined).map(item => {
-                return {
-                  tag: "button",
-                  properties: { textContent: item.btnText },
-                  eventListeners: {
-                    click: () => {
-                      // Add button click functionality if needed
+              children: headerData
+                .filter((item) => item.btnText !== undefined)
+                .map((item) => {
+                  return {
+                    tag: "button",
+                    properties: { textContent: item.btnText },
+                    eventListeners: {
+                      click: () => {
+                      },
                     },
-                  },
-                };
-              }),
+                  };
+                }),
             },
           ],
         },
       ],
     })
   );
+  if (window.innerWidth <= 900) {
+    sidebar(headerData);
+  }
 
   return headerGenerator;
 }
