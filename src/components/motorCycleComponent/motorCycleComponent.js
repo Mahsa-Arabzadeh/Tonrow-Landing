@@ -1,4 +1,7 @@
 import domGenerator from "dom-generator";
+import "./index.scss";
+
+import timeLine from "./timline";
 
 function renderBreakMotor() {
   let motor = domGenerator({
@@ -12,7 +15,10 @@ function renderBreakMotor() {
         children: [
           {
             tag: "img",
-            attributes: { src: "./public/images/motorC.svg", id: "motor" },
+            attributes: {
+              src: "./public/images/motorC.svg",
+              id: "motor",
+            },
           },
           {
             tag: "img",
@@ -22,8 +28,9 @@ function renderBreakMotor() {
       },
     ],
   });
-  // return map;
-  document.body.append(motor);
+  // return motor;
+  return motor;
+  timeLine();
 }
 
 export default renderBreakMotor;
