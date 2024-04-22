@@ -13,12 +13,34 @@ const bodyContentWhatDoesTonrowDo = [
       "میتوانید برای سازمان یا منزل شخصی خود فقط با مشخص کردن مبدا و مقصد و ارسال لیست های خرید خود, کارها را با سرعت بیشتری انجام دهید و برای دیگر کار هایتان زمانبخرید.   ",
     btnText: "درخواست خرید",
   },
-];
-bodyContentWhatDoesTonrowDo.forEach((element) => {
-  console.log(element.btnText);
-})
-function generatorDOMWhatDoesTonrowDo() {
+  {
+    headeText: "درخواست سفیر",
+    imgUrl: "public/images/thumbnail-headertext.png",
+    titleBody: "ارسال لیست خرید",
+    pText:
+      "میتوانید برای سازمان یا منزل شخصی خود فقط با مشخص کردن مبدا و مقصد و ارسال لیست های خرید خود, کارها را با سرعت بیشتری انجام دهید و برای دیگر کار هایتان زمانبخرید.   ",
+    btnText: "درخواست خرید",
+  },
   
+];
+
+function generatorHeadWhatDoesTonrowDo() {
+  let contentHeadWhatDoesTonrowDoArray = [];
+
+  bodyContentWhatDoesTonrowDo.forEach((element) => {
+    let contentHeadWhatDoesTonrowDo = {
+      tag: "button",
+      attributes: {
+        class: "btn-head-SEC-whatDoesTonrowDo",
+      },
+      properties: { textContent: element.headeText },
+    };
+    contentHeadWhatDoesTonrowDoArray.push(contentHeadWhatDoesTonrowDo); 
+  });
+
+  return contentHeadWhatDoesTonrowDoArray; 
+}
+function generatorDOMWhatDoesTonrowDo() {
   let conteanerGeneratorWhatDoesTonrowDo = document.body.append(
     domGenerator({
       tag: "section",
@@ -31,21 +53,7 @@ function generatorDOMWhatDoesTonrowDo() {
         {
           tag: "div",
           attributes: { class: "header-what-services-tonrow " },
-          children: [
-            {
-              tag: "button",
-              attributes: {
-                class:
-                  "btn-head-SEC-whatDoesTonrowDo active-btn-header-what-services-tonrow",
-              },
-              properties: { textContent: "درخواست خرید" },
-            },
-            {
-              tag: "button",
-              attributes: { class: "btn-head-SEC-whatDoesTonrowDo" },
-              properties: { textContent: "درخواست سفیر" },
-            },
-          ],
+          children: generatorHeadWhatDoesTonrowDo(),
         },
 
         {
