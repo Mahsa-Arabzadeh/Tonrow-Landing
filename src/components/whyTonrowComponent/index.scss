@@ -162,12 +162,16 @@
     .why-tonrow-card{
         width: 470px;
         height: 123px;
+
         display: flex;
         justify-content: center;
         flex-direction: row;
         align-items: center;
         .why-tonrow-div-icon{
             order: 2;
+        }
+        .why-tonrow-container-card{
+            align-items: flex-end;
         }
     }
 }
