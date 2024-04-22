@@ -44,15 +44,17 @@ const heroGenerator = document.body.appendChild(
             },
 
             //  subcard image (mobile)
-            {
-              tag: "img",
-              attributes : {src : "public/images/heroBannerImages/Subtract-mobile.png"}
-            }
+          
           ]
         },
+         // end of hero banner (all image,icon,shasow in hero section)
+         {
+          tag: "img",
+          attributes : {class : "subcard-image",src : "public/images/heroBannerImages/Subtract-mobile.png"}
+        }
+
       ],
-       // end of hero banner (all image,icon,shasow in hero section)
-  
+      
     }
     // end of hero section
   )
