@@ -1,0 +1,45 @@
+@mixin display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  margin: 0;
+
+  #breakMotor {
+    width: 100vw;
+    height: 108px;
+    @include display();
+  }
+  #animationMotor {
+    width: 89vw;
+    height: 108px;
+    @include display();
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #road {
+    width: 89vw;
+    height: 10px;
+  }
+  #motor {
+    width: 43px;
+    height: 34px;
+    animation-name: move;
+    animation-duration: 10s;
+
+    @keyframes move {
+      0% {
+        transform: translateX(0);
+      }
+
+      20% {
+        transform: translateX(1440px);
+      }
+
+      100% {
+        transform: translateX(1440px);
+      }
+    }
+  }
+}

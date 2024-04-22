@@ -2,6 +2,22 @@ import domGenerator from "dom-generator";
 import { brandData } from "./data";
 import "./index.scss";
 
+export function swiperBrands() {
+  const swiperElement = document.createElement("div");
+  swiperElement.setAttribute("class", "swiper");
+
+  let swiper = new Swiper(".swiper", {
+    slidesPerView: "auto",
+    centeredSlides: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  return swiperElement;
+}
+
 function generateBrandTrust() {
   const sectionBrandTrust = document.body.appendChild(
     domGenerator({
@@ -14,14 +30,19 @@ function generateBrandTrust() {
           properties: { textContent: "چه برند هایی به ما اعتماد کردند؟" },
         },
         {
-          tag: "div",
-          attributes: { class: "brand-container" },
+          tag: swiperBrands(),
+          children: [
+            {
+              tag: "div",
+              attributes: { class: "swiper-wrapper" },
+            },
+          ],
         },
       ],
     })
   );
 
-  const brandContainer = document.querySelector(".brand-container");
+  const brandContainer = document.querySelector(".swiper-wrapper");
   // append to the container of image items
   brandData.forEach((data) => {
     brandContainer.appendChild(
@@ -41,7 +62,7 @@ export function brandIconGenerator(defaultSrc, hoveredSrc) {
   const brandGenerator = document.body.appendChild(
     domGenerator({
       tag: "img",
-      attributes: { class: "brand-icon", src: defaultSrc },
+      attributes: { class: "swiper-slide", src: defaultSrc },
       eventListeners: {
         mouseover: (e) => {
           const mouseOver = e.target.setAttribute("src", hoveredSrc);
@@ -52,6 +73,8 @@ export function brandIconGenerator(defaultSrc, hoveredSrc) {
       },
     })
   );
+
+  swiperBrands();
 
   return brandGenerator;
 }
