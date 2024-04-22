@@ -41,6 +41,12 @@ const heroGenerator = document.body.appendChild(
             {
               tag: "img",
               attributes : {src : "./public/images/heroBannerImages/arrow.svg"}
+            },
+
+            //  subcard image (mobile)
+            {
+              tag: "img",
+              attributes : {src : "public/images/heroBannerImages/Subtract-mobile.png"}
             }
           ]
         },
