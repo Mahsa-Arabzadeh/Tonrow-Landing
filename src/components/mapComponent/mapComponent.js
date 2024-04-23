@@ -1,6 +1,7 @@
 import mapGenerator from "dom-generator";
-import createMap from "./map";
 import "./index.scss";
+
+import createMap from "./map";
 
 //* map component
 
@@ -25,6 +26,7 @@ function renderMap() {
   // return map;
   document.body.append(map);
 }
+
 
 
 export default renderMap;
