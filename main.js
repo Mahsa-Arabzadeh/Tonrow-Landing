@@ -15,6 +15,11 @@ import "./src/components/buttonComponent/index.scss";
 // import header from "./src/components/headerComponent/headerComponent";
 // import renderMap from "./src/components/mapComponent/mapComponent";
 
+// import heroBannerSection from "./src/components/heroBannerComponent/index"
+
+// heroBannerSection()
+
+
 // Define the default role
 
 // renderBreakMotor()
