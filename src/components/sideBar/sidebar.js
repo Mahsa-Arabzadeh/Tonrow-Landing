@@ -10,20 +10,32 @@ export default function sidebar(headerData) {
         {
           tag: "div",
           attributes: { class: "sidebar-content" },
-          children: headerData
-            .slice(1)
-            .filter((item) => !item.btnText)
-            .map((item) => {
-              return {
-                tag: "a",
-                properties: {
-                  textContent: item.linkText,
-                },
-                attributes: {
-                  href: item.LinkAddress || "#",
-                },
-              };
-            }),
+          children: [
+            // Add the logo before the links
+            {
+              tag: "img",
+              attributes: {
+                src: headerData[0].imgAddress, // Using the imgAddress from headerData
+                alt: "Logo",
+                class: "sidebar-logo",
+              },
+            },
+            // Links
+            ...headerData
+              .slice(1)
+              .filter((item) => !item.btnText)
+              .map((item) => {
+                return {
+                  tag: "a",
+                  properties: {
+                    textContent: item.linkText,
+                  },
+                  attributes: {
+                    href: item.LinkAddress || "#",
+                  },
+                };
+              }),
+          ],
         },
       ],
     })

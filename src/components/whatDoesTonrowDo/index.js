@@ -24,29 +24,39 @@ const contentWhatDoesTonrowDo = [
         pText: "فقط کارهای خود را مشخص کنید تا سفیران ما کارها را انجام دهند و دیگر وقت کم نیارید.",
         btnText: "درخواست سفیر",
     },
+
 ];
 
 function generatorHeadWhatDoesTonrowDo() {
     let contentHeadWhatDoesTonrowDoArray = [];
 
-    contentWhatDoesTonrowDo.forEach((element) => {
+    contentWhatDoesTonrowDo.forEach((element, number) => {
         let contentHeadWhatDoesTonrowDo = {
             tag: "button",
             attributes: {
                 class: "btn-head-SEC-whatDoesTonrowDo",
             },
             properties: { textContent: element.headeText },
+            eventListeners: {
+                click: () =>
+                    document.querySelector("*").classList.remove("active-btn-header-what-services-tonrow"),
+            },
+            eventListeners: {
+                click: () =>
+                    document
+                        .querySelector(`.btn-head-SEC-whatDoesTonrowDo:nth-of-type(${number + 1})`)
+                        .classList.add("active-btn-header-what-services-tonrow"),
+            },
         };
         contentHeadWhatDoesTonrowDoArray.push(contentHeadWhatDoesTonrowDo);
     });
 
     return contentHeadWhatDoesTonrowDoArray;
 }
+
 function generatorBodyWhatDoesTonrowDo() {
-    let mmdi
-    let contentbodyWhatDoesTonrowDoObject;
-    contentWhatDoesTonrowDo.forEach((element) => {
-        contentbodyWhatDoesTonrowDoObject = {
+    const contentBodyWhatDoesTonrowDoArray = contentWhatDoesTonrowDo.map((element) => {
+        return {
             tag: "div",
             attributes: { class: "body-what-services-tonrow" },
             children: [
@@ -74,15 +84,14 @@ function generatorBodyWhatDoesTonrowDo() {
                 },
             ],
         };
-        
     });
 
-    return contentbodyWhatDoesTonrowDoObject
+    return contentBodyWhatDoesTonrowDoArray;
 }
 
-
 function generatorDOMWhatDoesTonrowDo() {
-    let conteanerGeneratorWhatDoesTonrowDo = document.body.append(
+    const bodySections = generatorBodyWhatDoesTonrowDo();
+    const containerGeneratorWhatDoesTonrowDo = document.body.append(
         domGenerator({
             tag: "section",
             attributes: { class: "what-services-tonrow" },
@@ -96,11 +105,12 @@ function generatorDOMWhatDoesTonrowDo() {
                     attributes: { class: "header-what-services-tonrow " },
                     children: generatorHeadWhatDoesTonrowDo(),
                 },
-                generatorBodyWhatDoesTonrowDo(),
+                ...bodySections,
             ],
         })
     );
 
-    return conteanerGeneratorWhatDoesTonrowDo;
+    return containerGeneratorWhatDoesTonrowDo;
 }
+
 export default generatorDOMWhatDoesTonrowDo;
