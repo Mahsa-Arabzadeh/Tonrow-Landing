@@ -1,9 +1,18 @@
-// sidebar.scss
 #sidebar {
+    display: none; // Initially hide the sidebar
     background-color: #333;
     color: #fff;
     padding: 20px;
-    width: 0; 
+    width: 250px; // Set the width of the sidebar
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%; // Occupy full height of the viewport
+    overflow-y: auto; // Enable vertical scrolling if content exceeds viewport height
+  
+    &.open {
+      display: block; // Show the sidebar when open
+    }
   
     .sidebar-content {
       display: flex;
@@ -20,5 +29,21 @@
         }
       }
     }
-  }
+}
+
+.sidebar-toggle-icon {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
   
+    &:hover {
+      background-color: #555;
+    }
+}
+

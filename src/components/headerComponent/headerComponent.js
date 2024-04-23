@@ -1,9 +1,16 @@
+// Import domGenerator function
 import domGenerator from "dom-generator";
+
+// Import sidebar function from sidebar.js
 import sidebar from "../sideBar/sidebar";
+
+// Import styles
 import "./index.scss";
 
+// Function to create the header component
 export default function header(headerData) {
-  const headerGenerator = document.body.appendChild(
+  // Create the header element
+  const headerElement = document.body.appendChild(
     domGenerator({
       tag: "header",
       attributes: { id: "header" },
@@ -12,46 +19,62 @@ export default function header(headerData) {
           tag: "div",
           attributes: { class: "header-content" },
           children: [
-            {
-              tag: "div", // Wrap logo and links in a div
-              attributes: { class: "logo-links-container" },
-              children: [
-                {
-                  tag: "a",
-                  attributes: {
-                    href: headerData[0].imgLinkAddress,
-                    class: "logo",
-                  },
+            // Conditional rendering based on window width
+            window.innerWidth > 900
+              ? {
+                  tag: "div",
+                  attributes: { class: "logo-links-container" },
                   children: [
+                    // Logo element
                     {
-                      tag: "img",
+                      tag: "a",
                       attributes: {
-                        src: headerData[0].imgAddress,
-                        alt: "Logo",
+                        href: headerData[0].imgLinkAddress,
+                        class: "logo",
                       },
+                      children: [
+                        {
+                          tag: "img",
+                          attributes: {
+                            src: headerData[0].imgAddress,
+                            alt: "Logo",
+                          },
+                        },
+                      ],
+                    },
+                    // Links
+                    {
+                      tag: "div",
+                      attributes: { class: "logo-links" },
+                      children: headerData
+                        .slice(1)
+                        .filter((item) => !item.btnText)
+                        .map((item) => {
+                          return {
+                            tag: "a",
+                            properties: {
+                              textContent: item.linkText,
+                            },
+                            attributes: {
+                              href: item.LinkAddress || "#",
+                            },
+                          };
+                        }),
                     },
                   ],
-                },
+                }
+              : 
                 {
                   tag: "div",
-                  attributes: { class: "logo-links" },
-                  children: headerData
-                    .slice(1)
-                    .filter((item) => !item.btnText)
-                    .map((item) => {
-                      return {
-                        tag: "a",
-                        properties: {
-                          textContent: item.linkText,
-                        },
-                        attributes: {
-                          href: item.LinkAddress || "#",
-                        },
-                      };
-                    }),
+                  attributes: { class: "sidebar-toggle-icon" }, 
+                  eventListeners: {
+                    click: () => {
+                      const sidebarElement = document.getElementById("sidebar");
+                      sidebarElement.style.display = sidebarElement.style.display === "none" ? "inline-block" : "none";
+                    },
+                  },
                 },
-              ],
-            },
+            // Buttons container
             {
               tag: "div",
               attributes: { class: "buttons-container" },
@@ -63,6 +86,7 @@ export default function header(headerData) {
                     properties: { textContent: item.btnText },
                     eventListeners: {
                       click: () => {
+                        // Add button click functionality if needed
                       },
                     },
                   };
@@ -73,9 +97,11 @@ export default function header(headerData) {
       ],
     })
   );
+
+  // If the window width is less than 900px, create the sidebar
   if (window.innerWidth <= 900) {
     sidebar(headerData);
   }
 
-  return headerGenerator;
+  return headerElement;
 }
