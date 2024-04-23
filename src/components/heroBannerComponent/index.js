@@ -46,7 +46,7 @@ const heroGenerator = document.body.appendChild(
             //  subcard image (mobile)
             {
               tag: "img",
-              attributes : {class : "subcard-image",src : "public/images/heroBannerImages/Subtract-mobile.png"}
+              attributes : {class : "subcard-image",src : "./public/images/heroBannerImages/Subtract-mobile.png"}
             }
           
           ]
@@ -54,6 +54,24 @@ const heroGenerator = document.body.appendChild(
          // end of hero banner (all image,icon,shasow in hero section)
          
 
+        //  start of hero description
+        {
+          tag : "div" ,
+          attributes : {id : "hero-description"},
+          children :[
+            {
+              tag : "h1",
+              attributes : { class : "hero-title"},
+              properties : {textContent : "سامانه تنرو"}
+            },
+            {
+              tag : "span",
+              attributes : {class : "hero-textContent"},
+              properties : {textContent : "دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر"}
+            
+            }
+          ]
+        }
 
       ],
       
