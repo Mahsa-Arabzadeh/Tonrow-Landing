@@ -1,6 +1,6 @@
 import mapBGGenerator from "dom-generator";
 
-import createTooltip from "./tooltipGenerator";
+import createTooltips from "./tooltipGenerator";
 import createBlueCard from "./blueCard";
 
 //* blueCard component
@@ -23,7 +23,7 @@ function createMap() {
           "وظایف سفیران شامل جمع‌آوری سفارشات، تحویل به موقع، ارتباط مؤثر با مشتریان و حفظ کیفیت خدمات است.",
           "درخواست خرید"
         ),
-        tag:'div'
+        tag: "div",
       },
       //* tooltip creator function
       {
@@ -31,21 +31,8 @@ function createMap() {
         attributes: { src: "./public/images/group.png" },
       },
       {
-        tag: createTooltip("span", "tooltips", "دریافت سفارش")
+        tag: createTooltips("div", "tooltips", "This is a tooltip", 5),
       },
-      {
-        tag: createTooltip("span", "tooltips2", "قبول درخواست توسط نزدیک ترین سفیر")
-      },
-      {
-        tag: createTooltip("span", "tooltips3", "تحویل سفارش")
-      },
-      {
-        tag: createTooltip("span", "tooltips4", "درخواست سفیر")
-      },
-      {
-        tag: createTooltip("span", "tooltips5", "حضور در میدا")
-      }
-   
     ],
   });
 
@@ -59,7 +46,7 @@ function createMap() {
    *
    *=============================================**/
   const animationElement = document.getElementById("mapSection");
-  const tooltip1 = document.getElementById("tooltips");
+  const tooltip1 = document.getElementById("tooltips1");
   const tooltip2 = document.getElementById("tooltips2");
   const tooltip3 = document.getElementById("tooltips3");
   const tooltip4 = document.getElementById("tooltips4");
@@ -83,7 +70,7 @@ function createMap() {
       showTooltip(tooltip4, 20, 180); // up 1
     }, 410);
     setTimeout(() => {
-      showTooltip(tooltip5, 740,222); // up 3
+      showTooltip(tooltip5, 740, 222); // up 3
     }, 810);
   });
 
