@@ -1,39 +1,38 @@
 #sidebar {
-    display: none; // Initially hide the sidebar
+    display: none; 
     background-color: #333;
     color: #fff;
     padding: 20px;
-    width: 250px; // Set the width of the sidebar
+    width: 250px; 
     position: fixed;
     top: 0;
     right: 0;
-    height: 100%; // Occupy full height of the viewport
-    overflow-y: auto; // Enable vertical scrolling if content exceeds viewport height
-  
+    height: 100%; 
+
+
     &.open {
-      display: block; // Show the sidebar when open
+        display: block; 
     }
-  
+
     .sidebar-content {
-      display: flex;
-      flex-direction: column;
-  
-      a {
-        color: #fff;
-        text-decoration: none;
-        margin-bottom: 10px;
-        transition: color 0.3s ease;
-  
-        &:hover {
-          color: #ddd;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s ease; 
+
+            &:hover {
+                color: #ddd;
+            }
         }
-      }
     }
 }
 
 .sidebar-toggle-icon {
     background-color: #333;
-    color: #fff;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -41,9 +40,13 @@
     top: 20px;
     right: 20px;
     z-index: 1000;
-  
+
+    img {
+        width: 20px; 
+        height: 20px; 
+    }
+
     &:hover {
-      background-color: #555;
+        background-color: #555;
     }
 }
-

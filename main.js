@@ -1,8 +1,4 @@
 // import "./src/components/motorCycleComponent/index.scss";
-// import "./src/components/headerComponent/index.scss";
-// import "./src/components/headerComponent/index.scss";
-// import "./src/components/buttonComponent/index.scss";
-// import "./src/components/headerComponent/index.scss";
 // import "./src/components/heroBannerComponent/index";
 // import "./src/components/mapComponent/index.scss";
 import rowGenerator from "./src/components/footerComponent/footerComponent";
@@ -19,9 +15,6 @@ import rowGenerator from "./src/components/footerComponent/footerComponent";
 // heroBannerSection()
 // renderBreakMotor()
 
-// const defaultRole = "public";
-
-// const defaultRole = "safir";
 // renderMap()
 
 // const customButton = baseButtonGenerator(buttonOptions);
@@ -53,7 +46,7 @@ import rowGenerator from "./src/components/footerComponent/footerComponent";
 // import header from "./src/components/headerComponent/headerComponent";
 // import "./src/components/headerComponent/index.scss";
 // import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
-// import handleHeaderError from "./src/components/headerComponent/errorHandler"; 
-// const defaultRole = "safir";
+// import handleHeaderError from "./src/components/headerComponent/errorHandler";
+// const defaultRole = "public";
 // const headerData = getHeaderDataByRole(defaultRole);
 // handleHeaderError(headerData);
