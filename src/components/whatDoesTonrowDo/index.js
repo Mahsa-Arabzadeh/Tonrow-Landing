@@ -29,13 +29,21 @@ const contentWhatDoesTonrowDo = [
 function generatorHeadWhatDoesTonrowDo() {
     let contentHeadWhatDoesTonrowDoArray = [];
 
-    contentWhatDoesTonrowDo.forEach((element) => {
+    contentWhatDoesTonrowDo.forEach((element, number) => {
         let contentHeadWhatDoesTonrowDo = {
             tag: "button",
             attributes: {
                 class: "btn-head-SEC-whatDoesTonrowDo",
             },
             properties: { textContent: element.headeText },
+            eventListeners: {
+                click: () =>
+                document.querySelector("*").classList.remove("active-btn-header-what-services-tonrow"),
+            },
+            eventListeners: {
+                click: () =>
+                    document.querySelector(`.btn-head-SEC-whatDoesTonrowDo:nth-of-type(${number + 1})`).classList.add("active-btn-header-what-services-tonrow"),
+            },
         };
         contentHeadWhatDoesTonrowDoArray.push(contentHeadWhatDoesTonrowDo);
     });
@@ -43,7 +51,6 @@ function generatorHeadWhatDoesTonrowDo() {
     return contentHeadWhatDoesTonrowDoArray;
 }
 function generatorBodyWhatDoesTonrowDo() {
-    let mmdi
     let contentbodyWhatDoesTonrowDoObject;
     contentWhatDoesTonrowDo.forEach((element) => {
         contentbodyWhatDoesTonrowDoObject = {
@@ -74,7 +81,7 @@ function generatorBodyWhatDoesTonrowDo() {
                 },
             ],
         };
-        
+
     });
 
     return contentbodyWhatDoesTonrowDoObject
