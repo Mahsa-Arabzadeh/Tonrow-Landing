@@ -1,8 +1,5 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
-// bodyContentWhatDoesTonrowDo.forEach(element => {
-//   console.log("mmdi");
-// },),
 
 const contentWhatDoesTonrowDo = [
     {
