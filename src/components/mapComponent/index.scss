@@ -43,25 +43,29 @@ body {
       //*Engine movement animation on the map screen.
       @keyframes move {
         0% {
-          transform: translateX(1);
+          transform: translateX(0);
         }
 
         50% {
-          transform: translateX(750px) translateY(33px);
+          transform: translateX(620px) translateY(33px);
         }
 
         100% {
-          transform: translateY(33px) translateX(750px);
+          transform: translateY(33px) translateX(620px);
         }
       }
     }
-    #tooltips , #tooltips2 , #tooltips3{
+    #tooltips , #tooltips2 , #tooltips3 , #tooltips4, #tooltips5{
       display: none;
       position: absolute;
-      background-color: #333;
+      background-color: #06489f;
       color: white;
       padding: 5px;
       border-radius: 5px;
+      width: fit-content;
+      height: fit-content;
+      text-align: center;
+
     }
   }
   /**========================================================================
@@ -106,7 +110,7 @@ body {
         height: 56px;
         border-radius: 4px;
         padding: 18px, 8px, 18px, 8px;
-        background-color: #1f4baf;
+        background-color: #034f7e;
         color: white;
       }
     }

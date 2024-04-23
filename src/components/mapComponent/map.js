@@ -23,51 +23,67 @@ function createMap() {
           "وظایف سفیران شامل جمع‌آوری سفارشات، تحویل به موقع، ارتباط مؤثر با مشتریان و حفظ کیفیت خدمات است.",
           "درخواست خرید"
         ),
+        tag:'div'
       },
-      //* tooltip creator function 
+      //* tooltip creator function
       {
         tag: "img",
         attributes: { src: "./public/images/group.png" },
       },
       {
-        tag: createTooltip("span", "tooltips", "hdk[hdak"),
+        tag: createTooltip("span", "tooltips", "دریافت سفارش")
       },
       {
-        tag: createTooltip("span", "tooltips2", "hdk[hdak"),
+        tag: createTooltip("span", "tooltips2", "قبول درخواست توسط نزدیک ترین سفیر")
       },
       {
-        tag: createTooltip("span", "tooltips3", "hdk[hdak"),
+        tag: createTooltip("span", "tooltips3", "تحویل سفارش")
       },
+      {
+        tag: createTooltip("span", "tooltips4", "درخواست سفیر")
+      },
+      {
+        tag: createTooltip("span", "tooltips5", "حضور در میدا")
+      }
+   
     ],
   });
 
   // return mapBackground;
-  document.body.append(mapBackground)
+  document.body.append(mapBackground);
 
   /**==============================================
    * *                  select
-   *   
+   *
    *   select all element on body
-   *   
+   *
    *=============================================**/
   const animationElement = document.getElementById("mapSection");
   const tooltip1 = document.getElementById("tooltips");
   const tooltip2 = document.getElementById("tooltips2");
   const tooltip3 = document.getElementById("tooltips3");
-/**========================================================================
+  const tooltip4 = document.getElementById("tooltips4");
+  const tooltip5 = document.getElementById("tooltips5");
+  /**========================================================================
  **                           tooltip Animation
  *?  During a specified period of time, it shows each tooltip in the specified location and then cleanses.
 
  *========================================================================**/
   animationElement.addEventListener("animationstart", () => {
     setTimeout(() => {
-      showTooltip(tooltip1, 745, 339); // Show tooltip1 after 1 second at x: 100, y: 50
+      showTooltip(tooltip1, 698, 390); // down 1
     }, 410);
     setTimeout(() => {
-      showTooltip(tooltip2, 745, 450); // Show tooltip1 after 1 second at x: 100, y: 50
-    },610);
+      showTooltip(tooltip2, 300, 280); // up 2
+    }, 610);
     setTimeout(() => {
-      showTooltip(tooltip3, 600, 520); // Show tooltip1 after 1 second at x: 100, y: 50
+      showTooltip(tooltip3, 680, 510); // down 2
+    }, 810);
+    setTimeout(() => {
+      showTooltip(tooltip4, 20, 180); // up 1
+    }, 410);
+    setTimeout(() => {
+      showTooltip(tooltip5, 740,222); // up 3
     }, 810);
   });
 

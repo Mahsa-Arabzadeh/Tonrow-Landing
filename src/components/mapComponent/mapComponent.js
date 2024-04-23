@@ -20,7 +20,7 @@ function renderMap() {
     children: [
       {
         tag: createMap(),
-      },
+      }
     ],
   });
   // return map;
