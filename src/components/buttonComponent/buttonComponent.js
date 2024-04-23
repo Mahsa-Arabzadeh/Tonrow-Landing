@@ -12,14 +12,17 @@ import buttonsConfig from "./configButtonComponent";
 function baseButtonGenerator(buttonOptions) {
   let button = domGenerator({
     tag: "button",
-    attributes: { id: "baseButton" },
   });
 
   // Set the content of the button
-  button.textContent = buttonOptions.content;
+  // button.textContent = buttonOptions.content;
+  // button.textContent = buttonOptions.content ?? "button";
 
   // Set the type of the button
-  button.type = buttonOptions.type;
+  // button.type = buttonOptions.type;
+  // button.type = buttonOptions.type ?? "default";
+
+  const { content = "button", type = "default" } = buttonOptions;
 
   // Set the size of the button
   button.classList.add(`btn-${buttonOptions.size}`);
