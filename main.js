@@ -1,14 +1,3 @@
-import {
-// Define the default role
-// heroBannerSection()
-// renderBreakMotor()
-
-
-
-
-
-
-// const defaultRole = "public";
 // import "./src/components/motorCycleComponent/index.scss";
 // import "./src/components/headerComponent/index.scss";
 // import "./src/components/headerComponent/index.scss";
@@ -33,6 +22,18 @@ import {
 // import header from "./src/components/headerComponent/headerComponent";
 // import renderMap from "./src/components/mapComponent/mapComponent";
 
+// Define the default role
+// heroBannerSection()
+// renderBreakMotor()
+
+
+
+
+
+
+// const defaultRole = "public";
+
+
 // const defaultRole = "safir";
 // renderMap()
 
@@ -42,17 +43,17 @@ import {
 
 // const defaultRole = "safir";
 //! Testing
-const buttonOptions = {
-  content: "My Button",
-  size: "large",
-  type: "button",
-  attributes: {
-    class: "btn-primary",
-  },
-  dataattributes: {
-    main: "primer",
-  },
-};
+// const buttonOptions = {
+//   content: "My Button",
+//   size: "large",
+//   type: "button",
+//   attributes: {
+//     class: "btn-primary",
+//   },
+//   dataattributes: {
+//     main: "primer",
+//   },
+// };
 // button
 //! Testing
 // const customButton = baseButtonGenerator(buttonOptions);
