@@ -1,3 +1,22 @@
+// mixin for media query:
+@mixin queryIf($width){
+    @if ($width == 360){
+        @media (max-width: 360px){
+            @content
+        }
+    }
+        @else if($width == 361){
+        @media (min-width: 361px) {
+            @content
+        }
+    }
+        @else if($width == 600){
+        @media (min-width: 600px) {
+            @content
+        }
+    }
+}
+
 .swiper-slide{
     display: flex;
     justify-content: center;
@@ -7,8 +26,13 @@
     cursor: pointer;
     object-fit: cover;
 }
+// swiper styles:
+.swiper {
+    max-width: 100%;
+  }
 
 .section-brand{
+    max-width: 300vh;
     height: 200px;
     padding: 0px 13px 0px 13px;
     display: flex;
@@ -23,13 +47,58 @@
         text-align: center;
     }
     .swiper-wrapper{
-        height: 132px;
         width: 100%;
         display: flex;
     }
 }
 
-// swiper styles:
-.swiper {
-    width: 1280px;
-  }
+
+@include queryIf(360){
+    .section-brand{
+        .sec-title{
+            font-size: 20px;
+        }
+    }
+    .section-brand{
+        height: 190px;
+        .swiper-wrapper{
+            .swiper-slide{
+                width: 120px;
+                height: 60px;
+            }
+        }
+    }
+
+}
+@include queryIf(361){
+    .section-brand{
+        .sec-title{
+            font-size: 20px;
+        }
+    }
+    .section-brand{
+        height: 190px;
+        .swiper-wrapper{
+            .swiper-slide{
+                width: 120px;
+                height: 60px;
+            }
+        }
+    }
+}
+@include queryIf(600){
+    .section-brand{
+        .sec-title{
+            font-size: 40px;
+        }
+    }
+    .section-brand{
+        height: 200px;
+        .swiper-wrapper{
+            .swiper-slide{
+                width: 264px;
+                height: 135px;
+            }
+        }
+    }
+}

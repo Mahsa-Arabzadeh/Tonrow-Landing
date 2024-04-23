@@ -19,13 +19,10 @@ import "./src/components/buttonComponent/index.scss";
 
 // renderBreakMotor()
 
-
 // const defaultRole = "public";
-
 
 // const customButton = baseButtonGenerator(buttonOptions);
 // document.body.appendChild(customButton);
-
 
 // const defaultRole = "safir";
 
@@ -41,14 +38,9 @@ const buttonOptions = {
   },
 };
 // button
-//! Testing 
+//! Testing
 // const customButton = baseButtonGenerator(buttonOptions);
 // document.body.appendChild(customButton);
-
-
-
-
-// brandIconGenerator();
 
 // generatorDOMWhatDoesTonrowDo();
 
@@ -58,7 +50,7 @@ const buttonOptions = {
 // import header from "./src/components/headerComponent/headerComponent";
 // import "./src/components/headerComponent/index.scss";
 // import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
-// import handleHeaderError from "./src/components/headerComponent/errorHandler"; 
+// import handleHeaderError from "./src/components/headerComponent/errorHandler";
 // const defaultRole = "safir";
 // const headerData = getHeaderDataByRole(defaultRole);
 // handleHeaderError(headerData);
