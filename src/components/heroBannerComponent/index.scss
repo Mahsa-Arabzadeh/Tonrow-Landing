@@ -1,13 +1,13 @@
 // hero section (mobile version)
 #hero-section{
-    width: 98%;
+    width: 95%;
     height: 350px;
     margin: 0 auto;
     margin-top: 5% ;
-    // background-color: aquamarine;
     max-width: 600px;
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
+    padding-top:7%;
 }
 
 #hero-banner {
@@ -30,6 +30,7 @@
 
 .hero-image{
     left: 10%;
+    top: -10%;
     z-index: 2;
 }
 
@@ -41,6 +42,8 @@
 
 .downArrow-image{
     background-color: rgb(0, 11, 21);
+    bottom: 20%;
+    left: 20%;
 }
 
 .subcard-image{
@@ -48,6 +51,48 @@
  max-width: 600px;
  position: absolute;
  z-index: 4;
- bottom: -50px;
-//  left: -5%;
+ bottom: -7%;
+ left: -5%;
+ padding-bottom: 5px;
+ max-width: 700px;
 }
+
+
+
+@media screen and (min-width: 440px) {
+    
+    .hero-image{
+        left: 17%;
+    }
+    .subcard-image{
+        bottom: -10%;
+        width: 110%;
+    }
+
+
+}
+
+@media screen and (min-width: 455px) {
+    .subcard-image{
+        bottom: -11%;
+    }
+  }
+
+
+
+@media screen and (min-width : 500px) {
+    .subcard-image{
+        bottom: -13%;
+    }
+}
+
+@media screen and (min-width : 550px) {
+
+    .hero-image{
+
+    }
+    .subcard-image{
+        bottom: -15%;
+    }
+}
+
