@@ -5,6 +5,7 @@
 // import "./src/components/headerComponent/index.scss";
 // import "./src/components/heroBannerComponent/index";
 // import "./src/components/mapComponent/index.scss";
+import rowGenerator from "./src/components/footerComponent/footerComponent";
 
 // import { whyTonrowGenerator } from "./src/components/whyTonrowComponent/whyTonrowComponent";
 // import renderBreakMotor from "./src/components/motorCycleComponent/motorCycleComponent";
@@ -26,17 +27,10 @@
 // heroBannerSection()
 // renderBreakMotor()
 
-
-
-
-
-
 // const defaultRole = "public";
-
 
 // const defaultRole = "safir";
 // renderMap()
-
 
 // const customButton = baseButtonGenerator(buttonOptions);
 // document.body.appendChild(customButton);
@@ -69,3 +63,5 @@
 
 // const headerData = getHeaderDataByRole(defaultRole);
 // handleHeaderError(headerData);
+
+rowGenerator();
