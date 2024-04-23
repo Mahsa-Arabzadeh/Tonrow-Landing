@@ -1,8 +1,14 @@
 const buttonOptions = {
   content: "My Button",
-  backgroundColor: "blue",
-  color: "white",
-  borderWidth: "10px",
+  size: "large",
+  type: "button",
+  attributes: {
+    class: "btn-primary",
+  },
+  dataattributes: {
+    main: "primer",
+  },
 };
+
 
 export default buttonOptions;

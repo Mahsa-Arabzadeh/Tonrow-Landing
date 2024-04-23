@@ -1,15 +1,30 @@
 import domGenerator from "dom-generator";
 
-function createTooltip(tagName, idName, text) {
-  let tooltip = domGenerator({
-    tag: tagName,
-    //* imageMap: background section of map
-    attributes: { id: idName},
-    dataAttributes: { data: "123456789" },
-    properties: { textContent: text },
-  });
+class Tooltip {
+  constructor(tagName, idName, text) {
+    this.tagName = tagName;
+    this.idName = idName;
+    this.text = text;
+  }
 
-  return tooltip;
+  generate() {
+    return domGenerator({
+      tag: this.tagName,
+      attributes: { id: this.idName },
+      dataAttributes: { data: "123456789" },
+      properties: { textContent: this.text },
+    });
+  }
 }
 
-export default createTooltip
+function createTooltips(tagName, idPrefix, text, count) {
+  let tooltips = [];
+  for (let i = 1; i <= count; i++) {
+    let id = idPrefix + i;
+    let tooltip = new Tooltip(tagName, id, text);
+    tooltips.push(tooltip.generate());
+  }
+  return tooltips;
+}
+
+export default createTooltips

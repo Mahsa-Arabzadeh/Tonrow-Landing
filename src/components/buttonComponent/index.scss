@@ -1,6 +1,33 @@
+//* test button 
+
 .btn-primary {
-    width: 250px;
-    height: 65px;
-    background-color: peru;
-    color: white;
+  width: 250px;
+  height: 65px;
+  background-color: peru;
+  color: white;
+}
+
+/**========================================================================
+ * !                              buttons
+ *   The sizes and specifications of each button are announced in Discord.
+ *========================================================================**/
+.larg {
+  width: 236px;
+  height: 69px;
+  border-radius: 8px;
+}
+.medium {
+    width: 192px;
+    height: 56px;
+    border-radius: 4px;
+}
+.small {
+    width: 172px;
+    height: 43px;
+    border-radius: 4px;
+}
+.extraSmall{
+    width: 68px;
+    height: 60px;
+    border-radius: 4px;
 }
