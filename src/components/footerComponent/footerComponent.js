@@ -2,7 +2,6 @@ import domGenerator from "dom-generator";
 import "./index.scss";
 
 /**
- *
  * @param {rowTitle} rowTitle
  * @returns {HTMLElement}
  */
