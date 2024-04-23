@@ -14,7 +14,14 @@ const contentWhatDoesTonrowDo = [
         headeText: "درخواست سفیر",
         imgUrl: "public/images/thumbnail-headertext1.png",
         titleBody: "درخواست سفیر",
-        pText:"فقط کارهای خود را مشخص کنید تا سفیران ما کارها را انجام دهند و دیگر وقت کم نیارید.",
+        pText: "فقط کارهای خود را مشخص کنید تا سفیران ما کارها را انجام دهند و دیگر وقت کم نیارید.",
+        btnText: "درخواست سفیر",
+    },
+    {
+        headeText: "درخواست سفیر",
+        imgUrl: "public/images/thumbnail-headertext1.png",
+        titleBody: "درخواست سفیر",
+        pText: "فقط کارهای خود را مشخص کنید تا سفیران ما کارها را انجام دهند و دیگر وقت کم نیارید.",
         btnText: "درخواست سفیر",
     },
 ];
@@ -36,41 +43,43 @@ function generatorHeadWhatDoesTonrowDo() {
     return contentHeadWhatDoesTonrowDoArray;
 }
 function generatorBodyWhatDoesTonrowDo() {
-    let contentbodyWhatDoesTonrowDoArray = [];
-
+    let mmdi
+    let contentbodyWhatDoesTonrowDoObject;
     contentWhatDoesTonrowDo.forEach((element) => {
-        contentbodyWhatDoesTonrowDoArray.push({
-            tag: "img",
-            attributes: { src: element.imgUrl },
-        });
-
-        contentbodyWhatDoesTonrowDoArray.push({
+        contentbodyWhatDoesTonrowDoObject = {
             tag: "div",
-            attributes: { class: "description-body-SEC-whatDoesTonrowDo" },
+            attributes: { class: "body-what-services-tonrow" },
             children: [
                 {
-                    tag: "h2",
-                    properties: { textContent: element.titleBody },
+                    tag: "img",
+                    attributes: { src: element.imgUrl },
                 },
-
                 {
-                    tag: "p",
-                    properties: {
-                        textContent:
-                           element.pText,
-                    },
-                },
-
-                {
-                    tag: "button",
-                    properties: { textContent: element.btnText },
+                    tag: "div",
+                    attributes: { class: "description-body-SEC-whatDoesTonrowDo" },
+                    children: [
+                        {
+                            tag: "h2",
+                            properties: { textContent: element.titleBody },
+                        },
+                        {
+                            tag: "p",
+                            properties: { textContent: element.pText },
+                        },
+                        {
+                            tag: "button",
+                            properties: { textContent: element.btnText },
+                        },
+                    ],
                 },
             ],
-        });
+        };
+        
     });
 
-    return contentbodyWhatDoesTonrowDoArray;
+    return contentbodyWhatDoesTonrowDoObject
 }
+
 
 function generatorDOMWhatDoesTonrowDo() {
     let conteanerGeneratorWhatDoesTonrowDo = document.body.append(
@@ -87,12 +96,7 @@ function generatorDOMWhatDoesTonrowDo() {
                     attributes: { class: "header-what-services-tonrow " },
                     children: generatorHeadWhatDoesTonrowDo(),
                 },
-
-                {
-                    tag: "div",
-                    attributes: { class: "body-what-services-tonrow" },
-                    children: generatorBodyWhatDoesTonrowDo(),
-                },
+                generatorBodyWhatDoesTonrowDo(),
             ],
         })
     );
