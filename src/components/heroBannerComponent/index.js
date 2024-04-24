@@ -3,7 +3,10 @@ import "./index.scss"
 import "./responsive.scss"
 
 
-
+let descriptionData = {
+  heroTitle :  "سامانه تنرو",
+  textContent : 'دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر'
+}
 
 
 export default function heroBannerSection() {
@@ -75,12 +78,12 @@ const heroGenerator = document.body.appendChild(
             {
               tag : "h1",
               attributes : { class : "hero-title"},
-              properties : {textContent : "سامانه تنرو"}
+              properties : {textContent : descriptionData.heroTitle}
             },
             {
               tag : "span",
               attributes : {class : "hero-textContent"},
-              properties : {textContent : "دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر"}
+              properties : {textContent : descriptionData.textContent}
             
             }
           ]
