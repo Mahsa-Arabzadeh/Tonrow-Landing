@@ -37,21 +37,22 @@ function generatorHeadWhatDoesTonrowDo() {
                 class: "btn-head-SEC-whatDoesTonrowDo",
             },
             properties: { textContent: element.headeText },
-            eventListeners: {
-                click: () =>
-                    document.querySelector("*").classList.remove("active-btn-header-what-services-tonrow"),
-            },
-            eventListeners: {
-                click: () =>
-                    document
-                        .querySelector(`.btn-head-SEC-whatDoesTonrowDo:nth-of-type(${number + 1})`)
-                        .classList.add("active-btn-header-what-services-tonrow"),
-            },
-        };
+
+            eventListeners: { click: () => clickChangeBody(number) },
+        }
         contentHeadWhatDoesTonrowDoArray.push(contentHeadWhatDoesTonrowDo);
     });
 
     return contentHeadWhatDoesTonrowDoArray;
+}
+
+function clickChangeBody(index) {
+    let btns = document.querySelectorAll("button")
+    btns.forEach(btn => {
+        btn.classList.remove("active-btn-header-what-services-tonrow");
+    });
+
+    document.querySelector(`.btn-head-SEC-whatDoesTonrowDo:nth-of-type(${index + 1})`).classList.add("active-btn-header-what-services-tonrow")
 }
 
 function generatorBodyWhatDoesTonrowDo() {
