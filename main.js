@@ -49,6 +49,6 @@
 // import "./src/components/headerComponent/index.scss";
 // import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
 // import handleHeaderError from "./src/components/headerComponent/errorHandler";
-// const defaultRole = "public";
+// const defaultRole = "user";
 // const headerData = getHeaderDataByRole(defaultRole);
 // handleHeaderError(headerData);

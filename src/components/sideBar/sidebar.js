@@ -3,6 +3,7 @@ import domGenerator from "dom-generator";
 
 // Import styles
 import "./sidebar.scss";
+
 // Function to create the sidebar
 export default function sidebar(headerData, defaultRole) {
   // Create the sidebar element
@@ -22,6 +23,11 @@ export default function sidebar(headerData, defaultRole) {
                 src: headerData[0].imgAddress,
                 alt: "Logo",
               },
+            },
+            // Line under the logo
+            {
+              tag: "div",
+              attributes: { class: "line" },
             },
           ],
         },

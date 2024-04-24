@@ -1,52 +1,77 @@
 #sidebar {
-    display: none; 
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    width: 250px; 
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%; 
+  display: none;
+  background-color: #fbfcff;
+  color: #bcbdbf;
+  padding: 20px;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 96%;
+  border-radius: 10px 0px 0px 10px;
 
+  &.open {
+    display: block;
+  }
 
-    &.open {
-        display: block; 
+  .sidebar-logo {
+    margin: 34% 0% 20% 55%; // Set the desired margin
+    width: 80%; // Set the width of the sidebar logo container
+    position: relative; // Make it a positioned element
+
+    .line {
+      position: absolute;
+      top: 41px;
+      left: -109px;
+      width: 100%;
+      height: 2px;
+      background-color: #e3eaf4;
+    }
+  }
+
+  .additional-links {
+    text-align: right;
+    margin-right: 31px;
+   
+  }
+  .additional-links a{
+    text-decoration: none;
+    color: #e2725b;
+  }
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 65px;
+    align-items: flex-end;
+    margin-right: 30px;
+
+    a {
+      color: #bcbdbf;
+      text-decoration: none;
+      margin-bottom: 10px; // Adjust margin bottom for spacing between links
+      transition: color 0.3s ease;
+
     }
 
-    .sidebar-content {
-        display: flex;
-        flex-direction: column;
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            margin-bottom: 10px;
-            transition: color 0.3s ease; 
-
-            &:hover {
-                color: #ddd;
-            }
-        }
+    // Add padding between each link
+    a + a {
+      padding-top: 10px; // Adjust padding top for spacing between links
     }
+  }
 }
 
 .sidebar-toggle-icon {
-    background-color: #333;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+  background-color: #333;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 0;
 
-    img {
-        width: 20px; 
-        height: 20px; 
-    }
-
-    &:hover {
-        background-color: #555;
-    }
+  img {
+    width: 20px;
+    height: 20px;
+  }
 }
