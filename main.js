@@ -15,7 +15,6 @@
 
 // const defaultRole = "safir";
 
-
 // Define the default role
 // heroBannerSection()
 // renderBreakMotor()
@@ -29,16 +28,15 @@
 //! Testing
 /**========================================================================
  * todo                             BUTTON
- *   The style of each button is imported to the page as an object. 
+ *   The style of each button is imported to the page as an object.
  *   And it can be added to the page as two lines below.
- *   
  *
- *========================================================================**/ 
+ *
+ *========================================================================**/
 
 // const customButton = baseButtonGenerator(buttonOptions);
 // document.body.appendChild(customButton);
 //! Testing
-
 
 // generatorDOMWhatDoesTonrowDo();
 
