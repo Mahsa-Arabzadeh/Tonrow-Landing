@@ -1,0 +1,54 @@
+
+@media screen and (min-width: 370px) and (max-width: 440px) {
+    
+    .hero-image{
+        left: 10%;
+    }
+  }
+
+@media screen and (min-width: 440px) {
+    
+    .hero-image{
+        left: 15%;
+    }
+
+    .downArrow-image{
+        bottom: 13%;
+    }
+    .subcard-image{
+        bottom: -9%;
+        width: 110%;
+    }
+
+
+}
+
+@media screen and (min-width: 455px) {
+    .subcard-image{
+        bottom: -10%;
+    }
+  }
+
+
+
+@media screen and (min-width : 500px) {
+   
+    .downArrow-image{
+        bottom: 12%;
+    }
+    
+    .subcard-image{
+        bottom: -12%;
+    }
+}
+
+@media screen and (min-width : 550px) {
+
+
+    .hero-image{
+        left: 25%;
+    }
+    .subcard-image{
+        bottom: -14%;
+    }
+}
