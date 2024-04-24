@@ -1,12 +1,33 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
 
+const rowTitle = [
+  {
+    rowTitle: "سفیر",
+    obj: {
+      textElement: [
+        {
+          text: "fjdj",
+        },
+        {
+          text: "fjdj",
+        },
+      ],
+    },
+  },
+];
+
+rowTitle.map((title) => {
+  rowGenerator(title.rowTitle, title.obj.textElement);
+});
+
 /**
- * @param {rowTitle} rowTitle
+ * @param {string} rowTitle
+ * @param {Array} textElements
  * @returns {HTMLElement}
  */
-function rowGenerator(rowTitle) {
-  const rowElement = {
+export function rowGenerator(rowTitle, textElements) {
+  const rowElement = domGenerator({
     tag: "div",
     attributes: { class: "row-footer" },
     children: [
@@ -18,12 +39,14 @@ function rowGenerator(rowTitle) {
       {
         tag: "div",
         attributes: { class: "text-container" },
-        children: [],
+        children: textElements.map((textObj) => ({
+          tag: "div",
+          attributes: { class: "text-element" },
+          properties: { textContent: textObj.text },
+        })),
       },
     ],
-  };
+  });
 
   return rowElement;
 }
-
-export default rowGenerator;

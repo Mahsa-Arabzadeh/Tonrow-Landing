@@ -1,0 +1,100 @@
+
+@media screen and (min-width: 370px) and (max-width: 440px) {
+    
+    .hero-image{
+        left: 10%;
+    }
+  }
+
+@media screen and (min-width: 440px) {
+    
+    .hero-image{
+        left: 15%;
+    }
+
+    .downArrow-image{
+        bottom: 13%;
+    }
+    .subcard-image{
+        bottom: -9%;
+        width: 110%;
+    }
+
+    #hero-description .hero-textContent{
+        font-size: 20px;
+        // background-color: #000;
+    }
+
+}
+
+@media screen and (min-width: 455px) {
+    
+    .subcard-image{
+        bottom: -10%;
+    }
+  }
+
+
+
+@media screen and (min-width : 500px) {
+   
+    .downArrow-image{
+        bottom: 12%;
+    }
+    
+    .subcard-image{
+        bottom: -12%;
+    }
+}
+
+@media screen and (min-width : 550px) {
+
+
+    .hero-image{
+        left: 25%;
+    }
+    .subcard-image{
+        bottom: -14%;
+    }
+}
+// -------------------------------
+// desktop
+
+@media screen and (min-width : 650px) {
+
+    #hero-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // overflow: hidden;
+        width: 80%;
+    }
+    .subcard-image{
+        display: none;
+    }
+    .subcard-image-desktop {
+        display: block;
+    }
+    .subcard-desktop-container{
+        display: block;
+    }
+    .downArrow-image{
+        display: none;
+    }
+
+
+
+    #herobBanner-Container{
+        width: 50%;
+    }
+    .hero-image{
+        left: unset;
+        // right: 10%;
+    }
+
+    #hero-description{
+        width: 50%;
+        margin-top: 10%;
+    }
+    
+}

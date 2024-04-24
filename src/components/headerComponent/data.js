@@ -19,7 +19,9 @@ const publicHeaderData = [
     linkText: "خانه",
     LinkAddress: "#home",
   },
+
 ];
+
 // Header data for safir role
 const safirHeaderData = [
   {
@@ -33,7 +35,6 @@ const safirHeaderData = [
     linkText: "خانه",
     LinkAddress: "#home",
   },
-
   {
     linkText: "درخواست ها",
     LinkAddress: "#home",
@@ -46,7 +47,6 @@ const safirHeaderData = [
     linkText: "اطلاعیه",
     LinkAddress: "#home",
   },
-
   {
     btnText: "hi",
   },
@@ -65,7 +65,6 @@ const adminHeaderData = [
     linkText: "خانه",
     LinkAddress: "#home",
   },
-
   {
     linkText: "داشبورد",
     LinkAddress: "#home",
@@ -82,10 +81,12 @@ const adminHeaderData = [
     linkText: "لیست جابجایی ها",
     LinkAddress: "#home",
   },
-
+  // Additional links for less than 900 pixels
   {
-    btnText: "hi",
+    linkText: "Link for Safir",
+    LinkAddress: "#safir-link",
   },
+
 ];
 
 // Header data for user role
@@ -101,7 +102,6 @@ const userHeaderData = [
     linkText: "خانه",
     LinkAddress: "#home",
   },
-
   {
     linkText: "درخواست خرید",
     LinkAddress: "#home",
