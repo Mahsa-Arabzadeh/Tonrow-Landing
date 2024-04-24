@@ -6,8 +6,12 @@
     margin-top: 5% ;
     max-width: 600px;
     position: relative;
+}
+
+#herobBanner-Container {
+    height: 100%;
+    padding-top: 7%;
     overflow: hidden;
-    padding-top:7%;
 }
 
 #hero-banner {
@@ -17,6 +21,7 @@
     width: 100%;
     margin: 0 auto;
     border-radius: 40px;
+    margin: 0 auto;
 }
 
 #hero-banner > img {
@@ -56,8 +61,15 @@
  padding-bottom: 5px;
  max-width: 700px;
 }
+// ---------------------
+// end of heroBanner
 
+// ---------------------
+// start of heroDescription
 
-
-
-
+// #hero-description{
+//     width: 100%;
+//     // height: 500px;
+//     background-color: rgb(42, 216, 216);
+//     border: 5px solid #000;
+// }
