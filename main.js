@@ -9,7 +9,6 @@
 // import buttonOptions from "./src/components/buttonComponent/configButtonComponent";
 // import brandIconGenerator from "./src/components/brandTrust/brandTrustComponent";
 // import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
-// import rowGenerator from "./src/components/footerComponent/footerComponent";
 // import header from "./src/components/headerComponent/headerComponent";
 // import renderMap from "./src/components/mapComponent/mapComponent";
 
