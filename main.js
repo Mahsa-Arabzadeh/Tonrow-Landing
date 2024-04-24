@@ -9,12 +9,10 @@
 // import buttonOptions from "./src/components/buttonComponent/configButtonComponent";
 // import brandIconGenerator from "./src/components/brandTrust/brandTrustComponent";
 // import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
-// import rowGenerator from "./src/components/footerComponent/footerComponent";
 // import header from "./src/components/headerComponent/headerComponent";
 // import renderMap from "./src/components/mapComponent/mapComponent";
 
 // const defaultRole = "safir";
-
 
 // Define the default role
 // heroBannerSection()
@@ -29,16 +27,15 @@
 //! Testing
 /**========================================================================
  * todo                             BUTTON
- *   The style of each button is imported to the page as an object. 
+ *   The style of each button is imported to the page as an object.
  *   And it can be added to the page as two lines below.
- *   
  *
- *========================================================================**/ 
+ *
+ *========================================================================**/
 
 // const customButton = baseButtonGenerator(buttonOptions);
 // document.body.appendChild(customButton);
 //! Testing
-
 
 // generatorDOMWhatDoesTonrowDo();
 

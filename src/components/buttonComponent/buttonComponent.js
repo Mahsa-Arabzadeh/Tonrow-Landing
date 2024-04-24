@@ -1,5 +1,5 @@
 import domGenerator from "dom-generator";
-
+import "./index.scss";
 import buttonsConfig from "./configButtonComponent";
 
 /**=======================================================================================================================
@@ -70,4 +70,3 @@ function baseButtonGenerator(buttonOptions) {
 }
 
 export default baseButtonGenerator;
-
