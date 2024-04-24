@@ -16,6 +16,7 @@
     height: 100%;
     width: 100%;
     margin: 0 auto;
+    border-radius: 40px;
 }
 
 #hero-banner > img {
@@ -23,13 +24,13 @@
 }
 
 .logo-image{
-    right: 0;
+    right: 7%;
     top: -5%;
     // z-index: 1;
 }
 
 .hero-image{
-    left: 10%;
+    // left: 3%;
     top: -10%;
     z-index: 2;
 }
@@ -41,7 +42,6 @@
 }
 
 .downArrow-image{
-    // background-color: rgb(0, 11, 21);
     bottom: 13%;
     left: 45%;
     z-index: 5;
@@ -59,17 +59,26 @@
 
 
 
+
+
+@media screen and (min-width: 370px) and (max-width: 440px) {
+    
+    .hero-image{
+        left: 10%;
+    }
+  }
+
 @media screen and (min-width: 440px) {
     
     .hero-image{
-        left: 17%;
+        left: 15%;
     }
 
     .downArrow-image{
         bottom: 13%;
     }
     .subcard-image{
-        bottom: -10%;
+        bottom: -9%;
         width: 110%;
     }
 
