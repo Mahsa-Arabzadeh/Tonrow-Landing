@@ -51,8 +51,13 @@ function clickChangeBody(index) {
     btns.forEach(btn => {
         btn.classList.remove("active-btn-header-what-services-tonrow");
     });
-
     document.querySelector(`.btn-head-SEC-whatDoesTonrowDo:nth-of-type(${index + 1})`).classList.add("active-btn-header-what-services-tonrow")
+
+    let bodyItmswhatDoesTonrowDo = document.querySelectorAll(".body-what-services-tonrow")
+    bodyItmswhatDoesTonrowDo.forEach(element => {
+        element.style.display = "none";
+    });
+    document.querySelector(`.body-what-services-tonrow:nth-of-type(${index+2})`).style.display = "flex";
 }
 
 function generatorBodyWhatDoesTonrowDo() {
