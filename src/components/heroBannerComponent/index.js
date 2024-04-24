@@ -1,6 +1,6 @@
 import domGenerator from "dom-generator";
-import "./index.scss";
-import "./responsive.scss";
+import "./index.scss"
+import "./responsive.scss"
 
 
 
@@ -14,6 +14,13 @@ const heroGenerator = document.body.appendChild(
       tag: "section",
       attributes: { id: "hero-section" },
       children: [
+
+      {
+        tag : "div",
+        attributes: { id: "herobBanner-Container"},
+        children : [
+          
+
         // start of hero banner (all image,icon,shasow in hero section)
         {
           tag: "div",
@@ -51,7 +58,12 @@ const heroGenerator = document.body.appendChild(
             }
           
           ]
-        },
+        }
+        ]
+      },
+
+
+
          // end of hero banner (all image,icon,shasow in hero section)
          
 
@@ -75,7 +87,7 @@ const heroGenerator = document.body.appendChild(
         }
 
       ],
-      
+      // end of hero section children
     }
     // end of hero section
   )
