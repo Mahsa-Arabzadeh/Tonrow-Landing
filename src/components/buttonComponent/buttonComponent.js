@@ -25,7 +25,7 @@ function baseButtonGenerator(buttonOptions) {
   const { content = "button", type = "default" } = buttonOptions;
 
   // Set the size of the button
-  button.classList.add(`btn-${buttonOptions.size}`);
+  button.classList.add(buttonOptions.size);
 
   // Disable the button if necessary
   if (buttonOptions.disabled) {

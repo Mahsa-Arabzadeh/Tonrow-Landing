@@ -1,14 +1,13 @@
 const buttonOptions = {
   content: "My Button",
-  size: "large",
+  size: "small",
   type: "button",
   attributes: {
-    class: "btn-primary",
+    id: "btn-primary",
   },
   dataattributes: {
     main: "primer",
   },
 };
-
 
 export default buttonOptions;
