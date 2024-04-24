@@ -1,3 +1,6 @@
+import baseButtonGenerator from "../buttonComponent/buttonComponent";
+import buttonOptions from "../buttonComponent/configButtonComponent";
+
 // Import domGenerator function
 import domGenerator from "dom-generator";
 
@@ -63,14 +66,16 @@ export default function header(headerData) {
                     },
                   ],
                 }
-              : 
-                {
+              : {
                   tag: "div",
-                  attributes: { class: "sidebar-toggle-icon" }, 
+                  attributes: { class: "sidebar-toggle-icon" },
                   eventListeners: {
                     click: () => {
                       const sidebarElement = document.getElementById("sidebar");
-                      sidebarElement.style.display = sidebarElement.style.display === "none" ? "inline-block" : "none";
+                      sidebarElement.style.display =
+                        sidebarElement.style.display === "none"
+                          ? "inline-block"
+                          : "none";
                     },
                   },
                 },
@@ -82,7 +87,7 @@ export default function header(headerData) {
                 .filter((item) => item.btnText !== undefined)
                 .map((item) => {
                   return {
-                    tag: "button",
+                    tag: baseButtonGenerator(buttonOptions),
                     properties: { textContent: item.btnText },
                     eventListeners: {
                       click: () => {

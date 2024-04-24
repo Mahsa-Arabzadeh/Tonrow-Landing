@@ -19,7 +19,6 @@ const publicHeaderData = [
     linkText: "خانه",
     LinkAddress: "#home",
   },
-
 ];
 
 // Header data for safir role
@@ -86,7 +85,6 @@ const adminHeaderData = [
     linkText: "Link for Safir",
     LinkAddress: "#safir-link",
   },
-
 ];
 
 // Header data for user role

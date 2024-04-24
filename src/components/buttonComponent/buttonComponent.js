@@ -1,6 +1,5 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
-import buttonsConfig from "./configButtonComponent";
 
 /**=======================================================================================================================
  **                                                 baseButtonGenerator
@@ -15,12 +14,12 @@ function baseButtonGenerator(buttonOptions) {
   });
 
   // Set the content of the button
-  // button.textContent = buttonOptions.content;
-  // button.textContent = buttonOptions.content ?? "button";
+  button.textContent = buttonOptions.content;
+  button.textContent = buttonOptions.content ?? "button";
 
   // Set the type of the button
-  // button.type = buttonOptions.type;
-  // button.type = buttonOptions.type ?? "default";
+  button.type = buttonOptions.type;
+  button.type = buttonOptions.type ?? "default";
 
   const { content = "button", type = "default" } = buttonOptions;
 
