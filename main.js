@@ -8,10 +8,10 @@
 // import baseButtonGenerator from "./src/components/buttonComponent/buttonComponent";
 // import buttonOptions from "./src/components/buttonComponent/configButtonComponent";
 // import brandIconGenerator from "./src/components/brandTrust/brandTrustComponent";
-// import { rowGenerator } from "./src/components/footerComponent/footerComponent";
+import { rowGenerator } from "./src/components/footerComponent/footerComponent";
 // import renderMap from "./src/components/mapComponent/mapComponent";
 
-// rowGenerator();
+rowGenerator();
 
 // heroBannerSection()
 // renderBreakMotor()
@@ -44,5 +44,3 @@
 // const defaultRole = "user";
 // const headerData = getHeaderDataByRole(defaultRole);
 // handleHeaderError(headerData);
-
-
