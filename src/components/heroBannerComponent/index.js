@@ -84,7 +84,6 @@ export default function heroBannerSection() {
                 tag: "span",
                 attributes: { class: "hero-textContent" },
                 properties: { textContent: descriptionData.textContent }
-
               },
 
             ]
@@ -120,6 +119,11 @@ export default function heroBannerSection() {
 
                 ]
               },
+
+              {
+                tag : "img",
+                attributes : { class : "subcard-downBtn" , src : "./public/images/heroBannerImages/downBtn.png"},
+              }
              
 
             ]
