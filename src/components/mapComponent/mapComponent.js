@@ -1,7 +1,7 @@
 import mapGenerator from "dom-generator";
 import "./index.scss";
 
-import tooltipsAnimation from "./tooltipsAnimation";
+import animationTooltips from "./tooltipAnimation";
 import createMap from "./map";
 
 //* map component
@@ -27,17 +27,8 @@ function renderMap() {
   // return map;
   document.body.append(map);
   //* Using IntersectionObserver, it manages the animation of tooltips.
-  tooltipsAnimation();
 
-  const elements = document.querySelectorAll(".tooltips");
-
-  elements.forEach((element, index) => {
-    element.style.animation = `animated 1s ease-out ${(index + 1) * 0.5}s`;
-
-    element.addEventListener("animationend", () => {
-      element.style.display = "flex";
-    });
-  });
+  animationTooltips();
 }
 
 export default renderMap;
