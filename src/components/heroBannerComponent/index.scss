@@ -4,12 +4,8 @@
     height: 350px;
     margin: 0 auto;
     margin-top: 5% ;
-    max-width: 600px;
     position: relative;
-    max-width: 1300px;
-    // overflow: hidden;
-    // margin: 0 10%;
-    // display: flex;
+    max-width: 1280px;
 }
 
 
@@ -64,7 +60,7 @@
  bottom: -6%;
  left: -5%;
  padding-bottom: 5px;
- max-width: 700px;
+ max-width: 900px;
 }
 // ---------------------
 // end of heroBanner
@@ -73,7 +69,7 @@
 // start of heroDescription
 
 #hero-description{
-    width: 100%;
+    // width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -101,12 +97,10 @@
 .subcard-desktop-container{
     position: absolute;
     width: 120%;
-    max-width: 1100px;
-    height: 40%;
-    bottom: -20%;
+    max-width: 1280px;
+    height: 100%;
+    max-height: 10px;
     z-index: 7;
-    // background-color: aqua;
-
 }
 
 .subcard-desktop-container > * {
@@ -124,6 +118,6 @@
     margin: 10px;
     background-color: aliceblue;
     gap: 10px;
-    right: 5%;
-    top: 15%;
+    right: 10%;
+    top: 600%;
 }

@@ -1,3 +1,11 @@
+@keyframes moveSidebar {
+  0% {
+    right: -100px;
+  }
+  100% {
+    right: 0px;
+  }
+}
 #sidebar {
   display: none;
   background-color: #fbfcff;
@@ -10,7 +18,7 @@
   height: 96%;
   border-radius: 10px 0px 0px 10px;
   overflow-x: hidden; /* Hide overflow to prevent horizontal scrollbar */
-  transition: all 0.3s ease; /* Smooth transition for width */
+  animation: 0.7s moveSidebar;
   z-index: 3;
 
   &.open {

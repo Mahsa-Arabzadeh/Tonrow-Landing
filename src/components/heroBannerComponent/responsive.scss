@@ -46,8 +46,14 @@
         bottom: -12%;
     }
 }
+@media screen and (min-width : 500px) {
+   
+.hero-image{
+    left: 20%;
+}
+}
 
-@media screen and (min-width : 550px) {
+@media screen and (min-width : 600px) {
 
 
     .hero-image{
@@ -57,44 +63,81 @@
         bottom: -14%;
     }
 }
+
+@media screen and (min-width : 650px) {
+    .subcard-image{
+        bottom: -18%;
+     }
+}
+
+@media screen and (min-width : 700px) {
+ .subcard-image{
+    bottom: -21%;
+ }
+}
+
+@media screen and (min-width : 750px) {
+ .subcard-image{
+    bottom: -23.5%;
+ }
+ .hero-image{
+    left: 28%;
+ }
+
+}
+@media screen and (min-width : 800px) {
+ .subcard-image{
+    bottom: -26%;
+ }
+}
+@media screen and (min-width : 850px) {
+ .subcard-image{
+    bottom: -28%;
+ }
+}
+
 // -------------------------------
 // desktop
 
-@media screen and (min-width : 650px) {
+@media screen and (min-width : 900px) {
 
     #hero-section{
         display: flex;
         align-items: center;
         justify-content: center;
-        // overflow: hidden;
         width: 80%;
+        height: 370px;
+        // background-color: aquamarine;
+        gap: 15%;
+    }
+    #herobBanner-Container{
+        width: 100%;
+        max-width: 350px;
+    }
+    #hero-description{
+        width: 30%;
+        // margin-right: 5%;
     }
     .subcard-image{
         display: none;
     }
     .subcard-image-desktop {
         display: block;
+        
     }
     .subcard-desktop-container{
-        display: block;
+        display: flex;
+        bottom: 20%;
+        // position: absolute;
     }
     .downArrow-image{
         display: none;
     }
 
-
-
-    #herobBanner-Container{
-        width: 50%;
-    }
     .hero-image{
         left: unset;
-        // right: 10%;
+        // width: 100%;
+        top: -10%;
+        left: 5%;
     }
-
-    #hero-description{
-        width: 50%;
-        margin-top: 10%;
-    }
-    
 }
