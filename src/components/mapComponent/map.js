@@ -43,6 +43,7 @@ function createMap() {
     ],
   });
   return mapBackground;
+
 }
 
 export default createMap;

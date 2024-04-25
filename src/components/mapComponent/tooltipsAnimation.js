@@ -1,3 +1,5 @@
+//* Using IntersectionObserver, it manages the animation of tooltips.
+
 function tooltipsAnimation() {
   const targets = document.querySelectorAll(".tooltips");
 

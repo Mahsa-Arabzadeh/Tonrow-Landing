@@ -18,7 +18,7 @@
 // import header from "./src/components/headerComponent/headerComponent";
 // import header from "./src/components/headerComponent/headerComponent";
 // import header from "./src/components/headerComponent/headerComponent";
-// import renderMap from "./src/components/mapComponent/mapComponent";
+import renderMap from "./src/components/mapComponent/mapComponent";
 
 // rowGenerator();
 // const defaultRole = "safir";
@@ -27,7 +27,7 @@
 // heroBannerSection()
 // renderBreakMotor()
 
-// renderMap()
+renderMap()
 
 // const customButton = baseButtonGenerator(buttonOptions);
 // document.body.appendChild(customButton);
