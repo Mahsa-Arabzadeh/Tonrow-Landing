@@ -43,38 +43,57 @@ export default function sidebar(headerData, defaultRole) {
           ],
         },
         // Additional link container
-        defaultRole !== "public" ? {
-          tag: "div",
-          attributes: { class: "additional-links" },
-          children: [
-            // Static additional link for logout
-            {
-              tag: "a",
-              properties: { textContent: "خروج از حساب" },
-              attributes: { href: "#logout" },
-            },
-          ],
-        } : null,
+        defaultRole !== "public"
+          ? {
+              tag: "div",
+              attributes: { class: "additional-links" },
+              children: [
+                // Static additional link for logout
+                {
+                  tag: "a",
+                  properties: { textContent: "خروج از حساب" },
+                  attributes: { href: "#logout" },
+                },
+              ],
+            }
+          : null,
       ].filter((child) => child !== null), // Remove null elements from children array
     })
   );
 
-  // Close sidebar when clicking outside of it
+  // Create overlay div
+  const overlayDiv = document.body.appendChild(
+    domGenerator({
+      tag: "div",
+      attributes: { class: "overlay" },
+    })
+  );
+
+  // Toggle sidebar and overlay visibility
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("open");
+    overlayDiv.style.display = sidebar.classList.contains("open") ? "block" : "none";
+  }
+
+  // Close sidebar and overlay
+  function closeSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.remove("open");
+    overlayDiv.style.display = "none";
+  }
+
+  // Event listener to toggle sidebar
+  document.querySelector(".sidebar-toggle-icon").addEventListener("click", toggleSidebar);
+
+  // Event listener to close sidebar and overlay when clicking outside of them
   document.addEventListener("click", (event) => {
     const sidebar = document.getElementById("sidebar");
     const sidebarToggleIcon = document.querySelector(".sidebar-toggle-icon");
-    if (sidebar && !sidebar.contains(event.target) && !sidebarToggleIcon.contains(event.target)) {
-      sidebar.style.display = "none";
+    if (!sidebar.contains(event.target) && !sidebarToggleIcon.contains(event.target)) {
+      closeSidebar();
     }
   });
-
-  // Hide additional-links if defaultRole is "public"
-  if (defaultRole === "public") {
-    const additionalLinksContainer = sidebarGenerator.querySelector(".additional-links");
-    if (additionalLinksContainer) {
-      additionalLinksContainer.style.display = "none";
-    }
-  }
 
   return sidebarGenerator;
 }

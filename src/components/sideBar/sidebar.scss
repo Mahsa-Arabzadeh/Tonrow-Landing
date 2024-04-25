@@ -11,10 +11,10 @@
   border-radius: 10px 0px 0px 10px;
   overflow-x: hidden; /* Hide overflow to prevent horizontal scrollbar */
   transition: all 0.3s ease; /* Smooth transition for width */
+  z-index: 3;
 
   &.open {
     display: block; /* Show when open */
-    
   }
 
   .sidebar-logo {
@@ -72,5 +72,17 @@
   img {
     width: 20px;
     height: 20px;
-  } 
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background
+  backdrop-filter: blur(5px); // Blur effect
+  z-index: 2; // Ensure overlay appears above other content
 }
