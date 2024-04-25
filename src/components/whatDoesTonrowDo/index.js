@@ -17,14 +17,6 @@ const contentWhatDoesTonrowDo = [
         pText: "فقط کارهای خود را مشخص کنید تا سفیران ما کارها را انجام دهند و دیگر وقت کم نیارید.",
         btnText: "درخواست سفیر",
     },
-    {
-        headeText: "درخواست سفیر",
-        imgUrl: "public/images/thumbnail-headertext1.png",
-        titleBody: "درخواست سفیر",
-        pText: "فقط کارهای خود را مشخص کنید تا سفیران ما کارها را انجام دهند و دیگر وقت کم نیارید.",
-        btnText: "درخواست سفیر",
-    },
-
 ];
 
 function generatorHeadWhatDoesTonrowDo() {
