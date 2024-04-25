@@ -59,7 +59,7 @@ export default function header(headerData) {
                               textContent: item.linkText,
                             },
                             attributes: {
-                              href: item.LinkAddress || "#",
+                              href: item.LinkAddress ?? "#",
                             },
                           };
                         }),

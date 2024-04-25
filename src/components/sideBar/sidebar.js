@@ -38,7 +38,7 @@ export default function sidebar(headerData, defaultRole) {
             ...headerData.slice(1).map((item) => ({
               tag: "a",
               properties: { textContent: item.linkText },
-              attributes: { href: item.LinkAddress || "#" },
+              attributes: { href: item.LinkAddress ?? "#" },
             })),
           ],
         },
