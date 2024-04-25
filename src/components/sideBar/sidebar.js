@@ -61,26 +61,27 @@ export default function sidebar(headerData, defaultRole) {
     })
   );
 
-  // Create overlay div
-  const overlayDiv = document.body.appendChild(
+   // Create overlay div
+   const overlayDiv = document.body.appendChild(
     domGenerator({
       tag: "div",
       attributes: { class: "overlay" },
     })
   );
 
+  // Function to check if the sidebar is open
+  function isSidebarOpen() {
+    const sidebar = document.getElementById("sidebar");
+    return sidebar.classList.contains("open");
+  }
+
   // Toggle sidebar and overlay visibility
   function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
+    const isOpen = isSidebarOpen();
+    sidebar.style.display = isOpen ? "none" : "block";
+    overlayDiv.style.display = isOpen ? "none" : "block";
     sidebar.classList.toggle("open");
-    overlayDiv.style.display = sidebar.classList.contains("open") ? "block" : "none";
-  }
-
-  // Close sidebar and overlay
-  function closeSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    sidebar.classList.remove("open");
-    overlayDiv.style.display = "none";
   }
 
   // Event listener to toggle sidebar
@@ -90,8 +91,10 @@ export default function sidebar(headerData, defaultRole) {
   document.addEventListener("click", (event) => {
     const sidebar = document.getElementById("sidebar");
     const sidebarToggleIcon = document.querySelector(".sidebar-toggle-icon");
-    if (!sidebar.contains(event.target) && !sidebarToggleIcon.contains(event.target)) {
-      closeSidebar();
+    if (!sidebar.contains(event.target) && !sidebarToggleIcon.contains(event.target) && isSidebarOpen()) {
+      sidebar.style.display = "none";
+      overlayDiv.style.display = "none";
+      sidebar.classList.remove("open");
     }
   });
 
