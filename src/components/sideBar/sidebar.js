@@ -46,29 +46,18 @@ export default function sidebar(headerData, defaultRole) {
         defaultRole !== "public" ? {
           tag: "div",
           attributes: { class: "additional-links" },
+          children: [
+            // Static additional link for logout
+            {
+              tag: "a",
+              properties: { textContent: "خروج از حساب" },
+              attributes: { href: "#logout" },
+            },
+          ],
         } : null,
       ].filter((child) => child !== null), // Remove null elements from children array
     })
   );
-
-  // Function to render additional link
-  function renderAdditionalLink(linkData) {
-    const additionalLink = domGenerator({
-      tag: "a",
-      properties: { textContent: linkData.linkText },
-      attributes: { href: linkData.LinkAddress || "#" },
-    });
-
-    sidebarGenerator.querySelector(".additional-links").appendChild(additionalLink);
-  }
-
-  // Check if there's an additional link to render based on default role
-  if (defaultRole !== "public") {
-    const additionalLink = headerData.slice(1).find((item) => item.linkText !== undefined && item.LinkAddress !== undefined);
-    if (additionalLink) {
-      renderAdditionalLink(additionalLink);
-    }
-  }
 
   // Close sidebar when clicking outside of it
   document.addEventListener("click", (event) => {

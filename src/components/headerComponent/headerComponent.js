@@ -1,3 +1,6 @@
+import baseButtonGenerator from "../buttonComponent/buttonComponent";
+import buttonOptions from "../buttonComponent/configButtonComponent";
+
 // Import domGenerator function
 import domGenerator from "dom-generator";
 
@@ -63,16 +66,29 @@ export default function header(headerData) {
                     },
                   ],
                 }
-              : 
-                {
+              : {
                   tag: "div",
-                  attributes: { class: "sidebar-toggle-icon" }, 
-                  eventListeners: {
-                    click: () => {
-                      const sidebarElement = document.getElementById("sidebar");
-                      sidebarElement.style.display = sidebarElement.style.display === "none" ? "inline-block" : "none";
+                  attributes: { class: "sidebar-toggle-icon" },
+                  children: [
+                    // Add image for sidebar toggle
+                    {
+                      tag: "img",
+                      attributes: {
+                        src: "./public/images/menu.png", // Replace with the path to your sidebar icon
+                        alt: "Open Sidebar",
+                        class: "sidebar-icon",
+                      },
+                      eventListeners: {
+                        click: () => {
+                          const sidebarElement = document.getElementById("sidebar");
+                          sidebarElement.style.display =
+                            sidebarElement.style.display === "none"
+                              ? "inline-block"
+                              : "none";
+                        },
+                      },
                     },
-                  },
+                  ],
                 },
             // Buttons container
             {
@@ -81,8 +97,16 @@ export default function header(headerData) {
               children: headerData
                 .filter((item) => item.btnText !== undefined)
                 .map((item) => {
+                  const buttonOptionsCopy = { ...buttonOptions }; // Make a copy of buttonOptions object
+                  if (item.buttonStyles) {
+                    // If buttonStyles property exists, apply styles
+                    const { buttonStyles } = item;
+                    Object.keys(buttonStyles).forEach((style) => {
+                      buttonOptionsCopy[style] = buttonStyles[style];
+                    });
+                  }
                   return {
-                    tag: "button",
+                    tag: baseButtonGenerator(buttonOptionsCopy),
                     properties: { textContent: item.btnText },
                     eventListeners: {
                       click: () => {

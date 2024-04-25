@@ -4,7 +4,7 @@ import "./index.scss";
 const rowTitle = [
   {
     rowTitle: "سفیر",
-    obj: {
+    rowLinksText: {
       textElement: [
         {
           text: "fjdj",
@@ -18,7 +18,7 @@ const rowTitle = [
 ];
 
 rowTitle.map((title) => {
-  rowGenerator(title.rowTitle, title.obj.textElement);
+  rowGenerator(title.rowTitle, title.rowLinksText.textElement);
 });
 
 /**
@@ -27,26 +27,30 @@ rowTitle.map((title) => {
  * @returns {HTMLElement}
  */
 export function rowGenerator(rowTitle, textElements) {
-  const rowElement = domGenerator({
+  const textChildren = textElements.map((textObj) => ({
     tag: "div",
-    attributes: { class: "row-footer" },
-    children: [
-      {
-        tag: "h3",
-        attributes: { class: "row-title" },
-        properties: { textContent: rowTitle },
-      },
-      {
-        tag: "div",
-        attributes: { class: "text-container" },
-        children: textElements.map((textObj) => ({
+    attributes: { class: "text-element" },
+    properties: { textContent: textObj.text },
+  }));
+
+  const rowElement = document.body.appendChild(
+    domGenerator({
+      tag: "div",
+      attributes: { class: "row-footer" },
+      children: [
+        {
+          tag: "h3",
+          attributes: { class: "row-title" },
+          properties: { textContent: rowTitle },
+        },
+        {
           tag: "div",
-          attributes: { class: "text-element" },
-          properties: { textContent: textObj.text },
-        })),
-      },
-    ],
-  });
+          attributes: { class: "text-container" },
+          children: textChildren,
+        },
+      ],
+    })
+  );
 
   return rowElement;
 }
