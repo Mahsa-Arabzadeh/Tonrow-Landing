@@ -1,6 +1,6 @@
 const buttonOptions = {
-  content: 'fvfvaw',
-  size: "larg",
+  content: 'درخواست خرید',
+  size: "extraLarg",
   type: "button",
   attributes: {
     id: "btn-primary",

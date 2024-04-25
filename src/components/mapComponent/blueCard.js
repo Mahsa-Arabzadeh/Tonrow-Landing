@@ -1,5 +1,8 @@
 import cardGenerator from "dom-generator";
 
+import buttonOptions from "../buttonComponent/configButtonComponent";
+import baseButtonGenerator from "../buttonComponent/buttonComponent";
+
 /**================================================================================================
  **                                      createBlueCard
  *?  This section is responsible for creating the blue card component in the map section.This card contains a title and description and a button that is made in this part.The texts are given as input to the function so that it can be changed.
@@ -31,9 +34,9 @@ function createBlueCard(title, description, textButton) {
             },
           },
           {
-            tag: "button",
-            attributes: { class: "sellButton" },
-            properties: { textContent: textButton },
+            tag: baseButtonGenerator(buttonOptions),
+            // attributes: { class: "sellButton" },
+            // properties: { textContent: textButton },
           },
         ],
       },

@@ -171,13 +171,11 @@ body {
     }
 
     //* CTA button on description section
-    button {
-      width: 264px;
-      height: 56px;
-      border-radius: 4px;
+    #btn-primary {
+      outline: none;
       padding: 18px, 8px, 18px, 8px;
-      background-color: #034f7e;
-      color: white;
+      border: none;
+      background-color: #1f4baf;
     }
   }
 }
