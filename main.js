@@ -10,15 +10,17 @@
 // import brandIconGenerator from "./src/components/brandTrust/brandTrustComponent";
 // import { rowGenerator } from "./src/components/footerComponent/footerComponent";
 // import { getHeaderDataByRole } from "./src/components/headerComponent/validate";
+// import { rowGenerator } from "./src/components/footerComponent/footerComponent";
 // import handleHeaderError from "./src/components/headerComponent/errorHandler";
-import renderMap from "./src/components/mapComponent/mapComponent";
+// import renderMap from "./src/components/mapComponent/mapComponent";
+// import renderMap from "./src/components/mapComponent/mapComponent";
 
 // rowGenerator();
 
 // heroBannerSection()
 // renderBreakMotor()
 
-renderMap()
+// renderMap()
 
 // const customButton = baseButtonGenerator(buttonOptions);
 // document.body.appendChild(customButton);
@@ -44,5 +46,3 @@ renderMap()
 // const defaultRole = "user";
 // const headerData = getHeaderDataByRole(defaultRole);
 // handleHeaderError(headerData);
-
-
