@@ -71,10 +71,7 @@ body {
     // text-align: center;
     // }
 
-
-
     .tooltips {
-      display: none;
       position: absolute;
       background-color: #06489f;
       color: white;
@@ -82,22 +79,25 @@ body {
       border-radius: 5px;
       width: fit-content;
       height: fit-content;
-      text-align: center;
-
-      &:nth-child(1) {
-        animation-name: animated;
-        animation-duration: 5s;
-        animation-delay: 5s;
+      // opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      &:nth-child(6) {
         left: 20px;
         top: 180px;
+        animation-name: animated;
+        animation-duration: 5s;
+        animation-delay: 2s;
 
         @keyframes animated {
-          50% {
-            display: flex;
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
           }
         }
       }
-      &:nth-child(2) {
+      &:nth-child(7) {
         animation-name: animated;
         animation-duration: 5s;
         animation-delay: 8s;
@@ -113,13 +113,13 @@ body {
       &:nth-child(3) {
         animation-name: animated;
         animation-duration: 5s;
-        animation-delay: 11s;
+        animation-delay: 2s;
         left: 740px;
         top: 222px;
 
         @keyframes animated {
           50% {
-            display: flex;
+            display: flex !important;
           }
         }
       }
@@ -139,13 +139,13 @@ body {
       &:nth-child(5) {
         animation-name: animated;
         animation-duration: 5s;
-        animation-delay: 16s;
+        animation-delay: 0s;
         left: 680px;
         top: 510px;
 
         @keyframes animated {
-          50% {
-            display: block;
+          10% {
+            display: flex;
           }
         }
       }

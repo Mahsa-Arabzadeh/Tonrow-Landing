@@ -1,6 +1,6 @@
 const buttonOptions = {
-  content: "My Button",
-  size: "small",
+  content: 'fvfvaw',
+  size: "larg",
   type: "button",
   attributes: {
     id: "btn-primary",
