@@ -124,7 +124,7 @@ export default function heroBannerSection() {
 
             ]
           },
-          // diplay:none in mobile version 
+     
    
 
         ],
