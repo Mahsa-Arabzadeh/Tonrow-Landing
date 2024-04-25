@@ -1,104 +1,144 @@
 import domGenerator from "dom-generator";
 import "./index.scss"
 import "./responsive.scss"
+import "../buttonComponent/buttonComponent.js"
 
 
 let descriptionData = {
-  heroTitle :  "سامانه تنرو",
-  textContent : 'دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر'
+  heroTitle: "سامانه تنرو",
+  textContent: 'دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر'
 }
 
 
 export default function heroBannerSection() {
-const heroGenerator = document.body.appendChild(
-  domGenerator(
-    // start of hero section
-    {
-      tag: "section",
-      attributes: { id: "hero-section" },
-      children: [
-
+  const heroGenerator = document.body.appendChild(
+    domGenerator(
+      // start of hero section
       {
-        tag : "div",
-        attributes: { id: "herobBanner-Container"},
-        children : [
-          
+        tag: "section",
+        attributes: { id: "hero-section" },
+        children: [
 
-        // start of hero banner (all image,icon,shasow in hero section)
-        {
-          tag: "div",
-          attributes: { id: "hero-banner" },
-          children : [
-
-            // logo image
-            {
-              tag: "img",
-              attributes : { class :"logo-image" ,src : "./public/images/heroBannerImages/Logotype.png"}
-            },
-
-            // hero image
-            {
-              tag: "img",
-              attributes : { class: "hero-image" ,src : "./public/images/heroBannerImages/hero.png"}
-            },
-
-            // shadow image
-            {
-              tag: "img",
-              attributes : {class :"shadow-image",src : "./public/images/heroBannerImages/shadow.png"}
-            },
-
-            // down arrow image
-            {
-              tag: "img",
-              attributes : {class : "downArrow-image"  ,src : "./public/images/heroBannerImages/arrow.svg"}
-            },
-
-            //  subcard image (mobile)
-            {
-              tag: "img",
-              attributes : {class : "subcard-image",src : "./public/images/heroBannerImages/Subtract-mobile.png"}
-            }
-          
-          ]
-        }
-        ]
-      },
+          {
+            tag: "div",
+            attributes: { id: "herobBanner-Container" },
+            children: [
 
 
+              // start of hero banner (all image,icon,shasow in hero section)
+              {
+                tag: "div",
+                attributes: { id: "hero-banner" },
+                children: [
 
-         // end of hero banner (all image,icon,shasow in hero section)
-         
+                  // logo image
+                  {
+                    tag: "img",
+                    attributes: { class: "logo-image", src: "./public/images/heroBannerImages/Logotype.png" }
+                  },
 
-        //  start of hero description
-        {
-          tag : "div" ,
-          attributes : {id : "hero-description"},
-          children :[
-            {
-              tag : "h1",
-              attributes : { class : "hero-title"},
-              properties : {textContent : descriptionData.heroTitle}
-            },
-            {
-              tag : "span",
-              attributes : {class : "hero-textContent"},
-              properties : {textContent : descriptionData.textContent}
-            
-            }
-          ]
-        }
+                  // hero image
+                  {
+                    tag: "img",
+                    attributes: { class: "hero-image", src: "./public/images/heroBannerImages/hero.png" }
+                  },
 
-      ],
-      // end of hero section children
-    }
-    // end of hero section
-  )
+                  // shadow image
+                  {
+                    tag: "img",
+                    attributes: { class: "shadow-image", src: "./public/images/heroBannerImages/shadow.png" }
+                  },
 
-);
+                  // down arrow image
+                  {
+                    tag: "img",
+                    attributes: { class: "downArrow-image", src: "./public/images/heroBannerImages/arrow.svg" }
+                  },
 
-  }
+                  //  subcard image (mobile)
+                  {
+                    tag: "img",
+                    attributes: { class: "subcard-image", src: "./public/images/heroBannerImages/Subtract-mobile.png" }
+                  },
+
+                ]
+              }
+            ]
 
 
-  
+          },
+          // end of hero banner (all image,icon,shasow in hero section)
+
+
+          //  start of hero description
+          {
+            tag: "div",
+            attributes: { id: "hero-description" },
+            children: [
+              {
+                tag: "h1",
+                attributes: { class: "hero-title" },
+                properties: { textContent: descriptionData.heroTitle }
+              },
+              {
+                tag: "span",
+                attributes: { class: "hero-textContent" },
+                properties: { textContent: descriptionData.textContent }
+
+              },
+
+            ]
+          },
+
+
+          {
+            tag : "div",
+            attributes : { class : "subcard-desktop-container"},
+            children : [
+              {
+                tag: "img",
+                attributes: { class: "subcard-image-desktop", src: "./public/images/heroBannerImages/Subtract-desktop.svg" },
+              },
+
+              {
+                tag : "div",
+                attributes : {id : "desktop-subcardTexts"} , 
+
+                children : [
+                  
+                  {
+                    tag : "span",
+                    attributes : {class : "subcard-title"},
+                    properties: { textContent: " سال 5"}
+                  },
+    
+                  {
+                    tag : "span",
+                    attributes : {class : "subcard-textContent"},
+                    properties: { textContent: 'سابقه کار با بزرگترینشرکت های بوشهر'}
+                  },
+
+                ]
+              },
+             
+
+            ]
+          },
+          // diplay:none in mobile version 
+   
+
+        ],
+        // end of hero section children
+
+
+      }
+      // end of hero section
+    )
+
+  );
+
+}
+
+
+
 

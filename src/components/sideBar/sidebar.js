@@ -43,49 +43,60 @@ export default function sidebar(headerData, defaultRole) {
           ],
         },
         // Additional link container
-        defaultRole !== "public" ? {
-          tag: "div",
-          attributes: { class: "additional-links" },
-        } : null,
+        defaultRole !== "public"
+          ? {
+              tag: "div",
+              attributes: { class: "additional-links" },
+              children: [
+                // Static additional link for logout
+                {
+                  tag: "a",
+                  properties: { textContent: "خروج از حساب" },
+                  attributes: { href: "#logout" },
+                },
+              ],
+            }
+          : null,
       ].filter((child) => child !== null), // Remove null elements from children array
     })
   );
 
-  // Function to render additional link
-  function renderAdditionalLink(linkData) {
-    const additionalLink = domGenerator({
-      tag: "a",
-      properties: { textContent: linkData.linkText },
-      attributes: { href: linkData.LinkAddress || "#" },
-    });
+   // Create overlay div
+   const overlayDiv = document.body.appendChild(
+    domGenerator({
+      tag: "div",
+      attributes: { class: "overlay" },
+    })
+  );
 
-    sidebarGenerator.querySelector(".additional-links").appendChild(additionalLink);
+  // Function to check if the sidebar is open
+  function isSidebarOpen() {
+    const sidebar = document.getElementById("sidebar");
+    return sidebar.classList.contains("open");
   }
 
-  // Check if there's an additional link to render based on default role
-  if (defaultRole !== "public") {
-    const additionalLink = headerData.slice(1).find((item) => item.linkText !== undefined && item.LinkAddress !== undefined);
-    if (additionalLink) {
-      renderAdditionalLink(additionalLink);
-    }
+  // Toggle sidebar and overlay visibility
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const isOpen = isSidebarOpen();
+    sidebar.style.display = isOpen ? "none" : "block";
+    overlayDiv.style.display = isOpen ? "none" : "block";
+    sidebar.classList.toggle("open");
   }
 
-  // Close sidebar when clicking outside of it
+  // Event listener to toggle sidebar
+  document.querySelector(".sidebar-toggle-icon").addEventListener("click", toggleSidebar);
+
+  // Event listener to close sidebar and overlay when clicking outside of them
   document.addEventListener("click", (event) => {
     const sidebar = document.getElementById("sidebar");
     const sidebarToggleIcon = document.querySelector(".sidebar-toggle-icon");
-    if (sidebar && !sidebar.contains(event.target) && !sidebarToggleIcon.contains(event.target)) {
+    if (!sidebar.contains(event.target) && !sidebarToggleIcon.contains(event.target) && isSidebarOpen()) {
       sidebar.style.display = "none";
+      overlayDiv.style.display = "none";
+      sidebar.classList.remove("open");
     }
   });
-
-  // Hide additional-links if defaultRole is "public"
-  if (defaultRole === "public") {
-    const additionalLinksContainer = sidebarGenerator.querySelector(".additional-links");
-    if (additionalLinksContainer) {
-      additionalLinksContainer.style.display = "none";
-    }
-  }
 
   return sidebarGenerator;
 }

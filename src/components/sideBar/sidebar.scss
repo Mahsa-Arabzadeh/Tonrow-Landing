@@ -3,15 +3,18 @@
   background-color: #fbfcff;
   color: #bcbdbf;
   padding: 20px;
-  width: 250px;
+  width: 250px; /* Initial width */
   position: fixed;
   top: 0;
   right: 0;
   height: 96%;
   border-radius: 10px 0px 0px 10px;
+  overflow-x: hidden; /* Hide overflow to prevent horizontal scrollbar */
+  transition: all 0.3s ease; /* Smooth transition for width */
+  z-index: 3;
 
   &.open {
-    display: block;
+    display: block; /* Show when open */
   }
 
   .sidebar-logo {
@@ -32,9 +35,8 @@
   .additional-links {
     text-align: right;
     margin-right: 31px;
-   
   }
-  .additional-links a{
+  .additional-links a {
     text-decoration: none;
     color: #e2725b;
   }
@@ -50,7 +52,6 @@
       text-decoration: none;
       margin-bottom: 10px; // Adjust margin bottom for spacing between links
       transition: color 0.3s ease;
-
     }
 
     // Add padding between each link
@@ -61,12 +62,10 @@
 }
 
 .sidebar-toggle-icon {
-  background-color: #333;
   padding: 10px;
   border: none;
   cursor: pointer;
   position: fixed;
-  top: 20px;
   right: 20px;
   z-index: 0;
 
@@ -74,4 +73,16 @@
     width: 20px;
     height: 20px;
   }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background
+  backdrop-filter: blur(5px); // Blur effect
+  z-index: 2; // Ensure overlay appears above other content
 }

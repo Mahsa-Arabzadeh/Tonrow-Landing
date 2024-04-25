@@ -1,6 +1,7 @@
 import mapGenerator from "dom-generator";
 import "./index.scss";
 
+import tooltipsAnimation from "./tooltipsAnimation";
 import createMap from "./map";
 
 //* map component
@@ -20,13 +21,13 @@ function renderMap() {
     children: [
       {
         tag: createMap(),
-      }
+      },
     ],
   });
   // return map;
   document.body.append(map);
+//* Using IntersectionObserver, it manages the animation of tooltips. 
+  tooltipsAnimation();
 }
-
-
 
 export default renderMap;
