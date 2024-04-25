@@ -1,4 +1,4 @@
-import mapBGGenerator from "dom-generator";
+import domGenerator from "dom-generator";
 
 import createTooltip from "./tooltipGenerator";
 import createBlueCard from "./blueCard";
@@ -21,7 +21,7 @@ function createMap() {
   );
   console.log(tooltips);
   // start domGenerator
-  let mapBackground = mapBGGenerator({
+  let mapBackground = domGenerator({
     tag: "div",
     //* imageMap: background section of map
     attributes: { id: "mapSection" },
@@ -31,7 +31,6 @@ function createMap() {
         tag: createBlueCard(
           "درخواست خرید",
           "وظایف سفیران شامل جمع‌آوری سفارشات، تحویل به موقع، ارتباط مؤثر با مشتریان و حفظ کیفیت خدمات است.",
-          "درخواست خرید"
         ),
       },
       {

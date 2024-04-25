@@ -1,4 +1,4 @@
-import mapGenerator from "dom-generator";
+import domGenerator from "dom-generator";
 import "./index.scss";
 
 import animationTooltips from "./tooltipAnimation";
@@ -14,7 +14,7 @@ import createMap from "./map";
  *=======================================================================================================================
  **/
 function renderMap() {
-  let map = mapGenerator({
+  let map = domGenerator({
     tag: "div",
     //* map: parent section of map
     attributes: { id: "map" },
