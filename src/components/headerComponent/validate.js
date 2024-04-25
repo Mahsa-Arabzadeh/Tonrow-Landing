@@ -1,7 +1,13 @@
-// Import header data arrays
+/**
+ * Import header data arrays.
+ */
 import { safirHeaderData, adminHeaderData, userHeaderData, publicHeaderData } from "./data.js";
 
-// Function to validate user roles and return corresponding header data
+/**
+ * Function to validate user roles and return corresponding header data.
+ * @param {string} userRole - The role of the user.
+ * @returns {Array} - The header data corresponding to the user role.
+ */
 export function getHeaderDataByRole(userRole) {
   // Define header data based on user role
   let headerData;
