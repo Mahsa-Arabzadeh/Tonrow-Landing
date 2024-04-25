@@ -1,10 +1,23 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
 
-const rowTitle = [
+export const rowTitle = [
   {
     rowTitle: "سفیر",
-    rowLinksText: {
+    obj: {
+      textElement: [
+        {
+          text: "fjdj",
+        },
+        {
+          text: "fjdj",
+        },
+      ],
+    },
+  },
+  {
+    rowTitle: "سفیر",
+    obj: {
       textElement: [
         {
           text: "fjdj",
@@ -17,9 +30,30 @@ const rowTitle = [
   },
 ];
 
-rowTitle.map((title) => {
-  rowGenerator(title.rowTitle, title.rowLinksText.textElement);
+const footer = document.createElement("footer");
+footer.setAttribute("id", "footer");
+rowTitle.forEach((title) => {
+  const rowElement = rowGenerator(title.rowTitle, title.obj.textElement);
+  footer.appendChild(rowElement);
 });
+// Append the footer to the body
+document.body.appendChild(footer);
+
+function footerGenerator(rowTitle) {
+  const footerElement = document.body.appendChild(
+    domGenerator({
+      tag: "footer",
+      attributes: { id: "footer" },
+      children: rowTitle.forEach((title) => {
+        const rowElement = rowGenerator(title.rowTitle, title.obj.textElement);
+        console.log(rowElement);
+        return rowElement;
+      }),
+    })
+  );
+  return footerElement;
+}
+footerGenerator(rowTitle);
 
 /**
  * @param {string} rowTitle
@@ -27,30 +61,26 @@ rowTitle.map((title) => {
  * @returns {HTMLElement}
  */
 export function rowGenerator(rowTitle, textElements) {
-  const textChildren = textElements.map((textObj) => ({
+  const rowElement = domGenerator({
     tag: "div",
-    attributes: { class: "text-element" },
-    properties: { textContent: textObj.text },
-  }));
-
-  const rowElement = document.body.appendChild(
-    domGenerator({
-      tag: "div",
-      attributes: { class: "row-footer" },
-      children: [
-        {
-          tag: "h3",
-          attributes: { class: "row-title" },
-          properties: { textContent: rowTitle },
-        },
-        {
+    attributes: { class: "row-footer" },
+    children: [
+      {
+        tag: "h3",
+        attributes: { class: "row-title" },
+        properties: { textContent: rowTitle },
+      },
+      {
+        tag: "div",
+        attributes: { class: "text-container" },
+        children: textElements.map((textObj) => ({
           tag: "div",
-          attributes: { class: "text-container" },
-          children: textChildren,
-        },
-      ],
-    })
-  );
+          attributes: { class: "text-element" },
+          properties: { textContent: textObj.text },
+        })),
+      },
+    ],
+  });
 
   return rowElement;
 }
