@@ -21,7 +21,7 @@ const contentWhatDoesTonrowDo = [
 ];
 
 /**
- * @returns {array} - create header and pas to dom-genretore
+ * @returns {array} - create heade SEC WhatDoesTonrowDo and pas to dom-genretore
  */
 function generatorHeadWhatDoesTonrowDo() {
   let contentHeadWhatDoesTonrowDoArray = [];
@@ -42,7 +42,7 @@ function generatorHeadWhatDoesTonrowDo() {
   return contentHeadWhatDoesTonrowDoArray;
 }
 /**
- * @returns {} - for swuche body in mobile
+ * @returns {} - for swuche body SEC WhatDoesTonrowDo in mobile
  * @param {number} - to find it
  */
 function clickChangeBody(index) {
@@ -65,7 +65,7 @@ function clickChangeBody(index) {
   ).style.display = "flex";
 }
 /**
- * @returns {object} - for creating body
+ * @returns {object} - for creating body SEC WhatDoesTonrowDo
  */
 function generatorBodyWhatDoesTonrowDo() {
   const contentBodyWhatDoesTonrowDoArray = contentWhatDoesTonrowDo.map(
@@ -104,7 +104,7 @@ function generatorBodyWhatDoesTonrowDo() {
   return contentBodyWhatDoesTonrowDoArray;
 }
 /**
- * @returns {} - create all DOM  
+ * @returns {} - create all DOM  SEC WhatDoesTonrowDo
  */
 function generatorDOMWhatDoesTonrowDo() {
   const bodySections = generatorBodyWhatDoesTonrowDo();
