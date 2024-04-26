@@ -12,3 +12,13 @@ const tonrowInstagram = ""; // Instagram account for Tonrow
 const tonrowFacebook = ""; // Facebook page for Tonrow
 const tonrowTelegram = ""; // Telegram account for Tonrow
 const tonrowWhatsapp = ""; // Whatsapp number for Tonrow
+
+export {
+  tonrowEmail,
+  tonrowNumber,
+  tonrowAddress,
+  tonrowInstagram,
+  tonrowFacebook,
+  tonrowTelegram,
+  tonrowWhatsapp,
+};
