@@ -1,5 +1,5 @@
 import domGenerator from "dom-generator";
-import colFooterGenerator from "./data";
+import { colFooterGenerator, rowImageFooter } from "./data";
 import "./index.scss";
 
 // ########################################
@@ -8,13 +8,12 @@ footer.setAttribute("id", "footer");
 const topFooter = document.createElement("div");
 topFooter.setAttribute("class", "top-footer");
 footer.appendChild(topFooter);
+footer.appendChild(rowImage());
 colFooterGenerator.forEach((column) => {
   const div = document.createElement("div");
   div.setAttribute("class", "test");
-  console.log(div);
   topFooter.appendChild(div);
   column.forEach((item) => {
-    console.log(item);
     div.appendChild(rowGenerator(item.colTitle, item.colText, item.imgSrc));
   });
 });
@@ -98,4 +97,21 @@ export function rowGenerator(colTitle, colText, imgSrc) {
   });
 
   return rowElement;
+}
+
+export function rowImage() {
+  const rowImageContainer = domGenerator({
+    tag: "div",
+    attributes: { class: "row-images" },
+  });
+
+  rowImageFooter.forEach((item) => {
+    const imgElement = domGenerator({
+      tag: "img",
+      attributes: { class: "footer-imgsrc", src: item.imgSrc, alt: "" },
+    });
+    rowImageContainer.appendChild(imgElement);
+  });
+
+  return rowImageContainer;
 }

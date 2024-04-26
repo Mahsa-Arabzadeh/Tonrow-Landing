@@ -1,11 +1,7 @@
 import {
   tonrowEmail,
   tonrowAddress,
-  tonrowFacebook,
-  tonrowInstagram,
   tonrowNumber,
-  tonrowTelegram,
-  tonrowWhatsapp,
 } from "../../JS/constants/constants";
 
 const colFooterGenerator = [
@@ -108,4 +104,13 @@ const colFooterGenerator = [
   ],
 ];
 
-export default colFooterGenerator;
+const rowImageFooter = [
+  {
+    imgSrc: "../../public/images/Rectangleimg-footer.svg",
+  },
+  {
+    imgSrc: "../../public/images/Rectangle-footer.svg",
+  },
+];
+
+export { colFooterGenerator, rowImageFooter };

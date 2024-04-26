@@ -4,6 +4,7 @@
     max-width: 100%;
     height: 459px;
     display: flex;
+    flex-direction: column;
     padding: 20px 40px 12px 40px;
     gap: 15px;
     background-color: var(--black-color);
@@ -52,4 +53,18 @@
             }
         }
     }
+    .row-images{
+        width: 100%;
+        height: 160px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 48px;
+        .footer-imgsrc{
+            width: 160px;
+            height: 160px;
+            border-radius: 8px;
+        }
+    }
 }
+
+
