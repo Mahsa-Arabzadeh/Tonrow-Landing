@@ -8,15 +8,18 @@ const publicHeaderData = [
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
+    btnLink:"#register",
     imgLinkAddress: "#",
   },
   {
     linkText: "درخواست خرید",
     LinkAddress: "#home",
+
   },
   {
     linkText: "درخواست سفیر",
     LinkAddress: "#home",
+
   },
   {
     linkText: "خانه",
@@ -34,6 +37,7 @@ const safirHeaderData = [
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
+    btnLink:"#register",
     imgLinkAddress: "#",
   },
   {
@@ -54,6 +58,7 @@ const safirHeaderData = [
   },
   {
     btnText: "hi",
+    btnLink:"#",
   },
 ];
 
@@ -67,6 +72,7 @@ const adminHeaderData = [
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
+    btnLink:"#register",
     imgLinkAddress: "#",
   },
   {
@@ -89,11 +95,7 @@ const adminHeaderData = [
     linkText: "لیست جابجایی ها",
     LinkAddress: "#home",
   },
-  // Additional links for less than 900 pixels
-  {
-    linkText: "Link for Safir",
-    LinkAddress: "#safir-link",
-  },
+
 ];
 
 /**
@@ -106,6 +108,7 @@ const userHeaderData = [
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
+    btnLink:"#register",
     imgLinkAddress: "#",
   },
   {
@@ -126,6 +129,7 @@ const userHeaderData = [
   },
   {
     btnText: "hi",
+    btnLink:"#hi",
   },
 ];
 

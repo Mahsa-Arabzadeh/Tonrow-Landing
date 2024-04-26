@@ -66,9 +66,7 @@ export default function header(headerData) {
                             tag: "a",
                             properties: {
                               textContent: item.linkText,
-                            },
-                            attributes: {
-                              href: item.LinkAddress ?? "#",
+                              href: item.LinkAddress || "#",
                             },
                           };
                         }),
@@ -84,7 +82,7 @@ export default function header(headerData) {
                     {
                       tag: "img",
                       attributes: {
-                        src: "./public/images/menu.png", 
+                        src: "./public/images/menu.png",
                         alt: "Open Sidebar",
                         class: "sidebar-icon",
                       },
@@ -121,10 +119,15 @@ export default function header(headerData) {
                   return {
                     tag: baseButtonGenerator(buttonOptionsCopy),
                     properties: { textContent: item.btnText },
+                    attributes: {
+                      href: item.btnLink || "#", // Set the button href attribute
+                    },
                     eventListeners: {
-                      // Add button click functionality if needed
+                      // Navigate to the specified link when the button is clicked
                       click: () => {
-                        // Add button click functionality here
+                        if (item.btnLink) {
+                          window.location.href = item.btnLink;
+                        }
                       },
                     },
                   };
