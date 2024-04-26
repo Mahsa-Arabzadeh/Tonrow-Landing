@@ -6,7 +6,7 @@ const contentWhatDoesTonrowDo = [
         headeText: "درخواست خرید",
         imgUrl: "public/images/thumbnail-headertext.png",
         titleBody: "ارسال لیست خرید",
-        pText:
+        Paragraph:
             "میتوانید برای سازمان یا منزل شخصی خود فقط با مشخص کردن مبدا و مقصد و ارسال لیست های خرید خود, کارها را با سرعت بیشتری انجام دهید و برای دیگر کار هایتان زمانبخرید.   ",
         btnText: "درخواست خرید",
     },
@@ -14,7 +14,7 @@ const contentWhatDoesTonrowDo = [
         headeText: "درخواست سفیر",
         imgUrl: "public/images/thumbnail-headertext1.png",
         titleBody: "درخواست سفیر",
-        pText: "فقط کارهای خود را مشخص کنید تا سفیران ما کارها را انجام دهند و دیگر وقت کم نیارید.",
+        Paragraph: "فقط کارهای خود را مشخص کنید تا سفیران ما کارها را انجام دهند و دیگر وقت کم نیارید.",
         btnText: "درخواست سفیر",
     },
 ];
@@ -72,7 +72,7 @@ function generatorBodyWhatDoesTonrowDo() {
                         },
                         {
                             tag: "p",
-                            properties: { textContent: element.pText },
+                            properties: { textContent: element.Paragraph },
                         },
                         {
                             tag: "button",
