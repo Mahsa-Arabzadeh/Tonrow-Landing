@@ -12,20 +12,43 @@
         height: 201px;
         gap: 15px;
         display: flex;
-        background-color: #83839f;
+        .test{
+            width: 228px;
+            height: 201px;
+        }
         .col-footer{
-            width: 300px;
+            width: 100%;
             height: max-content;
-            background-color: pink;
+            gap: 10px;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
         .col-title{
             font-weight: 600;
             font-size: 18px;
-            text-align: right;
+            margin: 0;
             color: var(--white-text);
-            .text-container{
-                width: 100%;
-                gap: 10px;
+        }
+        .text-container{
+            width: 100%;
+            height: max-content;
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--white-text);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .image-container{
+            width: 168px;
+            gap: 4px;
+            display: flex;
+            justify-content: space-evenly;
+            .col-title{
+                font-weight: 700;
+                font-size: 24px;
             }
         }
     }

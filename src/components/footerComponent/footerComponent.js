@@ -15,7 +15,7 @@ colFooterGenerator.forEach((column) => {
   topFooter.appendChild(div);
   column.forEach((item) => {
     console.log(item);
-    div.appendChild(rowGenerator(item.colTitle, item.colText));
+    div.appendChild(rowGenerator(item.colTitle, item.colText, item.imgSrc));
   });
 });
 
@@ -44,26 +44,57 @@ document.body.appendChild(footer);
  * @param {Array} textElements
  * @returns {HTMLElement}
  */
-export function rowGenerator(colTitle, colText) {
+export function rowGenerator(colTitle, colText, imgSrc) {
   const rowElement = domGenerator({
     tag: "div",
     attributes: { class: "col-footer" },
-    children: [
-      {
-        tag: "h3",
-        attributes: { class: "col-title" },
-        properties: { textContent: colTitle },
-      },
-      {
-        tag: "div",
-        attributes: { class: "text-container" },
-        children: colText.map((textObj) => ({
-          tag: "div",
-          attributes: { class: "text-element" },
-          properties: { textContent: textObj.text },
-        })),
-      },
-    ],
+    children: (() => {
+      if (imgSrc) {
+        return [
+          {
+            tag: "div",
+            attributes: { class: "image-container" },
+            children: [
+              {
+                tag: "h3",
+                attributes: { class: "col-title" },
+                properties: { textContent: colTitle },
+              },
+              {
+                tag: "img",
+                attributes: { src: imgSrc, alt: "" },
+              },
+            ],
+          },
+          {
+            tag: "div",
+            attributes: { class: "text-container" },
+            children: colText.map((textObj) => ({
+              tag: "div",
+              attributes: { class: "text-element" },
+              properties: { textContent: textObj.text },
+            })),
+          },
+        ];
+      } else {
+        return [
+          {
+            tag: "h3",
+            attributes: { class: "col-title" },
+            properties: { textContent: colTitle },
+          },
+          {
+            tag: "div",
+            attributes: { class: "text-container" },
+            children: colText.map((textObj) => ({
+              tag: "div",
+              attributes: { class: "text-element" },
+              properties: { textContent: textObj.text },
+            })),
+          },
+        ];
+      }
+    })(),
   });
 
   return rowElement;

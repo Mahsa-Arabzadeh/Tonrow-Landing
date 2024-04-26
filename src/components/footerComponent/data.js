@@ -19,36 +19,89 @@ const colFooterGenerator = [
       ],
     },
     {
-      colTitle: "ایمیل",
+      colTitle: "شماره تماس",
       colText: [
         {
-          text: tonrowEmail,
+          text: tonrowNumber,
+        },
+      ],
+    },
+    {
+      colTitle: "آدرس",
+      colText: [
+        {
+          text: tonrowAddress,
         },
       ],
     },
   ],
   [
     {
-      colTitle: "ایمیل",
+      colTitle: "سفیران",
       colText: [
         {
-          text: tonrowEmail,
+          text: "دانلود اپ سفیر",
+        },
+        {
+          text: "پرسش های متداول سفیران",
+        },
+        {
+          text: "شرایط و قوانین سفیران",
         },
       ],
     },
+  ],
+  [
     {
-      colTitle: "ایمیل",
+      colTitle: "خدمات",
       colText: [
         {
-          text: tonrowEmail,
+          text: "خرید منزل",
+        },
+        {
+          text: "درخواست جا به جایی",
+        },
+        {
+          text: "بازگشت وجه",
+        },
+        {
+          text: "پشتیبانی",
         },
       ],
     },
+  ],
+  [
     {
-      colTitle: "ایمیل",
+      colTitle: "سفیر",
       colText: [
         {
-          text: tonrowEmail,
+          text: "وبلاگ سفیر",
+        },
+        {
+          text: "لوگو و هویت سفیر",
+        },
+        {
+          text: "قوانین و مقررات",
+        },
+        {
+          text: "درباره ما",
+        },
+        {
+          text: "تماس با ما",
+        },
+        {
+          text: "فرصت شغلی",
+        },
+      ],
+    },
+  ],
+  [
+    {
+      imgSrc: "../../public/images/Tonrow-white.svg",
+      colTitle: "سفیر",
+      colText: [
+        {
+          text: "حمل و نقل با ما, آسودگی خاطر برای شما !",
         },
       ],
     },
