@@ -9,6 +9,11 @@ let descriptionData = {
   textContent: 'دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر'
 }
 
+let subcardDesktopData = {
+  subcardTitle : "+5 سال" ,
+  subcardTextContent : "سابقه کار با بزرگترین شرکت های بوشهر"
+}
+
 
 export default function heroBannerSection() {
   const heroGenerator = document.body.appendChild(
@@ -84,7 +89,6 @@ export default function heroBannerSection() {
                 tag: "span",
                 attributes: { class: "hero-textContent" },
                 properties: { textContent: descriptionData.textContent }
-
               },
 
             ]
@@ -109,22 +113,27 @@ export default function heroBannerSection() {
                   {
                     tag : "span",
                     attributes : {class : "subcard-title"},
-                    properties: { textContent: " سال 5"}
+                    properties: { textContent: subcardDesktopData.subcardTitle}
                   },
     
                   {
                     tag : "span",
                     attributes : {class : "subcard-textContent"},
-                    properties: { textContent: 'سابقه کار با بزرگترینشرکت های بوشهر'}
+                    properties: { textContent: subcardDesktopData.subcardTextContent}
                   },
 
                 ]
               },
+
+              {
+                tag : "img",
+                attributes : { class : "subcard-downBtn" , src : "./public/images/heroBannerImages/downBtn.png"},
+              }
              
 
             ]
           },
-          // diplay:none in mobile version 
+     
    
 
         ],

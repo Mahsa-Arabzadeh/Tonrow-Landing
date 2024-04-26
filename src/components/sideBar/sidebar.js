@@ -1,10 +1,15 @@
-// Import domGenerator function
+// Import domGenerator function from "dom-generator" module
 import domGenerator from "dom-generator";
 
-// Import styles
+// Import styles for the sidebar component
 import "./sidebar.scss";
 
-// Function to create the sidebar
+/**
+ * Function to create the sidebar.
+ * @param {Array} headerData - Data to populate the sidebar.
+ * @param {string} defaultRole - Default role for the sidebar.
+ * @returns {HTMLElement} - The created sidebar element.
+ */
 export default function sidebar(headerData, defaultRole) {
   // Create the sidebar element
   const sidebarGenerator = document.body.appendChild(
@@ -12,6 +17,7 @@ export default function sidebar(headerData, defaultRole) {
       tag: "div",
       attributes: { id: "sidebar", class: "sidebar" },
       children: [
+        // Sidebar logo and line
         {
           tag: "div",
           attributes: { class: "sidebar-logo" },
@@ -31,18 +37,20 @@ export default function sidebar(headerData, defaultRole) {
             },
           ],
         },
+        // Sidebar content links
         {
           tag: "div",
           attributes: { class: "sidebar-content" },
           children: [
+            // Map header data to sidebar links
             ...headerData.slice(1).map((item) => ({
               tag: "a",
               properties: { textContent: item.linkText },
-              attributes: { href: item.LinkAddress || "#" },
+              attributes: { href: item.LinkAddress ?? "#" },
             })),
           ],
         },
-        // Additional link container
+        // Additional link container if defaultRole is not "public"
         defaultRole !== "public"
           ? {
               tag: "div",
@@ -61,8 +69,8 @@ export default function sidebar(headerData, defaultRole) {
     })
   );
 
-   // Create overlay div
-   const overlayDiv = document.body.appendChild(
+  // Create overlay div
+  const overlayDiv = document.body.appendChild(
     domGenerator({
       tag: "div",
       attributes: { class: "overlay" },
@@ -98,5 +106,5 @@ export default function sidebar(headerData, defaultRole) {
     }
   });
 
-  return sidebarGenerator;
+  return sidebarGenerator; // Return the created sidebar element
 }

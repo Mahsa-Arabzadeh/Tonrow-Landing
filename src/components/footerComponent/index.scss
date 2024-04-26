@@ -1,36 +1,70 @@
-
-
-.row-footer{
-    max-width: 228px;
-    height: 200px;
-    background-color: red;
-    gap: 10px;
-}
-
-.text-container{
-    width: 100px;
-    background-color: aqua;
-}
-
-.text-row{
-    width: 100px;
-    background-color: red;
-}
-
-.text-link{
-    width: 30px;
-    background-color: pink;
-}
+@import "../../../root.scss";
 
 #footer{
+    max-width: 100%;
+    height: 459px;
     display: flex;
-    gap: 30px;
-    background-color: rgb(170, 255, 0);
-    width: 100%;
-    height: 200px;
+    flex-direction: column;
+    padding: 20px 40px 12px 40px;
+    gap: 15px;
+    background-color: var(--black-color);
+    .top-footer{
+        width: 100%;
+        height: 201px;
+        gap: 15px;
+        display: flex;
+        .test{
+            width: 228px;
+            height: 201px;
+        }
+        .col-footer{
+            width: 100%;
+            height: max-content;
+            gap: 10px;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .col-title{
+            font-weight: 600;
+            font-size: 18px;
+            margin: 0;
+            color: var(--white-text);
+        }
+        .text-container{
+            width: 100%;
+            height: max-content;
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--white-text);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .image-container{
+            width: 168px;
+            gap: 4px;
+            display: flex;
+            justify-content: space-evenly;
+            .col-title{
+                font-weight: 700;
+                font-size: 24px;
+            }
+        }
+    }
+    .row-images{
+        width: 100%;
+        height: 160px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 48px;
+        .footer-imgsrc{
+            width: 160px;
+            height: 160px;
+            border-radius: 8px;
+        }
+    }
 }
-.top-footer{
-    background-color: rgb(81, 255, 0);
-    width: 100%;
-    height: 100px;
-}
+
+

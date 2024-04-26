@@ -1,19 +1,25 @@
-// Header data for public role
+/**
+ * Header data for public role.
+ * @type {Array<Object>}
+ */
 const publicHeaderData = [
   {
     imgAddress: "./public/images/Tonrow.svg",
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
+    btnLink:"#register",
     imgLinkAddress: "#",
   },
   {
     linkText: "درخواست خرید",
     LinkAddress: "#home",
+
   },
   {
     linkText: "درخواست سفیر",
     LinkAddress: "#home",
+
   },
   {
     linkText: "خانه",
@@ -21,13 +27,17 @@ const publicHeaderData = [
   },
 ];
 
-// Header data for safir role
+/**
+ * Header data for safir role.
+ * @type {Array<Object>}
+ */
 const safirHeaderData = [
   {
     imgAddress: "./public/images/Tonrow.svg",
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
+    btnLink:"#register",
     imgLinkAddress: "#",
   },
   {
@@ -48,16 +58,21 @@ const safirHeaderData = [
   },
   {
     btnText: "hi",
+    btnLink:"#",
   },
 ];
 
-// Header data for admin role
+/**
+ * Header data for admin role.
+ * @type {Array<Object>}
+ */
 const adminHeaderData = [
   {
     imgAddress: "./public/images/Tonrow.svg",
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
+    btnLink:"#register",
     imgLinkAddress: "#",
   },
   {
@@ -80,20 +95,20 @@ const adminHeaderData = [
     linkText: "لیست جابجایی ها",
     LinkAddress: "#home",
   },
-  // Additional links for less than 900 pixels
-  {
-    linkText: "Link for Safir",
-    LinkAddress: "#safir-link",
-  },
+
 ];
 
-// Header data for user role
+/**
+ * Header data for user role.
+ * @type {Array<Object>}
+ */
 const userHeaderData = [
   {
     imgAddress: "./public/images/Tonrow.svg",
     linkText: "تماس با ما",
     LinkAddress: "#home",
     btnText: "Register",
+    btnLink:"#register",
     imgLinkAddress: "#",
   },
   {
@@ -114,6 +129,7 @@ const userHeaderData = [
   },
   {
     btnText: "hi",
+    btnLink:"#hi",
   },
 ];
 

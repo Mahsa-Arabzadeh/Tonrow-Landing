@@ -1,18 +1,25 @@
+// Import the baseButtonGenerator function from the buttonComponent module
 import baseButtonGenerator from "../buttonComponent/buttonComponent";
+
+// Import the buttonOptions object from the configButtonComponent module
 import buttonOptions from "../buttonComponent/configButtonComponent";
 
-// Import domGenerator function
+// Import the domGenerator function from the dom-generator module
 import domGenerator from "dom-generator";
 
-// Import sidebar function from sidebar.js
+// Import the sidebar function from the sidebar.js module
 import sidebar from "../sideBar/sidebar";
 
-// Import styles
+// Import styles for the header component
 import "./index.scss";
 
-// Function to create the header component
+/**
+ * Function to create the header component.
+ * @param {Array} headerData - Data to populate the header component.
+ * @returns {HTMLElement} - The created header element.
+ */
 export default function header(headerData) {
-  // Create the header element
+  // Create the header element and append it to the document body
   const headerElement = document.body.appendChild(
     domGenerator({
       tag: "header",
@@ -25,6 +32,7 @@ export default function header(headerData) {
             // Conditional rendering based on window width
             window.innerWidth > 900
               ? {
+                  // Container for logo and links
                   tag: "div",
                   attributes: { class: "logo-links-container" },
                   children: [
@@ -36,6 +44,7 @@ export default function header(headerData) {
                         class: "logo",
                       },
                       children: [
+                        // Image for logo
                         {
                           tag: "img",
                           attributes: {
@@ -57,8 +66,6 @@ export default function header(headerData) {
                             tag: "a",
                             properties: {
                               textContent: item.linkText,
-                            },
-                            attributes: {
                               href: item.LinkAddress || "#",
                             },
                           };
@@ -67,18 +74,20 @@ export default function header(headerData) {
                   ],
                 }
               : {
+                  // Container for sidebar toggle icon
                   tag: "div",
                   attributes: { class: "sidebar-toggle-icon" },
                   children: [
-                    // Add image for sidebar toggle
+                    // Image for sidebar toggle
                     {
                       tag: "img",
                       attributes: {
-                        src: "./public/images/menu.png", // Replace with the path to your sidebar icon
+                        src: "./public/images/menu.png",
                         alt: "Open Sidebar",
                         class: "sidebar-icon",
                       },
                       eventListeners: {
+                        // Event listener for sidebar toggle
                         click: () => {
                           const sidebarElement = document.getElementById("sidebar");
                           sidebarElement.style.display =
@@ -90,27 +99,35 @@ export default function header(headerData) {
                     },
                   ],
                 },
-            // Buttons container
+            // Container for buttons
             {
               tag: "div",
               attributes: { class: "buttons-container" },
               children: headerData
                 .filter((item) => item.btnText !== undefined)
                 .map((item) => {
-                  const buttonOptionsCopy = { ...buttonOptions }; // Make a copy of buttonOptions object
+                  // Copy buttonOptions object
+                  const buttonOptionsCopy = { ...buttonOptions };
                   if (item.buttonStyles) {
-                    // If buttonStyles property exists, apply styles
+                    // Apply styles from item.buttonStyles to buttonOptionsCopy
                     const { buttonStyles } = item;
                     Object.keys(buttonStyles).forEach((style) => {
                       buttonOptionsCopy[style] = buttonStyles[style];
                     });
                   }
+                  // Generate button element using baseButtonGenerator
                   return {
                     tag: baseButtonGenerator(buttonOptionsCopy),
                     properties: { textContent: item.btnText },
+                    attributes: {
+                      href: item.btnLink || "#", // Set the button href attribute
+                    },
                     eventListeners: {
+                      // Navigate to the specified link when the button is clicked
                       click: () => {
-                        // Add button click functionality if needed
+                        if (item.btnLink) {
+                          window.location.href = item.btnLink;
+                        }
                       },
                     },
                   };
@@ -122,10 +139,10 @@ export default function header(headerData) {
     })
   );
 
-  // If the window width is less than 900px, create the sidebar
+  // If the window width is less than or equal to 900px, create the sidebar
   if (window.innerWidth <= 900) {
     sidebar(headerData);
   }
 
-  return headerElement;
+  return headerElement; // Return the created header element
 }

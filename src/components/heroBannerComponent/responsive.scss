@@ -20,10 +20,7 @@
         width: 110%;
     }
 
-    #hero-description .hero-textContent{
-        font-size: 20px;
-        // background-color: #000;
-    }
+  
 
 }
 
@@ -33,7 +30,6 @@
         bottom: -10%;
     }
   }
-
 
 
 @media screen and (min-width : 500px) {
@@ -101,13 +97,21 @@
 
 @media screen and (min-width : 900px) {
 
+    #desktop-subcardTexts{
+        background-color: transparent;
+        span{
+            font-size: 18px;
+        }
+        span:first-of-type{
+            font-size: 37px;
+        }
+    }
     #hero-section{
         display: flex;
         align-items: center;
         justify-content: center;
         width: 80%;
         height: 370px;
-        // background-color: aquamarine;
         gap: 15%;
     }
     #herobBanner-Container{
@@ -116,7 +120,6 @@
     }
     #hero-description{
         width: 30%;
-        // margin-right: 5%;
     }
     .subcard-image{
         display: none;
@@ -139,5 +142,35 @@
         // width: 100%;
         top: -10%;
         left: 5%;
+    }
+
+    #hero-description{
+        text-align: end;
+        display: flex;
+        align-items: end;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (min-width : 1000px) {
+    
+    #herobBanner-Container{
+        margin-left: 5%;
+    }
+}
+
+@media screen and (min-width : 1100px) {
+    
+    #herobBanner-Container{
+        margin-left: 7%;
+    }
+}
+
+@media screen and (min-width : 1250px) {
+    
+    #herobBanner-Container{
+        margin-left: 8%;
     }
 }
