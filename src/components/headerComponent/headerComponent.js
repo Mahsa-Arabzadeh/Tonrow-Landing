@@ -105,7 +105,7 @@ export default function header(headerData) {
               attributes: { class: "buttons-container" },
               children: headerData
                 .filter((item) => item.btnText !== undefined)
-                .map((item, index) => { // Added index parameter
+                .map((item, index) => {
                   // Copy buttonOptions object
                   const buttonOptionsCopy = { ...buttonOptions };
                   if (item.buttonStyles) {
@@ -121,7 +121,7 @@ export default function header(headerData) {
                     properties: { textContent: item.btnText },
                     attributes: {
                       href: item.btnLink || "#", // Set the button href attribute
-                      class: `btn-${index}`, // Add class based on index
+                      class: `btn-${index} ${item.public ? 'btn-public' : ''}`, // Add 'btn-public' class if 'public' property is true
                     },
                     children: item.btnImage
                       ? [

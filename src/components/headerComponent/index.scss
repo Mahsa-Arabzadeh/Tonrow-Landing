@@ -35,10 +35,6 @@
       display: flex;
       align-items: center;
 
-      .btn-primary {
-        // Default styles for buttons
-      }
-
       // Specific styles for each button class
       .btn-0 {
         // Styles for buttons in the first array
@@ -54,14 +50,14 @@
         border: 2px solid #dcdcdc;
       }
 
-      // Add more styles for other button classes as needed
 
-      // Additional styles for buttons related to publicHeaderData
+      // Special styles for buttons created from publicHeaderData array
       .btn-public {
-        // Add your specific styles for buttons related to publicHeaderData here
-        background-color: #ff0000; // Example background color
-        color: #fff; // Example text color
-        // Add more styles as needed
+        background-color: #003d95;
+        padding: 12px 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
       }
     }
   }

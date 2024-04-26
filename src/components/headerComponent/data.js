@@ -5,14 +5,14 @@
 const publicHeaderData = [
   {
     imgAddress: "./public/images/Tonrow.svg",
-    linkText: "تماس با ما",
     LinkAddress: "#home",
-    btnText: "Register",
+    btnText: "ورود/ثبت نام",
     btnLink: "#register",
     imgLinkAddress: "#",
+    public: true, 
   },
   {
-    linkText: "درخواست خرید",
+    linkText: "خانه",
     LinkAddress: "#home",
   },
   {
@@ -20,7 +20,7 @@ const publicHeaderData = [
     LinkAddress: "#home",
   },
   {
-    linkText: "خانه",
+    linkText: "درخواست خرید",
     LinkAddress: "#home",
   },
 ];
@@ -126,7 +126,7 @@ const userHeaderData = [
     LinkAddress: "#home",
   },
   {
-    btnText:"",
+    btnText: "",
     btnLink: "#hi",
     btnImage: "./public/images/setting-2.svg",
   },
