@@ -104,6 +104,7 @@ const colFooterGenerator = [
   ],
 ];
 
+// Path data of images for the rowImageFooter section
 const rowImageFooter = [
   {
     imgSrc: "../../public/images/Rectangleimg-footer.svg",

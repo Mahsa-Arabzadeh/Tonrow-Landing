@@ -2,33 +2,12 @@ import domGenerator from "dom-generator";
 import { colFooterGenerator, rowImageFooter } from "./data";
 import "./index.scss";
 
-// ########################################
-const footer = document.createElement("footer");
-footer.setAttribute("id", "footer");
-const topFooter = document.createElement("div");
-topFooter.setAttribute("class", "top-footer");
-footer.appendChild(topFooter);
-footer.appendChild(rowImage());
-footer.appendChild(copyRight());
-colFooterGenerator.forEach((column) => {
-  const div = document.createElement("div");
-  div.setAttribute("class", "test");
-  topFooter.appendChild(div);
-  column.forEach((item) => {
-    div.appendChild(rowGenerator(item.colTitle, item.colText, item.imgSrc));
-  });
-});
-
-// Append the footer to the body
-document.body.appendChild(footer);
-// ########################################
-
 /**
  * @param {string} rowTitle
  * @param {Array} textElements
  * @returns {HTMLElement}
  */
-export function rowGenerator(colTitle, colText, imgSrc) {
+function rowGenerator(colTitle, colText, imgSrc) {
   const rowElement = domGenerator({
     tag: "div",
     attributes: { class: "col-footer" },
@@ -121,3 +100,52 @@ function copyRight() {
 
   return copyRight;
 }
+
+/**
+ * Generates a footer element and appends it to the document body.
+ * @returns {HTMLElement} The generated footer element.
+ */
+function footerGenerator() {
+  const columns = colFooterGenerator.map((column) => {
+    const columnTag = domGenerator({
+      tag: "div",
+      attributes: { class: "test" },
+    });
+
+    column.forEach((item) => {
+      columnTag.appendChild(
+        rowGenerator(item.colTitle, item.colText, item.imgSrc)
+      );
+    });
+
+    return {
+      tag: columnTag,
+    };
+  });
+
+  const footerElement = document.body.appendChild(
+    domGenerator({
+      tag: "footer",
+      attributes: { id: "footer" },
+      children: [
+        {
+          tag: "div",
+          attributes: { class: "top-footer" },
+          children: columns.map((column) => ({
+            tag: column.tag,
+          })),
+        },
+        {
+          tag: rowImage(),
+        },
+        {
+          tag: copyRight(),
+        },
+      ],
+    })
+  );
+
+  return footerElement;
+}
+
+export default footerGenerator;
