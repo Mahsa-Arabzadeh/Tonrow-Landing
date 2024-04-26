@@ -1,39 +1,27 @@
 import domGenerator from "dom-generator";
+import colFooterGenerator from "./data";
 import "./index.scss";
 
-export const colFooterGenerator = [
-  {
-    colTitle: "سفیر",
-    colText: [
-      {
-        text: "fjdj",
-      },
-      {
-        text: "fjdj",
-      },
-    ],
-  },
-  {
-    colTitle: "سفیر",
-    colText: [
-      {
-        text: "fjdj",
-      },
-      {
-        text: "fjdj",
-      },
-    ],
-  },
-];
-
+// ########################################
 const footer = document.createElement("footer");
 footer.setAttribute("id", "footer");
+const topFooter = document.createElement("div");
+topFooter.setAttribute("class", "top-footer");
+footer.appendChild(topFooter);
 colFooterGenerator.forEach((column) => {
-  const rowElement = rowGenerator(column.colTitle, column.colText);
-  footer.appendChild(rowElement);
+  const div = document.createElement("div");
+  div.setAttribute("class", "test");
+  console.log(div);
+  topFooter.appendChild(div);
+  column.forEach((item) => {
+    console.log(item);
+    div.appendChild(rowGenerator(item.colTitle, item.colText));
+  });
 });
+
 // Append the footer to the body
 document.body.appendChild(footer);
+// ########################################
 
 // function footerGenerator(colFooterGenerator) {
 //   const footerElement = document.body.appendChild(
@@ -59,11 +47,11 @@ document.body.appendChild(footer);
 export function rowGenerator(colTitle, colText) {
   const rowElement = domGenerator({
     tag: "div",
-    attributes: { class: "row-footer" },
+    attributes: { class: "col-footer" },
     children: [
       {
         tag: "h3",
-        attributes: { class: "row-title" },
+        attributes: { class: "col-title" },
         properties: { textContent: colTitle },
       },
       {
