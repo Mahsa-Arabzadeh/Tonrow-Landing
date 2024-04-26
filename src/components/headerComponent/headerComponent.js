@@ -66,7 +66,7 @@ export default function header(headerData) {
                             tag: "a",
                             properties: {
                               textContent: item.linkText,
-                              href: item.LinkAddress || "#",
+                              href: item.LinkAddress ?? "#",
                             },
                           };
                         }),
@@ -105,7 +105,7 @@ export default function header(headerData) {
               attributes: { class: "buttons-container" },
               children: headerData
                 .filter((item) => item.btnText !== undefined)
-                .map((item) => {
+                .map((item, index) => { // Added index parameter
                   // Copy buttonOptions object
                   const buttonOptionsCopy = { ...buttonOptions };
                   if (item.buttonStyles) {
@@ -121,7 +121,20 @@ export default function header(headerData) {
                     properties: { textContent: item.btnText },
                     attributes: {
                       href: item.btnLink || "#", // Set the button href attribute
+                      class: `btn-${index}`, // Add class based on index
                     },
+                    children: item.btnImage
+                      ? [
+                          {
+                            tag: "img",
+                            attributes: {
+                              src: item.btnImage,
+                              alt: item.btnText,
+                              class: "button-image", // Add a class for styling
+                            },
+                          },
+                        ]
+                      : [], // If no btnImage, leave children array empty
                     eventListeners: {
                       // Navigate to the specified link when the button is clicked
                       click: () => {
