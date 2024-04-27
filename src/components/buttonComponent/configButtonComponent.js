@@ -11,6 +11,7 @@ const buttonOptions = {
     "https://",
     eventListeners:{click:()=> console.log("Hi!")},
     disabled:false,
+    iconStart: "image/...."
 };
 
 export default buttonOptions;
