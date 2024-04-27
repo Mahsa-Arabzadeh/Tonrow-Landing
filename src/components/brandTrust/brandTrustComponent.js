@@ -1,3 +1,9 @@
+// core version module:
+import Swiper from "swiper";
+// import Swiper and modules styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import domGenerator from "dom-generator";
 import { brandData } from "./data";
 import "./index.scss";

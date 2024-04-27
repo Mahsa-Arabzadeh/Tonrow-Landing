@@ -76,7 +76,7 @@ function rowImage() {
   rowImageFooter.forEach((item) => {
     const imgElement = domGenerator({
       tag: "img",
-      attributes: { class: "footer-imgsrc", src: item.imgSrc, alt: "" },
+      attributes: { class: "footer-imgsrc", src: item.imgSrc },
     });
     // Append the image element to the rowImagesContainer
     rowImageContainer.appendChild(imgElement);
