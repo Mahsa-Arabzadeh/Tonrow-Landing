@@ -3,8 +3,8 @@ import { colFooterGenerator, rowImageFooter } from "./data";
 import "./index.scss";
 
 /**
- * @param {string} rowTitle
- * @param {Array} textElements
+ * @param {string} colTitle
+ * @param {Array} colText
  * @returns {HTMLElement}
  */
 function rowGenerator(colTitle, colText, imgSrc) {
