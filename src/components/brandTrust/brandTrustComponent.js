@@ -1,11 +1,17 @@
 // core version + navigation, pagination modules:
 import Swiper from "swiper";
+// Import domGenerator for creating DOM Elements.
 import domGenerator from "dom-generator";
 import { brandData } from "./data";
 // import Swiper and modules styles
 import "swiper/css";
 import "./index.scss";
 
+/**
+ * Creates a swiper element for displaying brands.
+ * @function swiperBrands
+ * @returns {HTMLElement} - The swiper element
+ */
 function swiperBrands() {
   const swiperElement = document.createElement("div");
   swiperElement.setAttribute("class", "swiper");
@@ -17,6 +23,11 @@ function swiperBrands() {
   return swiperElement;
 }
 
+/**
+ * Function to generate the brand trust section.
+ * @function generateBrandTrust
+ * @returns {HTMLElement} - Create part of brand trust container.
+ */
 function generateBrandTrust() {
   const sectionBrandTrust = document.body.appendChild(
     domGenerator({
