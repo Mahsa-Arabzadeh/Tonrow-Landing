@@ -1,37 +1,108 @@
-//* test button 
+//* test button
 
 #btn-primary {
   background-color: peru;
   color: white;
-
 }
 /**========================================================================
  * !                              buttons
  *   The sizes and specifications of each button are announced in Discord.
  *========================================================================**/
-.larg {
-  width: 236px;
-  height: 69px;
-  border-radius: 8px;
-}
-.medium {
+.buttonComponentWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  img {
+    max-width: 20px;
+  }
+  .buttonComponent {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+  }
+  // .buttonComponent {
+
+  &[data-size="medium"] {
     width: 192px;
     height: 56px;
     border-radius: 4px;
-}
-.small {
+  }
+  &[data-size="large"] {
+    width: 236px;
+    height: 69px;
+    border-radius: 8px;
+  }
+  &[data-size="small"] {
     width: 172px;
     height: 43px;
     border-radius: 4px;
-}
-.extraSmall{
+  }
+  &[data-size="extraSmall"] {
     width: 68px;
     height: 60px;
     border-radius: 4px;
-}
+  }
+  &[data-size="extraLarge"] {
+    width: 264px;
+    height: 56px;
+    border-radius: 4px;
+  }
+  &[data-status="primaryFill"] {
+    background-color: #003d95;
+    color: #ececec;
+    border: 1.5px solid rgba(220, 220, 220, 1);
+    text-align: center;
 
-.extraLarg{
-  width: 264px;
-  height: 56px;
-  border-radius: 4px;
+    &:hover {
+      background-color: #003d95;
+      color: #ececec;
+    }
+    &:focus,
+    &:active {
+      background-color: #2b6fbd;
+      color: #ececec;
+    }
+    &:disabled {
+      color: #8c8c8c;
+      background-color: #ececec;
+    }
+  }
+  &[data-status="primaryOutLine"] {
+    background-color: transparent;
+    border: 1px solid #dcdcdc;
+    color: #003d95;
+    font-size: 24px;
+    text-align: center;
+    &:hover {
+      border: 1.5px solid #003d95;
+      box-shadow: 0px 19px 34px 0px #14113824;
+    }
+    &:focus,
+    &:active {
+      background-color: #f5f5f5;
+      border: 1.5px solid #003d95;
+    }
+    &:disabled {
+      color: #8c8c8c;
+    }
+  }
+
+  &[data-status="primaryTextBtn"] {
+    background-color: transparent;
+    color: #003d95;
+
+    &:hover {
+      background-color: #e8e8e8;
+    }
+    &:focus,
+    &:active {
+      background-color: #f5f5f5;
+    }
+    &:disabled {
+      color: #8c8c8c;
+    }
+  }
+
+  // }
 }

@@ -1,6 +1,5 @@
 import cardGenerator from "dom-generator";
 
-import buttonOptions from "../buttonComponent/configButtonComponent";
 import baseButtonGenerator from "../buttonComponent/buttonComponent";
 
 /**================================================================================================
@@ -34,9 +33,13 @@ function createBlueCard(title, description, textButton) {
             },
           },
           {
-            tag: baseButtonGenerator(buttonOptions),
-            // attributes: { class: "sellButton" },
-            // properties: { textContent: textButton },
+            tag: baseButtonGenerator({
+              content: "درخواست خرید",
+              size: "large",
+              statues: "primaryFill",
+              type: "button",
+              class: "btn-primary",
+            }),
           },
         ],
       },

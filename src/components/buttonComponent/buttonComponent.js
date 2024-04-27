@@ -8,61 +8,51 @@ import "./index.scss";
  *@return button {button}
  *=======================================================================================================================**/
 
-function baseButtonGenerator(buttonOptions) {
+function baseButtonGenerator({
+  content,
+  size = "medium",
+  statues = "primaryFill",
+  type = "button",
+  className = "",
+  anchorLink = "#",
+  eventListeners = {},
+  disabled,
+  iconStart = "",
+  iconEnd = "",
+}) {
   let button = domGenerator({
-    tag: "button",
-  });
+    tag: "div",
+    attributes: {
+      class: `buttonComponentWrapper  ${className}`,
+    },
+    dataAttributes: { size: size, status: statues },
+    eventListeners,
+    children: [
+      {
+        tag:'img',
+        attributes:{src:iconStart}
+      },
+      {
+        tag: "button",
+        properties: { textContent: content },
+        attributes: {
+          class: `buttonComponent`,
+          href: anchorLink,
+        },
+      },
+      {
+        tag:'img',
+        attributes:{src:iconEnd}
 
-  // Set the content of the button
-  button.textContent = buttonOptions.content;
-  button.textContent = buttonOptions.content ?? "button";
+      },
+    ],
+  });
 
   // Set the type of the button
-  button.type = buttonOptions.type;
-  button.type = buttonOptions.type ?? "default";
+  button.type = type ?? "button";
 
-  const { content = "button", type = "default" } = buttonOptions;
-
-  // Set the size of the button
-  button.classList.add(buttonOptions.size);
-
-  // Disable the button if necessary
-  if (buttonOptions.disabled) {
+  if (disabled) {
     button.disabled = true;
-  }
-
-  if (buttonOptions.anchorlink) {
-    button.href = buttonOptions.anchorlink;
-  }
-
-  // Add attributes to the button
-  Object.keys(buttonOptions.attributes).forEach((attribute) => {
-    button.setAttribute(attribute, buttonOptions.attributes[attribute]);
-  });
-
-  // Add data attributes to the button
-  Object.keys(buttonOptions.dataattributes).forEach((dataAttribute) => {
-    button.dataset[dataAttribute] = buttonOptions.dataattributes[dataAttribute];
-  });
-
-  if (buttonOptions.onclick) {
-    button.addEventListener("click", buttonOptions.onclick);
-  }
-
-  // Add a start icon to the button
-  if (buttonOptions.starticon) {
-    const span = document.createElement("span");
-    span.classList.add("btn-icon", "btn-start-icon");
-    span.innerHTML = buttonOptions.starticon;
-    button.insertBefore(span, button.firstChild);
-  }
-
-  // Add an end icon to the button
-  if (buttonOptions.endicon) {
-    const span = document.createElement("span");
-    span.classList.add("btn-icon", "btn-end-icon");
-    span.innerHTML = buttonOptions.endicon;
-    button.appendChild(span);
   }
 
   return button;

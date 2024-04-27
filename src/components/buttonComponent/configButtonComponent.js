@@ -1,13 +1,18 @@
+import './buttonComponent';
+import './index.scss';
+
 const buttonOptions = {
-  content: 'درخواست خرید',
-  size: "extraLarg",
+  content: "درخواست خرید",
+  size: "large",
+  statues: "primaryFill",
   type: "button",
-  attributes: {
-    id: "btn-primary",
-  },
-  dataattributes: {
-    main: "primer",
-  },
+  class: "btn-primary",
+  anchorLink:
+    "https://",
+    eventListeners:{click:()=> console.log("Hi!")},
+    disabled:false,
 };
 
 export default buttonOptions;
+
+

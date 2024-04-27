@@ -19,7 +19,7 @@ function createMap() {
       };
     }
   );
-  console.log(tooltips);
+
   // start domGenerator
   let mapBackground = domGenerator({
     tag: "div",
@@ -35,7 +35,7 @@ function createMap() {
       },
       {
         tag: "img",
-        attributes: { src: "./public/images/group.png" },
+        attributes: { src: "./public/images/group.png" , class:'motorDelivery' },
       },
       //* catch array tooltips
       ...tooltips,

@@ -34,3 +34,5 @@ function createTooltip(tagName, className, text, numOfTooltips) {
 }
 
 export default createTooltip;
+
+
