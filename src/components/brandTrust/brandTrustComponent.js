@@ -1,23 +1,24 @@
-// core version module:
+// core version + navigation, pagination modules:
 import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+import domGenerator from "dom-generator";
+import { brandData } from "./data";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import domGenerator from "dom-generator";
-import { brandData } from "./data";
 import "./index.scss";
 
-export function swiperBrands() {
+function swiperBrands() {
   const swiperElement = document.createElement("div");
   swiperElement.setAttribute("class", "swiper");
 
   let swiper = new Swiper(".swiper", {
+    modules: [Navigation],
     slidesPerView: "auto",
-    centeredSlides: false,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 
@@ -42,18 +43,37 @@ function generateBrandTrust() {
               tag: "div",
               attributes: { class: "swiper-wrapper" },
             },
+            {
+              tag: "div",
+              attributes: { class: "swiper-btn-container" },
+              children: [
+                {
+                  tag: "div",
+                  attributes: { class: "swiper-button-prev" },
+                },
+              ],
+            },
+            {
+              tag: "div",
+              attributes: { class: "swiper-btn-container" },
+              children: [
+                {
+                  tag: "div",
+                  attributes: { class: "swiper-button-next" },
+                },
+              ],
+            },
           ],
         },
       ],
     })
   );
+  swiperBrands();
 
   const brandContainer = document.querySelector(".swiper-wrapper");
   // append to the container of image items
   brandData.forEach((data) => {
-    brandContainer.appendChild(
-      brandIconGenerator(data.defaultSrc, data.hoveredSrc)
-    );
+    brandContainer.appendChild(brandIconGenerator(data.defaultSrc));
   });
 
   return sectionBrandTrust;
@@ -64,23 +84,13 @@ function generateBrandTrust() {
  * @param {string} - hoveredSrc : The hovered source of images.
  * @returns {HTMLElement} - this function generate a dom element of brand icons.
  */
-export function brandIconGenerator(defaultSrc, hoveredSrc) {
+function brandIconGenerator(defaultSrc) {
   const brandGenerator = document.body.appendChild(
     domGenerator({
       tag: "img",
       attributes: { class: "swiper-slide", src: defaultSrc },
-      eventListeners: {
-        mouseover: (e) => {
-          const mouseOver = e.target.setAttribute("src", hoveredSrc);
-        },
-        mouseout: (e) => {
-          const mouseOut = e.target.setAttribute("src", defaultSrc);
-        },
-      },
     })
   );
-
-  swiperBrands();
 
   return brandGenerator;
 }
