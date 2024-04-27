@@ -2,48 +2,12 @@ import domGenerator from "dom-generator";
 import { colFooterGenerator, rowImageFooter } from "./data";
 import "./index.scss";
 
-// ########################################
-const footer = document.createElement("footer");
-footer.setAttribute("id", "footer");
-const topFooter = document.createElement("div");
-topFooter.setAttribute("class", "top-footer");
-footer.appendChild(topFooter);
-footer.appendChild(rowImage());
-colFooterGenerator.forEach((column) => {
-  const div = document.createElement("div");
-  div.setAttribute("class", "test");
-  topFooter.appendChild(div);
-  column.forEach((item) => {
-    div.appendChild(rowGenerator(item.colTitle, item.colText, item.imgSrc));
-  });
-});
-
-// Append the footer to the body
-document.body.appendChild(footer);
-// ########################################
-
-// function footerGenerator(colFooterGenerator) {
-//   const footerElement = document.body.appendChild(
-//     domGenerator({
-//       tag: "footer",
-//       attributes: { id: "footer" },
-//       children: colFooterGenerator.forEach((title) => {
-//         const rowElement = rowGenerator(title.rowTitle, title.obj.textElement);
-//         console.log(rowElement);
-//         return rowElement;
-//       }),
-//     })
-//   );
-//   return footerElement;
-// }
-// footerGenerator(colFooterGenerator);
-
 /**
  * @param {string} rowTitle
  * @param {Array} textElements
  * @returns {HTMLElement}
  */
-export function rowGenerator(colTitle, colText, imgSrc) {
+function rowGenerator(colTitle, colText, imgSrc) {
   const rowElement = domGenerator({
     tag: "div",
     attributes: { class: "col-footer" },
@@ -99,19 +63,89 @@ export function rowGenerator(colTitle, colText, imgSrc) {
   return rowElement;
 }
 
-export function rowImage() {
+/**
+ * Creates a row of images based on the provided image sources.
+ * @returns {HTMLElement} - The container element for the row of images.
+ */
+function rowImage() {
   const rowImageContainer = domGenerator({
     tag: "div",
     attributes: { class: "row-images" },
   });
-
+  // Iterate over each image source and create corresponding img elements
   rowImageFooter.forEach((item) => {
     const imgElement = domGenerator({
       tag: "img",
-      attributes: { class: "footer-imgsrc", src: item.imgSrc, alt: "" },
+      attributes: { class: "footer-imgsrc", src: item.imgSrc },
     });
+    // Append the image element to the rowImagesContainer
     rowImageContainer.appendChild(imgElement);
   });
 
   return rowImageContainer;
 }
+
+/**
+ * Generates a footer element containing copyright information.
+ * @returns {HTMLElement} - The footer element containing copyright information.
+ */
+function copyRight() {
+  const copyRight = domGenerator({
+    tag: "div",
+    attributes: { class: "footer-copyright" },
+    properties: {
+      textContent: "تمام حقوق مادی و معنوی این وبسایت متعلق به تنرو است.",
+    },
+  });
+
+  return copyRight;
+}
+
+/**
+ * Generates a footer element and appends it to the document body.
+ * @returns {HTMLElement} The generated footer element.
+ */
+function footerGenerator() {
+  const columns = colFooterGenerator.map((column) => {
+    const columnTag = domGenerator({
+      tag: "div",
+      attributes: { class: "test" },
+    });
+
+    column.forEach((item) => {
+      columnTag.appendChild(
+        rowGenerator(item.colTitle, item.colText, item.imgSrc)
+      );
+    });
+
+    return {
+      tag: columnTag,
+    };
+  });
+
+  const footerElement = document.body.appendChild(
+    domGenerator({
+      tag: "footer",
+      attributes: { id: "footer" },
+      children: [
+        {
+          tag: "div",
+          attributes: { class: "top-footer" },
+          children: columns.map((column) => ({
+            tag: column.tag,
+          })),
+        },
+        {
+          tag: rowImage(),
+        },
+        {
+          tag: copyRight(),
+        },
+      ],
+    })
+  );
+
+  return footerElement;
+}
+
+export default footerGenerator;

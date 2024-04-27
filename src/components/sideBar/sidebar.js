@@ -51,7 +51,7 @@ export default function sidebar(headerData, defaultRole) {
           ],
         },
         // Additional link container if defaultRole is not "public"
-        defaultRole !== "public"
+        !headerData[0].public
           ? {
               tag: "div",
               attributes: { class: "additional-links" },
