@@ -12,7 +12,7 @@ function animationTooltips() {
     setTimeout(() => {
       element.style.display = "flex";
       element.style.animationDelay = "2s"; // Set a fixed delay of 2 seconds for the animation to start
-    }, delay * 1000); // Convert the delay to milliseconds by multiplying with 1000
+    }, delay * 800); // Convert the delay to milliseconds by multiplying with 1000
 
     element.addEventListener("animationend", () => {
       element.style.display = "none";

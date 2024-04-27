@@ -12,7 +12,7 @@ import createBlueCard from "./blueCard";
  *================================================================================================**/
 function createMap() {
   //* map on array tooltips 
-  const tooltips = createTooltip("div", "tooltips", "this is a test", 5).map(
+  const tooltips = createTooltip("div", "tooltips", "", 5).map(
     (item) => {
       return {
         tag: item,

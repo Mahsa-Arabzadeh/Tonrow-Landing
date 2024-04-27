@@ -13,7 +13,6 @@
 // import { rowGenerator } from "./src/components/footerComponent/footerComponent";
 // import handleHeaderError from "./src/components/headerComponent/errorHandler";
 // import renderMap from "./src/components/mapComponent/mapComponent";
-// import renderMap from "./src/components/mapComponent/mapComponent";
 
 // rowGenerator();
 

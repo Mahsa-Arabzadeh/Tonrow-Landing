@@ -73,13 +73,14 @@ body {
 
     .tooltips {
       position: absolute;
-      background-color: #06489f;
+      background-color:#2B6FBD;
       color: white;
       padding: 5px;
-      border-radius: 5px;
+      border-radius: 4px;
       width: fit-content;
       height: fit-content;
       display: none;
+      
 
       @keyframes animated {
         from {
@@ -93,11 +94,14 @@ body {
       }
 
       &:nth-child(3) {
-        left: 20px;
+        left: 45px;
         top: 180px;
         animation-name: animated;
         animation-duration: 5s;
         animation-delay: 10s;
+      }
+      &:nth-child(3)::after {
+        content: "درخواست سفیر";
       }
 
       &:nth-child(4) {
@@ -107,7 +111,9 @@ body {
         left: 300px;
         top: 280px;
       }
-
+      &:nth-child(4)::after {
+        content: "قبول درخواست توسط نزدیک ترین سفیر";
+      }
       &:nth-child(5) {
         animation-name: animated;
         animation-duration: 5s;
@@ -115,25 +121,33 @@ body {
         left: 740px;
         top: 222px;
       }
-
+      &:nth-child(5)::after {
+        content: "حضور در مبدا";
+      }
       &:nth-child(6) {
         animation-name: animated;
         animation-duration: 5s;
         animation-delay: 2s;
-        left: 698px;
+        left: 750px;
         top: 390px;
       }
-
+      &:nth-child(6)::after {
+        content: "دریافت سفارش";
+      }
       &:nth-child(7) {
         animation-name: animated;
         animation-duration: 5s;
         animation-delay: 2s;
-        left: 680px;
-        top: 510px;
+        left: 725px;
+        top: 525px;
+      }
+      &:nth-child(7)::after {
+        content: "تحویل سفارش";
       }
     }
   }
 }
+
 /**========================================================================
  *                           blue card component
  *========================================================================**/
