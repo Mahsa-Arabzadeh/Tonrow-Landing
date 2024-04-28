@@ -82,8 +82,6 @@ function whyTonrowGenerator() {
     );
   });
 
-  document.body.appendChild(section);
-
   return whyTonrowSection;
 }
 

@@ -29,28 +29,26 @@ function swiperBrands() {
  * @returns {HTMLElement} - Create part of brand trust container.
  */
 function generateBrandTrust() {
-  const sectionBrandTrust = document.body.appendChild(
-    domGenerator({
-      tag: "section",
-      attributes: { class: "section-brand" },
-      children: [
-        {
-          tag: "h1",
-          attributes: { class: "sec-title" },
-          properties: { textContent: "چه برند هایی به ما اعتماد کردند؟" },
-        },
-        {
-          tag: swiperBrands(),
-          children: [
-            {
-              tag: "div",
-              attributes: { class: "swiper-wrapper" },
-            },
-          ],
-        },
-      ],
-    })
-  );
+  const sectionBrandTrust = domGenerator({
+    tag: "section",
+    attributes: { class: "section-brand" },
+    children: [
+      {
+        tag: "h1",
+        attributes: { class: "sec-title" },
+        properties: { textContent: "چه برند هایی به ما اعتماد کردند؟" },
+      },
+      {
+        tag: swiperBrands(),
+        children: [
+          {
+            tag: "div",
+            attributes: { class: "swiper-wrapper" },
+          },
+        ],
+      },
+    ],
+  });
   swiperBrands();
 
   const brandContainer = document.querySelector(".swiper-wrapper");
