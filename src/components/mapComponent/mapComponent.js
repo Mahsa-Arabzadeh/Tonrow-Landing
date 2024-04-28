@@ -4,15 +4,10 @@ import "./index.scss";
 import animationTooltips from "./tooltipAnimation";
 import createMap from "./map";
 
-//* map component
-
-//
-/**=======================================================================================================================
- **                                                  mapGenerator
- *?  This MAP Map makes the sequel.This function of taking a series of inputs and outputs makes it more usable.That has a card and photo.
- *@return map {object}
- *=======================================================================================================================
- **/
+/**
+ * Renders a map section with tooltips and manages tooltip animations.
+ * @returns {HTMLDivElement} - The generated map section element.
+ */
 function renderMap() {
   let map = domGenerator({
     tag: "div",
@@ -24,10 +19,8 @@ function renderMap() {
       },
     ],
   });
-  // return map;
-  document.body.append(map);
+  return map;
   //* Using IntersectionObserver, it manages the animation of tooltips.
-
   animationTooltips();
 }
 

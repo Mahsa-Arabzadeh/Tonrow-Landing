@@ -1,17 +1,16 @@
-import cardGenerator from "dom-generator";
+import domGenerator from "dom-generator";
 
 import baseButtonGenerator from "../buttonComponent/buttonComponent";
 
-/**================================================================================================
- **                                      createBlueCard
- *?  This section is responsible for creating the blue card component in the map section.This card contains a title and description and a button that is made in this part.The texts are given as input to the function so that it can be changed.
- *@param title string
- *@param description string
- *@param buttonText string
- *@return blueCard[card]
- *================================================================================================**/
+/**
+ * Creates a blue card element with title, description, and optional button.
+ * @param {string} title - The title of the blue card.
+ * @param {string} description - The description of the blue card.
+ * @param {string} [textButton] - The text content of the optional button.
+ * @returns {HTMLDivElement} - The generated blue card element.
+ */
 function createBlueCard(title, description, textButton) {
-  let blueCard = cardGenerator({
+  let blueCard = domGenerator({
     tag: "div",
     //* map: parent section of map
     attributes: { id: "blueCard" },

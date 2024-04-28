@@ -1,5 +1,7 @@
 //* Animation of displaying tooltips.This animation assigns an animation to each tooltip by selecting it.
-
+/**
+ * Animates tooltips with a delayed display and disappearance.
+ */
 function animationTooltips() {
   //* all tooltips select with class
   const elements = document.querySelectorAll(".tooltips");

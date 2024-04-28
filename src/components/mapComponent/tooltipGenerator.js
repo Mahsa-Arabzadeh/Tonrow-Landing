@@ -1,15 +1,13 @@
-// import domGenerator from "dom-generator";
 import domGenerator from "dom-generator";
 
-/**========================================================================
- **                           FUNCTION NAME
- *?  This function creates a tooltip by taking inputs. These inputs return the type of element and the number of tooltips and its internal content.
- *@param tagName {element}
- *@param className {string}
- *@param text {string}
- *@param numOfTooltips {number}
- *@return {Array}
- *========================================================================**/
+/**
+ * Creates an array of tooltip elements.
+ * @param {string} tagName - The tag name for each tooltip element.
+ * @param {string} className - The class name for each tooltip element.
+ * @param {string} text - The text content for each tooltip element.
+ * @param {number} numOfTooltips - The number of tooltips to create.
+ * @returns {Array<HTMLDivElement>} - An array containing the generated tooltip elements.
+ */
 // Function to create a tooltip with a specified number of tooltips and a common class
 function createTooltip(tagName, className, text, numOfTooltips) {
   // Create an array to store the tooltips
@@ -34,5 +32,3 @@ function createTooltip(tagName, className, text, numOfTooltips) {
 }
 
 export default createTooltip;
-
-
