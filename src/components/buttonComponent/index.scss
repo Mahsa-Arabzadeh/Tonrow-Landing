@@ -8,11 +8,14 @@
  * !                              buttons
  *   The sizes and specifications of each button are announced in Discord.
  *========================================================================**/
+
+//  parent div: include button and two icon in start and end 
 .buttonComponentWrapper {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
+  // max with 
   img {
     max-width: 20px;
   }
@@ -21,7 +24,6 @@
     border: none;
     color: inherit;
   }
-  // .buttonComponent {
 
   &[data-size="medium"] {
     width: 192px;
@@ -104,5 +106,4 @@
     }
   }
 
-  // }
 }
