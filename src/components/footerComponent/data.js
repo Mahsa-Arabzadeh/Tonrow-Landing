@@ -93,7 +93,7 @@ const colFooterGenerator = [
   ],
   [
     {
-      imgSrc: "../../public/images/Tonrow-white.svg",
+      imgSrc: "/images/Tonrow-white.svg",
       colTitle: "سفیر",
       colText: [
         {
@@ -107,10 +107,10 @@ const colFooterGenerator = [
 // Path data of images for the rowImageFooter section
 const rowImageFooter = [
   {
-    imgSrc: "../../public/images/Rectangleimg-footer.svg",
+    imgSrc: "/images/Rectangleimg-footer.svg",
   },
   {
-    imgSrc: "../../public/images/Rectangle-footer.svg",
+    imgSrc: "/images/Rectangle-footer.svg",
   },
 ];
 

@@ -25,7 +25,6 @@
 // const customButton = baseButtonGenerator(buttonOptions);
 // document.body.appendChild(customButton);
 
-
 // generatorDOMWhatDoesTonrowDo();
 
 // heroBannerSection()
