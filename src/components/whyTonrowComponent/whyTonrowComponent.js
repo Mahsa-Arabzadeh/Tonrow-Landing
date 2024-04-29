@@ -1,5 +1,5 @@
 import domGenerator from "dom-generator";
-import { whayTonrowData } from "./data";
+import { whyTonrowData } from "./data";
 import "./index.scss";
 
 /**
@@ -10,7 +10,9 @@ import "./index.scss";
  * @param {string} bgColor - The background color of the card.
  * @returns {HTMLElement} The generated DOM element representing the "Why Tonrow" card.
  */
-function whyTonrowCardGenerator(title, description, icon, bgColor) {
+function whyTonrowCardGenerator(cardProps) {
+  const { title, description, icon, bgColor } = cardProps;
+
   const whyTonrow = domGenerator({
     tag: "div",
     attributes: { class: "why-tonrow-card" },
@@ -58,28 +60,37 @@ function whyTonrowCardGenerator(title, description, icon, bgColor) {
  * @returns {HTMLElement} The generated section element.
  */
 function whyTonrowGenerator() {
-  // i'll refactor this.---------------------------
-  const section = document.createElement("section");
-  const secTitle = document.createElement("div");
-  const cardContainer = document.createElement("div");
-  section.appendChild(secTitle);
-  section.appendChild(cardContainer);
-  secTitle.textContent = "چرا  تنرو  را  انتخاب  کنیم؟";
-  section.setAttribute("class", "section-why");
-  secTitle.setAttribute("class", "sec-title");
-  cardContainer.setAttribute("class", "card-container");
-  // i'll refactor this.---------------------------
+  const cardContainerConst = whyTonrowData.map((data) => {
+    const { title, description, icon, bgColor } = data;
+    const cards = whyTonrowCardGenerator({
+      title,
+      description,
+      icon,
+      bgColor,
+    });
 
-  //Append cards to the cardContainer to see the cards.
-  const generateCard = whayTonrowData.forEach((data) => {
-    cardContainer.appendChild(
-      whyTonrowCardGenerator(
-        data.title,
-        data.description,
-        data.icon,
-        data.bgColor
-      )
-    );
+    return {
+      tag: cards,
+    };
+  });
+
+  const whyTonrowSection = domGenerator({
+    tag: "div",
+    attributes: { class: "why-tonrow-container" },
+    children: [
+      {
+        tag: "h1",
+        attributes: { class: "sec-title" },
+        properties: { textContent: "چرا  تنرو  را  انتخاب  کنیم؟" },
+      },
+      {
+        tag: "div",
+        attributes: { class: "card-container" },
+        children: cardContainerConst.map((data) => ({
+          tag: data.tag,
+        })),
+      },
+    ],
   });
 
   return whyTonrowSection;

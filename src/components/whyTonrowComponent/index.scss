@@ -84,7 +84,7 @@
     }
 }
 
-.section-why{
+.why-tonrow-container{
     height: fit-content;
     display: flex;
     align-items: center;
@@ -109,7 +109,7 @@
 
 
 @include queryIf(360){
-    .section-why{
+    .why-tonrow-container{
         gap: 20px;
         .sec-title{
             font-size: 20px;
@@ -126,7 +126,7 @@
     }
 }
 @include queryIf(361){
-    .section-why{
+    .why-tonrow-container{
         gap: 20px;
         .sec-title{
             font-size: 20px;
@@ -144,7 +144,7 @@
     }
 }
 @include queryIf(600){
-    .section-why{
+    .why-tonrow-container{
         gap: 48px;
         .sec-title{
             font-size: 40px;
