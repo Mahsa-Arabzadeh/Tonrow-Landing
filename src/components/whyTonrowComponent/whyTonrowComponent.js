@@ -4,6 +4,7 @@ import "./index.scss";
 
 /**
  * Generates a DOM element representing a "Why Tonrow" card.
+ * @param {Object} cardProps - The properties of the card.
  * @param {string} title - The title of the card.
  * @param {string} description - The description of the card.
  * @param {string} icon - The URL of the icon for the card.
