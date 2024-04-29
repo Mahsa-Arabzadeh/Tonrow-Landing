@@ -123,25 +123,27 @@ function footerGenerator() {
     };
   });
 
-  const footerElement = domGenerator({
-    tag: "footer",
-    attributes: { id: "footer" },
-    children: [
-      {
-        tag: "div",
-        attributes: { class: "top-footer" },
-        children: columns.map((column) => ({
-          tag: column.tag,
-        })),
-      },
-      {
-        tag: rowImage(),
-      },
-      {
-        tag: copyRight(),
-      },
-    ],
-  });
+  const footerElement = document.body.appendChild(
+    domGenerator({
+      tag: "footer",
+      attributes: { id: "footer" },
+      children: [
+        {
+          tag: "div",
+          attributes: { class: "top-footer" },
+          children: columns.map((column) => ({
+            tag: column.tag,
+          })),
+        },
+        {
+          tag: rowImage(),
+        },
+        {
+          tag: copyRight(),
+        },
+      ],
+    })
+  );
 
   return footerElement;
 }
