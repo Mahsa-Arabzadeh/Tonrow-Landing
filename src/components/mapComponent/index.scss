@@ -58,6 +58,18 @@ body {
       width: fit-content;
       height: fit-content;
       display: none;
+      animation-name: animated;
+      animation-duration: 5s;
+
+
+      @keyframes animated {
+        from {
+          display: none;
+        }
+        to {
+          display: flex;
+        }
+      }
 
       &:nth-child(3) {
         left: 45px;
