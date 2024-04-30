@@ -1,7 +1,7 @@
 import domGenerator from "dom-generator";
 import "./index.scss"
 import "./responsive.scss"
-import "../buttonComponent/buttonComponent.js"
+import baseButtonGenerator from "../buttonComponent/buttonComponent";
 
 
 let descriptionData = {
@@ -26,6 +26,8 @@ let imagesSrc = {
   subcardDesktopDownBtn: "./public/images/heroBannerImages/downBtn.png"
 
 }
+
+
 
 /**
  * @returns - Creating the entire octet page dynamically with DOM generator
@@ -105,6 +107,16 @@ export default function heroBannerSection() {
                 tag: "span",
                 attributes: { class: "hero-textContent" },
                 properties: { textContent: descriptionData.textContent }
+              },
+              
+              {
+                tag: baseButtonGenerator({
+                  content: "ورور/ثبت نام",
+                  size: "small",  // size include: small , large , medium , extraLarge , extraSmall
+                  statues: "primaryFill",// include: primaryOutLine and primaryTextBtn, primaryFill
+                  type: "button", 
+                  class: "btn-primary",
+                }),
               },
 
             ]
