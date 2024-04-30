@@ -1,6 +1,7 @@
-"use strict";
 import domGenerator from "dom-generator";
 import "./sidebar.scss";
+
+"use strict";
 
 /**
  * Generates and controls the sidebar component.
@@ -85,7 +86,7 @@ export default function sidebar(headerData) {
       overlay.style.display = "none"; // Hide the overlay
     } else {
       sidebar.classList.add("open"); // Open the sidebar
-      overlay.style.display = "block"; // Show the overlay
+      overlay.style.display = "none"; // Show the overlay
     }
   }
 
@@ -98,8 +99,9 @@ export default function sidebar(headerData) {
   // Event listener to close sidebar when clicking outside of it
   document.addEventListener("click", (event) => {
     const sidebar = document.getElementById("sidebar");
+    const overlay = document.querySelector(".overlay");
     const sidebarToggleIcon = document.querySelector(".sidebar-toggle-icon");
-
+    overlay.style.display = "block";
     if (
       sidebar &&
       !sidebar.contains(event.target) &&
