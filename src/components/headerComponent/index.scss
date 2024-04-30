@@ -1,61 +1,46 @@
-/* Styling for the header */
+/* Styles for the header component */
 #header {
   background-color: #fefefe; /* Background color of the header */
   color: #fff; /* Text color */
   padding: 20px; /* Padding around the header content */
 
-  /* Styling for the content within the header */
+  /* Styles for the content within the header */
   .header-content {
     display: flex; /* Display as flexbox */
     align-items: center; /* Align items vertically */
     flex-direction: row-reverse; /* Arrange content in a row in reverse order */
     justify-content: space-between; /* Space evenly between content */
 
-    /* Styling for the container holding the logo and links */
+    /* Styles for the container holding the logo and links */
     .logo-links-container {
       display: flex; /* Display as flexbox */
       align-items: center; /* Align items vertically */
       flex-direction: row-reverse; /* Arrange content in a row in reverse order */
 
-      /* Styling for the links within the logo-links container */
+      /* Styles for the links within the logo-links container */
       .logo-links a {
         color: #9a9a9a; /* Link color */
         text-decoration: none; /* Remove underline from links */
         transition: color 0.3s ease; /* Smooth color transition */
         margin-right: 20px; /* Margin on the right */
 
-        /* Styling for link hover state */
+        /* Styles for link hover state */
         &:hover {
           color: #034cb6; /* Change color on hover */
         }
       }
 
-      /* Styling for the logo */
+      /* Styles for the logo */
       .logo {
         height: 15px; /* Height of the logo */
         margin-left: 20px; /* Margin on the left */
       }
     }
 
-    /* Styling for the container holding buttons */
+    /* Styles for the container holding buttons */
     .buttons-container {
       display: flex; /* Display as flexbox */
       align-items: center; /* Align items vertically */
-
-      /* Specific styles for each button class */
-      .btn-0 {
-        /* Styles for buttons in the first array */
-        background-color: #fefefe; /* Background color */
-        padding: 7px 10px; /* Padding */
-        margin-right: 5px; /* Margin on the right */
-        border: 2px solid #dcdcdc; /* Border */
-      }
-
-      .btn-1 {
-        background-color: #fefefe; /* Background color */
-        padding: 7px 10px; /* Padding */
-        border: 2px solid #dcdcdc; /* Border */
-      }
 
       /* Special styles for buttons created from publicHeaderData array */
       .btn-public {
@@ -64,6 +49,13 @@
         border: none; /* No border */
         border-radius: 5px; /* Border radius */
         cursor: pointer; /* Cursor style */
+      }
+      .buttonComponentWrapper {
+        margin-right: 10px; /* Margin on the right */
+        cursor: pointer; /* Cursor style */
+      }
+      .buttonComponentWrapper img {
+        margin-left: 25px; /* Margin on the left */
       }
     }
   }

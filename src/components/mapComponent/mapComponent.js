@@ -19,7 +19,7 @@ function renderMap() {
       },
     ],
   });
-  return map;
+  document.body.appendChild(map);
   //* Using IntersectionObserver, it manages the animation of tooltips.
   animationTooltips();
 }

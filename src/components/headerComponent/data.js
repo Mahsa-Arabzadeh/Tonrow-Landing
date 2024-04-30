@@ -1,16 +1,15 @@
 /**
- * Header data for public role.
+ * Contains header data tailored for the public role, including logo information and navigation links.
+ * 
  * @type {Array<Object>}
  */
 const publicHeaderData = [
+  // Logo configuration and link
   {
     imgAddress: "./public/images/Tonrow.svg",
-    LinkAddress: "#home",
-    btnText: "ورود/ثبت نام",
-    btnLink: "#register",
-    imgLinkAddress: "#",
-    public: true, 
+    logoLink: "#",
   },
+  // Navigation links for public role
   {
     linkText: "خانه",
     LinkAddress: "#home",
@@ -23,22 +22,35 @@ const publicHeaderData = [
     linkText: "درخواست خرید",
     LinkAddress: "#home",
   },
+  // Button for login/register action
+  {
+    content: "ورود / ثبت نام",
+    size: "extraLarge",
+    statues: "primaryFill",
+    type: "button",
+    class: "btn-primary",
+    anchorLink: "#dashboard",
+  },
 ];
 
 /**
- * Header data for safir role.
+ * Contains header data customized for the safir role, including logo, navigation links, and action buttons.
+ * 
  * @type {Array<Object>}
  */
 const safirHeaderData = [
+  // Logo and notification button
   {
     imgAddress: "./public/images/Tonrow.svg",
-    linkText: "تماس با ما",
-    LinkAddress: "#home",
-    btnText: "",
-    btnLink: "#register",
-    btnImage: "./public/images/notification.svg",
-    imgLinkAddress: "#",
+    logoLink: "#",
+    size: "extraSmall",
+    statues: "primaryOutLine",
+    type: "button",
+    class: "custom-class",
+    anchorLink: "#",
+    iconStart: "./images/notification.svg",
   },
+  // Navigation links for safir role
   {
     linkText: "خانه",
     LinkAddress: "#home",
@@ -59,27 +71,35 @@ const safirHeaderData = [
     linkText: "اطلاعیه",
     LinkAddress: "#home",
   },
+  // Button for user settings
   {
-    btnText: "",
-    btnLink: "#hi",
-    btnImage: "./public/images/setting-2.svg",
+    size: "extraSmall",
+    statues: "primaryOutLine",
+    type: "button",
+    class: "custom-class",
+    anchorLink: "#MyRBN",
+    iconStart: "./images/setting-2.svg",
   },
 ];
 
 /**
- * Header data for admin role.
+ * Contains header data designed for the admin role, encompassing logo, navigation links, and administrative actions.
+ * 
  * @type {Array<Object>}
  */
 const adminHeaderData = [
+  // Logo and notification button
   {
     imgAddress: "./public/images/Tonrow.svg",
-    linkText: "تماس با ما",
-    LinkAddress: "#home",
-    btnText: "",
-    btnLink: "#register",
-    btnImage: "./public/images/notification.svg",
-    imgLinkAddress: "#",
+    logoLink: "#",
+    size: "extraSmall",
+    statues: "primaryOutLine",
+    type: "button",
+    class: "custom-class",
+    anchorLink: "#",
+    iconStart: "./images/notification.svg",
   },
+  // Navigation links for admin role
   {
     linkText: "خانه",
     LinkAddress: "#home",
@@ -100,27 +120,35 @@ const adminHeaderData = [
     linkText: "لیست جابجایی",
     LinkAddress: "#home",
   },
+  // Button for admin settings
   {
-    btnText: "",
-    btnLink: "#hi",
-    btnImage: "./public/images/setting-2.svg",
+    size: "extraSmall",
+    statues: "primaryOutLine",
+    type: "button",
+    class: "custom-class",
+    anchorLink: "#MyRBN",
+    iconStart: "./images/setting-2.svg",
   },
 ];
 
 /**
- * Header data for user role.
+ * Contains header data optimized for the user role, including logo, navigation links, and user-specific actions.
+ * 
  * @type {Array<Object>}
  */
 const userHeaderData = [
+  // Logo and notification button
   {
     imgAddress: "./public/images/Tonrow.svg",
-    linkText: "تماس با ما",
-    LinkAddress: "#home",
-    btnText: "",
-    btnLink: "#register",
-    btnImage: "./public/images/notification.svg",
-    imgLinkAddress: "#",
+    logoLink: "#",
+    size: "extraSmall",
+    statues: "primaryOutLine",
+    type: "button",
+    class: "custom-class",
+    anchorLink: "#",
+    iconStart: "./images/notification.svg",
   },
+  // Navigation links for user role
   {
     linkText: "خانه",
     LinkAddress: "#home",
@@ -137,10 +165,14 @@ const userHeaderData = [
     linkText: "درخواست خرید",
     LinkAddress: "#home",
   },
+  // Button for user settings
   {
-    btnText: "",
-    btnLink: "#hi",
-    btnImage: "./public/images/setting-2.svg",
+    size: "extraSmall",
+    statues: "primaryOutLine",
+    type: "button",
+    class: "custom-class",
+    anchorLink: "#",
+    iconStart: "./images/setting-2.svg",
   },
 ];
 
