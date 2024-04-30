@@ -1,95 +1,100 @@
-
 @media screen and (min-width: 370px) and (max-width: 440px) {
-    
-    .hero-image{
+
+    .hero-image {
         left: 10%;
     }
-  }
+}
 
 @media screen and (min-width: 440px) {
-    
-    .hero-image{
+
+    .hero-image {
         left: 15%;
     }
 
-    .downArrow-image{
+    .downArrow-image {
         bottom: 13%;
     }
-    .subcard-image{
+
+    .subcard-image {
         bottom: -9%;
         width: 110%;
     }
 
-  
+
 
 }
 
 @media screen and (min-width: 455px) {
-    
-    .subcard-image{
+
+    .subcard-image {
         bottom: -10%;
     }
-  }
+}
 
 
 @media screen and (min-width : 500px) {
-   
-    .downArrow-image{
+
+    .downArrow-image {
         bottom: 12%;
     }
-    
-    .subcard-image{
+
+    .subcard-image {
         bottom: -12%;
     }
 }
+
 @media screen and (min-width : 500px) {
-   
-.hero-image{
-    left: 20%;
-}
+
+    .hero-image {
+        left: 20%;
+    }
 }
 
 @media screen and (min-width : 600px) {
 
 
-    .hero-image{
+    .hero-image {
         left: 25%;
     }
-    .subcard-image{
+
+    .subcard-image {
         bottom: -14%;
     }
 }
 
 @media screen and (min-width : 650px) {
-    .subcard-image{
+    .subcard-image {
         bottom: -18%;
-     }
+    }
 }
 
 @media screen and (min-width : 700px) {
- .subcard-image{
-    bottom: -21%;
- }
+    .subcard-image {
+        bottom: -21%;
+    }
 }
 
 @media screen and (min-width : 750px) {
- .subcard-image{
-    bottom: -23.5%;
- }
- .hero-image{
-    left: 28%;
- }
+    .subcard-image {
+        bottom: -23%;
+    }
+
+    .hero-image {
+        left: 28%;
+    }
 
 }
+
 @media screen and (min-width : 800px) {
- .subcard-image{
-    bottom: -26%;
- }
+    .subcard-image {
+        bottom: -25%;
+    }
 }
+
 @media screen and (min-width : 850px) {
- .subcard-image{
-    bottom: -28%;
- }
+    .subcard-image {
+        bottom: -26%;
+    }
 }
 
 // -------------------------------
@@ -97,16 +102,19 @@
 
 @media screen and (min-width : 900px) {
 
-    #desktop-subcardTexts{
+    #desktop-subcardTexts {
         background-color: transparent;
-        span{
+
+        span {
             font-size: 18px;
         }
-        span:first-of-type{
+
+        span:first-of-type {
             font-size: 37px;
         }
     }
-    #hero-section{
+
+    #hero-section {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -114,37 +122,43 @@
         height: 370px;
         gap: 15%;
     }
-    #herobBanner-Container{
+
+    #herobBanner-Container {
         width: 100%;
         max-width: 350px;
     }
-    #hero-description{
+
+    #hero-description {
         width: 30%;
     }
-    .subcard-image{
+
+    .subcard-image {
         display: none;
     }
+
     .subcard-image-desktop {
         display: block;
-        
+
     }
-    .subcard-desktop-container{
+
+    .subcard-desktop-container {
         display: flex;
         bottom: 20%;
         // position: absolute;
     }
-    .downArrow-image{
+
+    .downArrow-image {
         display: none;
     }
 
-    .hero-image{
+    .hero-image {
         left: unset;
         // width: 100%;
         top: -10%;
         left: 5%;
     }
 
-    #hero-description{
+    #hero-description {
         text-align: end;
         display: flex;
         align-items: end;
@@ -155,22 +169,32 @@
 
 
 @media screen and (min-width : 1000px) {
-    
-    #herobBanner-Container{
+
+    #herobBanner-Container {
         margin-left: 5%;
     }
 }
 
 @media screen and (min-width : 1100px) {
-    
-    #herobBanner-Container{
+
+    #herobBanner-Container {
         margin-left: 7%;
     }
 }
 
+@media screen and (min-width : 1150px) {
+
+    .subcard-desktop-container {
+        display: flex;
+        bottom: 22%;
+        // position: absolute;
+    }
+}
+
+
 @media screen and (min-width : 1250px) {
-    
-    #herobBanner-Container{
+
+    #herobBanner-Container {
         margin-left: 8%;
     }
 }

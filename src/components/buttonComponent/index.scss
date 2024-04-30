@@ -18,16 +18,19 @@
     width: 192px;
     height: 56px;
     border-radius: 4px;
+    font-size: 16px;
   }
   &[data-size="large"] {
     width: 236px;
     height: 69px;
     border-radius: 8px;
+    font-size: 24px;
   }
   &[data-size="small"] {
     width: 172px;
     height: 43px;
     border-radius: 4px;
+    font-size: 16px;
   }
   &[data-size="extraSmall"] {
     width: 68px;
@@ -38,6 +41,7 @@
     width: 264px;
     height: 56px;
     border-radius: 4px;
+    font-size: 24px;
   }
   &[data-status="primaryFill"] {
     background-color: #003d95;
