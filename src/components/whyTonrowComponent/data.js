@@ -1,3 +1,5 @@
+"use strict";
+
 import "../../../root.scss";
 import "./index.scss";
 
