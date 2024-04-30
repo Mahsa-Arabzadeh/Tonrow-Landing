@@ -1,7 +1,10 @@
 "use strict";
+import domGenerator from "dom-generator";
+import "./sidebar.scss";
+
 /**
  * Generates and controls the sidebar component.
- * 
+ *
  * @param {Array<Object>} headerData - Data to populate the sidebar component.
  * @returns {HTMLElement} - The created sidebar element.
  */
@@ -16,7 +19,10 @@ export default function sidebar(headerData) {
         tag: "div",
         attributes: { class: "sidebar-logo" },
         children: [
-          { tag: "img", attributes: { src: headerData[0].imgAddress, alt: "Logo" } },
+          {
+            tag: "img",
+            attributes: { src: headerData[0].imgAddress, alt: "Logo" },
+          },
           { tag: "div", attributes: { class: "line" } },
         ],
       },
@@ -50,12 +56,15 @@ export default function sidebar(headerData) {
   document.body.appendChild(sidebarGenerator); // Append sidebar to the body
 
   // Create overlay div
-  const overlayDiv = domGenerator({ tag: "div", attributes: { class: "overlay" } });
+  const overlayDiv = domGenerator({
+    tag: "div",
+    attributes: { class: "overlay" },
+  });
   document.body.appendChild(overlayDiv); // Append overlay to the body
 
   /**
    * Checks if the sidebar is open.
-   * 
+   *
    * @returns {boolean} - Whether the sidebar is open.
    */
   function isSidebarOpen() {
