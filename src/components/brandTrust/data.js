@@ -1,3 +1,5 @@
+"use strict";
+
 export const brandData = [
   {
     defaultSrc: "/images/refahlogo-hoverd.svg",

@@ -1,3 +1,5 @@
+"use strict";
+
 // core version + navigation, pagination modules:
 import Swiper from "swiper";
 // Import domGenerator for creating DOM Elements.
@@ -13,14 +15,34 @@ import "./index.scss";
  * @returns {HTMLElement} - The swiper element
  */
 function swiperBrands() {
-  const swiperElement = document.createElement("div");
-  swiperElement.setAttribute("class", "swiper");
+  // append to the container of image items
+  const brandImage = brandData.map((data) => {
+    const imagesCard = brandIconGenerator(data.defaultSrc);
 
-  let swiper = new Swiper(".swiper", {
+    return {
+      tag: imagesCard,
+    };
+  });
+  // Create swiper container
+  const swiperContainer = domGenerator({
+    tag: "div",
+    attributes: { class: "swiper" },
+    children: [
+      {
+        tag: "div",
+        attributes: { class: "swiper-wrapper" },
+        children: brandImage.map((img) => ({
+          tag: img.tag,
+        })),
+      },
+    ],
+  });
+
+  new Swiper(swiperContainer, {
     slidesPerView: "auto",
   });
 
-  return swiperElement;
+  return swiperContainer;
 }
 
 /**
@@ -40,21 +62,8 @@ function generateBrandTrust() {
       },
       {
         tag: swiperBrands(),
-        children: [
-          {
-            tag: "div",
-            attributes: { class: "swiper-wrapper" },
-          },
-        ],
       },
     ],
-  });
-  swiperBrands();
-
-  const brandContainer = document.querySelector(".swiper-wrapper");
-  // append to the container of image items
-  brandData.forEach((data) => {
-    brandContainer.appendChild(brandIconGenerator(data.defaultSrc));
   });
 
   return sectionBrandTrust;
