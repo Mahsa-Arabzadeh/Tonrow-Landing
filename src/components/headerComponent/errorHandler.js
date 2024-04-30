@@ -1,21 +1,23 @@
-/**
- * Imports the header component function from the headerComponent module.
- * @param {Array} headerData - Data to populate the header component.
- * @returns {void}
- */
-import header from "./headerComponent"; // Corrected import path
+"use strict";
 
 /**
- * Function to handle errors related to header data.
+ * Checks if the properties of header data are valid.
  * @param {Array} headerData - Data to populate the header component.
- * @returns {void}
+ * @throws {Error} Throws an error if headerData array is empty.
  */
-export default function handleHeaderError(headerData) {
-  if (!headerData.length) {
-    // Log an error message if headerData array is empty
-    console.error("headerData array is empty");
-  } else {
-    // Render the header if data is available
-    header(headerData);
+export default function checkHeaderData(headerData) {
+  try {
+    if (!headerData.length) {
+      throw new Error("headerData array is empty");
+    } else {
+      // Render the header if data is available
+      header(headerData);
+    }
+  } catch (error) {
+    // catch errors:
+    console.error(error.message);
   }
 }
+
+// Imports the header component function from the headerComponent module.
+import header from "./headerComponent"; // Corrected import path

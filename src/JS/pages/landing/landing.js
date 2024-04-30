@@ -1,5 +1,5 @@
 import main from "../../../components/mainComponent/main";
-
+import header from "../../../components/headerComponent/headerComponent";
 document.addEventListener("DOMContentLoaded", pageLandingRendering);
 
 /**
@@ -10,7 +10,7 @@ function pageLandingRendering() {
   const body = document.body;
   //   prepend header here:
   //   ...
-
+  body.prepend(header());
   //   append main section here:
   body.appendChild(main());
   //   append main section here:

@@ -1,5 +1,6 @@
 import domGenerator from "dom-generator";
 // import all section here:
+import generateBrandTrust from "../brandTrust/brandTrustComponent";
 import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
 // ...
 // import all section here:
@@ -15,6 +16,9 @@ function containerComponent() {
     children: [
       {
         tag: whyTonrowGenerator(),
+      },
+      {
+        tag: generateBrandTrust(),
       },
     ],
   });

@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Import header data arrays.
  */
