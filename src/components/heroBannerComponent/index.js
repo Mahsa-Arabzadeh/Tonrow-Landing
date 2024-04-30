@@ -4,17 +4,20 @@ import "./responsive.scss"
 import baseButtonGenerator from "../buttonComponent/buttonComponent";
 
 
+// descriptionData in hero banner
 let descriptionData = {
   heroTitle: "سامانه تنرو",
   textContent: 'دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر'
 }
 
+// subcard Desktop Data texts 
 let subcardDesktopData = {
   subcardTitle: "+5 سال",
   subcardTextContent: "سابقه کار با بزرگترین شرکت های بوشهر"
 }
 
 
+// all image in hero section
 let imagesSrc = {
 
   logoImage: "./public/images/heroBannerImages/Logotype.png",
@@ -24,7 +27,6 @@ let imagesSrc = {
   subcardImage: "./public/images/heroBannerImages/Subtract-mobile.png",
   subcardDesktopImage: "./public/images/heroBannerImages/Subtract-desktop.svg",
   subcardDesktopDownBtn: "./public/images/heroBannerImages/downBtn.png"
-
 }
 
 
@@ -108,13 +110,13 @@ export default function heroBannerSection() {
                 attributes: { class: "hero-textContent" },
                 properties: { textContent: descriptionData.textContent }
               },
-              
+
               {
                 tag: baseButtonGenerator({
                   content: "ورور/ثبت نام",
                   size: "small",  // size include: small , large , medium , extraLarge , extraSmall
                   statues: "primaryFill",// include: primaryOutLine and primaryTextBtn, primaryFill
-                  type: "button", 
+                  type: "button",
                   class: "btn-primary",
                 }),
               },

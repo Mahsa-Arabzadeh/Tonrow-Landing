@@ -1,9 +1,9 @@
 // hero section (mobile version)
-#hero-section{
+#hero-section {
     width: 95%;
     height: 350px;
     margin: 0 auto;
-    margin-top: 5% ;
+    margin-top: 5%;
     position: relative;
     max-width: 1000px;
     // background-color: #6168FF;
@@ -26,59 +26,61 @@
     margin: 0 auto;
 }
 
-#hero-banner > img {
+#hero-banner>img {
     position: absolute;
 }
 
-.logo-image{
+.logo-image {
     right: 7%;
     top: -5%;
     // z-index: 1;
 }
 
-.hero-image{
+.hero-image {
     // left: 3%;
     top: -10%;
     z-index: 2;
 }
 
-.shadow-image{
+.shadow-image {
     width: 100%;
     height: 100%;
     // z-index: ;
 }
 
-.downArrow-image{
+.downArrow-image {
     bottom: 13%;
     left: 45%;
     z-index: 5;
 }
 
-.subcard-image{
- width: 115%;
- position: absolute;
- z-index: 4;
- bottom: -6%;
- left: -5%;
- padding-bottom: 5px;
- max-width: 900px;
+.subcard-image {
+    width: 115%;
+    position: absolute;
+    z-index: 4;
+    bottom: -6%;
+    left: -5%;
+    padding-bottom: 5px;
+    max-width: 900px;
 }
+
 // ---------------------
 // end of heroBanner
 
 // ---------------------
 // start of heroDescription
 
-#hero-description{
+#hero-description {
     text-align: center;
     display: flex;
     align-items: center;
     margin: 0 auto;
     flex-direction: column;
+    gap: 20px;
     // background-color: #6168FF;
 }
 
-#hero-description .hero-title{
+#hero-description .hero-title {
     font-size: 50px;
     font-weight: bold;
     margin: 0;
@@ -89,15 +91,16 @@
     padding-top: 10px;
     width: 95%;
 }
+
 // =-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=
 
-.subcard-desktop-container{
+.subcard-desktop-container {
     display: none;
 }
 
-.subcard-desktop-container{
+.subcard-desktop-container {
     position: absolute;
-    width: 120%; 
+    width: 120%;
     max-width: 1280px;
     height: 10%;
     max-height: 10px;
@@ -105,15 +108,16 @@
 
 }
 
-.subcard-desktop-container > * {
+.subcard-desktop-container>* {
     position: absolute;
 }
-.subcard-desktop-container > .subcard-image-desktop {
+
+.subcard-desktop-container>.subcard-image-desktop {
     width: 100%;
     top: -10%;
 }
 
-#desktop-subcardTexts{
+#desktop-subcardTexts {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
@@ -123,11 +127,10 @@
     top: 600%;
 }
 
-.subcard-downBtn{
+.subcard-downBtn {
     position: absolute;
     left: 13%;
     top: 900%;
     width: 50px;
     // width:100px;
 }
-
