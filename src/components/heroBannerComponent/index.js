@@ -10,11 +10,27 @@ let descriptionData = {
 }
 
 let subcardDesktopData = {
-  subcardTitle : "+5 سال" ,
-  subcardTextContent : "سابقه کار با بزرگترین شرکت های بوشهر"
+  subcardTitle: "+5 سال",
+  subcardTextContent: "سابقه کار با بزرگترین شرکت های بوشهر"
 }
 
 
+let imagesSrc = {
+
+  logoImage: "./public/images/heroBannerImages/Logotype.png",
+  heroImage: "./public/images/heroBannerImages/hero.png",
+  shadowImage: "./public/images/heroBannerImages/shadow.png",
+  downArrowImage: "./public/images/heroBannerImages/arrow.svg",
+  subcardImage: "./public/images/heroBannerImages/Subtract-mobile.png",
+  subcardDesktopImage: "./public/images/heroBannerImages/Subtract-desktop.svg",
+  subcardDesktopDownBtn: "./public/images/heroBannerImages/downBtn.png"
+
+}
+
+/**
+ * @returns - Creating the entire octet page dynamically with DOM generator
+ * @function - cretor heroBannerSection
+ */
 export default function heroBannerSection() {
   const heroGenerator = document.body.appendChild(
     domGenerator(
@@ -39,31 +55,31 @@ export default function heroBannerSection() {
                   // logo image
                   {
                     tag: "img",
-                    attributes: { class: "logo-image", src: "./public/images/heroBannerImages/Logotype.png" }
+                    attributes: { class: "logo-image", src: imagesSrc.logoImage }
                   },
 
                   // hero image
                   {
                     tag: "img",
-                    attributes: { class: "hero-image", src: "./public/images/heroBannerImages/hero.png" }
+                    attributes: { class: "hero-image", src: imagesSrc.heroImage }
                   },
 
                   // shadow image
                   {
                     tag: "img",
-                    attributes: { class: "shadow-image", src: "./public/images/heroBannerImages/shadow.png" }
+                    attributes: { class: "shadow-image", src: imagesSrc.shadowImage }
                   },
 
                   // down arrow image
                   {
                     tag: "img",
-                    attributes: { class: "downArrow-image", src: "./public/images/heroBannerImages/arrow.svg" }
+                    attributes: { class: "downArrow-image", src: imagesSrc.downArrowImage }
                   },
 
                   //  subcard image (mobile)
                   {
                     tag: "img",
-                    attributes: { class: "subcard-image", src: "./public/images/heroBannerImages/Subtract-mobile.png" }
+                    attributes: { class: "subcard-image", src: imagesSrc.subcardImage }
                   },
 
                 ]
@@ -96,45 +112,45 @@ export default function heroBannerSection() {
 
 
           {
-            tag : "div",
-            attributes : { class : "subcard-desktop-container"},
-            children : [
+            tag: "div",
+            attributes: { class: "subcard-desktop-container" },
+            children: [
               {
                 tag: "img",
-                attributes: { class: "subcard-image-desktop", src: "./public/images/heroBannerImages/Subtract-desktop.svg" },
+                attributes: { class: "subcard-image-desktop", src: imagesSrc.subcardDesktopImage },
               },
 
               {
-                tag : "div",
-                attributes : {id : "desktop-subcardTexts"} , 
+                tag: "div",
+                attributes: { id: "desktop-subcardTexts" },
 
-                children : [
-                  
+                children: [
+
                   {
-                    tag : "span",
-                    attributes : {class : "subcard-title"},
-                    properties: { textContent: subcardDesktopData.subcardTitle}
+                    tag: "span",
+                    attributes: { class: "subcard-title" },
+                    properties: { textContent: subcardDesktopData.subcardTitle }
                   },
-    
+
                   {
-                    tag : "span",
-                    attributes : {class : "subcard-textContent"},
-                    properties: { textContent: subcardDesktopData.subcardTextContent}
+                    tag: "span",
+                    attributes: { class: "subcard-textContent" },
+                    properties: { textContent: subcardDesktopData.subcardTextContent }
                   },
 
                 ]
               },
 
               {
-                tag : "img",
-                attributes : { class : "subcard-downBtn" , src : "./public/images/heroBannerImages/downBtn.png"},
+                tag: "img",
+                attributes: { class: "subcard-downBtn", src: imagesSrc.subcardDesktopDownBtn },
               }
-             
+
 
             ]
           },
-     
-   
+
+
 
         ],
         // end of hero section children

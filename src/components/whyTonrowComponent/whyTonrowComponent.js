@@ -1,5 +1,8 @@
+"use strict";
+// modules:
 import domGenerator from "dom-generator";
 import { whyTonrowData } from "./data";
+import checkValue from "./errorHandler";
 import "./index.scss";
 
 /**
@@ -52,6 +55,8 @@ function whyTonrowCardGenerator(cardProps) {
       },
     ],
   });
+
+  checkValue(cardProps);
 
   return whyTonrow;
 }
