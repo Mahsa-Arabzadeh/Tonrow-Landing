@@ -1,13 +1,22 @@
+"use strict";
+
 import baseButtonGenerator from "../buttonComponent/buttonComponent";
 import domGenerator from "dom-generator";
 import sidebar from "../sideBar/sidebar";
 import { getHeaderDataByRole } from "./validate";
-import handleHeaderError from "./errorHandler";
 import "./index.scss";
-
+/**
+ * Generates the header component based on the provided header data.
+ * 
+ * @param {Array<Object>} headerData - Data to populate the header component.
+ * @param {string} [defaultRole="public"] - Default role to determine header data if not provided.
+ * @returns {HTMLElement} - The created header element.
+ */
 export default function header(headerData, defaultRole = "public") {
+  // Retrieve header data based on the default role
   headerData = getHeaderDataByRole(defaultRole);
 
+  // Generate the header element
   const headerElement = domGenerator({
     tag: "header",
     attributes: { id: "header" },
@@ -16,11 +25,14 @@ export default function header(headerData, defaultRole = "public") {
         tag: "div",
         attributes: { class: "header-content" },
         children: [
+          // Conditional rendering based on window width
           window.innerWidth > 900
             ? {
+                // Container for logo and links
                 tag: "div",
                 attributes: { class: "logo-links-container" },
                 children: [
+                  // Logo element
                   {
                     tag: "a",
                     attributes: {
@@ -28,6 +40,7 @@ export default function header(headerData, defaultRole = "public") {
                       class: "logo",
                     },
                     children: [
+                      // Image for logo
                       {
                         tag: "img",
                         attributes: {
@@ -37,6 +50,7 @@ export default function header(headerData, defaultRole = "public") {
                       },
                     ],
                   },
+                  // Links
                   {
                     tag: "div",
                     attributes: { class: "logo-links" },
@@ -54,9 +68,11 @@ export default function header(headerData, defaultRole = "public") {
                 ],
               }
             : {
+                // Container for sidebar toggle icon
                 tag: "div",
                 attributes: { class: "sidebar-toggle-icon" },
                 children: [
+                  // Image for sidebar toggle
                   {
                     tag: "img",
                     attributes: {
@@ -65,6 +81,7 @@ export default function header(headerData, defaultRole = "public") {
                       class: "sidebar-icon",
                     },
                     eventListeners: {
+                      // Event listener for sidebar toggle
                       click: () => {
                         const sidebarElement = document.getElementById("sidebar");
                         sidebarElement.classList.toggle("open");
@@ -73,10 +90,12 @@ export default function header(headerData, defaultRole = "public") {
                   },
                 ],
               },
+          // Container for buttons
           {
             tag: "div",
             attributes: { class: "buttons-container" },
             eventListeners: {
+              // Event listener for button click
               click: () => {
                 const buttonComponentWrapper = document.querySelector('.buttonComponentWrapper');
                 if (buttonComponentWrapper) {
@@ -93,12 +112,16 @@ export default function header(headerData, defaultRole = "public") {
     ],
   });
 
+  // Conditionally render sidebar for screens less than or equal to 900px
   if (window.innerWidth <= 900) {
     sidebar(headerData);
   }
 
+  // Select buttons container
   const buttonsContainer = headerElement.querySelector('.buttons-container');
+  // Clear existing buttons
   buttonsContainer.innerHTML = '';
+  // Iterate through header data to create buttons
   headerData.forEach((item) => {
     if (item.type === "button") {
       const buttonElement = baseButtonGenerator({
@@ -116,5 +139,5 @@ export default function header(headerData, defaultRole = "public") {
     }
   });
 
-  return headerElement;
+  return headerElement; // Return the created header element
 }

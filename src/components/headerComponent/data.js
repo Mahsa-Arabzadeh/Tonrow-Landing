@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Contains header data tailored for the public role, including logo information and navigation links.
  * 

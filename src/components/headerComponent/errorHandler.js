@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Imports the header component function from the headerComponent module.
  * @param {Array} headerData - Data to populate the header component.
