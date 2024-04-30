@@ -27,7 +27,10 @@ let imagesSrc = {
 
 }
 
-
+/**
+ * @returns - Creating the entire octet page dynamically with DOM generator
+ * @function - cretor heroBannerSection
+ */
 export default function heroBannerSection() {
   const heroGenerator = document.body.appendChild(
     domGenerator(
