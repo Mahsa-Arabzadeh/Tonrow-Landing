@@ -9,7 +9,7 @@ import baseButtonGenerator from "../buttonComponent/buttonComponent";
  * @param {string} [textButton] - The text content of the optional button.
  * @returns {HTMLDivElement} - The generated blue card element.
  */
-function createBlueCard(title, description, textButton) {
+function createBlueCard(title, description) {
   let blueCard = domGenerator({
     tag: "div",
     //* map: parent section of map

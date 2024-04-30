@@ -58,6 +58,17 @@ body {
       width: fit-content;
       height: fit-content;
       display: none;
+      animation-name: animated;
+      animation-duration: 5s;
+
+      @keyframes animated {
+        from {
+          display: none;
+        }
+        to {
+          display: flex;
+        }
+      }
 
       &:nth-child(3) {
         left: 45px;
@@ -132,5 +143,13 @@ body {
       font-size: 24px;
       font-weight: 400;
     }
+  }
+}
+/**
+ * CSS rule to hide the map element when the viewport width is 760 pixels or less.
+ */
+@media (max-width: 760px) {
+  #map {
+    display: none;
   }
 }
