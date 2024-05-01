@@ -17,6 +17,13 @@ import "./index.scss";
 function whyTonrowCardGenerator(cardProps) {
   const { title, description, icon, bgColor } = cardProps;
 
+  checkValue(cardProps);
+
+  // when this parameter are invalid cards don't show.
+  if (!title || !description || !icon || !bgColor) {
+    return;
+  }
+
   const whyTonrow = domGenerator({
     tag: "div",
     attributes: { class: "why-tonrow-card" },
@@ -55,8 +62,6 @@ function whyTonrowCardGenerator(cardProps) {
       },
     ],
   });
-
-  checkValue(cardProps);
 
   return whyTonrow;
 }

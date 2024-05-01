@@ -16,7 +16,7 @@ function checkValue(cardProps) {
     // If the values ​​of whyTonrowData were null or invalid, it should throw this error
     for (let key in cardProps) {
       if (cardProps[key] === null) {
-        throw new Error("All properties are null!");
+        return;
       }
     }
     if (!title || !description || !icon || !bgColor) {
