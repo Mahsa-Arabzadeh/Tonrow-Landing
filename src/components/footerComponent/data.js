@@ -39,9 +39,11 @@ const colFooterGenerator = [
       colText: [
         {
           text: "دانلود اپ سفیر",
+          linkHref: "#",
         },
         {
           text: "پرسش های متداول سفیران",
+          linkHref: "#",
         },
       ],
     },
@@ -52,9 +54,11 @@ const colFooterGenerator = [
       colText: [
         {
           text: "خرید منزل",
+          linkHref: "#",
         },
         {
           text: "درخواست جا به جایی",
+          linkHref: "#",
         },
       ],
     },
@@ -65,12 +69,15 @@ const colFooterGenerator = [
       colText: [
         {
           text: "وبلاگ سفیر",
+          linkHref: "#",
         },
         {
           text: "لوگو و هویت سفیر",
+          linkHref: "#",
         },
         {
           text: "قوانین و مقررات",
+          linkHref: "#",
         },
       ],
     },
