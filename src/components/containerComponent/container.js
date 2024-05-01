@@ -14,9 +14,20 @@ function containerComponent() {
     tag: "container",
     attributes: { class: "container" },
     children: [
+      // What services does Tenro provide section
+      // {
+      //   tag: //...
+      // },
+      // map section
+      // {
+      //   tag: //...,
+      // },
+
+      // Why choose Tenero section
       {
         tag: whyTonrowGenerator(),
       },
+      // What brands trusted us section
       {
         tag: generateBrandTrust(),
       },
