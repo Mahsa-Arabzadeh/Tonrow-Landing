@@ -74,12 +74,25 @@ function generateBrandTrust() {
  * @returns {HTMLElement} - this function generate a dom element of brand icons.
  */
 function brandIconGenerator(defaultSrc) {
-  const brandGenerator = domGenerator({
-    tag: "img",
-    attributes: { class: "swiper-slide", src: defaultSrc },
-  });
+  try {
+    // throwing an error that if the image source is not given to the function, do not show the image.
+    if (!defaultSrc) {
+      throw new Error("No default source provided");
+    }
 
-  return brandGenerator;
+    const brandGenerator = domGenerator({
+      tag: "img",
+      attributes: { class: "swiper-slide", src: defaultSrc },
+    });
+
+    return brandGenerator;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export default generateBrandTrust;
+
+// -----------------------------------
+// TODO:
+// rtl for swiper
