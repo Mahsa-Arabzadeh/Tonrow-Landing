@@ -33,3 +33,5 @@
 // const defaultRole = "user";
 // const headerData = getHeaderDataByRole(defaultRole);
 // handleHeaderError(headerData);
+import heroBannerSection from "./src/components/heroBannerComponent";
+heroBannerSection();

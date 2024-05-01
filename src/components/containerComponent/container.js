@@ -1,5 +1,6 @@
 import domGenerator from "dom-generator";
 // import all section here:
+import heroBannerSection from "../heroBannerComponent";
 import generateBrandTrust from "../brandTrust/brandTrustComponent";
 import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
 // ...
@@ -14,6 +15,9 @@ function containerComponent() {
     tag: "container",
     attributes: { class: "container" },
     children: [
+      {
+        tag: heroBannerSection(),
+      },
       // What services does Tenro provide section
       // {
       //   tag: //...

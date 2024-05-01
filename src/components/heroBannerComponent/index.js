@@ -1,183 +1,159 @@
 import domGenerator from "dom-generator";
-import "./index.scss"
-import "./responsive.scss"
-import baseButtonGenerator from "../buttonComponent/buttonComponent";
+import "./index.scss";
+import "./responsive.scss";
+import "../buttonComponent/buttonComponent.js";
 
-
-// descriptionData in hero banner
 let descriptionData = {
   heroTitle: "سامانه تنرو",
-  textContent: 'دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر'
-}
+  textContent:
+    "دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر",
+};
 
-// subcard Desktop Data texts 
 let subcardDesktopData = {
   subcardTitle: "+5 سال",
-  subcardTextContent: "سابقه کار با بزرگترین شرکت های بوشهر"
-}
+  subcardTextContent: "سابقه کار با بزرگترین شرکت های بوشهر",
+};
 
-
-// all image in hero section
 let imagesSrc = {
-
   logoImage: "./public/images/heroBannerImages/Logotype.png",
   heroImage: "./public/images/heroBannerImages/hero.png",
   shadowImage: "./public/images/heroBannerImages/shadow.png",
   downArrowImage: "./public/images/heroBannerImages/arrow.svg",
   subcardImage: "./public/images/heroBannerImages/Subtract-mobile.png",
   subcardDesktopImage: "./public/images/heroBannerImages/Subtract-desktop.svg",
-  subcardDesktopDownBtn: "./public/images/heroBannerImages/downBtn.png"
-}
-
-
+  subcardDesktopDownBtn: "./public/images/heroBannerImages/downBtn.png",
+};
 
 /**
  * @returns - Creating the entire octet page dynamically with DOM generator
  * @function - cretor heroBannerSection
  */
-export default function heroBannerSection() {
-  const heroGenerator = document.body.appendChild(
-    domGenerator(
-      // start of hero section
-      {
-        tag: "section",
-        attributes: { id: "hero-section" },
-        children: [
+function heroBannerSection() {
+  const heroGenerator = domGenerator(
+    // start of hero section
+    {
+      tag: "section",
+      attributes: { id: "hero-section" },
+      children: [
+        {
+          tag: "div",
+          attributes: { id: "herobBanner-Container" },
+          children: [
+            // start of hero banner (all image,icon,shasow in hero section)
+            {
+              tag: "div",
+              attributes: { id: "hero-banner" },
+              children: [
+                // logo image
+                {
+                  tag: "img",
+                  attributes: { class: "logo-image", src: imagesSrc.logoImage },
+                },
 
-          {
-            tag: "div",
-            attributes: { id: "herobBanner-Container" },
-            children: [
+                // hero image
+                {
+                  tag: "img",
+                  attributes: { class: "hero-image", src: imagesSrc.heroImage },
+                },
 
-
-              // start of hero banner (all image,icon,shasow in hero section)
-              {
-                tag: "div",
-                attributes: { id: "hero-banner" },
-                children: [
-
-                  // logo image
-                  {
-                    tag: "img",
-                    attributes: { class: "logo-image", src: imagesSrc.logoImage }
+                // shadow image
+                {
+                  tag: "img",
+                  attributes: {
+                    class: "shadow-image",
+                    src: imagesSrc.shadowImage,
                   },
+                },
 
-                  // hero image
-                  {
-                    tag: "img",
-                    attributes: { class: "hero-image", src: imagesSrc.heroImage }
+                // down arrow image
+                {
+                  tag: "img",
+                  attributes: {
+                    class: "downArrow-image",
+                    src: imagesSrc.downArrowImage,
                   },
+                },
 
-                  // shadow image
-                  {
-                    tag: "img",
-                    attributes: { class: "shadow-image", src: imagesSrc.shadowImage }
+                //  subcard image (mobile)
+                {
+                  tag: "img",
+                  attributes: {
+                    class: "subcard-image",
+                    src: imagesSrc.subcardImage,
                   },
+                },
+              ],
+            },
+          ],
+        },
+        // end of hero banner (all image,icon,shasow in hero section)
 
-                  // down arrow image
-                  {
-                    tag: "img",
-                    attributes: { class: "downArrow-image", src: imagesSrc.downArrowImage }
-                  },
+        //  start of hero description
+        {
+          tag: "div",
+          attributes: { id: "hero-description" },
+          children: [
+            {
+              tag: "h1",
+              attributes: { class: "hero-title" },
+              properties: { textContent: descriptionData.heroTitle },
+            },
+            {
+              tag: "span",
+              attributes: { class: "hero-textContent" },
+              properties: { textContent: descriptionData.textContent },
+            },
+          ],
+        },
 
-                  //  subcard image (mobile)
-                  {
-                    tag: "img",
-                    attributes: { class: "subcard-image", src: imagesSrc.subcardImage }
-                  },
-
-                ]
-              }
-            ]
-
-
-          },
-          // end of hero banner (all image,icon,shasow in hero section)
-
-
-          //  start of hero description
-          {
-            tag: "div",
-            attributes: { id: "hero-description" },
-            children: [
-              {
-                tag: "h1",
-                attributes: { class: "hero-title" },
-                properties: { textContent: descriptionData.heroTitle }
+        {
+          tag: "div",
+          attributes: { class: "subcard-desktop-container" },
+          children: [
+            {
+              tag: "img",
+              attributes: {
+                class: "subcard-image-desktop",
+                src: imagesSrc.subcardDesktopImage,
               },
-              {
-                tag: "span",
-                attributes: { class: "hero-textContent" },
-                properties: { textContent: descriptionData.textContent }
-              },
+            },
+            {
+              tag: "div",
+              attributes: { id: "desktop-subcardTexts" },
 
-              {
-                tag: baseButtonGenerator({
-                  content: "ورور/ثبت نام",
-                  size: "small",  // size include: small , large , medium , extraLarge , extraSmall
-                  statues: "primaryFill",// include: primaryOutLine and primaryTextBtn, primaryFill
-                  type: "button",
-                  class: "btn-primary",
-                }),
-              },
+              children: [
+                {
+                  tag: "span",
+                  attributes: { class: "subcard-title" },
+                  properties: { textContent: subcardDesktopData.subcardTitle },
+                },
 
-            ]
-          },
-
-
-          {
-            tag: "div",
-            attributes: { class: "subcard-desktop-container" },
-            children: [
-              {
-                tag: "img",
-                attributes: { class: "subcard-image-desktop", src: imagesSrc.subcardDesktopImage },
-              },
-
-              {
-                tag: "div",
-                attributes: { id: "desktop-subcardTexts" },
-
-                children: [
-
-                  {
-                    tag: "span",
-                    attributes: { class: "subcard-title" },
-                    properties: { textContent: subcardDesktopData.subcardTitle }
+                {
+                  tag: "span",
+                  attributes: { class: "subcard-textContent" },
+                  properties: {
+                    textContent: subcardDesktopData.subcardTextContent,
                   },
+                },
+              ],
+            },
 
-                  {
-                    tag: "span",
-                    attributes: { class: "subcard-textContent" },
-                    properties: { textContent: subcardDesktopData.subcardTextContent }
-                  },
-
-                ]
+            {
+              tag: "img",
+              attributes: {
+                class: "subcard-downBtn",
+                src: imagesSrc.subcardDesktopDownBtn,
               },
-
-              {
-                tag: "img",
-                attributes: { class: "subcard-downBtn", src: imagesSrc.subcardDesktopDownBtn },
-              }
-
-
-            ]
-          },
-
-
-
-        ],
-        // end of hero section children
-
-
-      }
-      // end of hero section
-    )
-
+            },
+          ],
+        },
+      ],
+      // end of hero section children
+    }
+    // end of hero section
   );
 
+  return heroGenerator;
 }
 
-
-
-
+export default heroBannerSection;
