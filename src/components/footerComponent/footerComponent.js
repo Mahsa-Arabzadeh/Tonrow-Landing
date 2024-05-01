@@ -25,7 +25,7 @@ function rowGenerator(colTitle, colText, imgSrc) {
               },
               {
                 tag: "img",
-                attributes: { src: imgSrc, alt: "" },
+                attributes: { src: imgSrc },
               },
             ],
           },
@@ -34,7 +34,7 @@ function rowGenerator(colTitle, colText, imgSrc) {
             attributes: { class: "text-container" },
             children: colText.map((textObj) => ({
               tag: "div",
-              attributes: { class: "text-element" },
+              attributes: { class: "text-element", src: textObj.linkHref },
               properties: { textContent: textObj.text },
             })),
           },
@@ -51,7 +51,14 @@ function rowGenerator(colTitle, colText, imgSrc) {
             attributes: { class: "text-container" },
             children: colText.map((textObj) => ({
               tag: "div",
-              attributes: { class: "text-element" },
+              attributes: {
+                class: `${
+                  textObj.linkHref === null || textObj.linkHref === undefined
+                    ? "text-element"
+                    : "link-active"
+                }`,
+                src: textObj.linkHref,
+              },
               properties: { textContent: textObj.text },
             })),
           },
@@ -123,29 +130,33 @@ function footerGenerator() {
     };
   });
 
-  const footerElement = document.body.appendChild(
-    domGenerator({
-      tag: "footer",
-      attributes: { id: "footer" },
-      children: [
-        {
-          tag: "div",
-          attributes: { class: "top-footer" },
-          children: columns.map((column) => ({
-            tag: column.tag,
-          })),
-        },
-        {
-          tag: rowImage(),
-        },
-        {
-          tag: copyRight(),
-        },
-      ],
-    })
-  );
-
+  const footerElement = domGenerator({
+    tag: "footer",
+    attributes: { id: "footer" },
+    children: [
+      {
+        tag: "div",
+        attributes: { class: "top-footer" },
+        children: columns.map((column) => ({
+          tag: column.tag,
+        })),
+      },
+      {
+        tag: rowImage(),
+      },
+      {
+        tag: copyRight(),
+      },
+    ],
+  });
+  // document.body.appendChild(footerElement);
   return footerElement;
 }
 
 export default footerGenerator;
+
+// TODO:
+// prepend ✔
+// set a condition for email and number
+// error handler
+// responsive

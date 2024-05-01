@@ -10,6 +10,7 @@ const colFooterGenerator = [
       colTitle: "ایمیل",
       colText: [
         {
+          linkHref: "#",
           text: tonrowEmail,
         },
       ],
@@ -18,6 +19,7 @@ const colFooterGenerator = [
       colTitle: "شماره تماس",
       colText: [
         {
+          linkHref: "#",
           text: tonrowNumber,
         },
       ],
