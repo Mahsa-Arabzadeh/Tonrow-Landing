@@ -8,66 +8,75 @@ import "./index.scss";
  * @returns {HTMLElement}
  */
 function rowGenerator(colTitle, colText, imgSrc) {
-  const rowElement = domGenerator({
-    tag: "div",
-    attributes: { class: "col-footer" },
-    children: (() => {
-      if (imgSrc) {
-        return [
-          {
-            tag: "div",
-            attributes: { class: "image-container" },
-            children: [
-              {
-                tag: "h3",
-                attributes: { class: "col-title" },
-                properties: { textContent: colTitle },
-              },
-              {
-                tag: "img",
-                attributes: { src: imgSrc },
-              },
-            ],
-          },
-          {
-            tag: "div",
-            attributes: { class: "text-container" },
-            children: colText.map((textObj) => ({
-              tag: "div",
-              attributes: { class: "text-element", src: textObj.linkHref },
-              properties: { textContent: textObj.text },
-            })),
-          },
-        ];
-      } else {
-        return [
-          {
-            tag: "h3",
-            attributes: { class: "col-title" },
-            properties: { textContent: colTitle },
-          },
-          {
-            tag: "div",
-            attributes: { class: "text-container" },
-            children: colText.map((textObj) => ({
-              tag: "div",
-              attributes: {
-                class: `${
-                  textObj.linkHref === null || textObj.linkHref === undefined
-                    ? "text-element"
-                    : "link-active"
-                }`,
-                src: textObj.linkHref,
-              },
-              properties: { textContent: textObj.text },
-            })),
-          },
-        ];
-      }
-    })(),
-  });
+  try {
+    // error handler:
+    if (!colText.length || !colTitle || !Array.isArray(colText)) {
+      return;
+    }
 
-  return rowElement;
+    const rowElement = domGenerator({
+      tag: "div",
+      attributes: { class: "col-footer" },
+      children: (() => {
+        if (imgSrc) {
+          return [
+            {
+              tag: "div",
+              attributes: { class: "image-container" },
+              children: [
+                {
+                  tag: "h3",
+                  attributes: { class: "col-title" },
+                  properties: { textContent: colTitle },
+                },
+                {
+                  tag: "img",
+                  attributes: { src: imgSrc },
+                },
+              ],
+            },
+            {
+              tag: "div",
+              attributes: { class: "text-container" },
+              children: colText.map((textObj) => ({
+                tag: "div",
+                attributes: { class: "text-element", src: textObj.linkHref },
+                properties: { textContent: textObj.text },
+              })),
+            },
+          ];
+        } else {
+          return [
+            {
+              tag: "h3",
+              attributes: { class: "col-title" },
+              properties: { textContent: colTitle },
+            },
+            {
+              tag: "div",
+              attributes: { class: "text-container" },
+              children: colText.map((textObj) => ({
+                tag: "div",
+                attributes: {
+                  class: `${
+                    textObj.linkHref === null || textObj.linkHref === undefined
+                      ? "text-element"
+                      : "link-active"
+                  }`,
+                  src: textObj.linkHref,
+                },
+                properties: { textContent: textObj.text },
+              })),
+            },
+          ];
+        }
+      })(),
+    });
+    // return element.
+    return rowElement;
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 
 /**
@@ -157,6 +166,6 @@ export default footerGenerator;
 
 // TODO:
 // prepend ✔
-// set a condition for email and number
+// set a condition for email and number ✔
 // error handler
 // responsive
