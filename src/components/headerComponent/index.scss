@@ -79,11 +79,13 @@
 
   /* Media query for screens less than 900px */
   @media (max-width: 900px) {
-    .header-content {
-      display: flex; /* Display as flexbox */
-      align-items: center; /* Align items vertically */
-      flex-direction: row; /* Arrange content in a row */
-      justify-content: space-between; /* Space evenly between content */
-    }
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Stick to the top of the viewport */
+    width: 100%; /* Make the header cover full width */
+    z-index: 2; /* Ensure it's above other content */
+    display: flex; /* Display as flexbox */
+    align-items: center; /* Align items vertically */
+    flex-direction: row-reverse; /* Arrange content in a row in reverse order */
+    justify-content: flex-end; /* Align content to the end of the flex container */
   }
 }
