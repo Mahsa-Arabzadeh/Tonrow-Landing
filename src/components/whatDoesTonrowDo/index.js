@@ -1,7 +1,6 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
-import { contentWhatDoesTonrowDo } from './data'
-
+import { contentWhatDoesTonrowDo } from "./data";
 
 /**
  * @returns {array} - create heade SEC WhatDoesTonrowDo and pas to dom-genretore

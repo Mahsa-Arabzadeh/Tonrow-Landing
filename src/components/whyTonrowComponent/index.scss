@@ -85,7 +85,6 @@
 }
 
 .why-tonrow-container{
-    height: fit-content;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -107,9 +106,9 @@
     }
 }
 
-
 @include queryIf(360){
     .why-tonrow-container{
+    height: 600px;
         gap: 20px;
         .sec-title{
             font-size: 20px;
@@ -127,6 +126,7 @@
 }
 @include queryIf(361){
     .why-tonrow-container{
+    height: 600px;
         gap: 20px;
         .sec-title{
             font-size: 20px;
@@ -178,6 +178,9 @@
     }
 }
 @include queryIf(1020){
+    .why-tonrow-container{
+        height: 425px;
+    }
     .why-tonrow-card{
         width: 470px;
         height: 123px;
