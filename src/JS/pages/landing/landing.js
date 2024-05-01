@@ -12,7 +12,7 @@ function pageLandingRendering() {
   //   prepend header here:
   body.prepend(header());
   //   append main section here:
-  // body.appendChild(main());
+  body.appendChild(main());
   //   append footer here:
   body.appendChild(footerGenerator());
 }

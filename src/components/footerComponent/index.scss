@@ -1,5 +1,33 @@
 @import "../../../root";
 
+// mixin for media query:
+@mixin queryIf($width){
+    @if ($width == 399){
+        @media (max-width: 399px){
+            @content
+        }
+    }
+        @else if($width == 400){
+        @media (min-width: 400px) {
+            @content
+        }
+    }
+    @else if($width == 460){
+        @media (min-width: 460px) {
+            @content
+        }
+    }
+        @else if($width == 650){
+        @media (min-width: 650px) {
+            @content
+        }
+    }   @else if($width == 900){
+        @media (min-width: 900px) {
+            @content
+        }
+    }
+}
+
 #footer{
     max-width: 100%;
     height: 459px;
@@ -12,6 +40,7 @@
         height: 201px;
         gap: 15px;
         display: flex;
+        justify-content: space-between;
         .test{
             width: 228px;
             height: 201px;
@@ -83,4 +112,96 @@
         padding: 10px 40px 10px 40px;
         gap: 16px;
     }
+}
+
+// responsive footer: 
+// mobile design:
+@include queryIf(399){
+    #footer{
+        .top-footer{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 10px;
+            .test{
+                width: 100%;
+                height: 91px;
+            }
+        }
+        .row-images{
+            gap: 16px;
+
+            .footer-imgsrc{
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+}
+@include queryIf(400){
+    #footer{
+        .top-footer{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 10px;
+            .test{
+                width: 100%;
+                height: 91px;
+            }
+        }
+        .row-images{
+            gap: 16px;
+            .footer-imgsrc{
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+}
+@include queryIf(460){
+    #footer{
+        .top-footer{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 10px;
+            .test{
+                width: 100%;
+                height: 91px;
+            }
+        }
+        .row-images{
+            .footer-imgsrc{
+                width: 160px;
+                height: 168px;
+            }
+        }
+    }
+}
+// mobile design:
+
+@include queryIf(650){
+   #footer{
+    .top-footer{
+        display: flex;
+        .test{
+            width: 228px;
+            height: 201px;
+        }
+    }
+    .row-images{
+        .footer-imgsrc{
+            width: 127px;
+            height: 127px;
+        }
+    }
+   }
+}
+@include queryIf(900){
+   #footer{
+    .row-images{
+        .footer-imgsrc{
+            width: 160px;
+            height: 160px;
+        }
+    }
+   }
 }

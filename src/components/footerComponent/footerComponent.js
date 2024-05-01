@@ -128,11 +128,33 @@ function footerGenerator() {
       attributes: { class: "test" },
     });
 
-    column.forEach((item) => {
-      columnTag.appendChild(
-        rowGenerator(item.colTitle, item.colText, item.imgSrc)
-      );
-    });
+    // remove column with more than one object.
+    if (column.length > 1 && window.innerWidth <= 900) {
+      column.forEach((item) => {
+        columnTag.appendChild(
+          rowGenerator(item.colTitle, item.colText, item.imgSrc)
+        );
+        columnTag.style.display = "none";
+      });
+    }
+    // show column with only one object.
+    if (column.length <= 1 && window.innerWidth <= 900) {
+      column.forEach((item) => {
+        columnTag.appendChild(
+          rowGenerator(item.colTitle, item.colText, item.imgSrc)
+        );
+      });
+    }
+    // if window innerwidth more than 900 we can see all of the objects.
+    if (column.length && window.innerWidth > 900) {
+      {
+        column.forEach((item) => {
+          columnTag.appendChild(
+            rowGenerator(item.colTitle, item.colText, item.imgSrc)
+          );
+        });
+      }
+    }
 
     return {
       tag: columnTag,
@@ -150,22 +172,18 @@ function footerGenerator() {
           tag: column.tag,
         })),
       },
+      // append rowImage part
       {
         tag: rowImage(),
       },
+      // append copyRight part
       {
         tag: copyRight(),
       },
     ],
   });
-  // document.body.appendChild(footerElement);
+
   return footerElement;
 }
 
 export default footerGenerator;
-
-// TODO:
-// prepend ✔
-// set a condition for email and number ✔
-// error handler
-// responsive

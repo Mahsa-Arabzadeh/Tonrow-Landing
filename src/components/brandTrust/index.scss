@@ -54,20 +54,7 @@
 }
 
 @include queryIf(360){
-    .section-brand{
-        .sec-title{
-            font-size: 20px;
-        }
-    }
-    .section-brand{
-        height: 190px;
-        .swiper-wrapper{
-            .swiper-slide{
-                width: 120px;
-                height: 60px;
-            }
-        }
-    }
+
 }
 @include queryIf(361){
     .section-brand{
