@@ -1,4 +1,5 @@
 import domGenerator from "dom-generator";
+import { publicHeaderData } from "../headerComponent/data.js"; // Importing publicHeaderData
 import "./sidebar.scss";
 
 "use strict";
@@ -10,6 +11,9 @@ import "./sidebar.scss";
  * @returns {HTMLElement} - The created sidebar element.
  */
 export default function sidebar(headerData) {
+  // Check if the headerData corresponds to publicHeaderData
+  const isPublicHeader = headerData === publicHeaderData;
+
   // Generate sidebar content
   const sidebarGenerator = domGenerator({
     tag: "div",
@@ -38,7 +42,7 @@ export default function sidebar(headerData) {
         })),
       },
       // Additional links (if not public)
-      !headerData[0].public
+      !isPublicHeader
         ? {
             tag: "div",
             attributes: { class: "additional-links" },
