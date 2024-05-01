@@ -85,8 +85,9 @@
   border: none; /* No border */
   cursor: pointer; /* Cursor style */
   position: fixed; /* Fixed positioning */
+  top: 20px; /* Position from the top */
   right: 20px; /* Position from the right */
-  z-index: 0; /* Stack order */
+  z-index: 1; /* Stack order, ensure it's above other content */
 
   /* Styling for the icon image */
   img {
@@ -94,7 +95,6 @@
     height: 32px; /* Image height */
   }
 }
-
 /* Styling for the overlay */
 .overlay {
   display: none; /* Initially hide the overlay */
