@@ -2,7 +2,7 @@
 
 /**
  * Contains header data tailored for the public role, including logo information and navigation links.
- * 
+ *
  * @type {Array<Object>}
  */
 const publicHeaderData = [
@@ -37,7 +37,7 @@ const publicHeaderData = [
 
 /**
  * Contains header data customized for the safir role, including logo, navigation links, and action buttons.
- * 
+ *
  * @type {Array<Object>}
  */
 const safirHeaderData = [
@@ -86,7 +86,7 @@ const safirHeaderData = [
 
 /**
  * Contains header data designed for the admin role, encompassing logo, navigation links, and administrative actions.
- * 
+ *
  * @type {Array<Object>}
  */
 const adminHeaderData = [
@@ -135,7 +135,7 @@ const adminHeaderData = [
 
 /**
  * Contains header data optimized for the user role, including logo, navigation links, and user-specific actions.
- * 
+ *
  * @type {Array<Object>}
  */
 const userHeaderData = [

@@ -119,7 +119,7 @@ function heroBannerSection() {
                 ? {
                     tag: baseButtonGenerator({
                       content: "ورود / ثبت نام",
-                      size: "medium",
+                      size: "large",
                       statues: "primaryFill",
                       type: "button",
                       className: "",

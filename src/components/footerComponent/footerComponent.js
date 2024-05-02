@@ -63,7 +63,7 @@ function rowGenerator(colTitle, colText, imgSrc) {
                       ? "text-element"
                       : "link-active"
                   }`,
-                  src: textObj.linkHref,
+                  src: `${textObj.linkHref ?? "#"}`,
                 },
                 properties: { textContent: textObj.text },
               })),
@@ -187,3 +187,8 @@ function footerGenerator() {
 }
 
 export default footerGenerator;
+
+// TODO:
+// fix links;
+// responsive for items text.
+// beyne section ha
