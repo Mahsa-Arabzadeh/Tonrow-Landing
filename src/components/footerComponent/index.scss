@@ -72,11 +72,6 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            .link-active{
-                text-decoration: underline #F1F5F8;
-                text-underline-offset: 3px;
-                cursor: pointer;
-            }
         }
         .image-container{
             width: 168px;
@@ -112,6 +107,12 @@
         padding: 10px 40px 10px 40px;
         gap: 16px;
     }
+}
+// data attribute for active text decoration for links
+[data-decoration="link-active"]{
+    text-decoration: underline #F1F5F8;
+    text-underline-offset: 3px;
+    cursor: pointer;
 }
 
 // responsive footer: 

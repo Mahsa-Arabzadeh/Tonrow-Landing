@@ -12,6 +12,7 @@ const colFooterGenerator = [
         {
           linkHref: "#",
           text: tonrowEmail,
+          decoration: "link-active",
         },
       ],
     },
@@ -21,6 +22,7 @@ const colFooterGenerator = [
         {
           linkHref: "#",
           text: tonrowNumber,
+          decoration: "link-active",
         },
       ],
     },

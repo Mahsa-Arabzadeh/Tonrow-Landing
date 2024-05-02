@@ -56,14 +56,14 @@ function rowGenerator(colTitle, colText, imgSrc) {
               tag: "div",
               attributes: { class: "text-container" },
               children: colText.map((textObj) => ({
-                tag: "div",
+                tag: "a",
                 attributes: {
-                  class: `${
-                    textObj.linkHref === null || textObj.linkHref === undefined
-                      ? "text-element"
-                      : "link-active"
-                  }`,
+                  class: "text-element",
                   src: `${textObj.linkHref ?? "#"}`,
+                },
+                // ----------------
+                dataAttributes: {
+                  decoration: textObj.decoration,
                 },
                 properties: { textContent: textObj.text },
               })),
@@ -189,6 +189,6 @@ function footerGenerator() {
 export default footerGenerator;
 
 // TODO:
-// fix links;
+// fix links; ✔
 // responsive for items text.
 // beyne section ha
