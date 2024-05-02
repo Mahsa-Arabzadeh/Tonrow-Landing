@@ -4,3 +4,17 @@
   --primary-color: #003d95;
   --white-text: #f1f5f8;
 }
+
+// add fonts
+@font-face {
+  font-family: "iranSanse";
+  src:
+    url("/public/font/IRANSansXV.ttf") format("ttf"),
+    url("/public/font/IRANSansXV.woff") format("woff"),
+    url("public/font/IRANSansXV.woff2") format("woff2");
+}
+
+// add iransans to container
+.container[data-font="iranSans"] {
+  font-family: "iranSans", sans-serif; 
+}

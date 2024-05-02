@@ -2,6 +2,7 @@ import domGenerator from "dom-generator";
 import "./index.scss";
 import "./responsive.scss";
 import "../buttonComponent/buttonComponent.js";
+import baseButtonGenerator from "../buttonComponent/buttonComponent.js";
 
 let descriptionData = {
   heroTitle: "سامانه تنرو",
@@ -23,6 +24,16 @@ let imagesSrc = {
   subcardDesktopImage: "./public/images/heroBannerImages/Subtract-desktop.svg",
   subcardDesktopDownBtn: "./public/images/heroBannerImages/downBtn.png",
 };
+
+let shouldShowPublicButton = false;
+/**
+ *  This function causes the button to be displayed in the public type
+ * @param {boolean} show - get true or false
+ */
+export function setPublicBtn(show) {
+  // store switching between true and false for public and other type of user.
+  shouldShowPublicButton = show;
+}
 
 /**
  * @returns - Creating the entire octet page dynamically with DOM generator
@@ -102,6 +113,23 @@ function heroBannerSection() {
               tag: "span",
               attributes: { class: "hero-textContent" },
               properties: { textContent: descriptionData.textContent },
+            },
+            {
+              ...(shouldShowPublicButton
+                ? {
+                    tag: baseButtonGenerator({
+                      content: "ورود / ثبت نام",
+                      size: "medium",
+                      statues: "primaryFill",
+                      type: "button",
+                      className: "",
+                      anchorLink: "#",
+                      eventListeners: { click: () => {} },
+                    }),
+                  }
+                : {
+                    tag: "div",
+                  }),
             },
           ],
         },

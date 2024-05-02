@@ -3,8 +3,13 @@
 /**
  * Import header data arrays.
  */
-import { safirHeaderData, adminHeaderData, userHeaderData, publicHeaderData } from "./data.js";
-
+import {
+  safirHeaderData,
+  adminHeaderData,
+  userHeaderData,
+  publicHeaderData,
+} from "./data.js";
+import { setPublicBtn } from "../heroBannerComponent/index.js";
 /**
  * Function to validate user roles and return corresponding header data.
  * @param {string} userRole - The role of the user.
@@ -26,6 +31,7 @@ export function getHeaderDataByRole(userRole) {
       break;
     case "public":
       headerData = publicHeaderData;
+      setPublicBtn(true);
       break;
     default:
       // If the user role is not recognized, return the header data for the public role

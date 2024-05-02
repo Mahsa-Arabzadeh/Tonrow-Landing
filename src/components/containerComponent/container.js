@@ -6,6 +6,7 @@ import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
 // ...
 // import all section here:
 import "./index.scss";
+import "../../../root.scss";
 
 /**
  * @returns {HTMLElement} - container Dom element.
@@ -14,6 +15,7 @@ function containerComponent() {
   const container = domGenerator({
     tag: "container",
     attributes: { class: "container" },
+    dataAttributes: { font: "iranSans" },
     children: [
       {
         tag: heroBannerSection(),
