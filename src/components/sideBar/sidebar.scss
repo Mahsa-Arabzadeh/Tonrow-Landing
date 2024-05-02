@@ -1,3 +1,4 @@
+@import "../../../root";
 /* Define keyframes for sidebar animation */
 @keyframes moveSidebar {
   0% {
@@ -11,8 +12,8 @@
 /* Styling for the sidebar */
 #sidebar {
   display: none; /* Initially hide the sidebar */
-  background-color: #fbfcff; /* Background color */
-  color: #bcbdbf; /* Text color */
+  background-color: var(--white-text); /* Background color */
+  color: var(--gray-color); /* Text color */
   padding: 20px; /* Padding inside the sidebar */
   width: 250px; /* Initial width */
   position: fixed; /* Fixed positioning */
