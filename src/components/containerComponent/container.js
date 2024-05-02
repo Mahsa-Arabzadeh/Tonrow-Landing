@@ -3,6 +3,7 @@ import domGenerator from "dom-generator";
 import heroBannerSection from "../heroBannerComponent";
 import generateBrandTrust from "../brandTrust/brandTrustComponent";
 import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
+import flashMaker from "../flashComponent";
 // ...
 // import all section here:
 import "./index.scss";
@@ -30,11 +31,20 @@ function containerComponent() {
       // },
       // Why choose Tenero section
       {
+        tag: flashMaker({ urlFlash: "/images/Vector 4flashblue.svg" }),
+      },
+      {
         tag: whyTonrowGenerator(),
+      },
+      {
+        tag: flashMaker({ urlFlash: "/images/Vector 40red.svg" }),
       },
       // What brands trusted us section
       {
         tag: generateBrandTrust(),
+      },
+      {
+        tag: flashMaker({ urlFlash: "/images/Vector 4flash.svg" }),
       },
     ],
   });
