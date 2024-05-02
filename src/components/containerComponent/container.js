@@ -17,9 +17,9 @@ function containerComponent() {
     attributes: { class: "container" },
     dataAttributes: { font: "iranSans" },
     children: [
-      {
-        tag: heroBannerSection(),
-      },
+      // {
+      //   tag: heroBannerSection(),
+      // },
       // What services does Tenro provide section
       // {
       //   tag: //...
@@ -28,7 +28,6 @@ function containerComponent() {
       // {
       //   tag: //...,
       // },
-
       // Why choose Tenero section
       {
         tag: whyTonrowGenerator(),

@@ -125,7 +125,7 @@ function footerGenerator() {
   const columns = colFooterGenerator.map((column) => {
     const columnTag = domGenerator({
       tag: "div",
-      attributes: { class: "test" },
+      attributes: { class: "column-tag" },
     });
 
     // remove column with more than one object.
@@ -137,14 +137,7 @@ function footerGenerator() {
         columnTag.style.display = "none";
       });
     }
-    // show column with only one object.
-    if (column.length <= 1 && window.innerWidth <= 900) {
-      column.forEach((item) => {
-        columnTag.appendChild(
-          rowGenerator(item.colTitle, item.colText, item.imgSrc)
-        );
-      });
-    }
+
     // if window innerwidth more than 900 we can see all of the objects.
     if (column.length && window.innerWidth > 900) {
       {
@@ -155,7 +148,16 @@ function footerGenerator() {
         });
       }
     }
-
+    // show column with only one object.
+    if (column.length <= 1 && window.innerWidth <= 900) {
+      column.map((data) => {
+        const dataItem = data.colText.slice(0, 2);
+        columnTag.appendChild(
+          rowGenerator(data.colTitle, dataItem, data.imgSrc)
+        );
+      });
+    }
+    // return colText object to this tag.
     return {
       tag: columnTag,
     };
@@ -168,6 +170,7 @@ function footerGenerator() {
       {
         tag: "div",
         attributes: { class: "top-footer" },
+        dataAttributes: { font: "iranSans" },
         children: columns.map((column) => ({
           tag: column.tag,
         })),
@@ -189,6 +192,4 @@ function footerGenerator() {
 export default footerGenerator;
 
 // TODO:
-// fix links; ✔
-// responsive for items text.
 // beyne section ha

@@ -15,6 +15,10 @@
 }
 
 // add iransans to container
-.container[data-font="iranSans"] {
+[data-font="iranSans"] {
   font-family: "iranSans", sans-serif; 
+}
+// add color to all h1 title
+h1.sec-title{
+  color: var(--black-color);
 }

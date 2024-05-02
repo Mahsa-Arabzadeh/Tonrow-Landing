@@ -7,7 +7,7 @@ import { getHeaderDataByRole } from "./validate";
 import "./index.scss";
 /**
  * Generates the header component based on the provided header data.
- * 
+ *
  * @param {Array<Object>} headerData - Data to populate the header component.
  * @param {string} [defaultRole="public"] - Default role to determine header data if not provided.
  * @returns {HTMLElement} - The created header element.
@@ -20,6 +20,7 @@ export default function header(headerData, defaultRole = "public") {
   const headerElement = domGenerator({
     tag: "header",
     attributes: { id: "header" },
+    dataAttributes: { font: "iranSans" },
     children: [
       {
         tag: "div",
@@ -83,7 +84,8 @@ export default function header(headerData, defaultRole = "public") {
                     eventListeners: {
                       // Event listener for sidebar toggle
                       click: () => {
-                        const sidebarElement = document.getElementById("sidebar");
+                        const sidebarElement =
+                          document.getElementById("sidebar");
                         sidebarElement.classList.toggle("open");
                       },
                     },
@@ -97,15 +99,18 @@ export default function header(headerData, defaultRole = "public") {
             eventListeners: {
               // Event listener for button click
               click: () => {
-                const buttonComponentWrapper = document.querySelector('.buttonComponentWrapper');
+                const buttonComponentWrapper = document.querySelector(
+                  ".buttonComponentWrapper"
+                );
                 if (buttonComponentWrapper) {
-                  const anchorLink = buttonComponentWrapper.getAttribute('data-anchor-link');
+                  const anchorLink =
+                    buttonComponentWrapper.getAttribute("data-anchor-link");
                   if (anchorLink) {
                     window.location.href = anchorLink;
                   }
                 }
-              }
-            }
+              },
+            },
           },
         ],
       },
@@ -118,9 +123,9 @@ export default function header(headerData, defaultRole = "public") {
   }
 
   // Select buttons container
-  const buttonsContainer = headerElement.querySelector('.buttons-container');
+  const buttonsContainer = headerElement.querySelector(".buttons-container");
   // Clear existing buttons
-  buttonsContainer.innerHTML = '';
+  buttonsContainer.innerHTML = "";
   // Iterate through header data to create buttons
   headerData.forEach((item) => {
     if (item.type === "button") {
