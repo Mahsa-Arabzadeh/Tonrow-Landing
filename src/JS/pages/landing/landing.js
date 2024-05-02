@@ -1,6 +1,8 @@
-import header from "../../../components/headerComponent/headerComponent";
-import main from "../../../components/mainComponent/main";
 import footerGenerator from "../../../components/footerComponent/footerComponent";
+import header from "../../../components/headerComponent/headerComponent";
+import renderMap from "../../../components/mapComponent/mapComponent";
+import main from "../../../components/mainComponent/main";
+
 document.addEventListener("DOMContentLoaded", pageLandingRendering);
 
 /**
@@ -13,6 +15,8 @@ function pageLandingRendering() {
   body.prepend(header());
   //   append main section here:
   body.appendChild(main());
+  // append map
+  body.appendChild(renderMap());
   //   append footer here:
   body.appendChild(footerGenerator());
 }
