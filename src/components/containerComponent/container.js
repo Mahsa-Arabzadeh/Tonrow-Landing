@@ -18,9 +18,9 @@ function containerComponent() {
     attributes: { class: "container" },
     dataAttributes: { font: "iranSans" },
     children: [
-      // {
-      //   tag: heroBannerSection(),
-      // },
+      {
+        tag: heroBannerSection(),
+      },
       // What services does Tenro provide section
       // {
       //   tag: //...
