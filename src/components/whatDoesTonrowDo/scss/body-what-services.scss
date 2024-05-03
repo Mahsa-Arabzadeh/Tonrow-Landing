@@ -29,13 +29,14 @@
       text-align: center;
       color: var(--gray-color);
     }
-    button {
+    .botton-tonrow-do {
       outline: none;
       font-size: 16px;
       color: var(--primary-color);
       border: 1.5px solid #dcdcdc;
       padding: 15px;
       width: 40%;
+      cursor: pointer;
     }
   }
 }

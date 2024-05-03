@@ -4,6 +4,7 @@ import heroBannerSection from "../heroBannerComponent";
 import generateBrandTrust from "../brandTrust/brandTrustComponent";
 import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
 import flashMaker from "../flashComponent";
+import generatorDOMWhatDoesTonrowDo from "../whatDoesTonrowDo";
 // ...
 // import all section here:
 import "./index.scss";
@@ -22,9 +23,9 @@ function containerComponent() {
         tag: heroBannerSection(),
       },
       // What services does Tenro provide section
-      // {
-      //   tag: //...
-      // },
+      {
+        tag: generatorDOMWhatDoesTonrowDo(),
+      },
       // map section
       // {
       //   tag: //...,
@@ -42,6 +43,10 @@ function containerComponent() {
       // What brands trusted us section
       {
         tag: generateBrandTrust(),
+      },
+      // flashes
+      {
+        tag: flashMaker({ urlFlash: "/images/Vector 4flash.svg" }),
       },
     ],
   });

@@ -1,6 +1,7 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
 import { contentWhatDoesTonrowDo } from "./data";
+import baseButtonGenerator from "../buttonComponent/buttonComponent";
 
 /**
  * @returns {array} - create heade SEC WhatDoesTonrowDo and pas to dom-genretore
@@ -24,7 +25,7 @@ function generatorHeadWhatDoesTonrowDo() {
   return contentHeadWhatDoesTonrowDoArray;
 }
 /**
- * @returns {} - for swuche body SEC WhatDoesTonrowDo in mobile
+ * @returns {void} - for swuche body SEC WhatDoesTonrowDo in mobile
  * @param {number} - to find it
  */
 function clickChangeBody(index) {
@@ -73,8 +74,16 @@ function generatorBodyWhatDoesTonrowDo() {
                 properties: { textContent: element.Paragraph },
               },
               {
-                tag: "button",
-                properties: { textContent: element.btnText },
+                tag: baseButtonGenerator({
+                  content: element.btnText,
+                  size: "small",
+                  statues: "primaryOutLine",
+                  type: "button",
+                  class: "botton-tonrow-do",
+                  anchorLink: "#",
+                  eventListeners: {},
+                  iconStart: "/images/arrow-left.svg",
+                }),
               },
             ],
           },
@@ -86,28 +95,27 @@ function generatorBodyWhatDoesTonrowDo() {
   return contentBodyWhatDoesTonrowDoArray;
 }
 /**
- * @returns {} - create all DOM  SEC WhatDoesTonrowDo
+ * @returns {void} - create all DOM  SEC WhatDoesTonrowDo
  */
 function generatorDOMWhatDoesTonrowDo() {
   const bodySections = generatorBodyWhatDoesTonrowDo();
-  const containerGeneratorWhatDoesTonrowDo = document.body.append(
-    domGenerator({
-      tag: "section",
-      attributes: { class: "what-services-tonrow" },
-      children: [
-        {
-          tag: "h1",
-          properties: { textContent: "تــنــرو، چه خدماتی ارائه میدهد؟" },
-        },
-        {
-          tag: "div",
-          attributes: { class: "header-what-services-tonrow " },
-          children: generatorHeadWhatDoesTonrowDo(),
-        },
-        ...bodySections,
-      ],
-    })
-  );
+  const containerGeneratorWhatDoesTonrowDo = domGenerator({
+    tag: "section",
+    attributes: { class: "what-services-tonrow" },
+    children: [
+      {
+        tag: "h1",
+        attributes: { class: "sec-title" },
+        properties: { textContent: "تــنــرو، چه خدماتی ارائه میدهد؟" },
+      },
+      {
+        tag: "div",
+        attributes: { class: "header-what-services-tonrow " },
+        children: generatorHeadWhatDoesTonrowDo(),
+      },
+      ...bodySections,
+    ],
+  });
 
   return containerGeneratorWhatDoesTonrowDo;
 }
