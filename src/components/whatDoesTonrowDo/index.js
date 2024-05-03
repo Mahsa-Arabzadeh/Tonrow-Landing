@@ -9,15 +9,17 @@ import baseButtonGenerator from "../buttonComponent/buttonComponent";
 function generatorHeadWhatDoesTonrowDo() {
   let contentHeadWhatDoesTonrowDoArray = [];
 
-  contentWhatDoesTonrowDo.forEach((element, number) => {
+  contentWhatDoesTonrowDo.forEach((element, index) => {
     let contentHeadWhatDoesTonrowDo = {
       tag: "button",
       attributes: {
-        class: "btn-head-SEC-whatDoesTonrowDo",
+        class: `btn-head-SEC-whatDoesTonrowDo ${
+          index === 1 ? "active-btn-header-what-services-tonrow" : ""
+        }`,
       },
       properties: { textContent: element.headeText },
 
-      eventListeners: { click: () => clickChangeBody(number) },
+      eventListeners: { click: () => clickChangeBody(index) },
     };
     contentHeadWhatDoesTonrowDoArray.push(contentHeadWhatDoesTonrowDo);
   });
@@ -26,7 +28,7 @@ function generatorHeadWhatDoesTonrowDo() {
 }
 /**
  * @returns {void} - for swuche body SEC WhatDoesTonrowDo in mobile
- * @param {number} - to find it
+ * @param {index} - to find it
  */
 function clickChangeBody(index) {
   let btns = document.querySelectorAll("button");
