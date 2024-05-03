@@ -11,7 +11,7 @@ let descriptionData = {
 };
 
 let subcardDesktopData = {
-  subcardTitle: "+5 سال",
+  subcardTitle: "+۵ سال",
   subcardTextContent: "سابقه کار با بزرگترین شرکت های بوشهر",
 };
 
