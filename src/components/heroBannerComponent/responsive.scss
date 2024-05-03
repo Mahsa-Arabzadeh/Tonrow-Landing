@@ -9,11 +9,13 @@
 
     #hero-section{
         padding-top: 100px;
-        padding-bottom: 200px;
+        padding-bottom: 270px;
     }
     .hero-image {
         left: 10%;
     }
+
+  
 }
 
 @media screen and (min-width: 440px) {
@@ -120,6 +122,10 @@
         span:first-of-type {
             font-size: 37px;
         }
+    }
+
+    #hero-section .hero-title{
+        font-size: 40px;
     }
 
     #hero-section {
