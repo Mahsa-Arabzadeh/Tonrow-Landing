@@ -148,8 +148,18 @@ function footerGenerator() {
         });
       }
     }
+    // when screen width more than 650 and less than 900 we can see all of links.
+    if (column.length && window.innerWidth <= 900 && window.innerWidth > 650) {
+      {
+        column.forEach((item) => {
+          columnTag.appendChild(
+            rowGenerator(item.colTitle, item.colText, item.imgSrc)
+          );
+        });
+      }
+    }
     // show column with only one object.
-    if (column.length <= 1 && window.innerWidth <= 900) {
+    if (column.length <= 1 && window.innerWidth <= 650) {
       column.map((data) => {
         const dataItem = data.colText.slice(0, 2);
         columnTag.appendChild(
@@ -192,4 +202,7 @@ function footerGenerator() {
 export default footerGenerator;
 
 // TODO:
-// beyne section ha
+// ADD SECTION WHAT DOES TONROW DO
+// FIX FLASH COMPONENT
+// CONTECT WITH US SECTION
+// SWIPER (IMPORTS AND INSTALL MODULE)

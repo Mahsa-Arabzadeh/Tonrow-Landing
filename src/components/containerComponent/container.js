@@ -18,9 +18,9 @@ function containerComponent() {
     attributes: { class: "container" },
     dataAttributes: { font: "iranSans" },
     children: [
-      // {
-      //   tag: heroBannerSection(),
-      // },
+      {
+        tag: heroBannerSection(),
+      },
       // What services does Tenro provide section
       // {
       //   tag: //...
@@ -42,9 +42,6 @@ function containerComponent() {
       // What brands trusted us section
       {
         tag: generateBrandTrust(),
-      },
-      {
-        tag: flashMaker({ urlFlash: "/images/Vector 4flash.svg" }),
       },
     ],
   });
