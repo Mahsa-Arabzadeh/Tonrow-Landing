@@ -1,13 +1,13 @@
 import domGenerator from "dom-generator";
-// import all section here:
-import heroBannerSection from "../heroBannerComponent";
-import generateBrandTrust from "../brandTrust/brandTrustComponent";
-import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
-import flashMaker from "../flashComponent";
-// ...
-// import all section here:
 import "./index.scss";
-import "../../../root.scss";
+
+import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
+import generateBrandTrust from "../brandTrust/brandTrustComponent";
+import heroBannerSection from "../heroBannerComponent";
+import flashMaker from "../flashComponent";
+
+// ...
+
 
 /**
  * @returns {HTMLElement} - container Dom element.
