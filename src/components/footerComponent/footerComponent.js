@@ -40,7 +40,7 @@ function rowGenerator(colTitle, colText, imgSrc) {
               attributes: { class: "text-container" },
               children: colText.map((textObj) => ({
                 tag: "div",
-                attributes: { class: "text-element", src: textObj.linkHref },
+                attributes: { class: "text-element", href: textObj.linkHref },
                 properties: { textContent: textObj.text },
               })),
             },
@@ -59,7 +59,7 @@ function rowGenerator(colTitle, colText, imgSrc) {
                 tag: "a",
                 attributes: {
                   class: "text-element",
-                  src: `${textObj.linkHref ?? "#"}`,
+                  href: `${textObj.linkHref ?? "#"}`,
                 },
                 // ----------------
                 dataAttributes: {

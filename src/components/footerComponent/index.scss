@@ -47,6 +47,11 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            .text-element{
+                font-size: 12px;
+                color: var(--white-text);
+                text-decoration: none;
+            }
         }
         .col-footer{
             width: 100%;
@@ -110,9 +115,9 @@
 }
 // data attribute for active text decoration for links
 [data-decoration="link-active"]{
-    text-decoration: underline #F1F5F8;
     text-underline-offset: 3px;
     cursor: pointer;
+    text-decoration: underline #F1F5F8 !important;
 }
 
 // responsive footer: 
@@ -128,6 +133,8 @@
                 height: 91px;
                 .text-element{
                     font-size: 12px;
+                    color: var(--white-text);
+                    text-decoration: none;
                 }
             }
         }
