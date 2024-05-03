@@ -5,6 +5,17 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+
+    #hero-section{
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+    .hero-image {
+        left: 10%;
+    }
+}
+
 @media screen and (min-width: 440px) {
 
     .hero-image {
@@ -121,6 +132,7 @@
         width: 80%;
         height: 370px;
         gap: 15%;
+
     }
 
     #herobBanner-Container {
@@ -130,6 +142,7 @@
 
     #hero-description {
         width: 30%;
+        padding-bottom: 5%;
     }
 
     .subcard-image {
