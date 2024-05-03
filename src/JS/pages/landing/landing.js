@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", pageLandingRendering);
 function pageLandingRendering() {
   const body = document.body;
 
+  // prepend header here:
+  body.prepend(header());
+  // append main section here:
+  body.appendChild(main());
+  // append footer here:
+  body.appendChild(footerGenerator());
+
   // Function to reload the page
   function reloadPage() {
     location.reload(); // Reload the page
@@ -35,11 +42,4 @@ function pageLandingRendering() {
 
   // Add event listener for window resize
   window.addEventListener("resize", handleWindowResize);
-
-  // prepend header here:
-  body.prepend(header());
-  // append main section here:
-  body.appendChild(main());
-  // append footer here:
-  body.appendChild(footerGenerator());
 }
