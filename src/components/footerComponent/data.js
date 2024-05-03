@@ -2,6 +2,7 @@ import {
   tonrowEmail,
   tonrowAddress,
   tonrowNumber,
+  tonrowMap,
 } from "../../JS/constants/constants";
 
 const colFooterGenerator = [
@@ -30,6 +31,7 @@ const colFooterGenerator = [
       colTitle: "آدرس",
       colText: [
         {
+          linkHref: `${tonrowMap}`,
           text: tonrowAddress,
         },
       ],
