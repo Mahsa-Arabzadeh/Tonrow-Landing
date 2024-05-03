@@ -5,15 +5,24 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+// @media screen and (max-width: 1280px) {
 
+//     #hero-section{
+//         padding-top: 100px;
+//         // padding-bottom: 300px;
+//         margin-bottom: 300px;
+//     }
+//     .hero-image {
+//         left: 10%;
+//     }
+// }
+
+@media screen and (max-width:900px) {
     #hero-section{
         padding-top: 100px;
-        padding-bottom: 200px;
+        padding-bottom: 300px;
     }
-    .hero-image {
-        left: 10%;
-    }
+    
 }
 
 @media screen and (min-width: 440px) {
@@ -132,7 +141,7 @@
         width: 80%;
         height: 370px;
         gap: 15%;
-
+        margin-bottom: 200px;
     }
 
     #herobBanner-Container {

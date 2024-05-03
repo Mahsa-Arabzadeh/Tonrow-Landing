@@ -1,198 +1,193 @@
-@import "../../../root.scss";
-*{
-    margin: 0;
-    padding: 0;
+
+* {
+  margin: 0;
+  padding: 0;
 }
 // mixin for media query 360px to 1020px
-@mixin queryIf($width){
-    @if ($width == 360){
-        @media (max-width: 360px){
-            @content
-        }
+@mixin queryIf($width) {
+  @if ($width == 360) {
+    @media (max-width: 360px) {
+      @content;
     }
-        @else if($width == 361){
-        @media (min-width: 361px) {
-            @content
-        }
+  } @else if($width == 361) {
+    @media (min-width: 361px) {
+      @content;
     }
-        @else if($width == 600){
-        @media (min-width: 600px) {
-            @content
-        }
+  } @else if($width == 600) {
+    @media (min-width: 600px) {
+      @content;
     }
-        @else if($width == 760){
-        @media (min-width: 760px) {
-            @content
-        }
+  } @else if($width == 760) {
+    @media (min-width: 760px) {
+      @content;
     }
-        @else if($width == 900){
-        @media (min-width: 900px) {
-            @content
-        }
+  } @else if($width == 900) {
+    @media (min-width: 900px) {
+      @content;
     }
-        @else if($width == 1020){
-        @media (min-width: 1020px) {
-            @content
-        }
+  } @else if($width == 1020) {
+    @media (min-width: 1020px) {
+      @content;
     }
+  }
 }
 
-.why-tonrow-card{
-    width: 470vh;
-    height: 123px;
+.why-tonrow-card {
+  width: 470vh;
+  height: 123px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px;
+  gap: 32px;
+  border: 1px solid #f5f5f5;
+  box-shadow: 0px 8px 34px 0px #e5586014;
+  text-align: center;
+  .why-tonrow-container-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+    .why-tonrow-title {
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .why-tonrow-desc {
+      font-weight: 400;
+      font-size: 14px;
+      color: #353535;
+    }
+  }
+  .why-tonrow-div-icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 91px;
+    height: 91px;
     border-radius: 12px;
-    padding: 10px;
-    gap: 32px;
-    border: 1px solid #F5F5F5;
-    box-shadow: 0px 8px 34px 0px #E5586014;
-    text-align: center;
-    .why-tonrow-container-card{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-        width: 100%;
-        gap: 12px;
-        .why-tonrow-title{
-            font-weight: 700;
-            font-size: 20px;
-        }
-        .why-tonrow-desc{
-            font-weight: 400;
-            font-size: 14px;
-            color: #353535;
-        }
+    padding: 12px;
+    gap: 10px;
+    border: 0.5px solid #f2f2f2;
+    box-shadow: 0px 4px 17.5px 0px #00000029;
+    .why-tonrow-icon {
+      width: 48px;
+      height: 48px;
     }
-    .why-tonrow-div-icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 91px;
-        height: 91px;
-        border-radius: 12px;
-        padding: 12px;
-        gap: 10px;
-        border: 0.5px solid #F2F2F2;
-        box-shadow: 0px 4px 17.5px 0px #00000029;
-        .why-tonrow-icon{
-            width: 48px;
-            height: 48px;
-        }
-    }
+  }
 }
 
-.why-tonrow-container{
+.why-tonrow-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 48px;
+  .sec-title {
+    width: 100%;
+    height: 51px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    font-weight: 600;
+    font-size: 40px;
+  }
+  .card-container {
+    height: 263px;
+    gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include queryIf(360) {
+  .why-tonrow-container {
+    height: 600px;
+    gap: 20px;
+    .sec-title {
+      font-size: 20px;
+    }
+  }
+  .why-tonrow-card {
+    width: 172px;
+    height: 211px;
     flex-direction: column;
+    .why-tonrow-container-card {
+      order: 2;
+      align-items: center;
+    }
+  }
+}
+@include queryIf(361) {
+  .why-tonrow-container {
+    height: 600px;
+    gap: 20px;
+    .sec-title {
+      font-size: 20px;
+    }
+  }
+  .why-tonrow-card {
+    width: 172px;
+    height: 211px;
+    flex-direction: column;
+    .why-tonrow-container-card {
+      text-align: center;
+      order: 2;
+      align-items: center;
+    }
+  }
+}
+@include queryIf(600) {
+  .why-tonrow-container {
     gap: 48px;
-    .sec-title{
-        width: 100%;
-        height: 51px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 600;
-        font-size: 40px;
+    .sec-title {
+      font-size: 40px;
     }
-    .card-container{
-        height: 263px;
-        gap: 24px;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
+  }
+  .why-tonrow-card {
+    width: 280px;
+    height: 211px;
+    flex-direction: column;
+    .why-tonrow-container-card {
+      order: 2;
+      align-items: center;
     }
+  }
 }
 
-@include queryIf(360){
-    .why-tonrow-container{
-    height: 600px;
-        gap: 20px;
-        .sec-title{
-            font-size: 20px;
-        }
+@include queryIf(760) {
+  .why-tonrow-card {
+    width: 330px;
+    height: 211px;
+    flex-direction: column;
+    .why-tonrow-container-card {
+      order: 2;
+      align-items: center;
     }
-    .why-tonrow-card{
-        width: 172px;
-        height: 211px;
-        flex-direction: column;
-        .why-tonrow-container-card{
-            order: 2;
-            align-items: center;
-        }
-    }
+  }
 }
-@include queryIf(361){
-    .why-tonrow-container{
-    height: 600px;
-        gap: 20px;
-        .sec-title{
-            font-size: 20px;
-        }
-    }
-    .why-tonrow-card{
-        width: 172px;
-        height: 211px;
-        flex-direction: column;
-        .why-tonrow-container-card{
-            text-align: center;
-            order: 2;
-            align-items: center;
-        }
-    }
+@include queryIf(900) {
+  .why-tonrow-card {
+    width: 400px;
+  }
 }
-@include queryIf(600){
-    .why-tonrow-container{
-        gap: 48px;
-        .sec-title{
-            font-size: 40px;
-        }
+@include queryIf(1020) {
+  .why-tonrow-container {
+    height: 425px;
+  }
+  .why-tonrow-card {
+    width: 470px;
+    height: 123px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    .why-tonrow-div-icon {
+      order: 2;
     }
-    .why-tonrow-card{
-        width: 280px;
-        height: 211px;
-        flex-direction: column;
-        .why-tonrow-container-card{
-            order: 2;
-            align-items: center;
-        }
+    .why-tonrow-container-card {
+      align-items: flex-end;
     }
-}
-
-@include queryIf(760){
-    .why-tonrow-card{
-        width: 330px;
-        height: 211px;
-        flex-direction: column;
-        .why-tonrow-container-card{
-            order: 2;
-            align-items: center;
-        }
-    }
-}
-@include queryIf(900){
-    .why-tonrow-card{
-        width: 400px;
-    }
-}
-@include queryIf(1020){
-    .why-tonrow-container{
-        height: 425px;
-    }
-    .why-tonrow-card{
-        width: 470px;
-        height: 123px;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        .why-tonrow-div-icon{
-            order: 2;
-        }
-        .why-tonrow-container-card{
-            align-items: flex-end;
-        }
-    }
+  }
 }

@@ -1,5 +1,3 @@
-@import "../../../root";
-
 // mixin for media query:
 @mixin queryIf($width){
     @if ($width == 399){

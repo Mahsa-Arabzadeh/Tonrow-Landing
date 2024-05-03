@@ -14,6 +14,10 @@ body {
     width: 100vw;
     height: 580px;
     background-color: #f1f5f8;
+
+    @media (max-width: 760px) {
+      display: none;
+    }
   }
   //* Map Background
   //* first childe on parent
@@ -153,12 +157,8 @@ body {
       font-weight: 400;
     }
   }
-}
-/**
+
+  /**
  * CSS rule to hide the map element when the viewport width is 760 pixels or less.
  */
-@media (max-width: 760px) {
-  #map {
-    display: none;
-  }
 }

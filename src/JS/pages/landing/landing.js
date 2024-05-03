@@ -1,3 +1,5 @@
+import "../../../styles/index.scss";
+
 import footerGenerator from "../../../components/footerComponent/footerComponent";
 import header from "../../../components/headerComponent/headerComponent";
 import main from "../../../components/mainComponent/main";
