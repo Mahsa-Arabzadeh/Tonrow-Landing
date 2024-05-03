@@ -1,13 +1,12 @@
 @import "../../../root";
 
-
 /* Styles for the header component */
 
 #header {
   background-color: #fefefe; /* Background color of the header */
   color: #fff; /* Text color */
   padding: 20px; /* Padding around the header content */
-
+  box-shadow: 0px 8px 34px 0px #727d871a; /* Shadow around the header*/
   /* Styles for the content within the header */
   .header-content {
     display: flex; /* Display as flexbox */
@@ -86,5 +85,6 @@
     align-items: center; /* Align items vertically */
     flex-direction: row-reverse; /* Arrange content in a row in reverse order */
     justify-content: flex-end; /* Align content to the end of the flex container */
+    box-shadow: none; /* Remove boxShadow from header in Responsive version */
   }
 }
