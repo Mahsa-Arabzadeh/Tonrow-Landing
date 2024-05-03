@@ -43,9 +43,6 @@ function containerComponent() {
       {
         tag: generateBrandTrust(),
       },
-      {
-        tag: flashMaker({ urlFlash: "/images/Vector 4flash.svg" }),
-      },
     ],
   });
   return container;

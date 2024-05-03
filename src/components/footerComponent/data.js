@@ -47,6 +47,10 @@ const colFooterGenerator = [
           text: "پرسش های متداول سفیران",
           linkHref: "#",
         },
+        {
+          text: "شرایط و قوانین سفیران",
+          linkHref: "#",
+        },
       ],
     },
   ],
@@ -60,6 +64,14 @@ const colFooterGenerator = [
         },
         {
           text: "درخواست جا به جایی",
+          linkHref: "#",
+        },
+        {
+          text: "بازگشت وجه",
+          linkHref: "#",
+        },
+        {
+          text: "پشتیبانی",
           linkHref: "#",
         },
       ],
@@ -79,6 +91,18 @@ const colFooterGenerator = [
         },
         {
           text: "قوانین و مقررات",
+          linkHref: "#",
+        },
+        {
+          text: "درباره ما",
+          linkHref: "#",
+        },
+        {
+          text: "تماس با ما",
+          linkHref: "#",
+        },
+        {
+          text: "فرصت شغلی",
           linkHref: "#",
         },
       ],
