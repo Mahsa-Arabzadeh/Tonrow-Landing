@@ -7,7 +7,7 @@ import "./index.scss";
 const whyTonrowData = [
   {
     title: "همیشه در دسترس",
-    description: "پشتیبانی 24 ساعته همکاران ما در تنرو",
+    description: "پشتیبانی ۲۴ ساعته همکاران ما در تنرو",
     icon: "/images/call-calling.svg",
     bgColor: "#C548F1",
   },

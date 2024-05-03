@@ -1,3 +1,6 @@
+@import "../../../root";
+
+
 /* Styles for the header component */
 
 #header {
@@ -27,7 +30,7 @@
 
         /* Styles for link hover state */
         &:hover {
-          color: #034cb6; /* Change color on hover */
+          color: var(--primary-color); /* Change color on hover */
         }
       }
 
@@ -45,10 +48,6 @@
 
       /* Special styles for buttons created from publicHeaderData array */
       .btn-public {
-        background-color: #003d95; /* Background color */
-        padding: 12px 40px; /* Padding */
-        border: none; /* No border */
-        border-radius: 5px; /* Border radius */
         cursor: pointer; /* Cursor style */
       }
       .buttonComponentWrapper {
