@@ -1,3 +1,5 @@
+"use strict";
+
 const contentWhatDoesTonrowDo = [
   {
     headeText: "درخواست خرید",

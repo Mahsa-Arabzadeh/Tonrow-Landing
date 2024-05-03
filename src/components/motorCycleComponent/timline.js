@@ -1,9 +1,11 @@
-  /**================================================================================================
-   **                                    timeLine
-   *?  When we reached the breakMotor section, then the animation we gave this sequel to the CSS section would get rid of it.
-   *@param entries {object}
-   *@param observer {object}
-   *================================================================================================**/
+"use strict";
+
+/**
+ ** timeLine
+ *? When we reached the breakMotor section, then the animation we gave this sequel to the CSS section would get rid of it.
+ *@param entries {object}
+ *@param observer {object}
+ **/
 
 function timeLine() {
   const animationElement = document.getElementById("motor");
@@ -27,4 +29,4 @@ function timeLine() {
   observer.observe(animationElement);
 }
 
-export default timeLine
+export default timeLine;

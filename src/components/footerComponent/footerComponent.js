@@ -1,3 +1,5 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 import { colFooterGenerator, rowImageFooter } from "./data";
 import "./index.scss";
