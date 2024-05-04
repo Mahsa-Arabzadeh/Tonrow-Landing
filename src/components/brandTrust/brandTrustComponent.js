@@ -87,12 +87,20 @@ function brandIconGenerator(defaultSrc, hrefImage) {
 
     // brandGenerator images slide.
     const brandGenerator = domGenerator({
-      tag: "img",
+      tag: "a",
       attributes: {
         class: "swiper-slide",
-        src: `${defaultSrc ?? "/images/defaultImage.png"}`,
-        href: `${hrefImage ?? "#"}`,
+        href: `${hrefImage ?? "#"}`, // Use hrefImage provided or "#" as fallback
       },
+      children: [
+        {
+          tag: "img",
+          attributes: {
+            src: `${defaultSrc ?? "/images/defaultImage.png"}`, // Use defaultSrc provided or a default image
+            alt: "Brand Icon",
+          },
+        },
+      ],
     });
 
     return brandGenerator;

@@ -9,7 +9,7 @@ import baseButtonGenerator from "../buttonComponent/buttonComponent.js";
 let descriptionData = {
   heroTitle: "سامانه تنرو",
   textContent:
-    "دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر",
+    "دریافت سریع خدمات حمل و نقل و انجام کار با ۵ سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر",
 };
 
 let subcardDesktopData = {
