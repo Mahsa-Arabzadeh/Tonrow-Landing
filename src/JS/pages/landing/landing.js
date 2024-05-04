@@ -17,8 +17,6 @@ function pageLandingRendering() {
   body.prepend(header());
   //   append main section here:
   body.appendChild(main());
-  // append map
-  body.appendChild(renderMap());
   //   append footer here:
   body.appendChild(footerGenerator());
 }

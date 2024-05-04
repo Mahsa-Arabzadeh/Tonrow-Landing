@@ -2,12 +2,14 @@ import domGenerator from "dom-generator";
 import "./index.scss";
 
 import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
+import renderBreakMotor from "../motorCycleComponent/motorCycleComponent";
 import generateBrandTrust from "../brandTrust/brandTrustComponent";
+import animationTooltips from "../mapComponent/tooltipAnimation";
 import heroBannerSection from "../heroBannerComponent";
+import renderMap from "../mapComponent/mapComponent";
 import flashMaker from "../flashComponent";
 
 // ...
-
 
 /**
  * @returns {HTMLElement} - container Dom element.
@@ -27,7 +29,7 @@ function containerComponent() {
       // },
       // map section
       // {
-      //   tag: //...,
+      //   tag:....,
       // },
       // Why choose Tenero section
       {
@@ -35,6 +37,12 @@ function containerComponent() {
       },
       {
         tag: whyTonrowGenerator(),
+      },
+      {
+        tag: renderBreakMotor(),
+      },
+      {
+        tag: renderMap(),
       },
       {
         tag: flashMaker({ urlFlash: "/images/Vector 40red.svg" }),
