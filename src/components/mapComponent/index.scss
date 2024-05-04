@@ -155,10 +155,10 @@ body {
   }
 }
 /**
- * CSS rule to hide the map element when the viewport width is 900 pixels or less.
+ * CSS rule to hide the map element when the viewport width is 1360 pixels or less.
  */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1360px) {
   body{
     #map{
       display: none;

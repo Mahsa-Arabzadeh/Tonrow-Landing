@@ -1,3 +1,5 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 
 import createTooltip from "./tooltipGenerator";

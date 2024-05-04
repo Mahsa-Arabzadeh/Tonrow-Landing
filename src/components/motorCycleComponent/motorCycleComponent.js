@@ -31,8 +31,8 @@ function renderBreakMotor() {
     ],
   });
   // return motor;
-  timeLine();
   return motor;
+  timeLine();
 }
 
 export default renderBreakMotor;

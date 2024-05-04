@@ -5,9 +5,8 @@ import "./index.scss";
 import "./index.scss";
 
 import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
-// import renderBreakMotor from "../motorCycleComponent/motorCycleComponent";
+import renderBreakMotor from "../motorCycleComponent/motorCycleComponent";
 import generateBrandTrust from "../brandTrust/brandTrustComponent";
-// import animationTooltips from "../mapComponent/tooltipAnimation";
 import generatorDOMWhatDoesTonrowDo from "../whatDoesTonrowDo";
 import contactUs from "../contactUsComponent/contactUs";
 import heroBannerSection from "../heroBannerComponent";
@@ -23,6 +22,7 @@ function containerComponent() {
     attributes: { class: "container" },
     dataAttributes: { font: "iranSans" },
     children: [
+      // heroBanner section:
       {
         tag: heroBannerSection(),
       },
@@ -34,12 +34,15 @@ function containerComponent() {
       {
         tag: flashMaker({ urlFlash: "/images/Vector 4flashblue.svg" }),
       },
+      // whyTonrowGenerator section:
       {
         tag: whyTonrowGenerator(),
       },
-      // {
-      //   tag: renderBreakMotor(),
-      // },
+      // motorcycle part:
+      {
+        tag: renderBreakMotor(),
+      },
+      // map animation section:
       {
         tag: renderMap(),
       },
