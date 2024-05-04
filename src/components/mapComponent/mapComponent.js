@@ -19,10 +19,10 @@ function renderMap() {
       },
     ],
   });
-  // document.body.appendChild(map);
   //* Using IntersectionObserver, it manages the animation of tooltips.
-  document.body.appendChild(map);
-  animationTooltips();
+  setTimeout(() => {
+    animationTooltips();
+  }, 0);
   return map;
 }
 
