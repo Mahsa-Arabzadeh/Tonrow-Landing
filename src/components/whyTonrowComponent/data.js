@@ -1,7 +1,7 @@
-import "./index.scss";
-
 "use strict";
 
+import "../../../root.scss";
+import "./index.scss";
 
 // Data array containing information for "Why Tonrow" cards.
 const whyTonrowData = [

@@ -9,11 +9,13 @@
 
     #hero-section{
         padding-top: 100px;
-        padding-bottom: 200px;
+        padding-bottom: 270px;
     }
     .hero-image {
         left: 10%;
     }
+
+  
 }
 
 @media screen and (min-width: 440px) {
@@ -30,9 +32,6 @@
         bottom: -9%;
         width: 110%;
     }
-
-
-
 }
 
 @media screen and (min-width: 455px) {
@@ -125,6 +124,10 @@
         }
     }
 
+    #hero-section .hero-title{
+        font-size: 40px;
+    }
+
     #hero-section {
         display: flex;
         align-items: center;
@@ -132,7 +135,7 @@
         width: 80%;
         height: 370px;
         gap: 15%;
-
+        margin-bottom: 160px;
     }
 
     #herobBanner-Container {
@@ -151,7 +154,6 @@
 
     .subcard-image-desktop {
         display: block;
-
     }
 
     .subcard-desktop-container {

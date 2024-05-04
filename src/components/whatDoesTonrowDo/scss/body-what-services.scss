@@ -16,10 +16,9 @@
   .description-body-SEC-whatDoesTonrowDo {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
     justify-content: center;
     align-items: center;
-
     h2 {
       font-size: 23px;
       color: var(--black-color);
@@ -29,13 +28,14 @@
       text-align: center;
       color: var(--gray-color);
     }
-    button {
+    .botton-tonrow-do {
       outline: none;
       font-size: 16px;
       color: var(--primary-color);
       border: 1.5px solid #dcdcdc;
       padding: 15px;
       width: 40%;
+      cursor: pointer;
     }
   }
 }
@@ -65,7 +65,7 @@
       width: 40%;
       justify-content: end;
       align-items: end;
-      gap: 10px;
+      gap: 18px;
       p {
         text-align: end;
       }

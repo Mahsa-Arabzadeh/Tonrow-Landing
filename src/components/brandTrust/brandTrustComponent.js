@@ -17,7 +17,7 @@ import "./index.scss";
 function swiperBrands() {
   // append to the container of image items
   const brandImage = brandData.map((data) => {
-    const imagesCard = brandIconGenerator(data.defaultSrc);
+    const imagesCard = brandIconGenerator(data.defaultSrc, data.hrefImage);
 
     return {
       tag: imagesCard,
@@ -73,16 +73,26 @@ function generateBrandTrust() {
  * @param {string} - defaultSrc : The default source of images.
  * @returns {HTMLElement} - this function generate a dom element of brand icons.
  */
-function brandIconGenerator(defaultSrc) {
+function brandIconGenerator(defaultSrc, hrefImage) {
   try {
     // throwing an error that if the image source is not given to the function, do not show the image.
-    if (!defaultSrc) {
-      throw new Error("No default source provided");
+    for (const item of brandData) {
+      if (
+        !item.hasOwnProperty("defaultSrc") ||
+        !item.hasOwnProperty("hrefImage")
+      ) {
+        throw new Error("No default source provided");
+      }
     }
 
+    // brandGenerator images slide.
     const brandGenerator = domGenerator({
       tag: "img",
-      attributes: { class: "swiper-slide", src: defaultSrc },
+      attributes: {
+        class: "swiper-slide",
+        src: `${defaultSrc ?? "/images/defaultImage.png"}`,
+        href: `${hrefImage ?? "#"}`,
+      },
     });
 
     return brandGenerator;
@@ -92,7 +102,3 @@ function brandIconGenerator(defaultSrc) {
 }
 
 export default generateBrandTrust;
-
-// -----------------------------------
-// TODO:
-// rtl for swiper

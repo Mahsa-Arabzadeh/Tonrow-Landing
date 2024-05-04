@@ -1,7 +1,10 @@
+"use strict";
+
 import {
   tonrowEmail,
   tonrowAddress,
   tonrowNumber,
+  tonrowMap,
 } from "../../JS/constants/constants";
 
 const colFooterGenerator = [
@@ -10,7 +13,7 @@ const colFooterGenerator = [
       colTitle: "ایمیل",
       colText: [
         {
-          linkHref: "#",
+          linkHref: `mailto: ${"info@tonrow.mail.com"}`,
           text: tonrowEmail,
           decoration: "link-active",
         },
@@ -20,7 +23,7 @@ const colFooterGenerator = [
       colTitle: "شماره تماس",
       colText: [
         {
-          linkHref: "#",
+          linkHref: `tel: ${1800}`,
           text: tonrowNumber,
           decoration: "link-active",
         },
@@ -30,6 +33,7 @@ const colFooterGenerator = [
       colTitle: "آدرس",
       colText: [
         {
+          linkHref: `${tonrowMap}`,
           text: tonrowAddress,
         },
       ],
@@ -47,6 +51,10 @@ const colFooterGenerator = [
           text: "پرسش های متداول سفیران",
           linkHref: "#",
         },
+        {
+          text: "شرایط و قوانین سفیران",
+          linkHref: "#",
+        },
       ],
     },
   ],
@@ -60,6 +68,14 @@ const colFooterGenerator = [
         },
         {
           text: "درخواست جا به جایی",
+          linkHref: "#",
+        },
+        {
+          text: "بازگشت وجه",
+          linkHref: "#",
+        },
+        {
+          text: "پشتیبانی",
           linkHref: "#",
         },
       ],
@@ -79,6 +95,18 @@ const colFooterGenerator = [
         },
         {
           text: "قوانین و مقررات",
+          linkHref: "#",
+        },
+        {
+          text: "درباره ما",
+          linkHref: "#",
+        },
+        {
+          text: "تماس با ما",
+          linkHref: "#",
+        },
+        {
+          text: "فرصت شغلی",
           linkHref: "#",
         },
       ],

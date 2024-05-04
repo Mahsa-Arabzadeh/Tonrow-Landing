@@ -1,3 +1,5 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 import "./index.scss";
 import "./responsive.scss";
@@ -11,7 +13,7 @@ let descriptionData = {
 };
 
 let subcardDesktopData = {
-  subcardTitle: "+5 سال",
+  subcardTitle: "+۵ سال",
   subcardTextContent: "سابقه کار با بزرگترین شرکت های بوشهر",
 };
 

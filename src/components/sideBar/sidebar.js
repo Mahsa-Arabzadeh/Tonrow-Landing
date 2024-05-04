@@ -1,8 +1,8 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 import { publicHeaderData } from "../headerComponent/data.js"; // Importing publicHeaderData
 import "./sidebar.scss";
-
-"use strict";
 
 /**
  * Generates and controls the sidebar component.

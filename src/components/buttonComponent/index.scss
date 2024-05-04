@@ -4,6 +4,7 @@
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
   // max with
   img {
     max-width: 20px;
@@ -12,6 +13,7 @@
     background-color: transparent;
     border: none;
     color: inherit;
+    cursor: pointer;
   }
 
   &[data-size="medium"] {
@@ -69,6 +71,7 @@
     color: #003d95;
     font-size: 24px;
     text-align: center;
+    transition: .3s;
     &:hover {
       border: 1.5px solid #003d95;
       box-shadow: 0px 19px 34px 0px #14113824;

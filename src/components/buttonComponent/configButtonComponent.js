@@ -1,3 +1,5 @@
+"use strict";
+
 import "./buttonComponent";
 import "./index.scss";
 

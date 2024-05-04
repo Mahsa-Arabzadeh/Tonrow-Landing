@@ -1,5 +1,8 @@
 "use strict";
 
+// Imports the header component function from the headerComponent module.
+import header from "./headerComponent"; // Corrected import path
+
 /**
  * Checks if the properties of header data are valid.
  * @param {Array} headerData - Data to populate the header component.
@@ -18,6 +21,3 @@ export default function checkHeaderData(headerData) {
     console.error(error.message);
   }
 }
-
-// Imports the header component function from the headerComponent module.
-import header from "./headerComponent"; // Corrected import path
