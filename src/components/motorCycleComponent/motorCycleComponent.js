@@ -18,13 +18,13 @@ function renderBreakMotor() {
           {
             tag: "img",
             attributes: {
-              src: "./public/images/motorC.svg",
+              src: "/images/motorC.svg",
               id: "motor",
             },
           },
           {
             tag: "img",
-            attributes: { src: "./public/images/road.svg", id: "road" },
+            attributes: { src: "/images/road.svg", id: "road" },
           },
         ],
       },
