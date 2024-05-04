@@ -76,15 +76,21 @@ function generateBrandTrust() {
 function brandIconGenerator(defaultSrc, hrefImage) {
   try {
     // throwing an error that if the image source is not given to the function, do not show the image.
-    if (!defaultSrc || !hrefImage) {
-      throw new Error("No default source provided");
+    for (const item of brandData) {
+      if (
+        !item.hasOwnProperty("defaultSrc") ||
+        !item.hasOwnProperty("hrefImage")
+      ) {
+        throw new Error("No default source provided");
+      }
     }
+
     // brandGenerator images slide.
     const brandGenerator = domGenerator({
       tag: "img",
       attributes: {
         class: "swiper-slide",
-        src: defaultSrc,
+        src: `${defaultSrc ?? "/images/defaultImage.png"}`,
         href: `${hrefImage ?? "#"}`,
       },
     });

@@ -202,8 +202,3 @@ function footerGenerator() {
 }
 
 export default footerGenerator;
-
-// TODO:
-// ADD SECTION WHAT DOES TONROW DO ✔
-// FIX FLASH COMPONENT ✔
-// CONTECT WITH US SECTION
