@@ -32,21 +32,21 @@ body {
     .motorDelivery {
       position: relative;
       bottom: 79px;
-      animation-name: move;
+      animation-name: moves;
       animation-duration: 5s;
 
       //*Engine movement animation on the map screen.
-      @keyframes move {
+      @keyframes moves {
         0% {
           transform: translateX(0);
         }
 
         50% {
-          transform: translateX(620px) translateY(33px);
+          transform: translateX(650px) translateY(33px);
         }
 
         100% {
-          transform: translateY(33px) translateX(620px);
+          transform: translateY(30px) translateX(650px);
         }
       }
     }

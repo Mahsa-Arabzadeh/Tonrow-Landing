@@ -15,7 +15,7 @@ function pageLandingRendering() {
   body.prepend(header());
   // append main section here:
   body.appendChild(main());
-  // append footer here:
+  //   append footer here:
   body.appendChild(footerGenerator());
 
   // Function to reload the page

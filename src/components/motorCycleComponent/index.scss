@@ -10,6 +10,10 @@ body {
     width: 100vw;
     height: 108px;
     @include display();
+
+    @media (max-width: 760px) {
+      display: none;
+    }
   }
   #animationMotor {
     width: 89vw;
@@ -25,9 +29,10 @@ body {
   #motor {
     width: 43px;
     height: 34px;
-    animation-name: move;
+    animation-name: runs;
+    animation-duration: 18s;
 
-    @keyframes move {
+    @keyframes runs {
       0% {
         transform: translateX(0);
       }
