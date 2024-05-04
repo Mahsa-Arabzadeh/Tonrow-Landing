@@ -5,8 +5,9 @@ import domGenerator from "dom-generator";
 import heroBannerSection from "../heroBannerComponent";
 import generateBrandTrust from "../brandTrust/brandTrustComponent";
 import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
-import flashMaker from "../flashComponent";
+import flashMaker from "../flashComponent/flashes";
 import generatorDOMWhatDoesTonrowDo from "../whatDoesTonrowDo";
+import contactUs from "../contactUsComponent/contactUs";
 // ...
 // import all section here:
 import "./index.scss";
@@ -49,6 +50,10 @@ function containerComponent() {
       // flashes
       {
         tag: flashMaker({ urlFlash: "/images/Vector 4flash.svg" }),
+      },
+      // contact us part.
+      {
+        tag: contactUs(),
       },
     ],
   });
