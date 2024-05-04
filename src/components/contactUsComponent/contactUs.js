@@ -1,12 +1,27 @@
+"use strict";
+
 import domGenerator from "dom-generator";
 import contactItemsData from "./data";
 import "./index.scss";
 
+/**
+ * Generates the contact section HTML structure.
+ * @returns {HTMLElement} The contact section HTML element.
+ */
 function contactUs() {
+  /**
+   * Represents an individual contact item.
+   * @property {string} tag : The HTML tag name.
+   * @property {Object} attributes : The attributes of the HTML tag.
+   */
   const contactItem = contactItemsData.map((img) => {
     const tagContact = {
       tag: "img",
-      attributes: { class: "contact-img", src: img.imageContact },
+      attributes: {
+        class: "contact-img",
+        src: `${img.imageContact ?? "/images/forbiddendefaultImage.svg"}`,
+        href: `${img.hrefImg ?? "#"}`,
+      },
     };
     return tagContact;
   });
@@ -23,6 +38,7 @@ function contactUs() {
       {
         tag: "div",
         attributes: { class: "contact-items" },
+        children: contactItem,
       },
     ],
   });
