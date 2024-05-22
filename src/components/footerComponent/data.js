@@ -83,14 +83,14 @@ export const colFooterGenerator = [
   ],
   [
     {
-      colTitle: "سفیر",
+      colTitle: "تنرو",
       colText: [
         {
-          text: "وبلاگ سفیر",
+          text: "وبلاگ تنرو",
           linkHref: "#",
         },
         {
-          text: "لوگو و هویت سفیر",
+          text: "لوگو و هویت تنرو",
           linkHref: "#",
         },
         {
@@ -115,7 +115,7 @@ export const colFooterGenerator = [
   [
     {
       imgSrc: "/images/Tonrow-white.svg",
-      colTitle: "سفیر",
+      colTitle: "تنرو",
       colText: [
         {
           text: "حمل و نقل با ما, آسودگی خاطر برای شما !",
