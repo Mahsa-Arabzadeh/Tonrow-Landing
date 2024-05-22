@@ -115,12 +115,22 @@
         }
     }
     .why-tonrow-card{
-        width: 172px;
-        height: 211px;
+        width: 128px;
+        height: fit-content;
         flex-direction: column;
+        .why-tonrow-title{
+            font-size: 16px !important;
+        }
+        .why-tonrow-desc{
+            font-size: 12px !important;
+        }
         .why-tonrow-container-card{
             order: 2;
             align-items: center;
+        }
+        .why-tonrow-div-icon{
+            width: 72px;
+            height: 72px;
         }
     }
 }
@@ -133,13 +143,23 @@
         }
     }
     .why-tonrow-card{
-        width: 172px;
-        height: 211px;
+        max-width: 37vw;
+        height: fit-content;
         flex-direction: column;
+        .why-tonrow-title{
+            font-size: 16px !important;
+        }
+        .why-tonrow-desc{
+            font-size: 12px !important;
+        }
         .why-tonrow-container-card{
             text-align: center;
             order: 2;
             align-items: center;
+        }
+        .why-tonrow-div-icon{
+            width: 72px;
+            height: 72px;
         }
     }
 }
@@ -154,9 +174,22 @@
         width: 280px;
         height: 211px;
         flex-direction: column;
+        max-width: 37vw;
+        .why-tonrow-title{
+            font-weight: 700;
+            font-size: 20px !important;
+        }
+        .why-tonrow-desc{
+            font-weight: 400;
+            font-size: 14px !important;
+        }
         .why-tonrow-container-card{
             order: 2;
             align-items: center;
+        }
+        .why-tonrow-div-icon{
+            width: 91px;
+            height: 91px;
         }
     }
 }
