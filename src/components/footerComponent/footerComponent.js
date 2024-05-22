@@ -16,7 +16,8 @@ function rowGenerator(colTitle, colText, imgSrc) {
       return;
     }
 
-    const rowElement = domGenerator({
+    // return element.
+    return domGenerator({
       tag: "div",
       attributes: { class: "col-footer" },
       children: (() => {
@@ -74,10 +75,8 @@ function rowGenerator(colTitle, colText, imgSrc) {
         }
       })(),
     });
-    // return element.
-    return rowElement;
   } catch (error) {
-    console.log(error.message);
+    throw new Error(error);
   }
 }
 
@@ -123,7 +122,7 @@ function copyRight() {
  * Generates a footer element and appends it to the document body.
  * @returns {HTMLElement} The generated footer element.
  */
-function footerGenerator() {
+export default function footerGenerator() {
   const columns = colFooterGenerator.map((column) => {
     const columnTag = domGenerator({
       tag: "div",
@@ -175,7 +174,7 @@ function footerGenerator() {
     };
   });
 
-  const footerElement = domGenerator({
+  return domGenerator({
     tag: "footer",
     attributes: { id: "footer" },
     children: [
@@ -197,8 +196,4 @@ function footerGenerator() {
       },
     ],
   });
-
-  return footerElement;
 }
-
-export default footerGenerator;

@@ -7,7 +7,7 @@ import {
   tonrowMap,
 } from "../../JS/constants/constants";
 
-const colFooterGenerator = [
+export const colFooterGenerator = [
   [
     {
       colTitle: "ایمیل",
@@ -23,7 +23,7 @@ const colFooterGenerator = [
       colTitle: "شماره تماس",
       colText: [
         {
-          linkHref: `tel: ${1800}`,
+          linkHref: `tel: ${tonrowNumber}`,
           text: tonrowNumber,
           decoration: "link-active",
         },
@@ -126,7 +126,7 @@ const colFooterGenerator = [
 ];
 
 // Path data of images for the rowImageFooter section
-const rowImageFooter = [
+export const rowImageFooter = [
   {
     imgSrc: "/images/Rectangleimg-footer.svg",
   },
@@ -134,5 +134,3 @@ const rowImageFooter = [
     imgSrc: "/images/Rectangle-footer.svg",
   },
 ];
-
-export { colFooterGenerator, rowImageFooter };

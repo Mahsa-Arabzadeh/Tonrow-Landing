@@ -4,7 +4,7 @@ import "../../../root.scss";
 import "./index.scss";
 
 // Data array containing information for "Why Tonrow" cards.
-const whyTonrowData = [
+export const whyTonrowData = [
   {
     title: "همیشه در دسترس",
     description: "پشتیبانی ۲۴ ساعته همکاران ما در تنرو",
@@ -30,5 +30,3 @@ const whyTonrowData = [
     bgColor: "#0054C1",
   },
 ];
-
-export { whyTonrowData };
