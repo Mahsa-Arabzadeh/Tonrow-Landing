@@ -85,21 +85,22 @@ function rowGenerator(colTitle, colText, imgSrc) {
  * @returns {HTMLElement} - The container element for the row of images.
  */
 function rowImage() {
-  const rowImageContainer = domGenerator({
-    tag: "div",
-    attributes: { class: "row-images" },
-  });
   // Iterate over each image source and create corresponding img elements
-  rowImageFooter.forEach((item) => {
+  const imgElementTag = rowImageFooter.map((item) => {
     const imgElement = domGenerator({
       tag: "img",
       attributes: { class: "footer-imgsrc", src: item.imgSrc },
     });
-    // Append the image element to the rowImagesContainer
-    rowImageContainer.appendChild(imgElement);
+    return { tag: imgElement };
   });
-
-  return rowImageContainer;
+  return domGenerator({
+    tag: "div",
+    attributes: { class: "row-images" },
+    // Append the image element to the rowImagesContainer
+    children: imgElementTag.map((item) => ({
+      tag: item.tag,
+    })),
+  });
 }
 
 /**
@@ -107,15 +108,13 @@ function rowImage() {
  * @returns {HTMLElement} - The footer element containing copyright information.
  */
 function copyRight() {
-  const copyRight = domGenerator({
+  return domGenerator({
     tag: "div",
     attributes: { class: "footer-copyright" },
     properties: {
       textContent: "تمام حقوق مادی و معنوی این وبسایت متعلق به تنرو است.",
     },
   });
-
-  return copyRight;
 }
 
 /**
@@ -139,48 +138,7 @@ export default function footerGenerator() {
     if (column.length > 1) {
       columnTag.classList.add("hide-column-tag");
     }
-    if (column.length <= 1) {
-    }
 
-    // remove column with more than one object.
-    // if (column.length > 1 && window.innerWidth <= 900) {
-    //   column.forEach((item) => {
-    //     columnTag.appendChild(
-    //       rowGenerator(item.colTitle, item.colText, item.imgSrc)
-    //     );
-    //     columnTag.style.display = "none";
-    //   });
-    // }
-
-    // if window innerwidth more than 900 we can see all of the objects.
-    // if (column.length && window.innerWidth > 900) {
-    //   {
-    //     column.forEach((item) => {
-    //       columnTag.appendChild(
-    //         rowGenerator(item.colTitle, item.colText, item.imgSrc)
-    //       );
-    //     });
-    //   }
-    // }
-    // when screen width more than 650 and less than 900 we can see all of links.
-    // if (column.length && window.innerWidth <= 900 && window.innerWidth > 650) {
-    //   {
-    //     column.forEach((item) => {
-    //       columnTag.appendChild(
-    //         rowGenerator(item.colTitle, item.colText, item.imgSrc)
-    //       );
-    //     });
-    //   }
-    // }
-    // show column with only one object.
-    // if (column.length <= 1 && window.innerWidth <= 650) {
-    //   column.map((data) => {
-    //     const dataItem = data.colText.slice(0, 2);
-    //     columnTag.appendChild(
-    //       rowGenerator(data.colTitle, dataItem, data.imgSrc)
-    //     );
-    //   });
-    // }
     // return colText object to this tag.
     return {
       tag: columnTag,
