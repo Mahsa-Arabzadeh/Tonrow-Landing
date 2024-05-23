@@ -129,45 +129,58 @@ export default function footerGenerator() {
       attributes: { class: "column-tag" },
     });
 
-    // remove column with more than one object.
-    if (column.length > 1 && window.innerWidth <= 900) {
+    if (column.length) {
       column.forEach((item) => {
         columnTag.appendChild(
           rowGenerator(item.colTitle, item.colText, item.imgSrc)
         );
-        columnTag.style.display = "none";
       });
+    }
+    if (column.length > 1) {
+      columnTag.classList.add("hide-column-tag");
+    }
+    if (column.length <= 1) {
     }
 
+    // remove column with more than one object.
+    // if (column.length > 1 && window.innerWidth <= 900) {
+    //   column.forEach((item) => {
+    //     columnTag.appendChild(
+    //       rowGenerator(item.colTitle, item.colText, item.imgSrc)
+    //     );
+    //     columnTag.style.display = "none";
+    //   });
+    // }
+
     // if window innerwidth more than 900 we can see all of the objects.
-    if (column.length && window.innerWidth > 900) {
-      {
-        column.forEach((item) => {
-          columnTag.appendChild(
-            rowGenerator(item.colTitle, item.colText, item.imgSrc)
-          );
-        });
-      }
-    }
+    // if (column.length && window.innerWidth > 900) {
+    //   {
+    //     column.forEach((item) => {
+    //       columnTag.appendChild(
+    //         rowGenerator(item.colTitle, item.colText, item.imgSrc)
+    //       );
+    //     });
+    //   }
+    // }
     // when screen width more than 650 and less than 900 we can see all of links.
-    if (column.length && window.innerWidth <= 900 && window.innerWidth > 650) {
-      {
-        column.forEach((item) => {
-          columnTag.appendChild(
-            rowGenerator(item.colTitle, item.colText, item.imgSrc)
-          );
-        });
-      }
-    }
+    // if (column.length && window.innerWidth <= 900 && window.innerWidth > 650) {
+    //   {
+    //     column.forEach((item) => {
+    //       columnTag.appendChild(
+    //         rowGenerator(item.colTitle, item.colText, item.imgSrc)
+    //       );
+    //     });
+    //   }
+    // }
     // show column with only one object.
-    if (column.length <= 1 && window.innerWidth <= 650) {
-      column.map((data) => {
-        const dataItem = data.colText.slice(0, 2);
-        columnTag.appendChild(
-          rowGenerator(data.colTitle, dataItem, data.imgSrc)
-        );
-      });
-    }
+    // if (column.length <= 1 && window.innerWidth <= 650) {
+    //   column.map((data) => {
+    //     const dataItem = data.colText.slice(0, 2);
+    //     columnTag.appendChild(
+    //       rowGenerator(data.colTitle, dataItem, data.imgSrc)
+    //     );
+    //   });
+    // }
     // return colText object to this tag.
     return {
       tag: columnTag,
