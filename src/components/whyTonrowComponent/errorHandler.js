@@ -9,7 +9,7 @@
  * @param {object} cardProps - The properties
  * @throws {Error} Throws an error if any property is null or if any required property is missing.
  */
-function checkValue(cardProps) {
+export default function checkValue(cardProps) {
   const { title, description, icon, bgColor } = cardProps;
 
   try {
@@ -26,8 +26,6 @@ function checkValue(cardProps) {
     }
   } catch (error) {
     // catch errors:
-    console.log(error.message);
+    throw new Error(error);
   }
 }
-
-export default checkValue;

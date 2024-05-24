@@ -50,8 +50,8 @@ function swiperBrands() {
  * @function generateBrandTrust
  * @returns {HTMLElement} - Create part of brand trust container.
  */
-function generateBrandTrust() {
-  const sectionBrandTrust = domGenerator({
+export default function generateBrandTrust() {
+  return domGenerator({
     tag: "section",
     attributes: { class: "section-brand" },
     children: [
@@ -65,8 +65,6 @@ function generateBrandTrust() {
       },
     ],
   });
-
-  return sectionBrandTrust;
 }
 
 /**
@@ -86,7 +84,7 @@ function brandIconGenerator(defaultSrc, hrefImage) {
     }
 
     // brandGenerator images slide.
-    const brandGenerator = domGenerator({
+    return domGenerator({
       tag: "img",
       attributes: {
         class: "swiper-slide",
@@ -94,11 +92,7 @@ function brandIconGenerator(defaultSrc, hrefImage) {
         href: `${hrefImage ?? "#"}`,
       },
     });
-
-    return brandGenerator;
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }
-
-export default generateBrandTrust;

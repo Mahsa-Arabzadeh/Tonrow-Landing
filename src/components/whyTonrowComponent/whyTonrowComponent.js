@@ -24,7 +24,7 @@ function whyTonrowCardGenerator(cardProps) {
     return;
   }
 
-  const whyTonrow = domGenerator({
+  return domGenerator({
     tag: "div",
     attributes: { class: "why-tonrow-card" },
     children: [
@@ -62,15 +62,13 @@ function whyTonrowCardGenerator(cardProps) {
       },
     ],
   });
-
-  return whyTonrow;
 }
 
 /**
  * Function to generate the 'Why Tonrow' section.
  * @returns {HTMLElement} The generated section element.
  */
-function whyTonrowGenerator() {
+export function whyTonrowGenerator() {
   const cardContainerConst = whyTonrowData.map((data) => {
     const { title, description, icon, bgColor } = data;
     const cards = whyTonrowCardGenerator({
@@ -85,7 +83,7 @@ function whyTonrowGenerator() {
     };
   });
 
-  const whyTonrowSection = domGenerator({
+  return domGenerator({
     tag: "div",
     attributes: { class: "why-tonrow-container" },
     children: [
@@ -103,8 +101,4 @@ function whyTonrowGenerator() {
       },
     ],
   });
-
-  return whyTonrowSection;
 }
-
-export { whyTonrowGenerator };

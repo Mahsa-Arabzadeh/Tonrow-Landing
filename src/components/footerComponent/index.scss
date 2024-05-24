@@ -21,8 +21,17 @@
         @media (min-width: 650px) {
             @content
         }
-    }   @else if($width == 900){
+    } @else if($width == 649){
+        @media (max-width: 649px) {
+            @content
+        }
+    }  
+     @else if($width == 900){
         @media (min-width: 900px) {
+            @content
+        }
+    } @else if($width == 901){
+        @media (max-width: 901px) {
             @content
         }
     }
@@ -190,6 +199,23 @@
     }
 }
 // mobile design:
+@include queryIf(649){
+    #footer{
+        .top-footer{
+            .column-tag{
+                .col-footer{
+                    .text-container{
+                        .text-element{
+                            &:nth-child(n+3){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
 @include queryIf(650){
    #footer{
     .top-footer{
@@ -217,3 +243,9 @@
     }
    }
 }
+@include queryIf(901){
+   .hide-column-tag{
+    display: none !important;
+    }
+}
+
