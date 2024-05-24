@@ -1,4 +1,6 @@
-import footerGenerator from "../../../components/footerComponent/footerComponent";
+"use strcit";
+
+import footerGenerator from "../../../components/footerComponent/renderFooterComponent";
 import header from "../../../components/headerComponent/headerComponent";
 import main from "../../../components/mainComponent/main";
 

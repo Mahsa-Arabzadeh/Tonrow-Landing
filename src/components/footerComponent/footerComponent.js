@@ -84,7 +84,7 @@ function rowGenerator(colTitle, colText, imgSrc) {
  * Creates a row of images based on the provided image sources.
  * @returns {HTMLElement} - The container element for the row of images.
  */
-function rowImage() {
+export function rowImage() {
   // Iterate over each image source and create corresponding img elements
   const imgElementTag = rowImageFooter.map((item) => {
     const imgElement = domGenerator({
@@ -107,7 +107,7 @@ function rowImage() {
  * Generates a footer element containing copyright information.
  * @returns {HTMLElement} - The footer element containing copyright information.
  */
-function copyRight() {
+export function copyRight() {
   return domGenerator({
     tag: "div",
     attributes: { class: "footer-copyright" },
@@ -117,11 +117,7 @@ function copyRight() {
   });
 }
 
-/**
- * Generates a footer element and appends it to the document body.
- * @returns {HTMLElement} The generated footer element.
- */
-export default function footerGenerator() {
+export function columnGenerator() {
   const columns = colFooterGenerator.map((column) => {
     const columnTag = domGenerator({
       tag: "div",
@@ -145,26 +141,5 @@ export default function footerGenerator() {
     };
   });
 
-  return domGenerator({
-    tag: "footer",
-    attributes: { id: "footer" },
-    children: [
-      {
-        tag: "div",
-        attributes: { class: "top-footer" },
-        dataAttributes: { font: "iranSans" },
-        children: columns.map((column) => ({
-          tag: column.tag,
-        })),
-      },
-      // append rowImage part
-      {
-        tag: rowImage(),
-      },
-      // append copyRight part
-      {
-        tag: copyRight(),
-      },
-    ],
-  });
+  return columns;
 }
