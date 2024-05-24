@@ -1,5 +1,3 @@
-// @import "../../../root";
-
 /* Styles for the header component */
 
 #header {
@@ -7,6 +5,7 @@
   color: #fff; /* Text color */
   padding: 20px; /* Padding around the header content */
   box-shadow: 0px 8px 34px 0px #727d871a; /* Shadow around the header*/
+
   /* Styles for the content within the header */
   .header-content {
     display: flex; /* Display as flexbox */
@@ -49,6 +48,10 @@
       .btn-public {
         cursor: pointer; /* Cursor style */
       }
+      .buttonComponent{
+        text-shadow: 0px 1px 3px #262626;
+        font-family: sans-serif;
+      }
       .buttonComponentWrapper {
         margin-right: 10px; /* Margin on the right */
         cursor: pointer; /* Cursor style */
@@ -73,6 +76,11 @@
       width: 28px;
       height: 32px;
     }
+
+    /* Hide the sidebar toggle icon for screens larger than 900px */
+    @media (min-width: 900px) {
+      display: none;
+    }
   }
 
   /* Media query for screens less than 900px */
@@ -86,5 +94,12 @@
     flex-direction: row-reverse; /* Arrange content in a row in reverse order */
     justify-content: flex-end; /* Align content to the end of the flex container */
     box-shadow: none; /* Remove boxShadow from header in Responsive version */
+  }
+}
+
+/* Hide logo-links-container on smaller screens */
+@media (max-width: 900px) {
+  .logo-links-container {
+    display: none !important; /* Hide logo-links-container on screens less than or equal to 900px */
   }
 }

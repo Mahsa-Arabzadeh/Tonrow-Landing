@@ -27,7 +27,7 @@ const publicHeaderData = [
   // Button for login/register action
   {
     content: "ورود / ثبت نام",
-    size: "extraLarge",
+    size: "medium",
     statues: "primaryFill",
     type: "button",
     class: "btn-primary",

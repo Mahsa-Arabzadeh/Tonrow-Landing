@@ -1,4 +1,3 @@
-// @import "../../../root";
 /* Define keyframes for sidebar animation */
 @keyframes moveSidebar {
   0% {
@@ -23,7 +22,7 @@
   border-radius: 10px 0px 0px 10px; /* Rounded corners */
   overflow-x: hidden; /* Hide horizontal overflow */
   animation: 0.7s moveSidebar; /* Apply animation to sidebar */
-  z-index: 3; /* Stack order */
+  z-index: 4; /* Stack order */
 
   /* Styling when sidebar is open */
   &.open {
@@ -96,7 +95,6 @@
     height: 32px; /* Image height */
   }
 }
-/* Styling for the overlay */
 .overlay {
   display: none; /* Initially hide the overlay */
   position: fixed; /* Fixed positioning */
@@ -107,4 +105,48 @@
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   backdrop-filter: blur(5px); /* Blur effect */
   z-index: 2; /* Stack order, ensure overlay appears above other content */
+}
+/* Styling for the overlay */
+
+/* Media query for screens less than or equal to 900px */
+@media (max-width: 900px) {
+  .sidebar-toggle-icon {
+    display: block; /* Display the sidebar toggle icon on smaller screens */
+  }
+
+  #sidebar {
+    display: none; /* Hide the sidebar initially on smaller screens */
+
+    &.open {
+      display: block; /* Show the sidebar when it's open */
+    }
+  }
+  .overlay {
+    display: none; /* Initially hide the overlay */
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Position from the top */
+    left: 0; /* Position from the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Semi-transparent black background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    z-index: 3; /* Stack order, ensure overlay appears above other content */
+  }
+
+}
+
+/* Media query for screens wider than 900px */
+@media (min-width: 901px) {
+  .sidebar-toggle-icon {
+    display: none; /* Hide the sidebar toggle icon on larger screens */
+  }
+
+  #sidebar {
+    display: none; /* Ensure the sidebar is hidden on larger screens */
+  }
 }
