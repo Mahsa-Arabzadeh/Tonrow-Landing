@@ -10,14 +10,16 @@ import {
   publicHeaderData,
 } from "./data.js";
 import { setPublicBtn } from "../heroBannerComponent/index.js";
+
 /**
  * Function to validate user roles and return corresponding header data.
  * @param {string} userRole - The role of the user.
  * @returns {Array} - The header data corresponding to the user role.
+ * @throws {Error} - Throws an error if the user role is not recognized.
  */
 export function getHeaderDataByRole(userRole) {
-  // Define header data based on user role
-  let headerData;
+  // Define default header data for public role
+  let headerData = publicHeaderData;
 
   switch (userRole) {
     case "safir":
@@ -30,13 +32,11 @@ export function getHeaderDataByRole(userRole) {
       headerData = userHeaderData;
       break;
     case "public":
-      headerData = publicHeaderData;
       setPublicBtn(true);
       break;
     default:
-      // If the user role is not recognized, return the header data for the public role
-      headerData = publicHeaderData;
-      break;
+      // Throw an error if the user role is not recognized
+      throw new Error(`Unrecognized user role: ${userRole}`);
   }
 
   return headerData;
