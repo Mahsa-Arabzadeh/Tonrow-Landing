@@ -1,7 +1,7 @@
 "use strict";
 
 // Imports the header component function from the headerComponent module.
-import header from "./headerComponent"; // Corrected import path
+import header from "./headerComponent"; 
 
 /**
  * Checks if the properties of header data are valid.
@@ -10,14 +10,21 @@ import header from "./headerComponent"; // Corrected import path
  */
 export default function checkHeaderData(headerData) {
   try {
-    if (!headerData.length) {
-      throw new Error("headerData array is empty");
-    } else {
-      // Render the header if data is available
-      header(headerData);
+    if (!Array.isArray(headerData)) {
+      throw new Error("headerData is not an array");
     }
+
+    if (headerData.length === 0) {
+      throw new Error("headerData array is empty");
+    }
+
+    // Render the header if data is available
+    header(headerData);
   } catch (error) {
-    // catch errors:
-    console.error(error.message);
+    // Log the entire error object for better debugging
+    console.error("An error occurred:", error);
+
+    // Rethrow the error to propagate it
+    throw error;
   }
 }
