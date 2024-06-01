@@ -8,7 +8,7 @@ import "./index.scss";
  * Generates the contact section HTML structure.
  * @returns {HTMLElement} The contact section HTML element.
  */
-function contactUs() {
+export default function contactUs() {
   /**
    * Represents an individual contact item.
    * @property {string} tag : The HTML tag name.
@@ -24,18 +24,20 @@ function contactUs() {
       }
     }
     const contactItem = contactItemsData.map((img) => {
-      const tagContact = {
-        tag: "img",
-        attributes: {
-          class: "contact-img",
-          src: `${img.imageContact ?? "/images/forbiddendefaultImage.svg"}`,
-          href: `${img.hrefImg ?? "#"}`,
+      return {
+        tag: "a",
+        attributes: { href: `${img.hrefImg ?? "#"}` },
+        children: {
+          tag: "img",
+          attributes: {
+            class: "contact-img",
+            src: `${img.imageContact ?? "/images/forbiddendefaultImage.svg"}`,
+          },
         },
       };
-      return tagContact;
     });
 
-    const contactUs = domGenerator({
+    return domGenerator({
       tag: "div",
       attributes: { class: "contactus-section" },
       children: [
@@ -51,11 +53,7 @@ function contactUs() {
         },
       ],
     });
-
-    return contactUs;
   } catch (error) {
-    console.log(error.message);
+    throw new Error(error);
   }
 }
-
-export default contactUs;

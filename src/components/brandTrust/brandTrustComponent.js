@@ -1,7 +1,7 @@
 "use strict";
 
 // core version + navigation, pagination modules:
-import Swiper from "swiper";
+import Swiper, { Mousewheel } from "swiper";
 // Import domGenerator for creating DOM Elements.
 import domGenerator from "dom-generator";
 import { brandData } from "./data";
@@ -9,6 +9,8 @@ import { brandData } from "./data";
 import "swiper/css";
 import "./index.scss";
 
+// Use Swiper modules
+Swiper.use([Mousewheel]);
 /**
  * Creates a swiper element for displaying brands.
  * @function swiperBrands
@@ -26,7 +28,7 @@ function swiperBrands() {
   // Create swiper container
   const swiperContainer = domGenerator({
     tag: "div",
-    attributes: { class: "swiper" },
+    attributes: { class: "mySwiper swiper" },
     children: [
       {
         tag: "div",
@@ -40,6 +42,8 @@ function swiperBrands() {
 
   new Swiper(swiperContainer, {
     slidesPerView: "auto",
+    mousewheel: true,
+    // direction: "vertical",
   });
 
   return swiperContainer;
@@ -85,12 +89,16 @@ function brandIconGenerator(defaultSrc, hrefImage) {
 
     // brandGenerator images slide.
     return domGenerator({
-      tag: "img",
-      attributes: {
-        class: "swiper-slide",
-        src: `${defaultSrc ?? "/images/defaultImage.png"}`,
-        href: `${hrefImage ?? "#"}`,
-      },
+      tag: "a",
+      attributes: { class: "swiper-slide", href: `${hrefImage ?? "#"}` },
+      children: [
+        {
+          tag: "img",
+          attributes: {
+            src: `${defaultSrc ?? "/images/defaultImage.png"}`,
+          },
+        },
+      ],
     });
   } catch (error) {
     throw new Error(error);
