@@ -19,6 +19,10 @@ function createBlueCard(title, description) {
     children: [
       {
         tag: "div",
+        attributes: { id: "overlay" },
+      },
+      {
+        tag: "div",
         attributes: { id: "descriptionSellCard" },
         children: [
           {
@@ -35,11 +39,11 @@ function createBlueCard(title, description) {
           },
           {
             tag: baseButtonGenerator({
-              content: "درخواست خرید",
+              content: "درخواست سفیر",
               size: "large",
               statues: "primaryFill",
               type: "button",
-              class: "btn-primary",
+              className: "ambassador-request-btn",
             }),
           },
         ],

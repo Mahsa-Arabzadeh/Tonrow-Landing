@@ -11,7 +11,7 @@ import createBlueCard from "./blueCard";
  * @returns {HTMLDivElement} - The generated map section element.
  */
 
-function createMap() {
+export default function createMap() {
   //* map on array tooltips
   const tooltips = createTooltip("div", "tooltips", "", 5).map((item) => {
     return {
@@ -20,7 +20,7 @@ function createMap() {
   });
 
   // start domGenerator
-  let mapBackground = domGenerator({
+  return domGenerator({
     tag: "div",
     //* imageMap: background section of map
     attributes: { id: "mapSection" },
@@ -28,14 +28,14 @@ function createMap() {
       //* card: cardBlue of map background section
       {
         tag: createBlueCard(
-          "درخواست خرید",
+          " همین حالا خرید کن",
           "وظایف سفیران شامل جمع‌آوری سفارشات، تحویل به موقع، ارتباط مؤثر با مشتریان و حفظ کیفیت خدمات است."
         ),
       },
       {
         tag: "img",
         attributes: {
-          src: "./public/images/group.png",
+          src: "/images/group.png",
           class: "motorDelivery",
         },
       },
@@ -43,7 +43,4 @@ function createMap() {
       ...tooltips,
     ],
   });
-  return mapBackground;
 }
-
-export default createMap;

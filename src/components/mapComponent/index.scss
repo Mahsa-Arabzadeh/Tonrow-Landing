@@ -6,8 +6,6 @@
   justify-content: center;
 }
 body {
-  margin: 0;
-
   //* parent div style
   #map {
     @include display();
@@ -24,7 +22,7 @@ body {
     @include display();
     justify-content: space-between;
     flex-direction: row-reverse;
-    background-image: url("../public/images/map.svg");
+    background-image: url("/images/map.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -128,10 +126,18 @@ body {
   text-align: center;
   width: 32%;
   height: 504px;
-  background: #2b6fbd1a;
-  border: 1px solid #f1f1f1;
-  border-radius: 4px;
-
+  position: relative;
+  // * blur overlay div
+  #overlay{
+    border-radius: 16px;
+    border: 1px solid #F1F1F1;
+    width: 100%;
+    height: 100%;
+    background: #2B6FBD1A;
+    position: absolute;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+  }
   //* description section on card child
   #descriptionSellCard {
     @include display();
@@ -139,8 +145,8 @@ body {
     text-align: center;
     gap: 10px;
     width: 87%;
-    height: 504px;
-
+    gap: 32px;
+    z-index: 2;
     //* title
     h1 {
       margin: 0;
@@ -151,6 +157,11 @@ body {
     p {
       font-size: 24px;
       font-weight: 400;
+    }
+    .ambassador-request-btn{
+      button{
+        font-size: 24px;
+      }
     }
   }
 }
