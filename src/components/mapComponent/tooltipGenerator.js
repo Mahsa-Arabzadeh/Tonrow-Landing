@@ -11,7 +11,7 @@ import domGenerator from "dom-generator";
  * @returns {Array<HTMLDivElement>} - An array containing the generated tooltip elements.
  */
 // Function to create a tooltip with a specified number of tooltips and a common class
-function createTooltip(tagName, className, text, numOfTooltips) {
+export default function createTooltip(tagName, className, text, numOfTooltips) {
   // Create an array to store the tooltips
   const tooltips = [];
 
@@ -32,5 +32,3 @@ function createTooltip(tagName, className, text, numOfTooltips) {
   // Return the array of tooltips
   return tooltips;
 }
-
-export default createTooltip;
