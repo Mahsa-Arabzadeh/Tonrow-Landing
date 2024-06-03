@@ -1,11 +1,10 @@
 "use strict";
 
 import domGenerator from "dom-generator";
+import timeLine from "./timline";
 import "./index.scss";
 
-import timeLine from "./timline";
-
-function renderBreakMotor() {
+export default function renderBreakMotor() {
   let motor = domGenerator({
     tag: "div",
     //* map: parent section of map
@@ -30,9 +29,7 @@ function renderBreakMotor() {
       },
     ],
   });
-  // return motor;
+  const motorCycle = motor.querySelector("#motor");
+  timeLine(motorCycle);
   return motor;
-  timeLine();
 }
-
-export default renderBreakMotor;

@@ -7,12 +7,11 @@
  *@param observer {object}
  **/
 
-function timeLine() {
-  const animationElement = document.getElementById("motor");
+export default function timeLine(animationElement) {
   const startAnimation = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        animationElement.style.animation = "move 18s linear";
+        animationElement.style.animation = "runs 18s linear";
         observer.disconnect(); // Stop observing once animation starts
       }
     });
@@ -28,5 +27,3 @@ function timeLine() {
 
   observer.observe(animationElement);
 }
-
-export default timeLine;

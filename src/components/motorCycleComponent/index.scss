@@ -10,10 +10,6 @@ body {
     width: 100vw;
     height: 108px;
     @include display();
-
-    @media (max-width: 760px) {
-      display: none;
-    }
   }
   #animationMotor {
     width: 89vw;
@@ -24,13 +20,11 @@ body {
   }
   #road {
     width: 89vw;
-    height: 10px;
+    height: 13px;
   }
   #motor {
     width: 43px;
     height: 34px;
-    animation-name: runs;
-    animation-duration: 18s;
 
     @keyframes runs {
       0% {
@@ -38,11 +32,11 @@ body {
       }
 
       20% {
-        transform: translateX(1440px);
+        transform: translateX(1280px);
       }
 
       100% {
-        transform: translateX(1440px);
+        transform: translateX(1280px);
       }
     }
   }

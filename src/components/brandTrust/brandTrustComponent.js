@@ -11,6 +11,7 @@ import "./index.scss";
 
 // Use Swiper modules
 Swiper.use([Mousewheel]);
+
 /**
  * Creates a swiper element for displaying brands.
  * @function swiperBrands
@@ -28,7 +29,7 @@ function swiperBrands() {
   // Create swiper container
   const swiperContainer = domGenerator({
     tag: "div",
-    attributes: { class: "mySwiper swiper" },
+    attributes: { class: "swiper" },
     children: [
       {
         tag: "div",
@@ -43,7 +44,6 @@ function swiperBrands() {
   new Swiper(swiperContainer, {
     slidesPerView: "auto",
     mousewheel: true,
-    // direction: "vertical",
   });
 
   return swiperContainer;
@@ -95,6 +95,7 @@ function brandIconGenerator(defaultSrc, hrefImage) {
         {
           tag: "img",
           attributes: {
+            class: "swiper-slide",
             src: `${defaultSrc ?? "/images/defaultImage.png"}`,
           },
         },
