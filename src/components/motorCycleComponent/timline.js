@@ -11,7 +11,14 @@ export default function timeLine(animationElement) {
   const startAnimation = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        animationElement.style.animation = "runs 18s linear";
+        animationElement.animate(
+          [
+            { transform: "translateX(0)" },
+            { transform: "translateX(1280px)" },
+            { transform: "translateX(1280px)" },
+          ],
+          { duration: 4000, fill: "forwards" }
+        );
         observer.disconnect(); // Stop observing once animation starts
       }
     });

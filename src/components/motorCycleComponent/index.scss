@@ -25,20 +25,6 @@ body {
   #motor {
     width: 43px;
     height: 34px;
-
-    @keyframes runs {
-      0% {
-        transform: translateX(0);
-      }
-
-      20% {
-        transform: translateX(1280px);
-      }
-
-      100% {
-        transform: translateX(1280px);
-      }
-    }
   }
 }
 
