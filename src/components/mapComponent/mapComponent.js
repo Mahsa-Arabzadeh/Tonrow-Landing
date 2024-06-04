@@ -3,7 +3,7 @@
 import domGenerator from "dom-generator";
 import "./index.scss";
 
-import animationTooltips from "./tooltipAnimation";
+import animationTooltips, { animateMotorDelivery } from "./tooltipAnimation";
 import createMap from "./map";
 
 /**
@@ -23,6 +23,7 @@ function renderMap() {
   });
   //* Using IntersectionObserver, it manages the animation of tooltips.
   setTimeout(() => {
+    animateMotorDelivery();
     animationTooltips();
   }, 0);
   return map;

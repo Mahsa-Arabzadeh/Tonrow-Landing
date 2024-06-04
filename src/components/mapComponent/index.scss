@@ -30,23 +30,7 @@ body {
     .motorDelivery {
       position: relative;
       bottom: 79px;
-      animation-name: moves;
-      animation-duration: 5s;
-
-      //*Engine movement animation on the map screen.
-      @keyframes moves {
-        0% {
-          transform: translateX(0);
-        }
-
-        50% {
-          transform: translateX(650px) translateY(33px);
-        }
-
-        100% {
-          transform: translateY(30px) translateX(650px);
-        }
-      }
+      z-index: 1;
     }
     .tooltips {
       position: absolute;
@@ -56,20 +40,8 @@ body {
       border-radius: 4px;
       width: fit-content;
       height: fit-content;
-      display: none;
-
-      @keyframes animated {
-        from {
-          display: none;
-        }
-        to {
-          display: flex;
-        }
-      }
-
+      opacity: 0;
       &:nth-child(3) {
-        animation-name: animated;
-        animation-duration: 5s;
         left: 45px;
         top: 180px;
       }
@@ -78,8 +50,6 @@ body {
       }
 
       &:nth-child(4) {
-        animation-name: animated;
-        animation-duration: 5s;
         left: 300px;
         top: 280px;
       }
@@ -87,8 +57,6 @@ body {
         content: "قبول درخواست توسط نزدیک ترین سفیر";
       }
       &:nth-child(5) {
-        animation-name: animated;
-        animation-duration: 5s;
         left: 740px;
         top: 222px;
       }
@@ -96,8 +64,6 @@ body {
         content: "حضور در مبدا";
       }
       &:nth-child(6) {
-        animation-name: animated;
-        animation-duration: 5s;
         left: 705px;
         top: 390px;
       }
@@ -105,8 +71,6 @@ body {
         content: "دریافت سفارش";
       }
       &:nth-child(7) {
-        animation-name: animated;
-        animation-duration: 5s;
         left: 695px;
         top: 525px;
       }
@@ -176,3 +140,4 @@ body {
     }
   }
 }
+
