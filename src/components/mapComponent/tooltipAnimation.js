@@ -63,6 +63,8 @@ export function animateMotorDelivery() {
             fill: "forwards",
           }
         );
+
+        observer.disconnect(); // Stop observing once animation starts
       }
     });
   };
