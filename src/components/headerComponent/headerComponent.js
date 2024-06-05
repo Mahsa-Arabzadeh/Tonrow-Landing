@@ -27,45 +27,25 @@ export default function header(headerData, defaultRole = "public") {
         tag: "div",
         attributes: { class: "header-content" },
         children: [
+          // Container for buttons
           {
-            // Container for logo and links
             tag: "div",
-            attributes: { class: "logo-links-container" },
-            children: [
-              // Logo element
-              {
-                tag: "a",
-                attributes: {
-                  href: headerData[0].logoLink || "#",
-                  class: "logo",
-                },
-                children: [
-                  // Image for logo
-                  {
-                    tag: "img",
-                    attributes: {
-                      src: headerData[0].imgAddress,
-                      alt: "Logo",
-                    },
-                  },
-                ],
+            attributes: { class: "buttons-container" },
+            eventListeners: {
+              // Event listener for button click
+              click: () => {
+                const buttonComponentWrapper = document.querySelector(
+                  ".buttonComponentWrapper"
+                );
+                if (buttonComponentWrapper) {
+                  const anchorLink =
+                    buttonComponentWrapper.getAttribute("data-anchor-link");
+                  if (anchorLink) {
+                    window.location.href = anchorLink;
+                  }
+                }
               },
-              // Links
-              {
-                tag: "div",
-                attributes: { class: "logo-links" },
-                children: headerData
-                  .slice(1)
-                  .filter((item) => !item.content)
-                  .map((item) => ({
-                    tag: "a",
-                    properties: {
-                      textContent: item.linkText,
-                      href: item.LinkAddress || "#",
-                    },
-                  })),
-              },
-            ],
+            },
           },
           // Container for sidebar toggle icon
           {
@@ -90,25 +70,45 @@ export default function header(headerData, defaultRole = "public") {
               },
             ],
           },
-          // Container for buttons
           {
+            // Container for logo and links
             tag: "div",
-            attributes: { class: "buttons-container" },
-            eventListeners: {
-              // Event listener for button click
-              click: () => {
-                const buttonComponentWrapper = document.querySelector(
-                  ".buttonComponentWrapper"
-                );
-                if (buttonComponentWrapper) {
-                  const anchorLink =
-                    buttonComponentWrapper.getAttribute("data-anchor-link");
-                  if (anchorLink) {
-                    window.location.href = anchorLink;
-                  }
-                }
+            attributes: { class: "logo-links-container" },
+            children: [
+              // Links
+              {
+                tag: "div",
+                attributes: { class: "logo-links" },
+                children: headerData
+                  .slice(1)
+                  .filter((item) => !item.content)
+                  .map((item) => ({
+                    tag: "a",
+                    properties: {
+                      textContent: item.linkText,
+                      href: item.LinkAddress || "#",
+                    },
+                  })),
               },
-            },
+              // Logo element
+              {
+                tag: "a",
+                attributes: {
+                  href: headerData[0].logoLink || "#",
+                  class: "logo",
+                },
+                children: [
+                  // Image for logo
+                  {
+                    tag: "img",
+                    attributes: {
+                      src: headerData[0].imgAddress,
+                      alt: "Logo",
+                    },
+                  },
+                ],
+              },
+            ],
           },
         ],
       },

@@ -23,7 +23,7 @@
   overflow-x: hidden; /* Hide horizontal overflow */
   animation: 0.7s moveSidebar; /* Apply animation to sidebar */
   z-index: 4; /* Stack order */
-
+  
   /* Styling when sidebar is open */
   &.open {
     display: block; /* Show when open */
@@ -39,7 +39,7 @@
     .line {
       position: absolute; /* Absolute positioning */
       top: 41px; /* Position from the top */
-      left: -109px; /* Position from the left */
+      left: 109px; /* Position from the left */
       width: 100%; /* Full width */
       height: 2px; /* Height */
       background-color: #e3eaf4; /* Line color */
@@ -61,8 +61,7 @@
     display: flex; /* Display as flexbox */
     flex-direction: column; /* Arrange content vertically */
     padding-bottom: 65px; /* Padding at the bottom */
-    align-items: flex-end; /* Align items to the right */
-    margin-right: 30px; /* Margin on the right */
+    align-items: flex-start; /* Align items to the right */
 
     /* Styling for links within the content */
     a {

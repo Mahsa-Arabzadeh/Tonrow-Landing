@@ -12,7 +12,7 @@
     align-items: center; /* Align items vertically */
     flex-direction: row-reverse; /* Arrange content in a row in reverse order */
     justify-content: space-between; /* Space evenly between content */
-
+    min-width: 93%;
     /* Styles for the container holding the logo and links */
     .logo-links-container {
       display: flex; /* Display as flexbox */
