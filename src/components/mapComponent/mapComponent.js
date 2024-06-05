@@ -1,32 +1,46 @@
 "use strict";
 
 import domGenerator from "dom-generator";
-import "./index.scss";
 
-import animationTooltips, { animateMotorDelivery } from "./tooltipAnimation";
-import createMap from "./map";
+import createTooltip from "./tooltipGenerator";
+import createBlueCard from "./blueCard";
 
 /**
- * Renders a map section with tooltips and manages tooltip animations.
+ * Creates a map section with tooltips.
+ * This component is for making the map part. This section has a background-image on which there is a card and an engine.
  * @returns {HTMLDivElement} - The generated map section element.
  */
-function renderMap() {
-  let map = domGenerator({
+
+export default function createMap() {
+  //* map on array tooltips
+  const tooltips = createTooltip("div", "tooltips", "", 5).map((item) => {
+    return {
+      tag: item,
+    };
+  });
+
+  // start domGenerator
+  return domGenerator({
     tag: "div",
-    //* map: parent section of map
-    attributes: { id: "map" },
+    //* imageMap: background section of map
+    attributes: { id: "mapSection" },
     children: [
+      //* card: cardBlue of map background section
       {
-        tag: createMap(),
+        tag: createBlueCard(
+          " همین حالا خرید کن",
+          "وظایف سفیران شامل جمع‌آوری سفارشات، تحویل به موقع، ارتباط مؤثر با مشتریان و حفظ کیفیت خدمات است."
+        ),
       },
+      {
+        tag: "img",
+        attributes: {
+          src: "/images/group.png",
+          class: "motorDelivery",
+        },
+      },
+      //* catch array tooltips
+      ...tooltips,
     ],
   });
-  //* Using IntersectionObserver, it manages the animation of tooltips.
-  setTimeout(() => {
-    animateMotorDelivery();
-    animationTooltips();
-  }, 0);
-  return map;
 }
-
-export default renderMap;

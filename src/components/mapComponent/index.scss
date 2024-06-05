@@ -9,15 +9,13 @@ body {
   //* parent div style
   #map {
     @include display();
-    width: 100vw;
-    height: 580px;
     background-color: #f1f5f8;
   }
   //* Map Background
   //* first childe on parent
   #mapSection {
     padding: 0 2%;
-    width: 91vw;
+    width: 90vw;
     height: 580px;
     @include display();
     justify-content: space-between;

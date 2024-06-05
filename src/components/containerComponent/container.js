@@ -10,7 +10,7 @@ import generateBrandTrust from "../brandTrust/brandTrustComponent";
 import generatorDOMWhatDoesTonrowDo from "../whatDoesTonrowDo";
 import contactUs from "../contactUsComponent/contactUs";
 import heroBannerSection from "../heroBannerComponent";
-import renderMap from "../mapComponent/mapComponent";
+import renderMap from "../mapComponent/renderMapComponent";
 import flashMaker from "../flashComponent/flashes";
 
 /**
