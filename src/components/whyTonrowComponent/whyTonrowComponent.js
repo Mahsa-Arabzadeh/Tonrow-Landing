@@ -30,22 +30,6 @@ function whyTonrowCardGenerator(cardProps) {
     children: [
       {
         tag: "div",
-        attributes: { class: "why-tonrow-container-card" },
-        children: [
-          {
-            tag: "h3",
-            attributes: { class: "why-tonrow-title" },
-            properties: { textContent: title },
-          },
-          {
-            tag: "p",
-            attributes: { class: "why-tonrow-desc" },
-            properties: { textContent: description },
-          },
-        ],
-      },
-      {
-        tag: "div",
         attributes: {
           class: "why-tonrow-div-icon",
           style: `background-color: ${bgColor}`,
@@ -57,6 +41,22 @@ function whyTonrowCardGenerator(cardProps) {
               class: "why-tonrow-icon",
               src: icon,
             },
+          },
+        ],
+      },
+      {
+        tag: "div",
+        attributes: { class: "why-tonrow-container-card" },
+        children: [
+          {
+            tag: "h3",
+            attributes: { class: "why-tonrow-title" },
+            properties: { textContent: title },
+          },
+          {
+            tag: "p",
+            attributes: { class: "why-tonrow-desc" },
+            properties: { textContent: description },
           },
         ],
       },

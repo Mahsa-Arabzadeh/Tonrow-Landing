@@ -17,15 +17,15 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     h2 {
       font-size: 23px;
       color: var(--black-color);
     }
     p {
       font-size: 16px;
-      text-align: center;
+      display: flex;
       color: var(--gray-color);
     }
     .botton-tonrow-do {
@@ -64,14 +64,11 @@
     .description-body-SEC-whatDoesTonrowDo {
       width: 40%;
       justify-content: end;
-      align-items: end;
+      align-items: start;
       gap: 18px;
-      p {
-        text-align: end;
-      }
     }
   }
-  .body-what-services-tonrow:nth-child(even) {
+  .body-what-services-tonrow:nth-child(odd) {
     flex-direction: row-reverse;
   }
 }
