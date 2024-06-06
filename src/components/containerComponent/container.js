@@ -1,9 +1,6 @@
 "use strict";
 
 import domGenerator from "dom-generator";
-import "./index.scss";
-import "./index.scss";
-
 import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
 import renderBreakMotor from "../motorCycleComponent/motorCycleComponent";
 import generateBrandTrust from "../brandTrust/brandTrustComponent";
@@ -12,12 +9,13 @@ import contactUs from "../contactUsComponent/contactUs";
 import heroBannerSection from "../heroBannerComponent";
 import renderMap from "../mapComponent/renderMapComponent";
 import flashMaker from "../flashComponent/flashes";
+import "./index.scss";
 
 /**
  * @returns {HTMLElement} - container Dom element.
  */
-function containerComponent() {
-  const container = domGenerator({
+export default function containerComponent() {
+  return domGenerator({
     tag: "container",
     attributes: { class: "container" },
     dataAttributes: { font: "iranSans" },
@@ -64,7 +62,4 @@ function containerComponent() {
       },
     ],
   });
-  return container;
 }
-
-export default containerComponent;

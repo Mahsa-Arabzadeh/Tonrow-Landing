@@ -41,8 +41,8 @@ export function setPublicBtn(show) {
  * @returns - Creating the entire octet page dynamically with DOM generator
  * @function - cretor heroBannerSection
  */
-function heroBannerSection() {
-  const heroGenerator = domGenerator(
+export default function heroBannerSection() {
+  return domGenerator(
     // start of hero section
     {
       tag: "section",
@@ -182,8 +182,4 @@ function heroBannerSection() {
     }
     // end of hero section
   );
-
-  return heroGenerator;
 }
-
-export default heroBannerSection;

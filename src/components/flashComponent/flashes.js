@@ -9,8 +9,8 @@ import "./index.scss";
  * @param {string} options.urlFlash  :The URL of the flash.
  * @returns {HTMLElement} generated flash maker element.
  */
-function flashMaker({ urlFlash = "" }) {
-  const flashMaker = domGenerator({
+export default function flashMaker({ urlFlash = "" }) {
+  return domGenerator({
     tag: "div",
     attributes: { class: "flash-maker" },
     children: {
@@ -18,8 +18,4 @@ function flashMaker({ urlFlash = "" }) {
       attributes: { class: "flash-url", src: urlFlash },
     },
   });
-
-  return flashMaker;
 }
-
-export default flashMaker;

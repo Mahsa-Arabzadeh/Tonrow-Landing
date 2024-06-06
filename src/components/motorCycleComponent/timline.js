@@ -24,13 +24,11 @@ export default function timeLine(animationElement) {
     });
   };
 
-  const observerOptions = {
+  const observer = new IntersectionObserver(startAnimation, {
     root: null,
     rootMargin: "0px",
     threshold: 0.5,
-  };
-
-  const observer = new IntersectionObserver(startAnimation, observerOptions);
+  });
 
   observer.observe(animationElement);
 }

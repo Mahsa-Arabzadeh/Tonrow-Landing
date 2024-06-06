@@ -117,8 +117,12 @@ export function copyRight() {
   });
 }
 
+/**
+ * generates columns for the footer section.
+ * @returns {Array}: An array of objects,
+ */
 export function columnGenerator() {
-  const columns = colFooterGenerator.map((column) => {
+  return colFooterGenerator.map((column) => {
     const columnTag = domGenerator({
       tag: "div",
       attributes: { class: "column-tag" },
@@ -140,6 +144,4 @@ export function columnGenerator() {
       tag: columnTag,
     };
   });
-
-  return columns;
 }

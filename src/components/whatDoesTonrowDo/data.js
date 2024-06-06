@@ -1,6 +1,6 @@
 "use strict";
 
-const contentWhatDoesTonrowDo = [
+export const contentWhatDoesTonrowDo = [
   {
     headeText: "درخواست خرید",
     imgUrl: "public/images/thumbnail-headertext.svg",
@@ -18,4 +18,3 @@ const contentWhatDoesTonrowDo = [
     btnText: "درخواست سفیر",
   },
 ];
-export { contentWhatDoesTonrowDo };

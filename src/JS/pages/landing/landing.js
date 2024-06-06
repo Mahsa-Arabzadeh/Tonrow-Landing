@@ -3,6 +3,7 @@
 import footerGenerator from "../../../components/footerComponent/renderFooterComponent";
 import header from "../../../components/headerComponent/headerComponent";
 import main from "../../../components/mainComponent/main";
+import "../../../styles/index.scss";
 
 document.addEventListener("DOMContentLoaded", pageLandingRendering);
 

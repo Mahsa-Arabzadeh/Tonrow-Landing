@@ -1,7 +1,6 @@
 "use strict";
 
 import domGenerator from "dom-generator";
-
 import baseButtonGenerator from "../buttonComponent/buttonComponent";
 
 /**

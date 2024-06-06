@@ -101,7 +101,7 @@ function generatorBodyWhatDoesTonrowDo() {
 /**
  * @returns {void} - create all DOM  SEC WhatDoesTonrowDo
  */
-function generatorDOMWhatDoesTonrowDo() {
+export default function generatorDOMWhatDoesTonrowDo() {
   const bodySections = generatorBodyWhatDoesTonrowDo();
   const containerGeneratorWhatDoesTonrowDo = domGenerator({
     tag: "section",
@@ -123,5 +123,3 @@ function generatorDOMWhatDoesTonrowDo() {
 
   return containerGeneratorWhatDoesTonrowDo;
 }
-
-export default generatorDOMWhatDoesTonrowDo;

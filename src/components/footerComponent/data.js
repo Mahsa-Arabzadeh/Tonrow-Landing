@@ -73,7 +73,6 @@ export const colFooterGenerator = [
       ],
     },
   ],
-
   [
     {
       colTitle: "سفیران",
