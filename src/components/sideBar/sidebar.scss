@@ -32,14 +32,13 @@
   /* Styling for the sidebar logo */
   .sidebar-logo {
     margin: 34% 0% 20% 55%; /* Set the desired margin */
-    width: 80%; /* Set the width of the sidebar logo container */
+    width: 100%; /* Set the width of the sidebar logo container */
     position: relative; /* Make it a positioned element */
 
     /* Styling for the lines in the logo */
     .line {
       position: absolute; /* Absolute positioning */
       top: 41px; /* Position from the top */
-      left: 109px; /* Position from the left */
       width: 100%; /* Full width */
       height: 2px; /* Height */
       background-color: #e3eaf4; /* Line color */

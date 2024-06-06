@@ -22,7 +22,7 @@ const buttonOptions = {
   size: "large", // size include: small , large , medium , extraLarge , extraSmall
   statues: "primaryFill", // include: primaryOutLine and primaryTextBtn, primaryFill
   type: "button", // If you do not need to use it | include all type button :submit , ...
-  class: "btn-primary", // null or add className(If you need to class)
+  className: "btn-primary", // null or add className(If you need to class)
   anchorLink: "https://", // href | If you do not need to use it
   eventListeners: { click: () => console.log("Hi!") }, // include all events
   disabled: false, // disabled true or false ? | If you do not need to use it

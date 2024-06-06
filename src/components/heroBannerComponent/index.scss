@@ -8,6 +8,7 @@
     margin-top: 5%;
     position: relative;
     max-width: 1000px;
+    flex-direction: row-reverse;
 }
 
 #herobBanner-Container {
@@ -74,6 +75,11 @@
     margin: 0 auto;
     flex-direction: column;
     gap: 20px;
+    .enter-btn{
+        button{
+            font-size: 24px;
+        }
+    }
 }
 
 #hero-description .hero-title {

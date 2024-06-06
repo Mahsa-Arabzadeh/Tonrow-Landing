@@ -124,7 +124,7 @@ function heroBannerSection() {
                       size: "large",
                       statues: "primaryFill",
                       type: "button",
-                      className: "",
+                      className: "enter-btn",
                       anchorLink: "#",
                       eventListeners: { click: () => {} },
                     }),

@@ -14,8 +14,6 @@
     .hero-image {
         left: 10%;
     }
-
-  
 }
 
 @media screen and (min-width: 440px) {
@@ -114,6 +112,8 @@
 
     #desktop-subcardTexts {
         background-color: transparent;
+        display: flex;
+        align-items: start;
 
         span {
             font-size: 18px;
@@ -159,7 +159,6 @@
     .subcard-desktop-container {
         display: flex;
         bottom: 20%;
-        // position: absolute;
     }
 
     .downArrow-image {
@@ -174,9 +173,9 @@
     }
 
     #hero-description {
-        text-align: end;
+        text-align: start;
         display: flex;
-        align-items: end;
+        align-items: start;
         margin: 0 auto;
         flex-direction: column;
     }

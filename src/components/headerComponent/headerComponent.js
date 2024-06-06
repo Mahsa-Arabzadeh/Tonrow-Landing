@@ -127,10 +127,10 @@ export default function header(headerData, defaultRole = "public") {
     if (item.type === "button") {
       const buttonElement = baseButtonGenerator({
         content: item.content || "",
-        size: window.innerWidth > 900 ? item.size : "extraLarge", // Adjust size based on window width
+        size: item.size,
         statues: item.statues,
         type: "button",
-        class: item.class || "custom-class",
+        className: item.class || "custom-class",
         anchorLink: item.anchorLink || "#",
         eventListeners: item.eventListeners || {},
         disabled: item.disabled || false,
