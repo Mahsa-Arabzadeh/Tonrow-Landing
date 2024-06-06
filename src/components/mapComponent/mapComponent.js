@@ -12,13 +12,6 @@ import createBlueCard from "./blueCard";
  */
 
 export default function createMap() {
-  //* map on array tooltips
-  const tooltips = createTooltip("div", "tooltips", "", 5).map((item) => {
-    return {
-      tag: item,
-    };
-  });
-
   // start domGenerator
   return domGenerator({
     tag: "div",
@@ -33,7 +26,9 @@ export default function createMap() {
         },
       },
       //* catch array tooltips
-      ...tooltips,
+      // ...tooltips,
+      ...createTooltip("div", "tooltips"),
+
       //* card: cardBlue of map background section
       {
         tag: createBlueCard(

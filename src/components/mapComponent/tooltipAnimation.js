@@ -11,14 +11,6 @@ export default function animationTooltips() {
   elements.forEach((element, index) => {
     const delay = (index + 1) * 0.5; // Calculate the delay dynamically
 
-    // set intersection observer api
-    // set options
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    };
-
     const startAnimation = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -37,13 +29,20 @@ export default function animationTooltips() {
       });
     };
 
-    const observer = new IntersectionObserver(startAnimation, observerOptions);
+    // set intersection observer api
+    const observer = new IntersectionObserver(startAnimation, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    });
 
     observer.observe(element);
   });
 }
 
-// function for observe animation motor delivery
+/**
+ * @function: function for observe animation motor delivery
+ */
 export function animateMotorDelivery() {
   // * select element
   const motorDelivery = document.querySelector(".motorDelivery");
