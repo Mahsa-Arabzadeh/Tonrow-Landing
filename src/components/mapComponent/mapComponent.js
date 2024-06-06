@@ -25,13 +25,6 @@ export default function createMap() {
     //* imageMap: background section of map
     attributes: { id: "mapSection" },
     children: [
-      //* card: cardBlue of map background section
-      {
-        tag: createBlueCard(
-          " همین حالا خرید کن",
-          "وظایف سفیران شامل جمع‌آوری سفارشات، تحویل به موقع، ارتباط مؤثر با مشتریان و حفظ کیفیت خدمات است."
-        ),
-      },
       {
         tag: "img",
         attributes: {
@@ -41,6 +34,13 @@ export default function createMap() {
       },
       //* catch array tooltips
       ...tooltips,
+      //* card: cardBlue of map background section
+      {
+        tag: createBlueCard(
+          " همین حالا خرید کن",
+          "وظایف سفیران شامل جمع‌آوری سفارشات، تحویل به موقع، ارتباط مؤثر با مشتریان و حفظ کیفیت خدمات است."
+        ),
+      },
     ],
   });
 }

@@ -13,9 +13,9 @@ export default function timeLine(animationElement) {
       if (entry.isIntersecting) {
         animationElement.animate(
           [
-            { transform: "translateX(0)" },
-            { transform: "translateX(1280px)" },
-            { transform: "translateX(1280px)" },
+            { transform: "translateX(0px)" },
+            { transform: "translateX(175vh)" },
+            { transform: "translateX(175vh)" },
           ],
           { duration: 4000, fill: "forwards" }
         );

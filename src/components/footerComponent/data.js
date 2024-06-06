@@ -10,73 +10,11 @@ import {
 export const colFooterGenerator = [
   [
     {
-      colTitle: "ایمیل",
+      imgSrc: "/images/Tonrow-white.svg",
+      colTitle: "تنرو",
       colText: [
         {
-          linkHref: `mailto: ${"info@tonrow.mail.com"}`,
-          text: tonrowEmail,
-          decoration: "link-active",
-        },
-      ],
-    },
-    {
-      colTitle: "شماره تماس",
-      colText: [
-        {
-          linkHref: `tel: ${tonrowNumber}`,
-          text: tonrowNumber,
-          decoration: "link-active",
-        },
-      ],
-    },
-    {
-      colTitle: "آدرس",
-      colText: [
-        {
-          linkHref: `${tonrowMap}`,
-          text: tonrowAddress,
-        },
-      ],
-    },
-  ],
-  [
-    {
-      colTitle: "سفیران",
-      colText: [
-        {
-          text: "دانلود اپ سفیر",
-          linkHref: "#",
-        },
-        {
-          text: "پرسش های متداول سفیران",
-          linkHref: "#",
-        },
-        {
-          text: "شرایط و قوانین سفیران",
-          linkHref: "#",
-        },
-      ],
-    },
-  ],
-  [
-    {
-      colTitle: "خدمات",
-      colText: [
-        {
-          text: "خرید منزل",
-          linkHref: "#",
-        },
-        {
-          text: "درخواست جا به جایی",
-          linkHref: "#",
-        },
-        {
-          text: "بازگشت وجه",
-          linkHref: "#",
-        },
-        {
-          text: "پشتیبانی",
-          linkHref: "#",
+          text: "حمل و نقل با ما, آسودگی خاطر برای شما !",
         },
       ],
     },
@@ -114,11 +52,74 @@ export const colFooterGenerator = [
   ],
   [
     {
-      imgSrc: "/images/Tonrow-white.svg",
-      colTitle: "تنرو",
+      colTitle: "خدمات",
       colText: [
         {
-          text: "حمل و نقل با ما, آسودگی خاطر برای شما !",
+          text: "خرید منزل",
+          linkHref: "#",
+        },
+        {
+          text: "درخواست جا به جایی",
+          linkHref: "#",
+        },
+        {
+          text: "بازگشت وجه",
+          linkHref: "#",
+        },
+        {
+          text: "پشتیبانی",
+          linkHref: "#",
+        },
+      ],
+    },
+  ],
+
+  [
+    {
+      colTitle: "سفیران",
+      colText: [
+        {
+          text: "دانلود اپ سفیر",
+          linkHref: "#",
+        },
+        {
+          text: "پرسش های متداول سفیران",
+          linkHref: "#",
+        },
+        {
+          text: "شرایط و قوانین سفیران",
+          linkHref: "#",
+        },
+      ],
+    },
+  ],
+  [
+    {
+      colTitle: "ایمیل",
+      colText: [
+        {
+          linkHref: `mailto: ${"info@tonrow.mail.com"}`,
+          text: tonrowEmail,
+          decoration: "link-active",
+        },
+      ],
+    },
+    {
+      colTitle: "شماره تماس",
+      colText: [
+        {
+          linkHref: `tel: ${tonrowNumber}`,
+          text: tonrowNumber,
+          decoration: "link-active",
+        },
+      ],
+    },
+    {
+      colTitle: "آدرس",
+      colText: [
+        {
+          linkHref: `${tonrowMap}`,
+          text: tonrowAddress,
         },
       ],
     },
