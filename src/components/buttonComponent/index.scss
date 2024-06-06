@@ -73,13 +73,13 @@
     text-align: center;
     transition: .3s;
     &:hover {
-      border: 1.5px solid #003d95;
+      border: 1px solid #003d95;
       box-shadow: 0px 19px 34px 0px #14113824;
     }
     &:focus,
     &:active {
       background-color: #f5f5f5;
-      border: 1.5px solid #003d95;
+      border: 1px solid #003d95;
     }
     &:disabled {
       color: #8c8c8c;
