@@ -10,14 +10,16 @@ document.addEventListener("DOMContentLoaded", pageLandingRendering);
 /**
  * Header, footer, and main section are appended to this function and finally, it renders the landing page.
  * @function pageLandingRendering
- */
+*/
 function pageLandingRendering() {
   const body = document.body;
+  // Select the app to place main in it
+  const app = document.querySelector(".app")
 
   // prepend header here:
   body.prepend(header());
   // append main section here:
-  body.appendChild(main());
+  app.appendChild(main());
   //   append footer here:
-  body.appendChild(footerGenerator());
+  body.append(footerGenerator());
 }

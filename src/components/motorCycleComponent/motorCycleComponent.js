@@ -23,7 +23,10 @@ export default function renderBreakMotor() {
           },
           {
             tag: "img",
-            attributes: { src: "/images/road.svg", id: "road" },
+            attributes: {
+              src: "/images/road.svg",
+              id: "road"
+            },
           },
         ],
       },
