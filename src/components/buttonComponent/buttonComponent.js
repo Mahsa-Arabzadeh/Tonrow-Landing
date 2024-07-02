@@ -34,7 +34,7 @@ function baseButtonGenerator({
   let button = domGenerator({
     tag: "div",
     attributes: {
-      class: `buttonComponentWrapper  ${className}`,
+      class: `buttonComponentWrapper ${className}`,
     },
     dataAttributes: { size: size, status: statues },
     eventListeners,

@@ -126,14 +126,14 @@ export default function header(headerData, defaultRole = "public") {
   headerData.forEach((item) => {
     if (item.type === "button") {
       const buttonElement = baseButtonGenerator({
-        content: item.content || "",
+        content: item.content ?? "",
         size: item.size,
         statues: item.statues,
         type: "button",
-        className: item.class || "custom-class",
-        anchorLink: item.anchorLink || "#",
-        eventListeners: item.eventListeners || {},
-        disabled: item.disabled || false,
+        className: item.class ?? "custom-class",
+        anchorLink: item.anchorLink ?? "#",
+        eventListeners: item.eventListeners ?? {},
+        disabled: item.disabled ?? false,
         iconStart: item.iconStart,
       });
       buttonsContainer.appendChild(buttonElement);

@@ -27,10 +27,10 @@ const publicHeaderData = [
   // Button for login/register action
   {
     content: "ورود / ثبت نام",
-    size: "medium",
+    size: "small",
     statues: "primaryFill",
     type: "button",
-    class: "btn-primary",
+    class: "btn-public",
     anchorLink: "#dashboard",
   },
 ];

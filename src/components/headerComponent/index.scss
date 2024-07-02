@@ -1,63 +1,84 @@
 /* Styles for the header component */
 
 #header {
-  background-color: #fefefe; /* Background color of the header */
-  color: #fff; /* Text color */
-  padding: 20px; /* Padding around the header content */
-  box-shadow: 0px 8px 34px 0px #727d871a; /* Shadow around the header*/
+  background-color: #fefefe;
+  /* Background color of the header */
+  color: #fff;
+  /* Text color */
+  padding: 20px;
+  /* Padding around the header content */
+  box-shadow: 0px 8px 34px 0px #727d871a;
+  /* Shadow around the header*/
 
   /* Styles for the content within the header */
   .header-content {
-    display: flex; /* Display as flexbox */
-    align-items: center; /* Align items vertically */
-    flex-direction: row-reverse; /* Arrange content in a row in reverse order */
-    justify-content: space-between; /* Space evenly between content */
+    display: flex;
+    /* Display as flexbox */
+    align-items: center;
+    /* Align items vertically */
+    flex-direction: row-reverse;
+    /* Arrange content in a row in reverse order */
+    justify-content: space-between;
+    /* Space evenly between content */
     min-width: 93%;
+
     /* Styles for the container holding the logo and links */
     .logo-links-container {
-      display: flex; /* Display as flexbox */
-      align-items: center; /* Align items vertically */
-      flex-direction: row-reverse; /* Arrange content in a row in reverse order */
+      display: flex;
+      /* Display as flexbox */
+      align-items: center;
+      /* Align items vertically */
+      flex-direction: row-reverse;
+      /* Arrange content in a row in reverse order */
 
       /* Styles for the links within the logo-links container */
       .logo-links a {
-        color: #9a9a9a; /* Link color */
-        text-decoration: none; /* Remove underline from links */
-        transition: color 0.3s ease; /* Smooth color transition */
-        margin-right: 20px; /* Margin on the right */
+        color: #9a9a9a;
+        /* Link color */
+        text-decoration: none;
+        /* Remove underline from links */
+        transition: color 0.3s ease;
+        /* Smooth color transition */
+        margin-right: 20px;
+        /* Margin on the right */
 
         /* Styles for link hover state */
         &:hover {
-          color: var(--primary-color); /* Change color on hover */
+          color: var(--primary-color);
+          /* Change color on hover */
         }
       }
 
       /* Styles for the logo */
       .logo {
-        height: 15px; /* Height of the logo */
-        margin-left: 20px; /* Margin on the left */
+        height: 15px;
+        /* Height of the logo */
+        margin-left: 20px;
+        /* Margin on the left */
       }
     }
 
     /* Styles for the container holding buttons */
     .buttons-container {
-      display: flex; /* Display as flexbox */
-      align-items: center; /* Align items vertically */
+      display: flex;
+      /* Display as flexbox */
+      align-items: center;
+      /* Align items vertically */
 
-      /* Special styles for buttons created from publicHeaderData array */
-      .btn-public {
-        cursor: pointer; /* Cursor style */
-      }
-      .buttonComponent{
+      .buttonComponent {
         text-shadow: 0px 1px 3px #262626;
         font-family: sans-serif;
       }
+
       .buttonComponentWrapper {
-        margin-right: 10px; /* Margin on the right */
+        margin-right: 10px;
+        /* Margin on the right */
         justify-content: center;
       }
+
       .buttonComponentWrapper img {
-        margin-left: 25px; /* Margin on the left */
+        margin-left: 25px;
+        /* Margin on the left */
       }
     }
   }
@@ -85,21 +106,38 @@
 
   /* Media query for screens less than 900px */
   @media (max-width: 900px) {
-    position: fixed; /* Make the header fixed */
-    top: 0; /* Stick to the top of the viewport */
-    width: 100%; /* Make the header cover full width */
-    z-index: 2; /* Ensure it's above other content */
-    display: flex; /* Display as flexbox */
-    align-items: center; /* Align items vertically */
-    flex-direction: row-reverse; /* Arrange content in a row in reverse order */
-    justify-content: flex-end; /* Align content to the end of the flex container */
-    box-shadow: none; /* Remove boxShadow from header in Responsive version */
+    position: fixed;
+    /* Make the header fixed */
+    top: 0;
+    /* Stick to the top of the viewport */
+    width: 100%;
+    /* Make the header cover full width */
+    z-index: 2;
+    /* Ensure it's above other content */
+    display: flex;
+    /* Display as flexbox */
+    align-items: center;
+    /* Align items vertically */
+    flex-direction: row-reverse;
+    /* Arrange content in a row in reverse order */
+    justify-content: flex-end;
+    /* Align content to the end of the flex container */
+    box-shadow: none;
+    /* Remove boxShadow from header in Responsive version */
+  }
+
+  @media (min-width: 900px) {
+    .btn-public {
+      width: 158px;
+      height: 48px;
+    }
   }
 }
 
 /* Hide logo-links-container on smaller screens */
 @media (max-width: 900px) {
   .logo-links-container {
-    display: none !important; /* Hide logo-links-container on screens less than or equal to 900px */
+    display: none !important;
+    /* Hide logo-links-container on screens less than or equal to 900px */
   }
 }
