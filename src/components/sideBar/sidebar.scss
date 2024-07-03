@@ -13,33 +13,32 @@
 
 /* Styling for the sidebar */
 #sidebar {
-  display: none;
   /* Initially hide the sidebar */
-  background-color: var(--white-text);
+  display: none;
   /* Background color */
-  color: var(--gray-color);
+  background: linear-gradient(152.34deg, #FFFFFF -0.48%, #E8F2FF 160.87%);
   /* Text color */
-  padding: 20px;
+  color: var(--gray-color);
   /* Padding inside the sidebar */
-  width: 250px;
+  padding: 20px;
   /* Initial width */
-  position: fixed;
+  width: 250px;
   /* Fixed positioning */
-  top: 0;
+  position: fixed;
   /* Position from the top */
-  right: 0;
+  top: 0;
   /* Position from the right */
-  height: 96%;
+  right: 0;
   /* Height of the sidebar */
-  border-radius: 10px 0px 0px 10px;
+  height: 96%;
   /* Rounded corners */
-  overflow-x: hidden;
+  border-radius: 10px 0px 0px 10px;
   /* Hide horizontal overflow */
-  animation: 0.7s moveSidebar;
+  overflow-x: hidden;
   /* Apply animation to sidebar */
-  z-index: 4;
+  animation: 0.7s moveSidebar;
   /* Stack order */
-
+  z-index: 4;
 
   /* Styling for the sidebar logo */
   .sidebar-logo {
@@ -106,32 +105,6 @@
       padding-top: 10px;
       /* Adjust padding top for spacing */
     }
-  }
-}
-
-/* Styling for the sidebar toggle icon */
-.sidebar-toggle-icon {
-  padding: 10px;
-  /* Padding around the icon */
-  border: none;
-  /* No border */
-  cursor: pointer;
-  /* Cursor style */
-  position: fixed;
-  /* Fixed positioning */
-  top: 20px;
-  /* Position from the top */
-  right: 20px;
-  /* Position from the right */
-  z-index: 1;
-  /* Stack order, ensure it's above other content */
-
-  /* Styling for the icon image */
-  img {
-    width: 28px;
-    /* Image width */
-    height: 32px;
-    /* Image height */
   }
 }
 
@@ -212,6 +185,7 @@
     display: none;
     /* Ensure the sidebar is hidden on larger screens */
   }
+
   .overlay {
     z-index: -10;
     background-color: transparent;

@@ -24,6 +24,7 @@
     justify-content: space-between;
     /* Space evenly between content */
     min-width: 93%;
+    align-items: center;
 
     /* Styles for the container holding the logo and links */
     .logo-links-container {
@@ -88,14 +89,7 @@
 
   /* Ensure the header has enough space for the fixed icon */
   .sidebar-toggle-icon {
-    padding: 10px;
-    border: none;
     cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1;
-
     img {
       width: 28px;
       height: 32px;
