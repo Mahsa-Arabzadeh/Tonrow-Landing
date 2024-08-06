@@ -2,12 +2,10 @@
 
 import domGenerator from "dom-generator";
 import { whyTonrowGenerator } from "../whyTonrowComponent/whyTonrowComponent";
-import renderBreakMotor from "../motorCycleComponent/motorCycleComponent";
 import generateBrandTrust from "../brandTrust/brandTrustComponent";
 import generatorDOMWhatDoesTonrowDo from "../whatDoesTonrowDo";
 import contactUs from "../contactUsComponent/contactUs";
 import heroBannerSection from "../heroBannerComponent";
-import renderMap from "../mapComponent/renderMapComponent";
 import flashMaker from "../flashComponent/flashes";
 import "./index.scss";
 
@@ -35,14 +33,6 @@ export default function containerComponent() {
       // whyTonrowGenerator section:
       {
         tag: whyTonrowGenerator(),
-      },
-      // motorcycle part:
-      {
-        tag: renderBreakMotor(),
-      },
-      // map animation section:
-      {
-        tag: renderMap(),
       },
       // flashes:
       {
