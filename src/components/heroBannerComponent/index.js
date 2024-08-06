@@ -119,19 +119,19 @@ export default function heroBannerSection() {
             {
               ...(shouldShowPublicButton
                 ? {
-                  tag: baseButtonGenerator({
-                    content: "ورود / ثبت نام",
-                    size: "large",
-                    statues: "primaryFill",
-                    type: "button",
-                    className: "enter-btn",
-                    anchorLink: "#",
-                    eventListeners: { click: () => { } },
-                  }),
-                }
+                    tag: baseButtonGenerator({
+                      content: "ورود / ثبت نام",
+                      size: "large",
+                      statues: "primaryFill",
+                      type: "button",
+                      className: "enter-btn",
+                      anchorLink: "#",
+                      eventListeners: { click: () => {} },
+                    }),
+                  }
                 : {
-                  tag: "div",
-                }),
+                    tag: "div",
+                  }),
             },
           ],
         },
@@ -176,11 +176,12 @@ export default function heroBannerSection() {
               },
               eventListeners: {
                 click: () => {
-                  const breakMotorElement = document.getElementById("breakMotor");
+                  const breakMotorElement =
+                    document.getElementById("breakMotor");
                   if (breakMotorElement) {
                     breakMotorElement.scrollIntoView({ behavior: "smooth" });
                   }
-                }
+                },
               },
             },
           ],

@@ -2,11 +2,11 @@
 
 const contactItemsData = [
   {
-    imageContact: "/images/Rectangle 33instagram.svg",
+    imageContact: "./public/images/Rectangle 33instagram.svg",
     hrefImg: "",
   },
   {
-    imageContact: "/images/Rectangle 34facebook.svg",
+    imageContact: "./Rectangle 34facebook.svg",
     hrefImg: "",
   },
   {
@@ -14,7 +14,7 @@ const contactItemsData = [
     hrefImg: "",
   },
   {
-    imageContact: "/images/Rectangle 32whatsapp.svg",
+    imageContact: "./images/Rectangle 32whatsapp.svg",
     hrefImg: "",
   },
 ];
