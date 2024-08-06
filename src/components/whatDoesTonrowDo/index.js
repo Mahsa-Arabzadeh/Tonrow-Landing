@@ -86,7 +86,7 @@ function generatorBodyWhatDoesTonrowDo() {
                   class: "botton-tonrow-do",
                   anchorLink: "#",
                   eventListeners: {},
-                  iconStart: "/images/arrow-left.svg",
+                  iconStart: "./public/images/arrow-left.svg",
                 }),
               },
             ],

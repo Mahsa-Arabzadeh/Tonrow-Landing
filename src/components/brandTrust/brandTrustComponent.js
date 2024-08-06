@@ -96,7 +96,7 @@ function brandIconGenerator(defaultSrc, hrefImage) {
           tag: "img",
           attributes: {
             class: "swiper-slide",
-            src: `${defaultSrc ?? "/images/defaultImage.png"}`,
+            src: `${defaultSrc ?? "./public/images/defaultImage.png"}`,
           },
         },
       ],

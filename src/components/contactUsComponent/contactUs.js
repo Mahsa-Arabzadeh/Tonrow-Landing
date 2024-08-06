@@ -31,7 +31,9 @@ export default function contactUs() {
           tag: "img",
           attributes: {
             class: "contact-img",
-            src: `${img.imageContact ?? "/images/forbiddendefaultImage.svg"}`,
+            src: `${
+              img.imageContact ?? "./public/images/forbiddendefaultImage.svg"
+            }`,
           },
         },
       };
