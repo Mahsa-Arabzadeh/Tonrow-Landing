@@ -50,7 +50,7 @@ const safirHeaderData = [
     type: "button",
     class: "custom-class",
     anchorLink: "#",
-    iconStart: "./images/notification.svg",
+    iconStart: "./public/images/notification.svg",
   },
   // Navigation links for safir role
   {
@@ -80,7 +80,7 @@ const safirHeaderData = [
     type: "button",
     class: "custom-class",
     anchorLink: "#MyRBN",
-    iconStart: "./images/setting-2.svg",
+    iconStart: "./public/images/setting-2.svg",
   },
 ];
 
@@ -99,7 +99,7 @@ const adminHeaderData = [
     type: "button",
     class: "custom-class",
     anchorLink: "#",
-    iconStart: "./images/notification.svg",
+    iconStart: "./public/images/notification.svg",
   },
   // Navigation links for admin role
   {
@@ -129,7 +129,7 @@ const adminHeaderData = [
     type: "button",
     class: "custom-class",
     anchorLink: "#MyRBN",
-    iconStart: "./images/setting-2.svg",
+    iconStart: "./public/images/setting-2.svg",
   },
 ];
 
@@ -148,7 +148,7 @@ const userHeaderData = [
     type: "button",
     class: "custom-class",
     anchorLink: "#",
-    iconStart: "./images/notification.svg",
+    iconStart: "./public/images/notification.svg",
   },
   // Navigation links for user role
   {
@@ -174,7 +174,7 @@ const userHeaderData = [
     type: "button",
     class: "custom-class",
     anchorLink: "#",
-    iconStart: "./images/setting-2.svg",
+    iconStart: "./public/images/setting-2.svg",
   },
 ];
 

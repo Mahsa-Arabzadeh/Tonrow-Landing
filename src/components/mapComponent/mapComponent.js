@@ -21,7 +21,7 @@ export default function createMap() {
       {
         tag: "img",
         attributes: {
-          src: "/images/group.png",
+          src: "./public/images/group.png",
           class: "motorDelivery",
         },
       },

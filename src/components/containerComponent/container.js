@@ -30,7 +30,7 @@ export default function containerComponent() {
       },
       // Why choose Tenero section
       {
-        tag: flashMaker({ urlFlash: "/images/Vector 4flashblue.svg" }),
+        tag: flashMaker({ urlFlash: "./public/images/Vector 4flashblue.svg" }),
       },
       // whyTonrowGenerator section:
       {
@@ -46,7 +46,7 @@ export default function containerComponent() {
       },
       // flashes:
       {
-        tag: flashMaker({ urlFlash: "/images/Vector 40red.svg" }),
+        tag: flashMaker({ urlFlash: "./public/images/Vector 40red.svg" }),
       },
       // What brands trusted us section
       {
@@ -54,7 +54,7 @@ export default function containerComponent() {
       },
       // flashes
       {
-        tag: flashMaker({ urlFlash: "/images/Vector 4flash.svg" }),
+        tag: flashMaker({ urlFlash: "./public/images/Vector 4flash.svg" }),
       },
       // contact us part.
       {

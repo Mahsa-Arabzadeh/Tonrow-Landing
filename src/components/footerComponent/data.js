@@ -10,7 +10,7 @@ import {
 export const colFooterGenerator = [
   [
     {
-      imgSrc: "/images/Tonrow-white.svg",
+      imgSrc: "./public/images/Tonrow-white.svg",
       colTitle: "تنرو",
       colText: [
         {
@@ -128,9 +128,9 @@ export const colFooterGenerator = [
 // Path data of images for the rowImageFooter section
 export const rowImageFooter = [
   {
-    imgSrc: "/images/Rectangleimg-footer.svg",
+    imgSrc: "./public/images/Rectangleimg-footer.svg",
   },
   {
-    imgSrc: "/images/Rectangle-footer.svg",
+    imgSrc: "./public/images/Rectangle-footer.svg",
   },
 ];

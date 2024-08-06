@@ -17,15 +17,15 @@ export default function renderBreakMotor() {
           {
             tag: "img",
             attributes: {
-              src: "/images/motorC.svg",
+              src: "./public/images/motorC.svg",
               id: "motor",
             },
           },
           {
             tag: "img",
             attributes: {
-              src: "/images/road.svg",
-              id: "road"
+              src: "./public/images/road.svg",
+              id: "road",
             },
           },
         ],

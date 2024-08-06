@@ -2,31 +2,31 @@
 
 export const brandData = [
   {
-    defaultSrc: "/images/refahlogo-hoverd.svg",
+    defaultSrc: "./public/images/refahlogo-hoverd.svg",
     hrefImage: "",
   },
   {
-    defaultSrc: "/images/digikalahovered.svg",
+    defaultSrc: "./public/images/digikalahovered.svg",
     hrefImage: "",
   },
   {
-    defaultSrc: "/images/shilalogohovered.svg",
+    defaultSrc: "./public/images/shilalogohovered.svg",
     hrefImage: "",
   },
   {
-    defaultSrc: "/images/Zikhoraklogohovered.svg",
+    defaultSrc: "./public/images/Zikhoraklogohovered.svg",
     hrefImage: "",
   },
   {
-    defaultSrc: "/images/cleanfood-hovered.svg",
+    defaultSrc: "./public/images/cleanfood-hovered.svg",
     hrefImage: "",
   },
   {
-    defaultSrc: "/images/OKlogo-hovered.svg",
+    defaultSrc: "./public/images/OKlogo-hovered.svg",
     hrefImage: "",
   },
   {
-    defaultSrc: "/images/sib360logo-hovered.svg",
+    defaultSrc: "./public/images/sib360logo-hovered.svg",
     hrefImage: "",
   },
 ];
